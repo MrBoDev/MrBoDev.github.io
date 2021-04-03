@@ -29,39 +29,4 @@
         <tag>人物</tag>
       </tags>
   </entry>
-  <entry>
-    <title>视频测试</title>
-    <url>/blog/post/844f966e/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\blog\assets\css\APlayer.min.css"><script src="\blog\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\blog\assets\js\Meting.min.js"></script>
-        <div id="aplayer-OpPwepfc" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-OpPwepfc"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "大风吹",
-              author: "王赫野",
-              url: "http://115.159.119.107/image/mp3/dfc.mp3",
-              pic: "http://home.ustc.edu.cn/~mmmwhy/jay.jpg",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
-
-
-
-]]></content>
-      <categories>
-        <category>热门人物</category>
-      </categories>
-      <tags>
-        <tag>人物</tag>
-      </tags>
-  </entry>
 </search>
