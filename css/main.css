@@ -1255,7 +1255,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #20b5ff;
+  background: #1b7c11;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2866,7 +2866,7 @@ span.exturl:hover {
   background: #06d633;
 }
 .site-brand-container {
-  background-image: url("/blog/images/2.jpg");
+  background-image: url("/images/2.jpg");
   background-size: 100% 100%;
   opacity: 0.9;
 }
@@ -2875,7 +2875,7 @@ code {
   color: #fff;
 }
 body {
-  background: url("/blog/images/1.png");
+  background: url("/images/1.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
