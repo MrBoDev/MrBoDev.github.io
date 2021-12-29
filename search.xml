@@ -28,48 +28,51 @@
       </tags>
   </entry>
   <entry>
-    <title>能推荐优秀的Java方面的up主吗?</title>
-    <url>/post/CsaaXIxr/</url>
+    <title>关于我的博客</title>
+    <url>/post/nTlGDHXn/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
 
 <br>
 
 <br>
 
-<h2 id="1、遇见狂神说"><a href="#1、遇见狂神说" class="headerlink" title="1、遇见狂神说"></a><font face="KaiTi" color="#9400D3">1、遇见狂神说</font></h2><p>B站主页：<a href="https://space.bilibili.com/95256449">https://space.bilibili.com/95256449</a></p>
-<p>up主已经投稿多个视频，其中包含了（javase、javaee、springboot、springmvc、springcloud 等spring全家桶、</p>
-<p>各种常用技术：ajax、redis、ElasticSearch、docker、linux等基础视频教程）。</p>
-<p>如果是初学者，可以关注</p>
-<hr>
-<h2 id="2、codesheep–程序羊"><a href="#2、codesheep–程序羊" class="headerlink" title="2、codesheep–程序羊"></a><font face="KaiTi" color="#9400D3">2、codesheep–程序羊</font></h2><p>B站主页：<a href="https://space.bilibili.com/384068749">https://space.bilibili.com/384068749</a></p>
-<p>程序羊，羊哥是我关注的up主中现在粉丝数（40.6万）最多的。平常会更新一些工作中常用的编程技巧、</p>
-<p>各种学习路线不限于java，还有c、c++。还会分享一些常用编程工具!</p>
-<span id="more"></span>
-
-<hr>
-<h2 id="3、三太子敖丙"><a href="#3、三太子敖丙" class="headerlink" title="3、三太子敖丙"></a><font face="KaiTi" color="#9400D3">3、三太子敖丙</font></h2><p>b站主页：<a href="https://space.bilibili.com/130763764">https://space.bilibili.com/130763764</a></p>
-<p>会分享一些工作中常用技术、面试分享（经常会有模拟面试），也会分享一些日常生活</p>
-<hr>
-<h2 id="4、我是程序汪"><a href="#4、我是程序汪" class="headerlink" title="4、我是程序汪"></a><font face="KaiTi" color="#9400D3">4、我是程序汪</font></h2><p>b站主页：<a href="https://space.bilibili.com/83853950">https://space.bilibili.com/83853950</a></p>
-<p>从事编程时间比较长，老程序员了。平常会分享各种面试技巧、也会帮公司招人面试、</p>
-<p>平常也会有很多粉丝模拟面试，周末可能会直播跟粉丝一起交流。更新还是比较快的</p>
-<hr>
-<h2 id="5、Guide哥"><a href="#5、Guide哥" class="headerlink" title="5、Guide哥"></a><font face="KaiTi" color="#9400D3">5、Guide哥</font></h2><p>b站主页：<a href="https://space.bilibili.com/504390397">https://space.bilibili.com/504390397</a></p>
-<p>up主是开源Java学习/面试指南——JavaGuide（75k+Star）的作者。关于java技术面试总结的比较全的。</p>
-<p>平常会分享一些编程技巧、生活日程。偶尔也会撒撒狗粮</p>
-<hr>
-<h2 id="6、心静思远-9527"><a href="#6、心静思远-9527" class="headerlink" title="6、心静思远-9527"></a><font face="KaiTi" color="#9400D3">6、心静思远-9527</font></h2><p>b站主页：<a href="https://space.bilibili.com/394607967">https://space.bilibili.com/394607967</a></p>
-<p>会分享一些面试中经常问到的技术知识</p>
-<hr>
-<h2 id="7、黎曼的猜想"><a href="#7、黎曼的猜想" class="headerlink" title="7、黎曼的猜想"></a><font face="KaiTi" color="#9400D3">7、黎曼的猜想</font></h2><p>b站主页：<a href="https://space.bilibili.com/14163840">https://space.bilibili.com/14163840</a></p>
-<p>up主会上传各种培训机构的视频教程（包括黑马、尚硅谷等）。需要下载视频的可以关注。关注后不再会为找视频教程发愁了。。。</p>
+<p><img src="https://pic.baixiongz.com/uploads/2021/04/12/27d1034a9d6bd.jpg"></p>
 ]]></content>
       <categories>
         <category>优质推荐</category>
-        <category>up主</category>
+        <category>博客</category>
       </categories>
       <tags>
-        <tag>B站up主</tag>
+        <tag>个人开发者博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用python开发简易版端口扫描</title>
+    <url>/post/qnSQnJMi/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># -*- coding:utf-8 -*-</span><br><span class="line">import socket</span><br><span class="line">from threading import Thread</span><br><span class="line">import time</span><br><span class="line">result &#x3D; []</span><br><span class="line">def scaner(host, port):</span><br><span class="line">	&quot;&quot;&quot;</span><br><span class="line">	author:张博</span><br><span class="line">	端口扫描函数</span><br><span class="line">	如果连接成功,把端口放入result中</span><br><span class="line">	否则关闭连接</span><br><span class="line">	:param host:</span><br><span class="line">	:param port:</span><br><span class="line">	:return:</span><br><span class="line">	&quot;&quot;&quot;</span><br><span class="line">	sockfd &#x3D; socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line">	sockfd.settimeout(0.1)</span><br><span class="line">	print(f&#39;正在检测&#123;host&#125;:&#123;port&#125;...&#39;)</span><br><span class="line">	tryConn &#x3D; sockfd.connect_ex((host, port))</span><br><span class="line">	if not tryConn:  # 返回0表示连接成功</span><br><span class="line">		result.append(port)</span><br><span class="line">	else:</span><br><span class="line">		sockfd.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">	host &#x3D; input(&#39;请输入IP地址：&#39;)</span><br><span class="line">	while True:  # 尝试对端口范围进行验证</span><br><span class="line">		startPort &#x3D; int(input(&#39;请输入起始扫描端口：&#39;))</span><br><span class="line">		endPort &#x3D; int(input(&#39;请输入终止扫描端口：&#39;))</span><br><span class="line">		if startPort &gt;&#x3D; 65536 or endPort &gt;&#x3D; 65536:</span><br><span class="line">			print(&#39;端口号不能大于65535&#39;)</span><br><span class="line">		else:</span><br><span class="line">			break</span><br><span class="line">	startTime &#x3D; time.time()</span><br><span class="line">	threads &#x3D; []  # 线程列表</span><br><span class="line">	for p in range(startPort, endPort + 1):</span><br><span class="line">		t &#x3D; Thread(target&#x3D;scaner, args&#x3D;(host, p))</span><br><span class="line">		threads.append(t)</span><br><span class="line">		t.start()</span><br><span class="line">	for t in threads:</span><br><span class="line">		t.join()</span><br><span class="line">	print(&#39;端口扫描完毕，端口开放结果如下&#39;)</span><br><span class="line">	result.sort()  # 排序</span><br><span class="line">	for p in result:  # 打印结果</span><br><span class="line">		print(f&#39;&#123;host&#125;:&#123;p&#125;&#39;)</span><br><span class="line">	endTime &#x3D; time.time()  # 计时</span><br><span class="line">	print(f&#39;本次端口扫描用时&#123;endTime-startTime&#125;秒&#39;)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>技术文章</category>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博哥整理秒面试题库?</title>
+    <url>/post/ZcsxUcnx/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+
+<p><a href="https://www.aliyundrive.com/s/XWG23zFR5yq">面试题库下载地址</a></p>
+]]></content>
+      <categories>
+        <category>优质推荐</category>
+        <category>面试</category>
+      </categories>
+      <tags>
+        <tag>面试</tag>
       </tags>
   </entry>
   <entry>
@@ -90,722 +93,6 @@
       </categories>
       <tags>
         <tag>个人创作文档</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>个人抽奖程序?</title>
-    <url>/post/WJKdKETk/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
-
-<br>
-
-<br>
-
-<h2 id="抽奖程序列表"><a href="#抽奖程序列表" class="headerlink" title="抽奖程序列表"></a><font face="KaiTi" color="#9400D3">抽奖程序列表</font></h2><p><strong><strong><font color="orange">抽取奖品</font></strong></strong></p>
-<p><a href="http://106.75.209.139:5050/">地址1</a></p>
-<p><strong><strong><font color="orange">抽取处罚</font></strong></strong></p>
-<p><a href="http://106.75.209.139:5051/">地址2</a></p>
-<p><strong><strong><font color="orange">抽奖答题</font></strong></strong></p>
-<p><a href="http://106.75.209.139:8080/#/">地址3</a></p>
-]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>个人服务</category>
-      </categories>
-      <tags>
-        <tag>个人服务</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于我的博客</title>
-    <url>/post/nTlGDHXn/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
-
-<br>
-
-<br>
-
-<p><img src="https://pic.baixiongz.com/uploads/2021/04/12/27d1034a9d6bd.jpg"></p>
-]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>博客</category>
-      </categories>
-      <tags>
-        <tag>个人开发者博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>国内顶级团队博客推荐</title>
-    <url>/post/rxGzcXCP/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
-
-<h4 id="一-美团技术团队"><a href="#一-美团技术团队" class="headerlink" title="一.美团技术团队"></a>一.美团技术团队</h4><p><img src="https://pic.baixiongz.com/uploads/2021/04/17/e27c20f13ac44.png"></p>
-<p>网址:<a href="https://tech.meituan.com/">https://tech.meituan.com/</a></p>
-<span id="more"></span>
-
-<hr>
-<br>
-
-<br>
-
-<h4 id="二-阿里技术公众号"><a href="#二-阿里技术公众号" class="headerlink" title="二.阿里技术公众号"></a>二.阿里技术公众号</h4><p><img src="https://pic.baixiongz.com/uploads/2021/04/17/fe9b57f6eb249.png"></p>
-<hr>
-
-<br>
-
-<br>
-
-<h4 id="三-ThoughtWorks-洞见"><a href="#三-ThoughtWorks-洞见" class="headerlink" title="三.ThoughtWorks 洞见"></a>三.ThoughtWorks 洞见</h4><p><img src="https://pic.baixiongz.com/uploads/2021/04/17/af655533b1b80.png"></p>
-<p>网址:<a href="https://insights.thoughtworks.cn/">https://insights.thoughtworks.cn/</a></p>
-<hr>
-
-<br>
-
-<br>
-
-<h4 id="四-小米技术团队"><a href="#四-小米技术团队" class="headerlink" title="四.小米技术团队"></a>四.小米技术团队</h4><p><img src="https://pic.baixiongz.com/uploads/2021/04/17/6dc9455832298.png"></p>
-<p>网址:<a href="https://xiaomi-info.github.io//">https://xiaomi-info.github.io/</a></p>
-<hr>
-
-<br>
-
-<br>
-
-<h4 id="五-360-核心安全技术博客"><a href="#五-360-核心安全技术博客" class="headerlink" title="五.360 核心安全技术博客"></a>五.360 核心安全技术博客</h4><p><img src="https://pic.baixiongz.com/uploads/2021/04/17/af84721ab83d1.png"></p>
-<p>网址:<a href="https://blogs.360.cn/post/analysis-of-RemRAT.html">https://blogs.360.cn/post/analysis-of-RemRAT.html</a></p>
-<hr>
-
-<br>
-
-<br>
-
-<h4 id="六-字节跳动技术团队"><a href="#六-字节跳动技术团队" class="headerlink" title="六.字节跳动技术团队"></a>六.字节跳动技术团队</h4><p>网址:<a href="https://juejin.cn/user/1838039172387262/posts">https://juejin.cn/user/1838039172387262/posts</a></p>
-<hr>
-
-<br>
-
-<br>
-
-<h4 id="七-伴鱼技术团队"><a href="#七-伴鱼技术团队" class="headerlink" title="七.伴鱼技术团队"></a>七.<a href="https://tech.ipalfish.com/blog/">伴鱼技术团队</a></h4><p><img src="https://pic.baixiongz.com/uploads/2021/04/17/4046ec92dc9b0.png"></p>
-<p>网址:<a href="https://tech.ipalfish.com/blog/">https://tech.ipalfish.com/blog/</a></p>
-<hr>
-
-<br>
-
-<br>
-
-]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>博客</category>
-      </categories>
-      <tags>
-        <tag>团队博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>国内顶级团队博客推荐二</title>
-    <url>/post/rxGzc12g/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
-
-<h2 id="2、阮一峰的网络日志"><a href="#2、阮一峰的网络日志" class="headerlink" title="2、阮一峰的网络日志"></a>2、阮一峰的网络日志</h2><ul>
-<li>地 址: <a href="http://www.ruanyifeng.com/blog/">阮一峰的网络日志</a></li>
-<li>简 介：大神阮一峰，博客风格真正做到深入浅出。</li>
-<li>推荐指数：⭐⭐⭐⭐⭐</li>
-</ul>
-<p><img src="https://pic2.zhimg.com/80/v2-82866264b7eff2f3d6edec2e8ce96825_720w.jpg" alt="img"></p>
-<span id="more"></span>
-
-<h2 id="3、Spring-Boot中文导航"><a href="#3、Spring-Boot中文导航" class="headerlink" title="3、Spring Boot中文导航"></a>3、Spring Boot中文导航</h2><ul>
-<li>地 址: <a href="http://springboot.fun/">Spring Boot中文导航</a></li>
-<li>简 介：汇总了一些比较优秀的Spring Boot博客、开源作品等。</li>
-<li>推荐指数：⭐⭐⭐⭐</li>
-</ul>
-<p><img src="https://pic4.zhimg.com/80/v2-1fd28f2fd3c3b77571f0fb034daa7b93_720w.jpg" alt="img"></p>
-<h2 id="4、Spring-Cloud中文导航"><a href="#4、Spring-Cloud中文导航" class="headerlink" title="4、Spring Cloud中文导航"></a>4、Spring Cloud中文导航</h2><ul>
-<li>地 址: <a href="http://springcloud.fun/">Spring Cloud中文导航</a></li>
-<li>简 介：汇总了一些比较优秀的Spring Cloud 博客、开源作品等。</li>
-<li>推荐指数：⭐⭐⭐⭐</li>
-</ul>
-<p><img src="https://pic4.zhimg.com/80/v2-25c931d797660cbb8ef4c4afb2dd88eb_720w.jpg" alt="img"></p>
-<p>上面两个索引里已经有了一些比较优秀的个人博主的相关博客地址，所以里面出现的个人博客，后面就不再列出了。</p>
-<h2 id="5、Web前端导航"><a href="#5、Web前端导航" class="headerlink" title="5、Web前端导航"></a>5、Web前端导航</h2><ul>
-<li>地 址: <a href="http://www.alloyteam.com/nav/">Web前端导航</a></li>
-<li>简 介：比较全的Web前端导航，包括 团队组织 、开发社区 、 前端门户、框架类库 等等网站的导航。</li>
-<li>推荐指数：⭐⭐⭐⭐</li>
-</ul>
-<p><img src="https://pic3.zhimg.com/80/v2-541bace02afbbe20c9e60c0239551bfe_720w.jpg" alt="img"></p>
-<h2 id="6、Spring-For-All"><a href="#6、Spring-For-All" class="headerlink" title="6、Spring For All"></a>6、Spring For All</h2><ul>
-<li>地 址: <a href="http://www.spring4all.com/">Spring For All</a></li>
-<li>简 介：目标是做最专业的的民间Sptng组织。</li>
-<li>推荐指数：⭐⭐⭐⭐</li>
-</ul>
-<p><img src="https://pic2.zhimg.com/80/v2-2b55dd112c04d9c7c117b271db1af071_720w.jpg" alt="img"></p>
-<h2 id="7、廖雪峰的官方网站"><a href="#7、廖雪峰的官方网站" class="headerlink" title="7、廖雪峰的官方网站"></a>7、廖雪峰的官方网站</h2><ul>
-<li>地 址: <a href="https://www.liaoxuefeng.com/">廖雪峰的官方网站</a></li>
-<li>简 介：廖雪峰老师的网站，有一些不错的入门教程。</li>
-<li>推荐指数：⭐⭐⭐</li>
-</ul>
-<p><img src="https://pic2.zhimg.com/80/v2-d09f32a7a161e2ef56f8b4bfcf2f9e4d_720w.jpg" alt="img"></p>
-<h2 id="8、bugstack"><a href="#8、bugstack" class="headerlink" title="8、bugstack"></a>8、bugstack</h2><ul>
-<li>地 址: <a href="https://bugstack.cn/">bugstack</a></li>
-<li>简 介：博主是京东架构师，产出非常丰富，包括框架、源码、设计模式等。</li>
-<li>推荐指数：⭐⭐⭐</li>
-</ul>
-<p><img src="https://pic4.zhimg.com/80/v2-fa431c6c001f7b3c7c9fbc22388f8af7_720w.jpg" alt="img"></p>
-<h2 id="9、Java技术驿站"><a href="#9、Java技术驿站" class="headerlink" title="9、Java技术驿站"></a>9、Java技术驿站</h2><ul>
-<li>地 址: <a href="http://cmsblogs.com/">Java技术驿站</a></li>
-<li>简 介：有很多不错的Java系列文章。</li>
-<li>推荐指数：⭐⭐⭐</li>
-</ul>
-<h2 id="10、酷壳"><a href="#10、酷壳" class="headerlink" title="10、酷壳"></a>10、酷壳</h2><ul>
-<li>地 址: <a href="https://coolshell.cn/">酷壳</a></li>
-<li>简 介：可以了解陈皓，是个很有个性的人。</li>
-<li>推荐指数：⭐⭐⭐</li>
-</ul>
-<p><img src="https://pic4.zhimg.com/80/v2-a4b8baa493f78719fa9ce6ebcdc35ca3_720w.jpg" alt="img"></p>
-<h2 id="11、床长人工智能教程"><a href="#11、床长人工智能教程" class="headerlink" title="11、床长人工智能教程"></a>11、床长人工智能教程</h2><ul>
-<li>地 址: <a href="https://www.captainbed.net/blog-neo/">床长人工智能教程</a></li>
-<li>简 介：不搞人工智能也可以看看，写的很有意思的教程，可以作为科普看看。</li>
-<li>推荐指数：⭐⭐⭐</li>
-</ul>
-<p><img src="https://pic2.zhimg.com/80/v2-8f2065f66890eeb6194a089a4f243d5d_720w.jpg" alt="img"></p>
-<h2 id="12、五分钟学算法"><a href="#12、五分钟学算法" class="headerlink" title="12、五分钟学算法"></a>12、五分钟学算法</h2><ul>
-<li>地 址: <a href="https://www.cxyxiaowu.com/">五分钟学算法-一个不错的算法网站！</a></li>
-<li>简 介：程序员学习网站，收集了和程序员学习相关的各种教程和资料，致力于将数据结构与算法讲清楚！</li>
-<li>推荐指数：⭐⭐⭐⭐</li>
-</ul>
-<p><img src="https://pic3.zhimg.com/80/v2-a79f762b510b7b85f7b058316e94c482_720w.jpg" alt="img"></p>
-<h2 id="13、AlgoMooc"><a href="#13、AlgoMooc" class="headerlink" title="13、AlgoMooc"></a>13、AlgoMooc</h2><ul>
-<li>地 址: <a href="https://www.algomooc.com/">AlgoMooc-一个专属于程序员的平台，和大家一起刷题</a></li>
-<li>简 介：图解 LeetCode 算法题</li>
-<li>推荐指数：⭐⭐⭐</li>
-</ul>
-<p><img src="https://pic2.zhimg.com/80/v2-edaf7379ff84f3516c3afcd6c2d65275_720w.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>博客</category>
-      </categories>
-      <tags>
-        <tag>团队博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>个人写作笔记汇总！</title>
-    <url>/post/SgtOwibX/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
-
-<br>
-
-<br>
-
-<h2 id="笔记软件列表"><a href="#笔记软件列表" class="headerlink" title="笔记软件列表"></a><font color="orange" face="kaiti">笔记软件列表</font></h2><table>
-<thead>
-<tr>
-<th>软件</th>
-<th>简介</th>
-<th>Windows</th>
-<th>macOS</th>
-<th>Linux</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a href="https://flomoapp.com/"><font color="orange">浮墨笔记</font></a></td>
-<td>像发微博一样记笔记</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://gitnoteapp.com/zh/"><font color="orange">GitNote</font></a></td>
-<td>基于Git 的跨平台云笔记工具</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://gridea.dev/"><font color="orange">Gridea</font></a></td>
-<td>静态博客写作客户端</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="github.com/onblog/JustWrite"><font color="orange">简单写作</font></a></td>
-<td>一款支持同步滑动预览的跨平台Markdown编辑器</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://minnote.v8cloud.cn/index.html"><font color="orange">极简笔记</font></a></td>
-<td>一款现代化 Markdown 笔记软件</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://www.kancloud.cn/"><font color="orange">看云</font></a></td>
-<td>一个现代化文档写作、托管及数字出版平台</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://marktext.app/"><font color="orange">Mark Text</font></a></td>
-<td>简洁优雅的 Markdown 编辑器</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://leanote.com/"><font color="orange">蚂蚁笔记</font></a></td>
-<td>蚂蚁笔记 = 笔记 + 博客 + 协作 + 私有云</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://www.notion.so/"><font color="orange">Notion</font></a></td>
-<td>提供笔记、任务、数据库、看板、维基、日历和提醒等组件的笔记应用</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://notable.app/"><font color="orange">Notable</font></a></td>
-<td>跨平台 Markdown 本地编辑器</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://www.onenote.com/download"><font color="orange">OneNote</font></a></td>
-<td>微软出品，记录想法、观点和待办事项</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://simplenote.com/"><font color="orange">Simplenote</font></a></td>
-<td>一款轻量级笔记软件</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://typora.io/"><font color="orange">Typora</font></a></td>
-<td>一款极简所见即所得的 Markdown 笔记软件</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://getupnote.com/"><font color="orange">UpNote</font></a></td>
-<td>一款简洁干净的笔记软件</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://github.com/Vanessa219/vditor"><font color="orange">Vditor</font></a></td>
-<td>易于使用的 Markdown 编辑器，为适配不同的应用场景而生</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://www.wolai.com/"><font color="orange">wolai</font></a></td>
-<td>面向未来的云端笔记</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://www.wiz.cn/zh-cn/"><font color="orange">为知笔记</font></a></td>
-<td>云笔记、个人知识管理、团队协作……</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://bear.app/cn/"><font color="orange">熊掌记</font></a></td>
-<td>优雅、灵活的写作笔记应用</td>
-<td></td>
-<td>:heart:</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="http://soft.xiaoshujiang.com/"><font color="orange">小书匠</font></a></td>
-<td>既是一款 Markdown 编辑器，更是一款功能丰富、强大的知识管理工具</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://staging.yinxiang.com/"><font color="orange">印象笔记</font></a></td>
-<td>工作必备效率应用</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://note.youdao.com/"><font color="orange">有道云笔记</font></a></td>
-<td>专注办公提效的笔记软件</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://www.yuque.com/install/desktop"><font color="orange">语雀</font></a></td>
-<td>新一代云端知识库</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="http://focusapp.ink/#/"><font color="orange">专注笔记</font></a></td>
-<td>精美的电子笔记软件</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td></td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>写作软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>免费科学上网软件！</title>
-    <url>/post/EDQNZQAi/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
-
-<br>
-
-<br>
-
-<p><strong><strong><font color="orange">1.佛跳墙</font></strong></strong></p>
-<p>下载链接:<a href="https://www.qingfengshenzhen.com/cn/">https://www.zhenleguan.com/cn/?a=v84cm<a></a></a></p>
-<p>😌😌😌😌😌😌😌😌😌😌😌😌😌😌😌😌😌😌😌😌😌😌</p>
-<p><strong><strong><font color="orange">2.vpn软件:博哥整理</font></strong></strong></p>
-<p>下载链接:<a href="https://wws.lanzoui.com/i0F61ntn1of">https://wws.lanzoui.com/i0F61ntn1of</a></p>
-<p>密码:9205</p>
-<p><strong><strong><font color="orange">3.最强大的翻墙浏览器下载</font></strong></strong></p>
-<p>下载链接:<a href="https://github.com/Alvin9999/new-pac/wiki">https://github.com/Alvin9999/new-pac/wiki</a></p>
-<p><strong><strong><font color="orange">4.六款免费手机端vpn汇总</font></strong></strong></p>
-<p>下载链接:<a href="https://wwi.lanzoui.com/itHMGndhdab">https://wwi.lanzoui.com/itHMGndhdab</a></p>
-]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>vpn软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>掌握notion让你的工作效率起飞</title>
-    <url>/post/cvZgXago/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
-
-<br>
-
-<br>
-
-<h2 id="notion的使用"><a href="#notion的使用" class="headerlink" title="notion的使用"></a>notion的使用</h2><iframe style="overflow:auto;" width="100%" height="100%" src="//player.bilibili.com/player.html?aid=46349671&bvid=BV1Zb411H7xC&cid=81208364&page=1" scrolling="auto" border="0" frameborder="none" framespacing="0" allowfullscreen="true">
-</iframe>
-
-]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>视频</category>
-      </categories>
-      <tags>
-        <tag>写作软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2020最新面试合集?</title>
-    <url>/post/ZvTmuYBt/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
-
-<br>
-
-<br>
-
-<p>Java基础知识面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104390612">地址</a></p>
-<p>Java集合容器面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104588551">地址</a></p>
-<p>Java异常面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104390689">地址</a></p>
-<p>并发编程面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104863992">地址</a></p>
-<p>JVM面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104390752">地址</a></p>
-<p>Spring面试题（2020最新版） <a href="https://thinkwon.blog.csdn.net/article/details/104397516">地址</a></p>
-<p>Spring MVC面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104397427">地址</a></p>
-<p>Spring Boot面试题（2020最新版） <a href="https://thinkwon.blog.csdn.net/article/details/104397299">地址</a></p>
-<p>Spring Cloud面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104397367">地址</a></p>
-<span id="more"></span>
-
-<p>😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀</p>
-<p>MyBatis面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/101292950">地址</a></p>
-<p>Redis面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/103522351">地址</a></p>
-<p>MySQL数据库面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104778621">地址</a></p>
-<p>消息中间件MQ与RabbitMQ面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104588612">地址</a></p>
-<p>Dubbo面试题（2020最新版)<a href="https://thinkwon.blog.csdn.net/article/details/104390006">地址</a></p>
-<p>Linux面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104588679">地址</a></p>
-<p>Tomcat面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104397665">地址</a></p>
-<p>ZooKeeper面试题（2020最新版 )<a href="https://thinkwon.blog.csdn.net/article/details/104397719">地址</a></p>
-<p>Netty面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104391081">地址</a></p>
-<p>架构设计&amp;分布式&amp;数据结构与算法面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/105870730">地址</a></p>
-]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>面试</category>
-      </categories>
-      <tags>
-        <tag>面试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博哥整理秒面试题库?</title>
-    <url>/post/ZcsxUcnx/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
-
-<p><a href="https://www.aliyundrive.com/s/XWG23zFR5yq">面试题库下载地址</a></p>
-]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>面试</category>
-      </categories>
-      <tags>
-        <tag>面试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>5个 Chrome必备技巧【秘籍】！</title>
-    <url>/post/tIPSFuYY/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
-
-<br>
-
-<br>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.Ctrl+Shift+T 恢复关闭书签</span><br><span class="line"></span><br><span class="line">2.Ctrl+Shift+D 快速保存页面链接到书签</span><br><span class="line"></span><br><span class="line">3.右键向群组添加标签页—标签分组</span><br><span class="line"></span><br><span class="line">4.右键为页面创建二维码</span><br><span class="line"></span><br><span class="line">5.windows+?键盘 调用谷歌自带表情</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>其他</category>
-        <category>搜索技巧</category>
-      </categories>
-      <tags>
-        <tag>google</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>google必备搜索技巧</title>
-    <url>/post/yZEhjmpm/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
-
-<br>
-
-<br>
-
-<h2 id="1-准确搜索"><a href="#1-准确搜索" class="headerlink" title="1. 准确搜索"></a><font color="orange" face="kaiti">1. 准确搜索</font></h2><p>最简单和最有效的搜索方式是给关键词加上双引号，这样搜索引擎会反馈和关键词完全吻合的搜索结果</p>
-<p>例如，搜索 Joe Bloggs 时，搜索引擎会返回同时跟 Joe 和 Bloggs 相关的结果，而搜索 “Joe Bloggs” 时，搜索引擎只返回跟 “Joe Bloggs” 相关的结果。</p>
-<p>准确搜索会排除常见但相关度偏低的信息，会提高搜索的精确性。</p>
-<h2 id="2-排除关键字"><a href="#2-排除关键字" class="headerlink" title="2. 排除关键字"></a><font color="orange" face="kaiti">2. 排除关键字</font></h2><p>如果准确搜索不能得到想要的结果，你可以通过使用<strong>减号</strong>的方式来排除特定词汇。</p>
-<p>例如搜索 Joe Bloggs -jeans 时，搜索引擎会返回与 Joe Bloggs 匹配但已经排除关键字 jeans 的信息。</p>
-<h2 id="3-用-or-进行搜索"><a href="#3-用-or-进行搜索" class="headerlink" title="3. 用 or 进行搜索"></a><font color="orange" face="kaiti">3. 用 or 进行搜索</font></h2><p>默认的文本搜索会返回所有和关键字相关的信息，通过使用 OR，不仅能返回和关键字都相关的信息，还能返回和两个关键字分别相关的信息。在不确定哪个哪个关键字对搜索结果起决定作用时，OR 搜索是很有用的。</p>
-<span id="more"></span>
-
-<h2 id="4-同义词搜索"><a href="#4-同义词搜索" class="headerlink" title="4. 同义词搜索"></a><font color="orange" face="kaiti">4. 同义词搜索</font></h2><p>有时使用不确定的关键词进行搜索反而更有用。如果你不确定使用哪个关键词，可以试试使用同义词搜索。</p>
-<p>例如，你搜索 plumbing ~university，则搜索引擎会返回包含 plumbing universities 和 plumbing colleges 的信息。</p>
-<h2 id="5-站内搜索"><a href="#5-站内搜索" class="headerlink" title="5. 站内搜索"></a><font color="orange" face="kaiti">5. 站内搜索</font></h2><p>很多网站缺乏搜索功能，但你可以通过谷歌等搜索引擎对站内进行搜索。</p>
-<p>在搜索引擎上输入 <strong>site:theguardian.com</strong> 和搜索关键字，搜索引擎会返回网站 <a href="http://theguardian.com/">theguardian.com</a> 内和关键词相关的信息。结合准确搜索，能使这项功能更强大。</p>
-<h2 id="6-星号搜索"><a href="#6-星号搜索" class="headerlink" title="6. 星号搜索"></a><font color="orange" face="kaiti">6. 星号搜索</font></h2><p>类似拼图游戏 Scrabble 的空白方块，在搜索引擎中，不管关键字缺失的是一连串单词中的其中一个还是一个单词的某一部分，都可以使用星号来填补缺失的部分，这同样适用于搜索一篇确定性偏低的文章。</p>
-<p>例如，在搜索引擎输入 architect*，则会得到所有包含 architect、architectural、architecture、architected、architecting 以及其他所有以architect 作为开头的词汇的信息。</p>
-<h2 id="7-两个值之间的搜索"><a href="#7-两个值之间的搜索" class="headerlink" title="7. 两个值之间的搜索"></a><font color="orange" face="kaiti">7. 两个值之间的搜索</font></h2><p>在一定范围内使用限定词来搜索某些东西是一个不错的方法。例如想要找出 1920 至 1950 年间的英国首相，直接在搜索引擎中输入 英国首相 1920.. 1950 即可得出想要的结果。</p>
-<p><strong>记住，数值之间的符号是两个英文句号加一个空格键。</strong></p>
-<h2 id="8-关键字标题搜索"><a href="#8-关键字标题搜索" class="headerlink" title="8. 关键字标题搜索"></a><font color="orange" face="kaiti">8. 关键字标题搜索</font></h2><p>有时，你只想找出所有和关键词相关的网页链接、网页主体(内容)和标题，这时，就可以使用对应的限定词：<strong>inurl:</strong> 、<strong>intext</strong> 和 <strong>intitle</strong>。</p>
-<p>例如，在搜索引擎中输入 intitle: 评测 会得到所有和关键词 评测 相关的网页标题。</p>
-<h2 id="9-准确搜索"><a href="#9-准确搜索" class="headerlink" title="9. 准确搜索"></a><font color="orange" face="kaiti">9. 准确搜索</font></h2><p>相关的限定词可用于搜索相关网站时使用。例如，你仅需在搜索引擎中输入 related:theguardian.com 即可得到所有和 <a href="http://theguardian.com/">theguardian.com</a> 相关的网站的搜索结果。</p>
-<h2 id="10-组合上述搜索技巧"><a href="#10-组合上述搜索技巧" class="headerlink" title="10. 组合上述搜索技巧"></a><font color="orange" face="kaiti">10. 组合上述搜索技巧</font></h2><p>你可以组合使用上述的搜索技巧来缩小或扩大搜索范围。尽管一些搜索技巧不常使用，但是准确搜索和站内搜索的使用范围是很广的。</p>
-<p>随着 Google 等搜索引擎对用户自然语言理解程度的提高，这些搜索技能的适用场景会越来越少，至少这是搜索引擎的共同追求目标。但是在当下，掌握这些搜索技巧还是非常有用的</p>
-]]></content>
-      <categories>
-        <category>其他</category>
-        <category>搜索技巧</category>
-      </categories>
-      <tags>
-        <tag>google</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>youtube搜索下载技巧</title>
-    <url>/post/DgSnWkfD/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
-
-<br>
-
-<br>
-
-<h2 id="一-搜索技巧"><a href="#一-搜索技巧" class="headerlink" title="一.搜索技巧"></a><font color="orange" face="kaiti">一.搜索技巧</font></h2><h3 id="1-找到特定的YouTube的频道"><a href="#1-找到特定的YouTube的频道" class="headerlink" title="1.找到特定的YouTube的频道"></a><strong>1.找到特定的YouTube的频道</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">royal wedding, channel</span><br><span class="line">YouTube里面有很多关于royal wedding的视频，但是如果你希望检索到官方的视频页面，只要在后面加上channel就可以了。</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-检索近期上传视频"><a href="#2-检索近期上传视频" class="headerlink" title="2.检索近期上传视频"></a><strong>2.检索近期上传视频</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">oprah winfrey, this week上面的检索关键字将会显示过去一周内上传到YouTube的视频，当然你还可以使用&quot;today&quot;或者&quot;this mouth&quot;来限制时间。</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-找到原汁原味的视频"><a href="#3-找到原汁原味的视频" class="headerlink" title="3.找到原汁原味的视频"></a><strong>3.找到原汁原味的视频</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">never say never, partner如果你想要听到原版的音乐或者视频，而不是网友们翻版的或者恶搞的，加上partner就可以了。</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-找到全时长的电影"><a href="#4-找到全时长的电影" class="headerlink" title="4.找到全时长的电影"></a><strong>4.找到全时长的电影</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">jackie chan, movie</span><br><span class="line">如果你项找到完整版的电影，该加上什么，你懂的。甚至你能看到宝莱坞的电影哦。</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h3 id="5-找出高清电影"><a href="#5-找出高清电影" class="headerlink" title="5.找出高清电影"></a><strong>5.找出高清电影</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">the king&#39;s speech trailer, hd你既然已经知道hd是高清的意思，我额外想要告诉你的信息就是你可以看到结果里面全部时720p或者1080p的电影鸟～</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-看3D电影"><a href="#6-看3D电影" class="headerlink" title="6.看3D电影"></a><strong>6.看3D电影</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">avatar, 3d高清的还不过瘾，你有一副3D眼镜摆在家里？那就来尝试3D的电影吧，看3D电影不一定要3D眼镜哦，详情猛击此处。</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-找出播放列表"><a href="#7-找出播放列表" class="headerlink" title="7.找出播放列表"></a><strong>7.找出播放列表</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bryan adams, playlist你可以找出播放列表和一些相关类型的演员或者是电影，为了保存他们，你可以添加到你的账户中，以备下次观看。详情猛击此处。</span><br></pre></td></tr></table></figure>
-
-<h3 id="8-在-YouTube-中找到长影片"><a href="#8-在-YouTube-中找到长影片" class="headerlink" title="8.在 YouTube 中找到长影片"></a><strong>8.在 YouTube 中找到长影片</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tom and jerry cartoons, long加上 long ，你可以找到20分钟时长以上的影片。</span><br></pre></td></tr></table></figure>
-
-<h3 id="9-标题的精确匹配"><a href="#9-标题的精确匹配" class="headerlink" title="9.标题的精确匹配"></a><strong>9.标题的精确匹配</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">allintitle:&quot;google goes gaga&quot;你可以进行精确地匹配以便于找到一些可能由于地理位置限制而不允许在你们国家看的电影哦。</span><br></pre></td></tr></table></figure>
-
-<h3 id="10-混合条件匹配"><a href="#10-混合条件匹配" class="headerlink" title="10.混合条件匹配"></a><strong>10.混合条件匹配</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ted talks, hd, this month, long</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="二-下载技巧"><a href="#二-下载技巧" class="headerlink" title="二.下载技巧"></a><font color="orange" face="kaiti">二.下载技巧</font></h2><p>1.于 YouTube 网址前方加入 ss</p>
-<p>2.于 YouTube 网址后方加入 my</p>
-]]></content>
-      <categories>
-        <category>其他</category>
-        <category>搜索技巧</category>
-      </categories>
-      <tags>
-        <tag>youtube</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>github搜索技巧</title>
-    <url>/post/DvyIdwpp/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
-
-<br>
-
-<br>
-
-<h2 id="搜索技巧汇总"><a href="#搜索技巧汇总" class="headerlink" title="搜索技巧汇总"></a><font color="orange" face="kaiti">搜索技巧汇总</font></h2><table>
-<thead>
-<tr>
-<th>序号</th>
-<th>标题</th>
-<th align="left">地址</th>
-<th align="left">日期</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1</td>
-<td><font color="orange" face="kaiti">身为程序员 你真的会使用github搜索吗？</font></td>
-<td align="left"><a href="https://juejin.cn/post/6970490256625762312?share_token=1c747323-5ec5-46a4-b690-e81f9dc0a605" target="_blank">url地址</a></td>
-<td align="left">2021/09/01</td>
-</tr>
-<tr>
-<td>2</td>
-<td><font color="orange" face="kaiti">我是如何发现优质开源项目的？ - 知乎</font></td>
-<td align="left"><a href="https://zhuanlan.zhihu.com/p/55174293?utm_source=qq&utm_medium=social&utm_oi=1267028025772253184" targer="_blank">url地址</a></td>
-<td align="left">2021/09/01</td>
-</tr>
-<tr>
-<td>3</td>
-<td><font color="orange" face="kaiti">【硬核干货】如何高效找到优质编程项目？ - 知乎</font></td>
-<td align="left"><a href="https://zhuanlan.zhihu.com/p/352147462" targer="_blank">url地址</a></td>
-<td align="left">2021/09/01</td>
-</tr>
-<tr>
-<td>4</td>
-<td><font color="orange" face="kaiti">GitHub 上能挖矿的神仙技巧 - 如何发现优秀开源项目 </font></td>
-<td align="left"><a href="https://github.com/biaochenxuying/blog/issues/45" targer="_blank">url地址</a></td>
-<td align="left">2021/09/01</td>
-</tr>
-<tr>
-<td>5</td>
-<td><font color="orange" face="kaiti">github排行榜</font></td>
-<td align="left"><a href="https://gitstar-ranking.com/" targer="_blank">url地址</a></td>
-<td align="left">2021/09/01</td>
-</tr>
-<tr>
-<td>6</td>
-<td><font color="orange" face="kaiti">github中文排行榜</font></td>
-<td align="left"><a href="https://github.com/kon9chunkit/GitHub-Chinese-Top-Charts" targer="_blank">url地址</a></td>
-<td align="left">2021/09/01</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>其他</category>
-        <category>搜索技巧</category>
-      </categories>
-      <tags>
-        <tag>github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端学习路线图</title>
-    <url>/post/SraNXKVe/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
-
-
-
-<p><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/%E5%89%8D%E7%AB%AF.1fyjbmflam00.png"></p>
-]]></content>
-      <categories>
-        <category>技术文章</category>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>学习路线</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用python开发简易版端口扫描</title>
-    <url>/post/qnSQnJMi/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># -*- coding:utf-8 -*-</span><br><span class="line">import socket</span><br><span class="line">from threading import Thread</span><br><span class="line">import time</span><br><span class="line">result &#x3D; []</span><br><span class="line">def scaner(host, port):</span><br><span class="line">	&quot;&quot;&quot;</span><br><span class="line">	author:张博</span><br><span class="line">	端口扫描函数</span><br><span class="line">	如果连接成功,把端口放入result中</span><br><span class="line">	否则关闭连接</span><br><span class="line">	:param host:</span><br><span class="line">	:param port:</span><br><span class="line">	:return:</span><br><span class="line">	&quot;&quot;&quot;</span><br><span class="line">	sockfd &#x3D; socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line">	sockfd.settimeout(0.1)</span><br><span class="line">	print(f&#39;正在检测&#123;host&#125;:&#123;port&#125;...&#39;)</span><br><span class="line">	tryConn &#x3D; sockfd.connect_ex((host, port))</span><br><span class="line">	if not tryConn:  # 返回0表示连接成功</span><br><span class="line">		result.append(port)</span><br><span class="line">	else:</span><br><span class="line">		sockfd.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">	host &#x3D; input(&#39;请输入IP地址：&#39;)</span><br><span class="line">	while True:  # 尝试对端口范围进行验证</span><br><span class="line">		startPort &#x3D; int(input(&#39;请输入起始扫描端口：&#39;))</span><br><span class="line">		endPort &#x3D; int(input(&#39;请输入终止扫描端口：&#39;))</span><br><span class="line">		if startPort &gt;&#x3D; 65536 or endPort &gt;&#x3D; 65536:</span><br><span class="line">			print(&#39;端口号不能大于65535&#39;)</span><br><span class="line">		else:</span><br><span class="line">			break</span><br><span class="line">	startTime &#x3D; time.time()</span><br><span class="line">	threads &#x3D; []  # 线程列表</span><br><span class="line">	for p in range(startPort, endPort + 1):</span><br><span class="line">		t &#x3D; Thread(target&#x3D;scaner, args&#x3D;(host, p))</span><br><span class="line">		threads.append(t)</span><br><span class="line">		t.start()</span><br><span class="line">	for t in threads:</span><br><span class="line">		t.join()</span><br><span class="line">	print(&#39;端口扫描完毕，端口开放结果如下&#39;)</span><br><span class="line">	result.sort()  # 排序</span><br><span class="line">	for p in result:  # 打印结果</span><br><span class="line">		print(f&#39;&#123;host&#125;:&#123;p&#125;&#39;)</span><br><span class="line">	endTime &#x3D; time.time()  # 计时</span><br><span class="line">	print(f&#39;本次端口扫描用时&#123;endTime-startTime&#125;秒&#39;)</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>技术文章</category>
-        <category>后端</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>后端学习路线图</title>
-    <url>/post/bmQjVybF/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
-
-
-
-<p><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/%E5%90%8E%E7%AB%AF.1769qe4z4a0w.png"></p>
-]]></content>
-      <categories>
-        <category>技术文章</category>
-        <category>后端</category>
-      </categories>
-      <tags>
-        <tag>学习路线</tag>
       </tags>
   </entry>
   <entry>
@@ -996,23 +283,6 @@
       </categories>
       <tags>
         <tag>IDEA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>运维学习路线图</title>
-    <url>/post/ydXKXUUk/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
-
-
-
-<p><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/%E8%BF%90%E7%BB%B4.29le6x9z72f4.png"></p>
-]]></content>
-      <categories>
-        <category>技术文章</category>
-        <category>运维</category>
-      </categories>
-      <tags>
-        <tag>学习路线</tag>
       </tags>
   </entry>
   <entry>
@@ -1421,6 +691,736 @@
       </categories>
       <tags>
         <tag>IDEA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>运维学习路线图</title>
+    <url>/post/ydXKXUUk/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+
+
+
+<p><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/%E8%BF%90%E7%BB%B4.29le6x9z72f4.png"></p>
+]]></content>
+      <categories>
+        <category>技术文章</category>
+        <category>运维</category>
+      </categories>
+      <tags>
+        <tag>学习路线</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>后端学习路线图</title>
+    <url>/post/bmQjVybF/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+
+
+
+<p><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/%E5%90%8E%E7%AB%AF.1769qe4z4a0w.png"></p>
+]]></content>
+      <categories>
+        <category>技术文章</category>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>学习路线</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端学习路线图</title>
+    <url>/post/SraNXKVe/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+
+
+
+<p><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/%E5%89%8D%E7%AB%AF.1fyjbmflam00.png"></p>
+]]></content>
+      <categories>
+        <category>技术文章</category>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>学习路线</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>github搜索技巧</title>
+    <url>/post/DvyIdwpp/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+
+<br>
+
+<br>
+
+<h2 id="搜索技巧汇总"><a href="#搜索技巧汇总" class="headerlink" title="搜索技巧汇总"></a><font color="orange" face="kaiti">搜索技巧汇总</font></h2><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>标题</th>
+<th align="left">地址</th>
+<th align="left">日期</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><font color="orange" face="kaiti">身为程序员 你真的会使用github搜索吗？</font></td>
+<td align="left"><a href="https://juejin.cn/post/6970490256625762312?share_token=1c747323-5ec5-46a4-b690-e81f9dc0a605" target="_blank">url地址</a></td>
+<td align="left">2021/09/01</td>
+</tr>
+<tr>
+<td>2</td>
+<td><font color="orange" face="kaiti">我是如何发现优质开源项目的？ - 知乎</font></td>
+<td align="left"><a href="https://zhuanlan.zhihu.com/p/55174293?utm_source=qq&utm_medium=social&utm_oi=1267028025772253184" targer="_blank">url地址</a></td>
+<td align="left">2021/09/01</td>
+</tr>
+<tr>
+<td>3</td>
+<td><font color="orange" face="kaiti">【硬核干货】如何高效找到优质编程项目？ - 知乎</font></td>
+<td align="left"><a href="https://zhuanlan.zhihu.com/p/352147462" targer="_blank">url地址</a></td>
+<td align="left">2021/09/01</td>
+</tr>
+<tr>
+<td>4</td>
+<td><font color="orange" face="kaiti">GitHub 上能挖矿的神仙技巧 - 如何发现优秀开源项目 </font></td>
+<td align="left"><a href="https://github.com/biaochenxuying/blog/issues/45" targer="_blank">url地址</a></td>
+<td align="left">2021/09/01</td>
+</tr>
+<tr>
+<td>5</td>
+<td><font color="orange" face="kaiti">github排行榜</font></td>
+<td align="left"><a href="https://gitstar-ranking.com/" targer="_blank">url地址</a></td>
+<td align="left">2021/09/01</td>
+</tr>
+<tr>
+<td>6</td>
+<td><font color="orange" face="kaiti">github中文排行榜</font></td>
+<td align="left"><a href="https://github.com/kon9chunkit/GitHub-Chinese-Top-Charts" targer="_blank">url地址</a></td>
+<td align="left">2021/09/01</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>其他</category>
+        <category>搜索技巧</category>
+      </categories>
+      <tags>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>youtube搜索下载技巧</title>
+    <url>/post/DgSnWkfD/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+
+<br>
+
+<br>
+
+<h2 id="一-搜索技巧"><a href="#一-搜索技巧" class="headerlink" title="一.搜索技巧"></a><font color="orange" face="kaiti">一.搜索技巧</font></h2><h3 id="1-找到特定的YouTube的频道"><a href="#1-找到特定的YouTube的频道" class="headerlink" title="1.找到特定的YouTube的频道"></a><strong>1.找到特定的YouTube的频道</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">royal wedding, channel</span><br><span class="line">YouTube里面有很多关于royal wedding的视频，但是如果你希望检索到官方的视频页面，只要在后面加上channel就可以了。</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-检索近期上传视频"><a href="#2-检索近期上传视频" class="headerlink" title="2.检索近期上传视频"></a><strong>2.检索近期上传视频</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">oprah winfrey, this week上面的检索关键字将会显示过去一周内上传到YouTube的视频，当然你还可以使用&quot;today&quot;或者&quot;this mouth&quot;来限制时间。</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-找到原汁原味的视频"><a href="#3-找到原汁原味的视频" class="headerlink" title="3.找到原汁原味的视频"></a><strong>3.找到原汁原味的视频</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">never say never, partner如果你想要听到原版的音乐或者视频，而不是网友们翻版的或者恶搞的，加上partner就可以了。</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-找到全时长的电影"><a href="#4-找到全时长的电影" class="headerlink" title="4.找到全时长的电影"></a><strong>4.找到全时长的电影</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">jackie chan, movie</span><br><span class="line">如果你项找到完整版的电影，该加上什么，你懂的。甚至你能看到宝莱坞的电影哦。</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h3 id="5-找出高清电影"><a href="#5-找出高清电影" class="headerlink" title="5.找出高清电影"></a><strong>5.找出高清电影</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">the king&#39;s speech trailer, hd你既然已经知道hd是高清的意思，我额外想要告诉你的信息就是你可以看到结果里面全部时720p或者1080p的电影鸟～</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-看3D电影"><a href="#6-看3D电影" class="headerlink" title="6.看3D电影"></a><strong>6.看3D电影</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">avatar, 3d高清的还不过瘾，你有一副3D眼镜摆在家里？那就来尝试3D的电影吧，看3D电影不一定要3D眼镜哦，详情猛击此处。</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-找出播放列表"><a href="#7-找出播放列表" class="headerlink" title="7.找出播放列表"></a><strong>7.找出播放列表</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bryan adams, playlist你可以找出播放列表和一些相关类型的演员或者是电影，为了保存他们，你可以添加到你的账户中，以备下次观看。详情猛击此处。</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-在-YouTube-中找到长影片"><a href="#8-在-YouTube-中找到长影片" class="headerlink" title="8.在 YouTube 中找到长影片"></a><strong>8.在 YouTube 中找到长影片</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tom and jerry cartoons, long加上 long ，你可以找到20分钟时长以上的影片。</span><br></pre></td></tr></table></figure>
+
+<h3 id="9-标题的精确匹配"><a href="#9-标题的精确匹配" class="headerlink" title="9.标题的精确匹配"></a><strong>9.标题的精确匹配</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">allintitle:&quot;google goes gaga&quot;你可以进行精确地匹配以便于找到一些可能由于地理位置限制而不允许在你们国家看的电影哦。</span><br></pre></td></tr></table></figure>
+
+<h3 id="10-混合条件匹配"><a href="#10-混合条件匹配" class="headerlink" title="10.混合条件匹配"></a><strong>10.混合条件匹配</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ted talks, hd, this month, long</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="二-下载技巧"><a href="#二-下载技巧" class="headerlink" title="二.下载技巧"></a><font color="orange" face="kaiti">二.下载技巧</font></h2><p>1.于 YouTube 网址前方加入 ss</p>
+<p>2.于 YouTube 网址后方加入 my</p>
+]]></content>
+      <categories>
+        <category>其他</category>
+        <category>搜索技巧</category>
+      </categories>
+      <tags>
+        <tag>youtube</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>google必备搜索技巧</title>
+    <url>/post/yZEhjmpm/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+
+<br>
+
+<br>
+
+<h2 id="1-准确搜索"><a href="#1-准确搜索" class="headerlink" title="1. 准确搜索"></a><font color="orange" face="kaiti">1. 准确搜索</font></h2><p>最简单和最有效的搜索方式是给关键词加上双引号，这样搜索引擎会反馈和关键词完全吻合的搜索结果</p>
+<p>例如，搜索 Joe Bloggs 时，搜索引擎会返回同时跟 Joe 和 Bloggs 相关的结果，而搜索 “Joe Bloggs” 时，搜索引擎只返回跟 “Joe Bloggs” 相关的结果。</p>
+<p>准确搜索会排除常见但相关度偏低的信息，会提高搜索的精确性。</p>
+<h2 id="2-排除关键字"><a href="#2-排除关键字" class="headerlink" title="2. 排除关键字"></a><font color="orange" face="kaiti">2. 排除关键字</font></h2><p>如果准确搜索不能得到想要的结果，你可以通过使用<strong>减号</strong>的方式来排除特定词汇。</p>
+<p>例如搜索 Joe Bloggs -jeans 时，搜索引擎会返回与 Joe Bloggs 匹配但已经排除关键字 jeans 的信息。</p>
+<h2 id="3-用-or-进行搜索"><a href="#3-用-or-进行搜索" class="headerlink" title="3. 用 or 进行搜索"></a><font color="orange" face="kaiti">3. 用 or 进行搜索</font></h2><p>默认的文本搜索会返回所有和关键字相关的信息，通过使用 OR，不仅能返回和关键字都相关的信息，还能返回和两个关键字分别相关的信息。在不确定哪个哪个关键字对搜索结果起决定作用时，OR 搜索是很有用的。</p>
+<span id="more"></span>
+
+<h2 id="4-同义词搜索"><a href="#4-同义词搜索" class="headerlink" title="4. 同义词搜索"></a><font color="orange" face="kaiti">4. 同义词搜索</font></h2><p>有时使用不确定的关键词进行搜索反而更有用。如果你不确定使用哪个关键词，可以试试使用同义词搜索。</p>
+<p>例如，你搜索 plumbing ~university，则搜索引擎会返回包含 plumbing universities 和 plumbing colleges 的信息。</p>
+<h2 id="5-站内搜索"><a href="#5-站内搜索" class="headerlink" title="5. 站内搜索"></a><font color="orange" face="kaiti">5. 站内搜索</font></h2><p>很多网站缺乏搜索功能，但你可以通过谷歌等搜索引擎对站内进行搜索。</p>
+<p>在搜索引擎上输入 <strong>site:theguardian.com</strong> 和搜索关键字，搜索引擎会返回网站 <a href="http://theguardian.com/">theguardian.com</a> 内和关键词相关的信息。结合准确搜索，能使这项功能更强大。</p>
+<h2 id="6-星号搜索"><a href="#6-星号搜索" class="headerlink" title="6. 星号搜索"></a><font color="orange" face="kaiti">6. 星号搜索</font></h2><p>类似拼图游戏 Scrabble 的空白方块，在搜索引擎中，不管关键字缺失的是一连串单词中的其中一个还是一个单词的某一部分，都可以使用星号来填补缺失的部分，这同样适用于搜索一篇确定性偏低的文章。</p>
+<p>例如，在搜索引擎输入 architect*，则会得到所有包含 architect、architectural、architecture、architected、architecting 以及其他所有以architect 作为开头的词汇的信息。</p>
+<h2 id="7-两个值之间的搜索"><a href="#7-两个值之间的搜索" class="headerlink" title="7. 两个值之间的搜索"></a><font color="orange" face="kaiti">7. 两个值之间的搜索</font></h2><p>在一定范围内使用限定词来搜索某些东西是一个不错的方法。例如想要找出 1920 至 1950 年间的英国首相，直接在搜索引擎中输入 英国首相 1920.. 1950 即可得出想要的结果。</p>
+<p><strong>记住，数值之间的符号是两个英文句号加一个空格键。</strong></p>
+<h2 id="8-关键字标题搜索"><a href="#8-关键字标题搜索" class="headerlink" title="8. 关键字标题搜索"></a><font color="orange" face="kaiti">8. 关键字标题搜索</font></h2><p>有时，你只想找出所有和关键词相关的网页链接、网页主体(内容)和标题，这时，就可以使用对应的限定词：<strong>inurl:</strong> 、<strong>intext</strong> 和 <strong>intitle</strong>。</p>
+<p>例如，在搜索引擎中输入 intitle: 评测 会得到所有和关键词 评测 相关的网页标题。</p>
+<h2 id="9-准确搜索"><a href="#9-准确搜索" class="headerlink" title="9. 准确搜索"></a><font color="orange" face="kaiti">9. 准确搜索</font></h2><p>相关的限定词可用于搜索相关网站时使用。例如，你仅需在搜索引擎中输入 related:theguardian.com 即可得到所有和 <a href="http://theguardian.com/">theguardian.com</a> 相关的网站的搜索结果。</p>
+<h2 id="10-组合上述搜索技巧"><a href="#10-组合上述搜索技巧" class="headerlink" title="10. 组合上述搜索技巧"></a><font color="orange" face="kaiti">10. 组合上述搜索技巧</font></h2><p>你可以组合使用上述的搜索技巧来缩小或扩大搜索范围。尽管一些搜索技巧不常使用，但是准确搜索和站内搜索的使用范围是很广的。</p>
+<p>随着 Google 等搜索引擎对用户自然语言理解程度的提高，这些搜索技能的适用场景会越来越少，至少这是搜索引擎的共同追求目标。但是在当下，掌握这些搜索技巧还是非常有用的</p>
+]]></content>
+      <categories>
+        <category>其他</category>
+        <category>搜索技巧</category>
+      </categories>
+      <tags>
+        <tag>google</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2020最新面试合集?</title>
+    <url>/post/ZvTmuYBt/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+
+<br>
+
+<br>
+
+<p>Java基础知识面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104390612">地址</a></p>
+<p>Java集合容器面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104588551">地址</a></p>
+<p>Java异常面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104390689">地址</a></p>
+<p>并发编程面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104863992">地址</a></p>
+<p>JVM面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104390752">地址</a></p>
+<p>Spring面试题（2020最新版） <a href="https://thinkwon.blog.csdn.net/article/details/104397516">地址</a></p>
+<p>Spring MVC面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104397427">地址</a></p>
+<p>Spring Boot面试题（2020最新版） <a href="https://thinkwon.blog.csdn.net/article/details/104397299">地址</a></p>
+<p>Spring Cloud面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104397367">地址</a></p>
+<span id="more"></span>
+
+<p>😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀</p>
+<p>MyBatis面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/101292950">地址</a></p>
+<p>Redis面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/103522351">地址</a></p>
+<p>MySQL数据库面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104778621">地址</a></p>
+<p>消息中间件MQ与RabbitMQ面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104588612">地址</a></p>
+<p>Dubbo面试题（2020最新版)<a href="https://thinkwon.blog.csdn.net/article/details/104390006">地址</a></p>
+<p>Linux面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104588679">地址</a></p>
+<p>Tomcat面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104397665">地址</a></p>
+<p>ZooKeeper面试题（2020最新版 )<a href="https://thinkwon.blog.csdn.net/article/details/104397719">地址</a></p>
+<p>Netty面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/104391081">地址</a></p>
+<p>架构设计&amp;分布式&amp;数据结构与算法面试题（2020最新版）<a href="https://thinkwon.blog.csdn.net/article/details/105870730">地址</a></p>
+]]></content>
+      <categories>
+        <category>优质推荐</category>
+        <category>面试</category>
+      </categories>
+      <tags>
+        <tag>面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>个人抽奖程序?</title>
+    <url>/post/WJKdKETk/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+
+<br>
+
+<br>
+
+<h2 id="抽奖程序列表"><a href="#抽奖程序列表" class="headerlink" title="抽奖程序列表"></a><font face="KaiTi" color="#9400D3">抽奖程序列表</font></h2><p><strong><strong><font color="orange">抽取奖品</font></strong></strong></p>
+<p><a href="http://106.75.209.139:5050/">地址1</a></p>
+<p><strong><strong><font color="orange">抽取处罚</font></strong></strong></p>
+<p><a href="http://106.75.209.139:5051/">地址2</a></p>
+<p><strong><strong><font color="orange">抽奖答题</font></strong></strong></p>
+<p><a href="http://106.75.209.139:8080/#/">地址3</a></p>
+]]></content>
+      <categories>
+        <category>优质推荐</category>
+        <category>个人服务</category>
+      </categories>
+      <tags>
+        <tag>个人服务</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>个人写作笔记汇总！</title>
+    <url>/post/SgtOwibX/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+
+<br>
+
+<br>
+
+<h2 id="笔记软件列表"><a href="#笔记软件列表" class="headerlink" title="笔记软件列表"></a><font color="orange" face="kaiti">笔记软件列表</font></h2><table>
+<thead>
+<tr>
+<th>软件</th>
+<th>简介</th>
+<th>Windows</th>
+<th>macOS</th>
+<th>Linux</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://flomoapp.com/"><font color="orange">浮墨笔记</font></a></td>
+<td>像发微博一样记笔记</td>
+<td>:heart:</td>
+<td>:heart:</td>
+<td>:heart:</td>
+</tr>
+<tr>
+<td><a href="https://gitnoteapp.com/zh/"><font color="orange">GitNote</font></a></td>
+<td>基于Git 的跨平台云笔记工具</td>
+<td>:heart:</td>
+<td>:heart:</td>
+<td>:heart:</td>
+</tr>
+<tr>
+<td><a href="https://gridea.dev/"><font color="orange">Gridea</font></a></td>
+<td>静态博客写作客户端</td>
+<td>:heart:</td>
+<td>:heart:</td>
+<td>:heart:</td>
+</tr>
+<tr>
+<td><a href="github.com/onblog/JustWrite"><font color="orange">简单写作</font></a></td>
+<td>一款支持同步滑动预览的跨平台Markdown编辑器</td>
+<td>:heart:</td>
+<td>:heart:</td>
+<td>:heart:</td>
+</tr>
+<tr>
+<td><a href="https://minnote.v8cloud.cn/index.html"><font color="orange">极简笔记</font></a></td>
+<td>一款现代化 Markdown 笔记软件</td>
+<td>:heart:</td>
+<td>:heart:</td>
+<td>:heart:</td>
+</tr>
+<tr>
+<td><a href="https://www.kancloud.cn/"><font color="orange">看云</font></a></td>
+<td>一个现代化文档写作、托管及数字出版平台</td>
+<td>:heart:</td>
+<td>:heart:</td>
+<td>:heart:</td>
+</tr>
+<tr>
+<td><a href="https://marktext.app/"><font color="orange">Mark Text</font></a></td>
+<td>简洁优雅的 Markdown 编辑器</td>
+<td>:heart:</td>
+<td>:heart:</td>
+<td>:heart:</td>
+</tr>
+<tr>
+<td><a href="https://leanote.com/"><font color="orange">蚂蚁笔记</font></a></td>
+<td>蚂蚁笔记 = 笔记 + 博客 + 协作 + 私有云</td>
+<td>:heart:</td>
+<td>:heart:</td>
+<td>:heart:</td>
+</tr>
+<tr>
+<td><a href="https://www.notion.so/"><font color="orange">Notion</font></a></td>
+<td>提供笔记、任务、数据库、看板、维基、日历和提醒等组件的笔记应用</td>
+<td>:heart:</td>
+<td>:heart:</td>
+<td>:heart:</td>
+</tr>
+<tr>
+<td><a href="https://notable.app/"><font color="orange">Notable</font></a></td>
+<td>跨平台 Markdown 本地编辑器</td>
+<td>:heart:</td>
+<td>:heart:</td>
+<td>:heart:</td>
+</tr>
+<tr>
+<td><a href="https://www.onenote.com/download"><font color="orange">OneNote</font></a></td>
+<td>微软出品，记录想法、观点和待办事项</td>
+<td>:heart:</td>
+<td>:heart:</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://simplenote.com/"><font color="orange">Simplenote</font></a></td>
+<td>一款轻量级笔记软件</td>
+<td>:heart:</td>
+<td>:heart:</td>
+<td>:heart:</td>
+</tr>
+<tr>
+<td><a href="https://typora.io/"><font color="orange">Typora</font></a></td>
+<td>一款极简所见即所得的 Markdown 笔记软件</td>
+<td>:heart:</td>
+<td>:heart:</td>
+<td>:heart:</td>
+</tr>
+<tr>
+<td><a href="https://getupnote.com/"><font color="orange">UpNote</font></a></td>
+<td>一款简洁干净的笔记软件</td>
+<td>:heart:</td>
+<td>:heart:</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/Vanessa219/vditor"><font color="orange">Vditor</font></a></td>
+<td>易于使用的 Markdown 编辑器，为适配不同的应用场景而生</td>
+<td>:heart:</td>
+<td>:heart:</td>
+<td>:heart:</td>
+</tr>
+<tr>
+<td><a href="https://www.wolai.com/"><font color="orange">wolai</font></a></td>
+<td>面向未来的云端笔记</td>
+<td>:heart:</td>
+<td>:heart:</td>
+<td>:heart:</td>
+</tr>
+<tr>
+<td><a href="https://www.wiz.cn/zh-cn/"><font color="orange">为知笔记</font></a></td>
+<td>云笔记、个人知识管理、团队协作……</td>
+<td>:heart:</td>
+<td>:heart:</td>
+<td>:heart:</td>
+</tr>
+<tr>
+<td><a href="https://bear.app/cn/"><font color="orange">熊掌记</font></a></td>
+<td>优雅、灵活的写作笔记应用</td>
+<td></td>
+<td>:heart:</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://soft.xiaoshujiang.com/"><font color="orange">小书匠</font></a></td>
+<td>既是一款 Markdown 编辑器，更是一款功能丰富、强大的知识管理工具</td>
+<td>:heart:</td>
+<td>:heart:</td>
+<td>:heart:</td>
+</tr>
+<tr>
+<td><a href="https://staging.yinxiang.com/"><font color="orange">印象笔记</font></a></td>
+<td>工作必备效率应用</td>
+<td>:heart:</td>
+<td>:heart:</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://note.youdao.com/"><font color="orange">有道云笔记</font></a></td>
+<td>专注办公提效的笔记软件</td>
+<td>:heart:</td>
+<td>:heart:</td>
+<td>:heart:</td>
+</tr>
+<tr>
+<td><a href="https://www.yuque.com/install/desktop"><font color="orange">语雀</font></a></td>
+<td>新一代云端知识库</td>
+<td>:heart:</td>
+<td>:heart:</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://focusapp.ink/#/"><font color="orange">专注笔记</font></a></td>
+<td>精美的电子笔记软件</td>
+<td>:heart:</td>
+<td>:heart:</td>
+<td></td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>优质推荐</category>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>写作软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>免费科学上网软件！</title>
+    <url>/post/EDQNZQAi/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+
+<br>
+
+<br>
+
+<p><strong><strong><font color="orange">1.佛跳墙</font></strong></strong></p>
+<p>下载链接:<a href="https://www.qingfengshenzhen.com/cn/">https://www.zhenleguan.com/cn/?a=v84cm<a></a></a></p>
+<p>😌😌😌😌😌😌😌😌😌😌😌😌😌😌😌😌😌😌😌😌😌😌</p>
+<p><strong><strong><font color="orange">2.vpn软件:博哥整理</font></strong></strong></p>
+<p>下载链接:<a href="https://wws.lanzoui.com/i0F61ntn1of">https://wws.lanzoui.com/i0F61ntn1of</a></p>
+<p>密码:9205</p>
+<p><strong><strong><font color="orange">3.最强大的翻墙浏览器下载</font></strong></strong></p>
+<p>下载链接:<a href="https://github.com/Alvin9999/new-pac/wiki">https://github.com/Alvin9999/new-pac/wiki</a></p>
+<p><strong><strong><font color="orange">4.六款免费手机端vpn汇总</font></strong></strong></p>
+<p>下载链接:<a href="https://wwi.lanzoui.com/itHMGndhdab">https://wwi.lanzoui.com/itHMGndhdab</a></p>
+]]></content>
+      <categories>
+        <category>优质推荐</category>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>vpn软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>能推荐优秀的Java方面的up主吗?</title>
+    <url>/post/CsaaXIxr/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+
+<br>
+
+<br>
+
+<h2 id="1、遇见狂神说"><a href="#1、遇见狂神说" class="headerlink" title="1、遇见狂神说"></a><font face="KaiTi" color="#9400D3">1、遇见狂神说</font></h2><p>B站主页：<a href="https://space.bilibili.com/95256449">https://space.bilibili.com/95256449</a></p>
+<p>up主已经投稿多个视频，其中包含了（javase、javaee、springboot、springmvc、springcloud 等spring全家桶、</p>
+<p>各种常用技术：ajax、redis、ElasticSearch、docker、linux等基础视频教程）。</p>
+<p>如果是初学者，可以关注</p>
+<hr>
+<h2 id="2、codesheep–程序羊"><a href="#2、codesheep–程序羊" class="headerlink" title="2、codesheep–程序羊"></a><font face="KaiTi" color="#9400D3">2、codesheep–程序羊</font></h2><p>B站主页：<a href="https://space.bilibili.com/384068749">https://space.bilibili.com/384068749</a></p>
+<p>程序羊，羊哥是我关注的up主中现在粉丝数（40.6万）最多的。平常会更新一些工作中常用的编程技巧、</p>
+<p>各种学习路线不限于java，还有c、c++。还会分享一些常用编程工具!</p>
+<span id="more"></span>
+
+<hr>
+<h2 id="3、三太子敖丙"><a href="#3、三太子敖丙" class="headerlink" title="3、三太子敖丙"></a><font face="KaiTi" color="#9400D3">3、三太子敖丙</font></h2><p>b站主页：<a href="https://space.bilibili.com/130763764">https://space.bilibili.com/130763764</a></p>
+<p>会分享一些工作中常用技术、面试分享（经常会有模拟面试），也会分享一些日常生活</p>
+<hr>
+<h2 id="4、我是程序汪"><a href="#4、我是程序汪" class="headerlink" title="4、我是程序汪"></a><font face="KaiTi" color="#9400D3">4、我是程序汪</font></h2><p>b站主页：<a href="https://space.bilibili.com/83853950">https://space.bilibili.com/83853950</a></p>
+<p>从事编程时间比较长，老程序员了。平常会分享各种面试技巧、也会帮公司招人面试、</p>
+<p>平常也会有很多粉丝模拟面试，周末可能会直播跟粉丝一起交流。更新还是比较快的</p>
+<hr>
+<h2 id="5、Guide哥"><a href="#5、Guide哥" class="headerlink" title="5、Guide哥"></a><font face="KaiTi" color="#9400D3">5、Guide哥</font></h2><p>b站主页：<a href="https://space.bilibili.com/504390397">https://space.bilibili.com/504390397</a></p>
+<p>up主是开源Java学习/面试指南——JavaGuide（75k+Star）的作者。关于java技术面试总结的比较全的。</p>
+<p>平常会分享一些编程技巧、生活日程。偶尔也会撒撒狗粮</p>
+<hr>
+<h2 id="6、心静思远-9527"><a href="#6、心静思远-9527" class="headerlink" title="6、心静思远-9527"></a><font face="KaiTi" color="#9400D3">6、心静思远-9527</font></h2><p>b站主页：<a href="https://space.bilibili.com/394607967">https://space.bilibili.com/394607967</a></p>
+<p>会分享一些面试中经常问到的技术知识</p>
+<hr>
+<h2 id="7、黎曼的猜想"><a href="#7、黎曼的猜想" class="headerlink" title="7、黎曼的猜想"></a><font face="KaiTi" color="#9400D3">7、黎曼的猜想</font></h2><p>b站主页：<a href="https://space.bilibili.com/14163840">https://space.bilibili.com/14163840</a></p>
+<p>up主会上传各种培训机构的视频教程（包括黑马、尚硅谷等）。需要下载视频的可以关注。关注后不再会为找视频教程发愁了。。。</p>
+]]></content>
+      <categories>
+        <category>优质推荐</category>
+        <category>up主</category>
+      </categories>
+      <tags>
+        <tag>B站up主</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>国内顶级团队博客推荐二</title>
+    <url>/post/rxGzc12g/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+
+<h2 id="2、阮一峰的网络日志"><a href="#2、阮一峰的网络日志" class="headerlink" title="2、阮一峰的网络日志"></a>2、阮一峰的网络日志</h2><ul>
+<li>地 址: <a href="http://www.ruanyifeng.com/blog/">阮一峰的网络日志</a></li>
+<li>简 介：大神阮一峰，博客风格真正做到深入浅出。</li>
+<li>推荐指数：⭐⭐⭐⭐⭐</li>
+</ul>
+<p><img src="https://pic2.zhimg.com/80/v2-82866264b7eff2f3d6edec2e8ce96825_720w.jpg" alt="img"></p>
+<span id="more"></span>
+
+<h2 id="3、Spring-Boot中文导航"><a href="#3、Spring-Boot中文导航" class="headerlink" title="3、Spring Boot中文导航"></a>3、Spring Boot中文导航</h2><ul>
+<li>地 址: <a href="http://springboot.fun/">Spring Boot中文导航</a></li>
+<li>简 介：汇总了一些比较优秀的Spring Boot博客、开源作品等。</li>
+<li>推荐指数：⭐⭐⭐⭐</li>
+</ul>
+<p><img src="https://pic4.zhimg.com/80/v2-1fd28f2fd3c3b77571f0fb034daa7b93_720w.jpg" alt="img"></p>
+<h2 id="4、Spring-Cloud中文导航"><a href="#4、Spring-Cloud中文导航" class="headerlink" title="4、Spring Cloud中文导航"></a>4、Spring Cloud中文导航</h2><ul>
+<li>地 址: <a href="http://springcloud.fun/">Spring Cloud中文导航</a></li>
+<li>简 介：汇总了一些比较优秀的Spring Cloud 博客、开源作品等。</li>
+<li>推荐指数：⭐⭐⭐⭐</li>
+</ul>
+<p><img src="https://pic4.zhimg.com/80/v2-25c931d797660cbb8ef4c4afb2dd88eb_720w.jpg" alt="img"></p>
+<p>上面两个索引里已经有了一些比较优秀的个人博主的相关博客地址，所以里面出现的个人博客，后面就不再列出了。</p>
+<h2 id="5、Web前端导航"><a href="#5、Web前端导航" class="headerlink" title="5、Web前端导航"></a>5、Web前端导航</h2><ul>
+<li>地 址: <a href="http://www.alloyteam.com/nav/">Web前端导航</a></li>
+<li>简 介：比较全的Web前端导航，包括 团队组织 、开发社区 、 前端门户、框架类库 等等网站的导航。</li>
+<li>推荐指数：⭐⭐⭐⭐</li>
+</ul>
+<p><img src="https://pic3.zhimg.com/80/v2-541bace02afbbe20c9e60c0239551bfe_720w.jpg" alt="img"></p>
+<h2 id="6、Spring-For-All"><a href="#6、Spring-For-All" class="headerlink" title="6、Spring For All"></a>6、Spring For All</h2><ul>
+<li>地 址: <a href="http://www.spring4all.com/">Spring For All</a></li>
+<li>简 介：目标是做最专业的的民间Sptng组织。</li>
+<li>推荐指数：⭐⭐⭐⭐</li>
+</ul>
+<p><img src="https://pic2.zhimg.com/80/v2-2b55dd112c04d9c7c117b271db1af071_720w.jpg" alt="img"></p>
+<h2 id="7、廖雪峰的官方网站"><a href="#7、廖雪峰的官方网站" class="headerlink" title="7、廖雪峰的官方网站"></a>7、廖雪峰的官方网站</h2><ul>
+<li>地 址: <a href="https://www.liaoxuefeng.com/">廖雪峰的官方网站</a></li>
+<li>简 介：廖雪峰老师的网站，有一些不错的入门教程。</li>
+<li>推荐指数：⭐⭐⭐</li>
+</ul>
+<p><img src="https://pic2.zhimg.com/80/v2-d09f32a7a161e2ef56f8b4bfcf2f9e4d_720w.jpg" alt="img"></p>
+<h2 id="8、bugstack"><a href="#8、bugstack" class="headerlink" title="8、bugstack"></a>8、bugstack</h2><ul>
+<li>地 址: <a href="https://bugstack.cn/">bugstack</a></li>
+<li>简 介：博主是京东架构师，产出非常丰富，包括框架、源码、设计模式等。</li>
+<li>推荐指数：⭐⭐⭐</li>
+</ul>
+<p><img src="https://pic4.zhimg.com/80/v2-fa431c6c001f7b3c7c9fbc22388f8af7_720w.jpg" alt="img"></p>
+<h2 id="9、Java技术驿站"><a href="#9、Java技术驿站" class="headerlink" title="9、Java技术驿站"></a>9、Java技术驿站</h2><ul>
+<li>地 址: <a href="http://cmsblogs.com/">Java技术驿站</a></li>
+<li>简 介：有很多不错的Java系列文章。</li>
+<li>推荐指数：⭐⭐⭐</li>
+</ul>
+<h2 id="10、酷壳"><a href="#10、酷壳" class="headerlink" title="10、酷壳"></a>10、酷壳</h2><ul>
+<li>地 址: <a href="https://coolshell.cn/">酷壳</a></li>
+<li>简 介：可以了解陈皓，是个很有个性的人。</li>
+<li>推荐指数：⭐⭐⭐</li>
+</ul>
+<p><img src="https://pic4.zhimg.com/80/v2-a4b8baa493f78719fa9ce6ebcdc35ca3_720w.jpg" alt="img"></p>
+<h2 id="11、床长人工智能教程"><a href="#11、床长人工智能教程" class="headerlink" title="11、床长人工智能教程"></a>11、床长人工智能教程</h2><ul>
+<li>地 址: <a href="https://www.captainbed.net/blog-neo/">床长人工智能教程</a></li>
+<li>简 介：不搞人工智能也可以看看，写的很有意思的教程，可以作为科普看看。</li>
+<li>推荐指数：⭐⭐⭐</li>
+</ul>
+<p><img src="https://pic2.zhimg.com/80/v2-8f2065f66890eeb6194a089a4f243d5d_720w.jpg" alt="img"></p>
+<h2 id="12、五分钟学算法"><a href="#12、五分钟学算法" class="headerlink" title="12、五分钟学算法"></a>12、五分钟学算法</h2><ul>
+<li>地 址: <a href="https://www.cxyxiaowu.com/">五分钟学算法-一个不错的算法网站！</a></li>
+<li>简 介：程序员学习网站，收集了和程序员学习相关的各种教程和资料，致力于将数据结构与算法讲清楚！</li>
+<li>推荐指数：⭐⭐⭐⭐</li>
+</ul>
+<p><img src="https://pic3.zhimg.com/80/v2-a79f762b510b7b85f7b058316e94c482_720w.jpg" alt="img"></p>
+<h2 id="13、AlgoMooc"><a href="#13、AlgoMooc" class="headerlink" title="13、AlgoMooc"></a>13、AlgoMooc</h2><ul>
+<li>地 址: <a href="https://www.algomooc.com/">AlgoMooc-一个专属于程序员的平台，和大家一起刷题</a></li>
+<li>简 介：图解 LeetCode 算法题</li>
+<li>推荐指数：⭐⭐⭐</li>
+</ul>
+<p><img src="https://pic2.zhimg.com/80/v2-edaf7379ff84f3516c3afcd6c2d65275_720w.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>优质推荐</category>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>团队博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>国内顶级团队博客推荐</title>
+    <url>/post/rxGzcXCP/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+
+<h4 id="一-美团技术团队"><a href="#一-美团技术团队" class="headerlink" title="一.美团技术团队"></a>一.美团技术团队</h4><p><img src="https://pic.baixiongz.com/uploads/2021/04/17/e27c20f13ac44.png"></p>
+<p>网址:<a href="https://tech.meituan.com/">https://tech.meituan.com/</a></p>
+<span id="more"></span>
+
+<hr>
+<br>
+
+<br>
+
+<h4 id="二-阿里技术公众号"><a href="#二-阿里技术公众号" class="headerlink" title="二.阿里技术公众号"></a>二.阿里技术公众号</h4><p><img src="https://pic.baixiongz.com/uploads/2021/04/17/fe9b57f6eb249.png"></p>
+<hr>
+
+<br>
+
+<br>
+
+<h4 id="三-ThoughtWorks-洞见"><a href="#三-ThoughtWorks-洞见" class="headerlink" title="三.ThoughtWorks 洞见"></a>三.ThoughtWorks 洞见</h4><p><img src="https://pic.baixiongz.com/uploads/2021/04/17/af655533b1b80.png"></p>
+<p>网址:<a href="https://insights.thoughtworks.cn/">https://insights.thoughtworks.cn/</a></p>
+<hr>
+
+<br>
+
+<br>
+
+<h4 id="四-小米技术团队"><a href="#四-小米技术团队" class="headerlink" title="四.小米技术团队"></a>四.小米技术团队</h4><p><img src="https://pic.baixiongz.com/uploads/2021/04/17/6dc9455832298.png"></p>
+<p>网址:<a href="https://xiaomi-info.github.io//">https://xiaomi-info.github.io/</a></p>
+<hr>
+
+<br>
+
+<br>
+
+<h4 id="五-360-核心安全技术博客"><a href="#五-360-核心安全技术博客" class="headerlink" title="五.360 核心安全技术博客"></a>五.360 核心安全技术博客</h4><p><img src="https://pic.baixiongz.com/uploads/2021/04/17/af84721ab83d1.png"></p>
+<p>网址:<a href="https://blogs.360.cn/post/analysis-of-RemRAT.html">https://blogs.360.cn/post/analysis-of-RemRAT.html</a></p>
+<hr>
+
+<br>
+
+<br>
+
+<h4 id="六-字节跳动技术团队"><a href="#六-字节跳动技术团队" class="headerlink" title="六.字节跳动技术团队"></a>六.字节跳动技术团队</h4><p>网址:<a href="https://juejin.cn/user/1838039172387262/posts">https://juejin.cn/user/1838039172387262/posts</a></p>
+<hr>
+
+<br>
+
+<br>
+
+<h4 id="七-伴鱼技术团队"><a href="#七-伴鱼技术团队" class="headerlink" title="七.伴鱼技术团队"></a>七.<a href="https://tech.ipalfish.com/blog/">伴鱼技术团队</a></h4><p><img src="https://pic.baixiongz.com/uploads/2021/04/17/4046ec92dc9b0.png"></p>
+<p>网址:<a href="https://tech.ipalfish.com/blog/">https://tech.ipalfish.com/blog/</a></p>
+<hr>
+
+<br>
+
+<br>
+
+]]></content>
+      <categories>
+        <category>优质推荐</category>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>团队博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>掌握notion让你的工作效率起飞</title>
+    <url>/post/cvZgXago/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+
+<br>
+
+<br>
+
+<h2 id="notion的使用"><a href="#notion的使用" class="headerlink" title="notion的使用"></a>notion的使用</h2><iframe style="overflow:auto;" width="100%" height="100%" src="//player.bilibili.com/player.html?aid=46349671&bvid=BV1Zb411H7xC&cid=81208364&page=1" scrolling="auto" border="0" frameborder="none" framespacing="0" allowfullscreen="true">
+</iframe>
+
+]]></content>
+      <categories>
+        <category>优质推荐</category>
+        <category>视频</category>
+      </categories>
+      <tags>
+        <tag>写作软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>5个 Chrome必备技巧【秘籍】！</title>
+    <url>/post/tIPSFuYY/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+
+<br>
+
+<br>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.Ctrl+Shift+T 恢复关闭书签</span><br><span class="line"></span><br><span class="line">2.Ctrl+Shift+D 快速保存页面链接到书签</span><br><span class="line"></span><br><span class="line">3.右键向群组添加标签页—标签分组</span><br><span class="line"></span><br><span class="line">4.右键为页面创建二维码</span><br><span class="line"></span><br><span class="line">5.windows+?键盘 调用谷歌自带表情</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>其他</category>
+        <category>搜索技巧</category>
+      </categories>
+      <tags>
+        <tag>google</tag>
       </tags>
   </entry>
 </search>
