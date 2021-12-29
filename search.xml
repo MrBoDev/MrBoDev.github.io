@@ -47,6 +47,20 @@
       </tags>
   </entry>
   <entry>
+    <title>使用python开发简易版端口扫描</title>
+    <url>/post/qnSQnJMi/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># -*- coding:utf-8 -*-</span><br><span class="line">import socket</span><br><span class="line">from threading import Thread</span><br><span class="line">import time</span><br><span class="line">result &#x3D; []</span><br><span class="line">def scaner(host, port):</span><br><span class="line">	&quot;&quot;&quot;</span><br><span class="line">	author:张博</span><br><span class="line">	端口扫描函数</span><br><span class="line">	如果连接成功,把端口放入result中</span><br><span class="line">	否则关闭连接</span><br><span class="line">	:param host:</span><br><span class="line">	:param port:</span><br><span class="line">	:return:</span><br><span class="line">	&quot;&quot;&quot;</span><br><span class="line">	sockfd &#x3D; socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line">	sockfd.settimeout(0.1)</span><br><span class="line">	print(f&#39;正在检测&#123;host&#125;:&#123;port&#125;...&#39;)</span><br><span class="line">	tryConn &#x3D; sockfd.connect_ex((host, port))</span><br><span class="line">	if not tryConn:  # 返回0表示连接成功</span><br><span class="line">		result.append(port)</span><br><span class="line">	else:</span><br><span class="line">		sockfd.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">	host &#x3D; input(&#39;请输入IP地址：&#39;)</span><br><span class="line">	while True:  # 尝试对端口范围进行验证</span><br><span class="line">		startPort &#x3D; int(input(&#39;请输入起始扫描端口：&#39;))</span><br><span class="line">		endPort &#x3D; int(input(&#39;请输入终止扫描端口：&#39;))</span><br><span class="line">		if startPort &gt;&#x3D; 65536 or endPort &gt;&#x3D; 65536:</span><br><span class="line">			print(&#39;端口号不能大于65535&#39;)</span><br><span class="line">		else:</span><br><span class="line">			break</span><br><span class="line">	startTime &#x3D; time.time()</span><br><span class="line">	threads &#x3D; []  # 线程列表</span><br><span class="line">	for p in range(startPort, endPort + 1):</span><br><span class="line">		t &#x3D; Thread(target&#x3D;scaner, args&#x3D;(host, p))</span><br><span class="line">		threads.append(t)</span><br><span class="line">		t.start()</span><br><span class="line">	for t in threads:</span><br><span class="line">		t.join()</span><br><span class="line">	print(&#39;端口扫描完毕，端口开放结果如下&#39;)</span><br><span class="line">	result.sort()  # 排序</span><br><span class="line">	for p in result:  # 打印结果</span><br><span class="line">		print(f&#39;&#123;host&#125;:&#123;p&#125;&#39;)</span><br><span class="line">	endTime &#x3D; time.time()  # 计时</span><br><span class="line">	print(f&#39;本次端口扫描用时&#123;endTime-startTime&#125;秒&#39;)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>技术文章</category>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>博哥整理秒面试题库?</title>
     <url>/post/ZcsxUcnx/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
@@ -1361,27 +1375,6 @@
       </tags>
   </entry>
   <entry>
-    <title>掌握notion让你的工作效率起飞</title>
-    <url>/post/cvZgXago/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
-
-<br>
-
-<br>
-
-<h2 id="notion的使用"><a href="#notion的使用" class="headerlink" title="notion的使用"></a>notion的使用</h2><iframe style="overflow:auto;" width="100%" height="100%" src="//player.bilibili.com/player.html?aid=46349671&bvid=BV1Zb411H7xC&cid=81208364&page=1" scrolling="auto" border="0" frameborder="none" framespacing="0" allowfullscreen="true">
-</iframe>
-
-]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>视频</category>
-      </categories>
-      <tags>
-        <tag>写作软件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>5个 Chrome必备技巧【秘籍】！</title>
     <url>/post/tIPSFuYY/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
@@ -1407,6 +1400,27 @@
       </categories>
       <tags>
         <tag>google</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>掌握notion让你的工作效率起飞</title>
+    <url>/post/cvZgXago/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+
+<br>
+
+<br>
+
+<h2 id="notion的使用"><a href="#notion的使用" class="headerlink" title="notion的使用"></a>notion的使用</h2><iframe style="overflow:auto;" width="100%" height="100%" src="//player.bilibili.com/player.html?aid=46349671&bvid=BV1Zb411H7xC&cid=81208364&page=1" scrolling="auto" border="0" frameborder="none" framespacing="0" allowfullscreen="true">
+</iframe>
+
+]]></content>
+      <categories>
+        <category>优质推荐</category>
+        <category>视频</category>
+      </categories>
+      <tags>
+        <tag>写作软件</tag>
       </tags>
   </entry>
 </search>
