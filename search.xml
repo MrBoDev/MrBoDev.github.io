@@ -124,81 +124,6 @@
       </tags>
   </entry>
   <entry>
-    <title>windows查杀进程！</title>
-    <url>/post/reZknLns/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
-
-<br>
-
-<br>
-
-
-
-<h2 id="一-打开命令窗口-以管理员身份运行"><a href="#一-打开命令窗口-以管理员身份运行" class="headerlink" title="一.打开命令窗口(以管理员身份运行)"></a><font face="KaiTi" color="#9400D3">一.打开命令窗口(以管理员身份运行)</font></h2><p>WIN+R 组合键打开</p>
-<p><img src="https://pic.rmb.bdstatic.com/bjh/bfc2c02f475c6062042010cebf3277e9.png"></p>
-<hr>
-
-<br>
-
-<br>
-
-<h2 id="二-查找所有运行的端口"><a href="#二-查找所有运行的端口" class="headerlink" title="二.查找所有运行的端口"></a><font face="KaiTi" color="#9400D3">二.查找所有运行的端口</font></h2><p><strong>输入命令：</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -ano</span><br></pre></td></tr></table></figure>
-
-<p>该命令列出所有端口的使用情况。</p>
-<p>在列表中我们观察被占用的端口，比如是 1224，首先找到它。</p>
-<p><img src="https://pic.rmb.bdstatic.com/bjh/f3699b4c4187a7700fc81b685fa6952d.png"></p>
-<hr>
-
-<br>
-
-<br>
-
-<h2 id="三-查看端口对应的pid"><a href="#三-查看端口对应的pid" class="headerlink" title="三.查看端口对应的pid"></a><font face="KaiTi" color="#9400D3">三.查看端口对应的pid</font></h2><p>输入命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -aon|findstr <span class="string">&quot;8081&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>回车执行该命令，最后一位数字就是 PID, 这里是 9088。</p>
-<p><img src="https://pic.rmb.bdstatic.com/bjh/1ca81fb7f7a6512c27eb97548cc5d028.png"></p>
-<hr>
-
-<br>
-
-<br>
-
-<h2 id="四-查看指定-PID-的进程"><a href="#四-查看指定-PID-的进程" class="headerlink" title="四.查看指定 PID 的进程"></a><font face="KaiTi" color="#9400D3">四.查看指定 PID 的进程</font></h2><p>继续输入命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tasklist|findstr <span class="string">&quot;9088&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>回车执行该命令。</p>
-<p>查看是哪个进程或者程序占用了 8081 端口，结果是：node.exe。</p>
-<p><img src="https://pic.rmb.bdstatic.com/bjh/f59c7632585a5ddab97e12abc4b1f539.png"></p>
-<hr>
-
-<br>
-
-<br>
-
-<h2 id="五-结束进程"><a href="#五-结束进程" class="headerlink" title="五.结束进程"></a><font face="KaiTi" color="#9400D3">五.结束进程</font></h2><p>强制（/F参数）杀死 pid 为 9088 的所有进程包括子进程（/T参数）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">taskkill /T /F /PID 9088 </span><br></pre></td></tr></table></figure>
-
-<p>或者是我们打开任务管理器，切换到进程选项卡，在PID一列查看9088对应的进程是谁，如果看不到PID这一列,如下图：</p>
-<p><img src="https://pic.rmb.bdstatic.com/bjh/efc96c5922a14263e76a8e63173ced92.png"></p>
-<hr>
-
-<br>
-
-<br>
-
-
-
-]]></content>
-      <categories>
-        <category>技术文章</category>
-      </categories>
-      <tags>
-        <tag>windows命令</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>百度网盘不限速下载！</title>
     <url>/post/YSupWwQV/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
@@ -1911,6 +1836,26 @@
       </tags>
   </entry>
   <entry>
+    <title>掌握notion让你的工作效率起飞</title>
+    <url>/post/cvZgXago/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
+
+<br>
+
+<br>
+
+<h2 id="notion的使用"><a href="#notion的使用" class="headerlink" title="notion的使用"></a>notion的使用</h2><iframe style="overflow:auto;" width="100%" height="100%" src="//player.bilibili.com/player.html?aid=46349671&bvid=BV1Zb411H7xC&cid=81208364&page=1" scrolling="auto" border="0" frameborder="none" framespacing="0" allowfullscreen="true">
+</iframe>
+]]></content>
+      <categories>
+        <category>优质推荐</category>
+        <category>视频</category>
+      </categories>
+      <tags>
+        <tag>写作软件</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>5个 Chrome必备技巧【秘籍】！</title>
     <url>/post/tIPSFuYY/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
@@ -1936,26 +1881,6 @@
       </categories>
       <tags>
         <tag>google</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>掌握notion让你的工作效率起飞</title>
-    <url>/post/cvZgXago/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
-
-<br>
-
-<br>
-
-<h2 id="notion的使用"><a href="#notion的使用" class="headerlink" title="notion的使用"></a>notion的使用</h2><iframe style="overflow:auto;" width="100%" height="100%" src="//player.bilibili.com/player.html?aid=46349671&bvid=BV1Zb411H7xC&cid=81208364&page=1" scrolling="auto" border="0" frameborder="none" framespacing="0" allowfullscreen="true">
-</iframe>
-]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>视频</category>
-      </categories>
-      <tags>
-        <tag>写作软件</tag>
       </tags>
   </entry>
 </search>
