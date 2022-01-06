@@ -49,6 +49,53 @@
       </tags>
   </entry>
   <entry>
+    <title>使用potplayer轻松播放中国所有电视直播频道！</title>
+    <url>/post/upvEVyck/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><br>
+
+<br>
+
+<h2 id="一-下载potplayer"><a href="#一-下载potplayer" class="headerlink" title="一.下载potplayer"></a><font color="orange" face="kaiti">一.下载potplayer</font></h2><p><a href="https://disk.onji.cn/s/8v6Lso">下载地址</a></p>
+<h2 id="二-导入国内直播源地址"><a href="#二-导入国内直播源地址" class="headerlink" title="二.导入国内直播源地址"></a><font color="orange" face="kaiti">二.导入国内直播源地址</font></h2><p>直播源码地址:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;iptv-org.github.io&#x2F;iptv&#x2F;countries&#x2F;cn.m3u</span><br></pre></td></tr></table></figure>
+
+<p><strong>1.打开potplay播放器</strong></p>
+<p><strong>2.右键打开连接，将直播源地址粘贴</strong></p>
+<p><strong>3.测试观看所有电视直播频道</strong></p>
+]]></content>
+      <categories>
+        <category>优质推荐</category>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>视频播放</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>win10桌面美化！</title>
+    <url>/post/BuwjfYzj/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><br>
+
+<br>
+
+<h2 id="桌面美化需要的软件"><a href="#桌面美化需要的软件" class="headerlink" title="桌面美化需要的软件"></a><font color="orange" face="kaiti">桌面美化需要的软件</font></h2><p><strong>(1)任务栏透明</strong></p>
+<p><a href="https://disk.onji.cn/s/rl3Mcb">下载连接</a></p>
+<p><strong>(2)动态桌面软件</strong></p>
+<p><a href="https://disk.onji.cn/s/bNOrtg">下载连接</a></p>
+<p><strong>(3)博哥提供的20个动态桌面素材</strong></p>
+<p><a href="https://mmitacnz2-my.sharepoint.com/personal/bhydev_ceo_co_ax/_layouts/15/onedrive.aspx?id=/personal/bhydev_ceo_co_ax/Documents/%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6/%E8%BD%AF%E4%BB%B6/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/%E7%BE%8E%E5%8C%96%E6%A1%8C%E9%9D%A2/20%E4%B8%AA%E9%AB%98%E6%B8%85%E5%8A%A8%E6%80%81%E6%A1%8C%E9%9D%A2/%E5%8A%A8%E6%80%81%E6%A1%8C%E9%9D%A2.7z&parent=/personal/bhydev_ceo_co_ax/Documents/%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6/%E8%BD%AF%E4%BB%B6/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/%E7%BE%8E%E5%8C%96%E6%A1%8C%E9%9D%A2/20%E4%B8%AA%E9%AB%98%E6%B8%85%E5%8A%A8%E6%80%81%E6%A1%8C%E9%9D%A2">下载连接</a></p>
+<p><strong>(4)10个好用的壁纸素材网站</strong></p>
+<p>.<a href="https://www.jianshu.com/p/1454bcdff9f6">https://www.jianshu.com/p/1454bcdff9f6</a></p>
+]]></content>
+      <categories>
+        <category>优质推荐</category>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>win10</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用python开发简易版端口扫描</title>
     <url>/post/qnSQnJMi/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># -*- coding:utf-8 -*-</span><br><span class="line">import socket</span><br><span class="line">from threading import Thread</span><br><span class="line">import time</span><br><span class="line">result &#x3D; []</span><br><span class="line">def scaner(host, port):</span><br><span class="line">	&quot;&quot;&quot;</span><br><span class="line">	author:张博</span><br><span class="line">	端口扫描函数</span><br><span class="line">	如果连接成功,把端口放入result中</span><br><span class="line">	否则关闭连接</span><br><span class="line">	:param host:</span><br><span class="line">	:param port:</span><br><span class="line">	:return:</span><br><span class="line">	&quot;&quot;&quot;</span><br><span class="line">	sockfd &#x3D; socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line">	sockfd.settimeout(0.1)</span><br><span class="line">	print(f&#39;正在检测&#123;host&#125;:&#123;port&#125;...&#39;)</span><br><span class="line">	tryConn &#x3D; sockfd.connect_ex((host, port))</span><br><span class="line">	if not tryConn:  # 返回0表示连接成功</span><br><span class="line">		result.append(port)</span><br><span class="line">	else:</span><br><span class="line">		sockfd.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">	host &#x3D; input(&#39;请输入IP地址：&#39;)</span><br><span class="line">	while True:  # 尝试对端口范围进行验证</span><br><span class="line">		startPort &#x3D; int(input(&#39;请输入起始扫描端口：&#39;))</span><br><span class="line">		endPort &#x3D; int(input(&#39;请输入终止扫描端口：&#39;))</span><br><span class="line">		if startPort &gt;&#x3D; 65536 or endPort &gt;&#x3D; 65536:</span><br><span class="line">			print(&#39;端口号不能大于65535&#39;)</span><br><span class="line">		else:</span><br><span class="line">			break</span><br><span class="line">	startTime &#x3D; time.time()</span><br><span class="line">	threads &#x3D; []  # 线程列表</span><br><span class="line">	for p in range(startPort, endPort + 1):</span><br><span class="line">		t &#x3D; Thread(target&#x3D;scaner, args&#x3D;(host, p))</span><br><span class="line">		threads.append(t)</span><br><span class="line">		t.start()</span><br><span class="line">	for t in threads:</span><br><span class="line">		t.join()</span><br><span class="line">	print(&#39;端口扫描完毕，端口开放结果如下&#39;)</span><br><span class="line">	result.sort()  # 排序</span><br><span class="line">	for p in result:  # 打印结果</span><br><span class="line">		print(f&#39;&#123;host&#125;:&#123;p&#125;&#39;)</span><br><span class="line">	endTime &#x3D; time.time()  # 计时</span><br><span class="line">	print(f&#39;本次端口扫描用时&#123;endTime-startTime&#125;秒&#39;)</span><br></pre></td></tr></table></figure>
@@ -65,7 +112,7 @@
   <entry>
     <title>博哥整理秒面试题库?</title>
     <url>/post/ZcsxUcnx/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
 
 <p><a href="https://www.aliyundrive.com/s/XWG23zFR5yq">面试题库下载地址</a></p>
 ]]></content>
@@ -80,7 +127,7 @@
   <entry>
     <title>个人创作文档?</title>
     <url>/post/OSgtRcft/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
 
 <br>
 
@@ -100,7 +147,7 @@
   <entry>
     <title>idea26个常用设置</title>
     <url>/post/tSBLZShQ/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
 
 <h1 id="「硬核干货」总结-IDEA-开发的26个常用设置"><a href="#「硬核干货」总结-IDEA-开发的26个常用设置" class="headerlink" title="「硬核干货」总结 IDEA 开发的26个常用设置"></a>「硬核干货」总结 IDEA 开发的26个常用设置</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>程序员对待IDE都是虔诚的，经常因为谁是最好的IDE而在江湖上掀起波澜</strong>，曾经我也是。</p>
 <p><img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/19/1705d918ec24cfdd~tplv-t2oaga2asx-watermark.awebp" alt="img"></p>
@@ -290,7 +337,7 @@
   <entry>
     <title>idea快捷键</title>
     <url>/post/yHUpVfDj/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
 
 <p><strong><font color="orange" face="kaiti">1.编辑类快捷键</font></strong></p>
 <table>
@@ -698,7 +745,7 @@
   <entry>
     <title>运维学习路线图</title>
     <url>/post/ydXKXUUk/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
 
 
 
@@ -715,7 +762,7 @@
   <entry>
     <title>后端学习路线图</title>
     <url>/post/bmQjVybF/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
 
 
 
@@ -732,7 +779,7 @@
   <entry>
     <title>前端学习路线图</title>
     <url>/post/SraNXKVe/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
 
 
 
@@ -749,7 +796,7 @@
   <entry>
     <title>github搜索技巧</title>
     <url>/post/DvyIdwpp/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
 
 <br>
 
@@ -813,7 +860,7 @@
   <entry>
     <title>youtube搜索下载技巧</title>
     <url>/post/DgSnWkfD/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
 
 <br>
 
@@ -856,7 +903,7 @@
   <entry>
     <title>google必备搜索技巧</title>
     <url>/post/yZEhjmpm/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
 
 <br>
 
@@ -895,7 +942,7 @@
   <entry>
     <title>2020最新面试合集?</title>
     <url>/post/ZvTmuYBt/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
 
 <br>
 
@@ -935,7 +982,7 @@
   <entry>
     <title>个人抽奖程序?</title>
     <url>/post/WJKdKETk/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
 
 <br>
 
@@ -959,7 +1006,7 @@
   <entry>
     <title>个人写作笔记汇总！</title>
     <url>/post/SgtOwibX/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
 
 <br>
 
@@ -1149,7 +1196,7 @@
   <entry>
     <title>免费科学上网软件！</title>
     <url>/post/EDQNZQAi/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
 
 <br>
 
@@ -1177,7 +1224,7 @@
   <entry>
     <title>能推荐优秀的Java方面的up主吗?</title>
     <url>/post/CsaaXIxr/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
 
 <br>
 
@@ -1222,7 +1269,7 @@
   <entry>
     <title>国内顶级团队博客推荐二</title>
     <url>/post/rxGzc12g/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
 
 <h2 id="2、阮一峰的网络日志"><a href="#2、阮一峰的网络日志" class="headerlink" title="2、阮一峰的网络日志"></a>2、阮一峰的网络日志</h2><ul>
 <li>地 址: <a href="http://www.ruanyifeng.com/blog/">阮一峰的网络日志</a></li>
@@ -1310,7 +1357,7 @@
   <entry>
     <title>国内顶级团队博客推荐</title>
     <url>/post/rxGzcXCP/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
 
 <h4 id="一-美团技术团队"><a href="#一-美团技术团队" class="headerlink" title="一.美团技术团队"></a>一.美团技术团队</h4><p><img src="https://pic.baixiongz.com/uploads/2021/04/17/e27c20f13ac44.png"></p>
 <p>网址:<a href="https://tech.meituan.com/">https://tech.meituan.com/</a></p>
@@ -1377,9 +1424,29 @@
       </tags>
   </entry>
   <entry>
+    <title>掌握notion让你的工作效率起飞</title>
+    <url>/post/cvZgXago/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
+
+<br>
+
+<br>
+
+<h2 id="notion的使用"><a href="#notion的使用" class="headerlink" title="notion的使用"></a>notion的使用</h2><iframe style="overflow:auto;" width="100%" height="100%" src="//player.bilibili.com/player.html?aid=46349671&bvid=BV1Zb411H7xC&cid=81208364&page=1" scrolling="auto" border="0" frameborder="none" framespacing="0" allowfullscreen="true">
+</iframe>
+]]></content>
+      <categories>
+        <category>优质推荐</category>
+        <category>视频</category>
+      </categories>
+      <tags>
+        <tag>写作软件</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>5个 Chrome必备技巧【秘籍】！</title>
     <url>/post/tIPSFuYY/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
 
 <br>
 
@@ -1402,27 +1469,6 @@
       </categories>
       <tags>
         <tag>google</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>掌握notion让你的工作效率起飞</title>
-    <url>/post/cvZgXago/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://pic.baixiongz.com/uploads/2021/04/13/43b3db7c204a5.png" height="40px" width="150px" style="float:right">
-
-<br>
-
-<br>
-
-<h2 id="notion的使用"><a href="#notion的使用" class="headerlink" title="notion的使用"></a>notion的使用</h2><iframe style="overflow:auto;" width="100%" height="100%" src="//player.bilibili.com/player.html?aid=46349671&bvid=BV1Zb411H7xC&cid=81208364&page=1" scrolling="auto" border="0" frameborder="none" framespacing="0" allowfullscreen="true">
-</iframe>
-
-]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>视频</category>
-      </categories>
-      <tags>
-        <tag>写作软件</tag>
       </tags>
   </entry>
 </search>
