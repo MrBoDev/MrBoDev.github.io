@@ -1,34 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>高清mv缓解学习工作压力</title>
-    <url>/post/iumZnoKK/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://s6.jpg.cm/2022/07/01/Pq2I24.png" height="80px" width="260px" style="float:right">
-
-<br>
-
-<br>
-
-
-
-<div class="submenu">
-    <input type="hidden" name="parentName" id="parentName" value="老王">
-    <div style="top: 0px;  position: relative; background-color: white; width: 100%;height:700px;margin:0px auto;border: 1px solid #cccccc;" id="iframeCont" class="iframeCont">
-        <div align="center" style="height: 100%;background-color: white;">
-            <iframe style="background-color: floralwhite;margin-top:0px;" width="100%" height="100%" scrolling="no" src="https://vxhz3bfyct.feishu.cn/file/boxcnWCCr5WjTPUUcLOy53mUp3m" frameborder="0" sandbox="allow-scripts allow-popups allow-top-navigation-by-user-activation allow-forms allow-same-origin" allowfullscreen loading="lazy">
-            </iframe>
-        </div>
-    </div>
-</div>]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>高清电影榜Top1</category>
-      </categories>
-      <tags>
-        <tag>video</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于我的博客</title>
     <url>/post/nTlGDHXn/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://s6.jpg.cm/2022/07/01/Pq2I24.png" height="100px" width="670px">
@@ -55,6 +27,12 @@
 <h1 id="一-ssm整合结构图"><a href="#一-ssm整合结构图" class="headerlink" title="一.ssm整合结构图"></a><font color="orange" face="kaiti"><strong>一.ssm整合结构图</strong></font></h1><p><img src="https://s6.jpg.cm/2022/03/19/L3EcES.png"></p>
 <h1 id="二-基础环境搭建"><a href="#二-基础环境搭建" class="headerlink" title="二.基础环境搭建"></a><font color="orange" face="kaiti"><strong>二.基础环境搭建</strong></font></h1><p><font color="blue" face="kaiti">(1)创建数据表结构</font></p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">create database ssm;</span><br><span class="line"><span class="function">create table <span class="title">account</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">    id <span class="keyword">int</span> primary key auto_increment,</span></span></span><br><span class="line"><span class="function"><span class="params">    name varchar(<span class="number">100</span>)</span>,</span></span><br><span class="line"><span class="function">    money <span class="title">double</span><span class="params">(<span class="number">7</span>,<span class="number">2</span>)</span></span></span><br><span class="line"><span class="function">)</span>;</span><br></pre></td></tr></table></figure>
+
+
+<span id="more"></span>
+
+
+
 
 <p><font color="blue" face="kaiti">(2)创建web项目结构如下</font></p>
 <p><img src="https://s6.jpg.cm/2022/03/19/L3EUjW.png"></p>
@@ -193,7 +171,7 @@
 
 <p>***<font color="blue" face="kaiti">(2)创建核心配置:mybatis-config.xml</font>**</p>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">configuration</span></span></span><br><span class="line"><span class="meta">        <span class="meta-keyword">PUBLIC</span> <span class="meta-string">&quot;-//mybatis.org//DTD Config 3.0//EN&quot;</span></span></span><br><span class="line"><span class="meta">        <span class="meta-string">&quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span> <span class="attr">resource</span>=<span class="string">&quot;db.properties&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">environments</span> <span class="attr">default</span>=<span class="string">&quot;development&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">environment</span> <span class="attr">id</span>=<span class="string">&quot;development&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">transactionManager</span> <span class="attr">type</span>=<span class="string">&quot;JDBC&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">transactionManager</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dataSource</span> <span class="attr">type</span>=<span class="string">&quot;POOLED&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;driver&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;jdbc.driver&#125;&quot;</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;url&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;jdbc.url&#125;&quot;</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;jdbc.username&#125;&quot;</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;password&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;jdbc.password&#125;&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dataSource</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">environment</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">environments</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mappers</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">mapper</span> <span class="attr">resource</span>=<span class="string">&quot;mappers/UserMapper.xml&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mappers</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+<span id="more"></span>
 <p>***<font color="blue" face="kaiti">(3)创建dao : UserDao</font>**</p>
 <p>***<font color="blue" face="kaiti">(4)创建mapper文件:       UserMapper.xml</font>**   </p>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">mapper</span> <span class="meta-keyword">PUBLIC</span> <span class="meta-string">&quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;</span> <span class="meta-string">&quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">&quot;com.bogedev.spring_mybatis.dao.TUserDao&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">type</span>=<span class="string">&quot;com.bogedev.spring_mybatis.entity.TUser&quot;</span> <span class="attr">id</span>=<span class="string">&quot;TUserMap&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;id&quot;</span> <span class="attr">column</span>=<span class="string">&quot;id&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;INTEGER&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;name&quot;</span> <span class="attr">column</span>=<span class="string">&quot;name&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;VARCHAR&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;age&quot;</span> <span class="attr">column</span>=<span class="string">&quot;age&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;INTEGER&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;bornDate&quot;</span> <span class="attr">column</span>=<span class="string">&quot;born_date&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;TIMESTAMP&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;headImg&quot;</span> <span class="attr">column</span>=<span class="string">&quot;head_img&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;VARCHAR&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -256,41 +234,28 @@
   <entry>
     <title>个人教程文档</title>
     <url>/post/jQPRvLFO/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="14d3d591f778c85291f079e7b4019b44bd452e64651e3f8aa86fe49579e531b0">a830a4b01c6f94a83c6845e9bfbb55a870ad3137be6b8bc50890a0b595ef2273d86ce342ee53347d45ee2207f23f9877ef66f988fc474127213c37973ba06831585198b804e971394b96010c54c361895a2c81c3bce8cb362b722c0d8e387e325c13d0d98045d090d56e46c2619a3546bef42649fcffcfa0621a972299789f8e4a593181d3f715637e6fc32ae7692f06df13ccf8f379b960deb694f0604c7b77bd8a2fd0e2fcb508071ef986614c5e4f4d44753e7e85e7ccae70b2e157e408c5dd292d039d4b99b388af49c1ebe07949282fc62f93ea48c805c61e2242792a91cb742c4908804d57afc6f76c8792fdf6ceea18ca361d23a87cff7ce41708eafa419fc0002680a24d2bf05f42323dc13fb92190db8c70532347fff14e6b369803fe10f991ac20a94b555d30dc86eef50a18f98797e93012821c69d5820800964e9e9298d0b1bdf12373d1ca0aac20e4192c29b65d6dba3965494222fa3be15a9ed8c49ddc395f42ed5d90ad3b95a78a0aa38692ca3edb969142f32f55966802ea70c3d7e528b2b5f56f6a3a669423ca7042c2e42641f07aefb7bb7e9f1d87da62f32547a6679b7b80ab64272ee2b5dbd28b104592f2dd897a3347690009de66a9f18e30101993e0fbf135e032823b86b12d406203529096dc25a5f47800b43c6c9fc9ad66ce0874bd778610336410181134579911ebd6b13a979e34282ba1e9db245cd985552041a13a2f25fb0c00ad5c7710048e4af1194d775b79901a8a38fda06d295fa3e7ca69b35c8ed8e46d1c57a67d76ec041bdb3206e82856595ee1e9afc53ca262796d9588fc7b8dfb0d0ed6119b1c397b2a2b0f5b948a7da89b18248ea3cbf5567afb34e6115fc642d2b57f7e146626621c698c806c98e1b0b7e834326508d5572ee52d5c2ccc9a0b01431ce78088369448875528b328a102a752128287c56fa4083990ed371b3131acbdc4807cdd3f45928d8534afa48bd54354b4409374f4d677455713d3f61dd5069e478c5eea3ee9fa7ceb489e9f10b5c269ee49dd58151a064b006eda18f4cafb083a48871186cbca2c5a30dc083c21468ffe78452a052f6301ce9f729f9020b1ddfec0b955ba7cdbffd01507ce29faa92f1a9ec766f19f985dacebd704371b31f3f6a3d84edb50015154647fd9c064b756fee548534e71dafd63d8fa98ace24fce761f5221d83892e47eb4b4c7601b7dab57042e6fa3f714f7ca2d789c134c744e4e39536b33767bd7eb69b02b70ca2e18f764ffbb2fc3193af66c53ceb3d8775e71de15198c5d689eea5883acdad6864f8da569eda9acef6827fe475e6effde953c04d3e3d7973d89b167abe9352a9d22bcabc45a1b3565f077cfd1e688fac20ef80691ba3e7b6e3b609efe3104c7482ce73e44116d1711fb5a335be8ed778c4ba4e63940b51ef1124ebd9cdde7b4d6841256e7e8a98635190fe7ceb63065f31171b3360401b546a58554d96675e2d4f55ef7b4ac46697243fe2aa9953438f708571fc574e7962a4ad7d73410dbeb7aa82bb9bc07f3f695e8189897e024287f43a687d5d1b99b22f62480b4e94d40d7ef8a00e27f04dfb176434d1c0cc2c635f14667a230f7ce081c14aaf5b0faf37677f07d8296243a3aed2369b1f68116cfd2bce527d23f9f03f888d4f91fab40ba17f188b31d332a8b13963a73ddb34afc14d37a9465adb31e436bdcfee7a95720732f</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>个人服务</category>
-      </categories>
-      <tags>
-        <tag>个人服务</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>个人维护网站列表</title>
-    <url>/post/YNFQWQic/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="a8e254e5281331b2aee8ca4836e3ebc5f941f6b696440fd7015ede86cd7d8f2e">a830a4b01c6f94a83c6845e9bfbb55a870ad3137be6b8bc50890a0b595ef2273d86ce342ee53347d45ee2207f23f9877ef66f988fc474127213c37973ba06831585198b804e971394b96010c54c361895a2c81c3bce8cb362b722c0d8e387e325c13d0d98045d090d56e46c2619a3546bef42649fcffcfa0621a972299789f8e4a593181d3f715637e6fc32ae7692f06df13ccf8f379b960deb694f0604c7b77bd8a2fd0e2fcb508071ef986614c5e4f4d44753e7e85e7ccae70b2e157e408c5dd292d039d4b99b388af49c1ebe07949282fc62f93ea48c805c61e2242792a91cb742c4908804d57afc6f76c8792fdf6ceea18ca361d23a87cff7ce41708eafa419fc0002680a24d2bf05f42323dc13fb92190db8c70532347fff14e6b369803fe10f991ac20a94b555d30dc86eef50a18f98797e93012821c69d5820800964e9e9298d0b1bdf12373d1ca0aac20e4192c29b65d6dba3965494222fa3be15a9ed8c49ddc395f42ed5d90ad3b95a78a0aa38692ca3edb969142f32f55966802ea70c3d7e528b2b5f56f6a3a669423ca7042c2e42641f07aefb7bb7e9f1d87da62f32547a6679b7b80ab64272ee2b5dbd28b104592f2dd897a3347690009de66a91fd2add6f181cb0eb4544898bab59325f87e66740a44bef6e99a984f5842dee6bf7b5cc0cac48df7363b83f5f5827ba06b6306d1f263dc7c5864857e6e4e479995b6ad26407fd6d27270c59e71bbc598246ea5c98c0f180a01726eeceed3101586da30b7d38c37dc1d0f239b3f21e052a8132113cb056e2b6116031af0aff1fc48773c9230a2a2c9b86e060b248215c6e6b0e77e7f4b59fd23919f4993ae7b1162fb2547fbe8810d1db70d0bab7be0b73f09557df77d9f32f8be75d535a58536a42dd3bfa4c9b73b4c06027cb956e3f799ad9c51ceb33116aab7d51399db0a0d292758d212d71279d666a86ba2afdf2a21f8b15a397a0c6b6c3ac2e437a8bd9c78bece996fc3bc54858a0e33b98641c4d9bda7c7ced4582428d347b683016ec90ecb514f6735eb6c93e38c8a12d631d10ef2049566487f14d0f76001bba7d570227f09c99a4bc9380c50461988eb04777ce04a2c19ba997bd3a52a26804ae5324c37b2b4b2a770f6314525eee0ac094fe8f452e2733f67298b6281ee035f850a5cdfac440045e94239b02f754236676e0971f9b5f3b908d47c6aabb845b8428bacaf3f6b9bf96934942d85191b8f37d1b97d645aafb896c4185ede132fb0bdb5fbc6012775a820328229bd81ea26c74eccc56fc03be9ebc9836fe587f30597259f2776da004d2d70a67c7225f4e8b204289ee6afea3cd22bfd3fa0c86289723161cf411ca98971bcc0dc14af003e322197a40831c8a77df95022aab72dca5882234834228c3b11f10b9e0e9e78eef996b075cc976fb00fc97cad576810cb23496adc88d3f8eb02e6fee961b9f13ea476ac6026b2008de4889557168b22103c3beb8f832382c8e028a56fdab2cd7afb9c0e0171758dda5ba24959f3584f2e6e841787126664c6c197fd67268fae84149159c7d25893c440913b6c53c696b3b2dc10282e666cf05a7ad58fa310e3ac1aa2d8550f790797bf2b4978df33aebf6366279cfb27d04cd6c98c55f19306f161ac7ad379672816a2d1ca049b703c88f959421cb19dda2b9dab876a8f72c55c55135fef65a839bded8891560e894437e515c8a22b5dd85cb2bfae41016ecb76c16fa224ff9ed8bdc30af624b65d40cf54c95ed499b7b0a3be0f739ce2d5816d675547b4b06f6afcbe8b300c5055321347fa4442685b8ae9ec0615d5e515752240e3b278d4e44fca6437ec1544c2d2fddd43903ddc0bd4443c489a21d7a1c78bcd4788034f8e863bd700edc39d8ad7b1696d04b371c61f2057620e218817a97f903f09fb4a05836949ac12ff51879ad02529103d85fd5487a909f1453279b19d7cbb</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://s6.jpg.cm/2022/07/01/Pq2I24.png" height="80px" width="260px" style="float:right">
+
+<br>
+
+<br>
+
+<p><img src="https://pic.rmb.bdstatic.com/bjh/fd2d9ee2b7037aaf1e9bd3a230a9f1c8.jpeg"></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>网站</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><font face="kaiti" color="blue">博哥教程文档</font></td>
+<td><a href="https://zmkj_8073.gitee.io/boge_code_repository/boge_bc/index.html">链接地址</a></td>
+<td><table><tr><td bgcolor="orange"> 文档笔记</td></tr></table></td>
+</tr>
+</tbody></table>
+]]></content>
       <categories>
         <category>优质推荐</category>
         <category>个人服务</category>
@@ -326,7 +291,7 @@
     <title>个人邮箱和github账号</title>
     <url>/post/QdLkjHuX/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="95d4481c43b2c057da14fe62b52c09ce6cf7d5c0bb7bf34c80f9f5449dd3afed">a830a4b01c6f94a83c6845e9bfbb55a870ad3137be6b8bc50890a0b595ef2273d86ce342ee53347d45ee2207f23f9877ef66f988fc474127213c37973ba06831585198b804e971394b96010c54c361895a2c81c3bce8cb362b722c0d8e387e325c13d0d98045d090d56e46c2619a3546bef42649fcffcfa0621a972299789f8e4a593181d3f715637e6fc32ae7692f06df13ccf8f379b960deb694f0604c7b77bd8a2fd0e2fcb508071ef986614c5e4f4d44753e7e85e7ccae70b2e157e408c5dd292d039d4b99b388af49c1ebe07949282fc62f93ea48c805c61e2242792a91cb742c4908804d57afc6f76c8792fdf6ceea18ca361d23a87cff7ce41708eafa419fc0002680a24d2bf05f42323dc13fb92190db8c70532347fff14e6b369803fe10f991ac20a94b555d30dc86eef50a18f98797e93012821c69d5820800964e9e9298d0b1bdf12373d1ca0aac20e4192c29b65d6dba3965494222fa3be15a9ed8c49ddc395f42ed5d90ad3b95a78a0aa38692ca3edb969142f32f55966802ea70c3d7e528b2b5f56f6a3a669423ca7042c2e42641f07aefb7bb7e9f1d87da62f32547a6679b7b80ab64272ee2b5dbd28b104592f2dd897a3347690009de66a9d0783e975fb27acf3644e2094a4559286e79f502869c751c29c7fb7c47d3e71849385a9ee8a1e6e5d0fef13ebb47de331b01447c5c8b66bb56469b33f325d9d7b73b38f7b08b7d12e20b9971fb9c189d5128384ffc6563c70a47fa86e0d66bbb9882eb17eac54553278b3b28f66d51f78e86575fee73f457321af2087d13b102f656b72ab68c10bd72d781819ea7e5fc886c4b719db2b655d24914c6b68f177e29ef2990448c72845551400706dac2241045e485b03ba1322663eec0bdbcbe507abc69f99053e9c4fa41e9e768e34ac22cd179edc01da71b023fbc3eb85970c432c695cc21c6484970241f6156c51f400f1be55095f6dc1952b5de23c8b219823afe574ab687f510d4a999d9e2b434ea799cb23ea621d04aad2a571fd5483b216733b50d8ca149b7555f869e749cd542e9e156a10b7bd125b038a30d22f2f3be040c65d847b6f7d80432ce35f734ff4d27914dc3ac2196a29ce684e79bde7d850ca35dabdca60b53d60e8b8118b5f4da9381c077b4279527da3d0863d1834d6ee9254beb031228b9e9b9202cd0b97480a3d083947d4dc7805c110ed8ed3e8eb9c1077a3bba11ea31ee5d2ece4d9276aeac05f1bca89a02b8cf7316c20bc139dfa26704a3d2eb51f1d4ac0979c9c0462e866d3a0080b8a74e50d48a50f92670accceccdd12590f44b08ea1a9540362a23c26dc154ccad31bd8d7b7dace7581790c6f5d7a2dea29794b6c4edf0d718690edd6af18db5a619bdd3749da86bb91f224672ca3d5752bf65daebb41e19187f8f8c40efabd34b1a3f48f10d57873190acf74d9f9e4e2b70b768d71079cacd28a39fe39d1f40792fdfa3a0d95a270527f73b4a4bd739ab109ed209f92e9507044de3e2756a20b2cbeb0e4231d7fae887ca49ef775b8422643be088579b5f047bac2b2692f1fee2271687a7108e83bb63e3cf1c2358e3209b58ecdf6018e99cbcdb5420b75177180893eb068edced08dcafe49c37335e7e42ec94297715707e46e48f26afc3a64dfeafb8a2c389aebdfd61aef90290150d213f2bc82e8141a387ba3a3dd3b2bff35579106ec2ddb873f45ff2ce86de55e445fd78afbf5adc1b9067e2a13cbb6c7ea6e152635ffc904bab0ae23225451c00ebaae0b804c6c111b30a091537d642ddc6a6d22e9433a338b0f28b71069b7526e77b5b4a11ddf74455ca08b6ffb9c83eef8530a8da7c6e3dc257aa00856cde3aea0a2827d7bcc77198ba222825446fecc2793e9adf7c0060c0a5d6e12dd23523fa64a52ac791a2b21212f9ccb2dde7e14403fb43ad2383467538a860102142d038bdbdb9fa40d6d00939eb83fe063e2d7f5297b2301475dffdfa40b4a4272fed99892583b8c26743b6bb3f9ff55d2a723f9c108fb74df358b85d3ece134e3af21d6abf324714ab42864fca46d31a464542b4e71d2a503adda3daa0a3e4777e2d8160f52a2e7c556a4bddfb418b0d31e1489bb335f9da3fe79338122a1b0723bdf30fa967ed8ad75c6055e7b929c32d320b7e04de8f733c7c9ef9945ea7f00b519eafec011dac405c58cf816094dadf610281a460e1e73a5cb295c55cf6be6deb39142f32779a128add9ed8b376462894f566de8b4d6a2804a4c06db7eb1d42f25cc9e03616be93d8cfeae6e96e91ba8ab39650fca634fb5b0c5a9421afc512eac513e41384390926a4f50d0e1701261a4fd027bd21b430ac692469c36216b423912980d4b4055e374f0fbf4bb9416ff9036986a9b342b2778b1b5d740de50459661cb8b998a4db37fd5ee049d6aa028b2b841163de94836c99b22eebfefbfb118a0cd54658025a64972f3fd56ffe9e364db516e54c5d9ce403580f92cfa401a482d6b68188a7a92e7f856fdfd015b4f0713867b90a0f0b56a95c7b37895511787c31353ea5a1c4c9f4e3bde74f9654bf96ccc6e7e7b1f6fdd1e69c63e5c7b3c52f1d2be40fae1f28ba3685c362eb207605e523a6b5476a5dc0d2094b8f11def06d9aab03a79991afca384b8f85e5888be16b8e358604519968084314cb3c1c4cf3daa26127d4c03e5d9245b92189555fe1a30a7195220c87f6e877c7414fcfedb944a9305724c9d2e5c2c3d01bc2828f58444a608c3a352a28a43251b4ce4f7dd444500287893cd5b7493505b0581553eff91fa589967769c686ffbb272bf9f1e300c4ce9ec1f3396f88460dab3ae6dc9a42c51e76c061679067fb5619625c9c830bc33feaead9eef0c0d388012f31620bdac76371f3378b8f359ba32364599e507a355a320f0343db4b5eadf88fe4dedd2015a091092441b64ef4dd9a33243abe0ab7a2dc3e676e0190ff813d13e5dd96239b514b1d748a04bebc46493a910848fab09451468845fe14a98af5b56c23e44a19ad020616f3cb3bbcc9eca90acb334d1b11584c18e3fdb71993ddef5e9c5223cdd8f284b0f6299f6c3fe6c2a787d0342d680fdcd125162acc8bd62ab9ca73ede77029e6253235945228431500ed12cb96e040990cbf87822ebde8ee2d70fac76a4335c392034463a4dd0a6ed0c77c3704e8ee085380140869f9eef51d1472fae8c1559bbdce782c7b28cdce0b8479141d73c2688b11b7c202ecaa93e82c9c23d373644d2c6fc65f2ab9e0c1deb14bbf9d7e20b35ce6ad28c14f790dfa55fcc532c4d94747e2a664537ead0200ababe85a5988d8a49401a93f80fcf3e9f6148e97b1c9e568a6907ab5cd0ff48a5389d19c2f6b9b2ee04de6e4dc3431a1572a6626604902c0c7718d2adf850a69d32d647100cbaf219d274c2d9be5f004fdc1895d2c99a162f8c0fc2d246af374acd145c7568712152675e359119e4ed568601d314297f8650592e960edda9a06ea95536b02dead0208c1465ad1759754a694a8c2ab8df4d0666f254acb1d70a28c7c2403813879d5bf34fcc6f3e81fb74d58800496b64e66c1101a621ccedf7abb3181f38effed40e31f07e35f41eac19c468cab504dc48ff6160bae8a6af6155c40a0743db72fffde22e178d71bc79e82bea015dc80435822ba3377dce8c334a8219c30d5611a9b44b0ad24c991d69a94832a31b4efa76e7ec01521f1c3d709b9fb73beec278ee02a212f73de602f49589ac1681e5b48ee236b9e1de96de752fca96c07a99913430f6175321088993cea0e29165b89307dc3183fc4deabf0dc5e55657e79385efe47410064f96a9de1bf9a374d4f27a96ea2470bfce9b88b19c077ccb5364d1b8852a2959490495c96535c49e55aa6b9f65ad20879d952a6b0ad3a1a397bfcfb81ae5190dcbdcd9413e0acf15b703af34159e1bd19a3c6aeeb46bd7a718544818f1861d05b6063d9c281f2bbbdc5787e0945775a02dd808f5440970af58635bae331729d115eb19efe8f22b461d5db85b8511e2b10c4e77f2a339411afbdd1333c1922f8da78a5a59d83ab34382dcf80717a704fa1837d4584379d9c3feb3fed39ce6ddba48143bb304a03e6fec7d69e9c5109f6157030e3678d65dd7d3895420bdb19a551c860d9b4048b789eb7d8bbc2c466d0bfa9c743704cb5f831d13b39e03071a5ca9e85b54996231c86177562f8f0648a133f64df1f9ef6794f1c5b10ed84cf2117f045c9aee085fbdd36b1788e86b58cd8be48a6d9ee1102fda389e0b88ff76d7754f50d00d5c9110db3d369667a62acf4c0ec1a854cc94fd72943835fa954d2a131725b968bda2ae1f98b78f5274460017076ef46b86f38d28e59543ee94901c333f11d38a77b053c5fdd52ea156ed6b7f3b27e74987c53cbe187dd4c8322c8c2f160277529298e89504f2c2460e2c6fd7b67649b9a962471e4bc9de16b7ea4352899be274604d0b3e1b7f07ef00c1f2c14e42b66912efa0f6647a3af30eb8874d5b917ac4249e04a10c2c263f42930c54261fca6fd55843ed80e718415d93ba7312f33fb7f7c6f6babdd7ac701be34d1afee2dfe263915f0c177bb20243efbd7ce052f7365de66f79dd02e97229a227320af72e9953553caf285003b2983d1f8782eabcc32e4d565dac158dffa02cadcf6ed45401b8197ee5c410b087e1f321c71324f147c20fb79c85007f1647a6b2ac8e3f703e3fa055ae1470e965bae0fc34869e96e09889508243906092b44aaf1f12f7c05bf4249da3d669f98d0854393ac0e8145d02f8158d8ce6f5e4c212559566ba0fd96c5bce0756bd44f73dbc8e3ad5a76e0bec0d8a3d645b6d4de60bedc142e9fc7fffbc030334048ceb8fc24574c4f9fbe308fc9eb5bd03a5c366e586f77acbfcf97b048677c0c65f8fab3cfa12b2ce2a7084c008d680e304a0a571534492acdf8d9ff2f06738a9f4cf15dd9f0295c583ce054e86e3519c589e9e570430e41b8941bac25fbee85d459640546f5980621ffca6e7796e7b016a3ef68429b49f08eacb8bbd41a8f615a9868e5bba7f5a5ce6a147e79ca30af0caa0fa3b458a96b77338b43192dc95217d247c2cca047eac2b56f964491eea1164b97cb0d97b00196c4e754b9ff6391b6fd7398f560b0a5af7cf9508e48b8d543adb91ea28bcea7196e92cb384d97e44f75a522d53552763aa857243539ca6ac9d1dc33e7e502918bd4a4a283774e48f6bf51fd25bf7cc1c5c5972d775407e42003b1858cbf612d4c46f1a4fd9d6666d1bc0531698e09ad15969ffb6c0c0e8a9d08d6a223dec45792c38246e60063d21217ac9406b2b5a2003d3a9b6ddacc74ec1b64a072d0757c04aceb04e1d4894c79b2bb3803</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="b51feecac661e8668aff9992331671917b0295a3d4520455c0bc971060e29af4">a830a4b01c6f94a83c6845e9bfbb55a870ad3137be6b8bc50890a0b595ef2273d86ce342ee53347d45ee2207f23f9877ef66f988fc474127213c37973ba06831585198b804e971394b96010c54c361895a2c81c3bce8cb362b722c0d8e387e325c13d0d98045d090d56e46c2619a3546bef42649fcffcfa0621a972299789f8e4a593181d3f715637e6fc32ae7692f06df13ccf8f379b960deb694f0604c7b77bd8a2fd0e2fcb508071ef986614c5e4f4d44753e7e85e7ccae70b2e157e408c5dd292d039d4b99b388af49c1ebe07949282fc62f93ea48c805c61e2242792a91cb742c4908804d57afc6f76c8792fdf6ceea18ca361d23a87cff7ce41708eafa419fc0002680a24d2bf05f42323dc13fb92190db8c70532347fff14e6b369803fe10f991ac20a94b555d30dc86eef50a18f98797e93012821c69d5820800964e9e9298d0b1bdf12373d1ca0aac20e4192c29b65d6dba3965494222fa3be15a9ed8c49ddc395f42ed5d90ad3b95a78a0aa38692ca3edb969142f32f55966802ea70c3d7e528b2b5f56f6a3a669423ca7042c2e42641f07aefb7bb7e9f1d87da62f32547a6679b7b80ab64272ee2b5dbd28b104592f2dd897a3347690009de66a9d0783e975fb27acf3644e2094a4559286e79f502869c751c29c7fb7c47d3e71849385a9ee8a1e6e5d0fef13ebb47de331b01447c5c8b66bb56469b33f325d9d7b73b38f7b08b7d12e20b9971fb9c189d5128384ffc6563c70a47fa86e0d66bbb9882eb17eac54553278b3b28f66d51f78e86575fee73f457321af2087d13b102f656b72ab68c10bd72d781819ea7e5fcc1afd4270c38092400f089d98bca2331873ead5ba11f9effd69813cdbca495a6110c8c0d343833276ebd5d6938fead0a6b4cae6998fe6ff3ccc77759c8a1894ca6f8a522175e86c2dc77db060205a0f879a82974a992c2f7d594d4f0a4d93f6fc829ed808c36989e46747dc63721abea2a70911b5188f436a545f2a49babb254b340e77d16b7c7efedad6d5440dfe22c1ad84160854361dda2380ae20b57b1c7202b8304f340d8c7234bd8bdde2d71cd6f4c4f2ac5075c47837ed450f8c959a3ac8a75653264717ae9d6bd80704411c9e3d5fb9e33a4491655f8c9f37ff87d9b9b8f133aef4a082be73242de7581abd2115a1b42444a291b8c032fafe6d47e5b0c88d86b828fb79310657915fcc8edbe2c7183f0be31caa6fc9136edc7209a1c1bce17f824530b6597cfb77ddd1655475c43987e4d31ccdc4dcfebcd43c6c63b8e179023a68d1fbf907d9a5eeb5a94ad409ed5b3e50d779bb1084aeb40a03a4cc99bf7b50a30ebe2b52a40a2adcf6ce0d5d2082684b7d15d27c3f995b57814651bc07b1281a9a59aefe0b89e8858bfbc44930608c64c10d2897f1524fbea5d21889ba8b1f15e19ba41ae33a7462c77a8b78f2f875d69aeb19d716583e7f832d3efc9fb8f331ada19f018cca90a27dcedf2083c11a752160c2bc22d38cadcbd2f9474714e72fff4b9a1ce88d1e8af4695e97894fad10a44cc7bfb7783f92e47ee680518e3123828056ff79ca14d8b11deae238d9fd776b6570dee25563554e6d3b08d77d410b0894085cbfa8fc37f42ceb4aed3c4176a108720c6b04bef9dc7f75aaed268346b64512737a71f9d1db9dc9a407abad0d429f8c737806e4366b98955824a5faaf0d7ffeb51766992e1668d383c84c52ec7f1b47a84b12a3238165275f223e77d89fedfa54b1bd5ec37b6b5d85ead9cfff6dc51758d1612e8d6a687d9e2b17ea3f6f80f1f8327ff6c3c637e55c844ae4de9cea62f22342563dc90c1ef6f9886369f47fbbb1303d685e2e4688e4cc7b480f0b21638e84db573e9224817252d8fd9e34e6896bd44208b6847a34beaff7c12691765524700129aac632b5fea7dec3c4663350d08eb1f5a15b758ee23ba69ad214e0f593117e67494657217bf6fed05fe57c55e8294a7781880a825cfcd81c0feb32cd327fc310ad5fe1aa5b6deec9f123e81bab497c123a581f8dcfea4725198154470d386d7937709796056c345592e7d44b98b300e886742ee17ea18725b5ac4f77897152e90f217c68b50bf00f1e870e7d39e7422bb3f656b346d823f31f376fbf275c84b2eda4957b54741dee8abcf262ee8a5e956cb967b139f308bf20ed8468f891996d8bb5e6407c42de23df0576e547b516546465f3a38969b56e79a7c7c20a9c6308703f2359cf2a9210e92f20e51fcb45e6f2a2911e12e1f3f358628fd9a291c42fe1df5db4791550ec77d1a34f8adccf0646f16c1d22771fd276c5c753ef8f418f3a9cc3d44fe0cdf3ca231956c62d4b7b72cea72c197308d7580effa1f07ff998dbded3a28bfb22367bdd6a24a2e655352d19a7ed62b6f89f2e65f525ba361e1ecf6d0d9a5598216531589b6b734388dcdbd2fe8dcc135303f365605427230119feb4e39398fbe96dc0b747e0f8723beb080739e82d94edf6eaca890b5161872650f329b21086acebb416cce0145843c5f132f54fea8006d1ba32037b7efe2915572b39ea2e3bf2f8b91de493aad698f13b803c82751a117863e8924b91d959cbfe9dbffa98a11bc22a94dcea5ccfd579d370a79f88ae634cbb9355eb31ea12d230cef4b581bd42a6fe50a6036c36179c65bdbfae166dc403a52af2d320390174aa69f29787ef14a72ed93c3e1b46a94b27ceadb79e6f30f6dba90240779d6e17a5919fb33968ac8303a0150e03e8d1109206b7e2997cb10163abfcc4e35f3e372be8aefd9fdcac4a7bd2f641a336423812334fcaabbb44ecda1080de70246382405cd007fee16b92a39f44fd6073aeeff1e387143ca0cd04138b5a39737e3188eecf7e2785c35ec14e71f7deeb9515a9e0e112a3459a7b6cd55018c06989c9d890b19902f94bf0df16f6277cf8f05e6573331cf1e2e84e0ab89f7367fd3da88eec7ae2b776cfffd9e5bd9fb8feebc7ca436be36ed669395762557a71ef7ba2401a808452e2ec14f282cc311678f2b7c4a60deb6811d24ee4ddda4310bea177ca83a8e4b0b7fc36ad02ed5d66aef0b5582b85c4d2fa40b1b219a95cc65213f59002049946fa55fe52dbcd86db14de8a44a352c4a431c46f66f5ba8c65996658b1ee48624421adb921496c1654d8493c7b32c17b4e0593066ad72050017ba940c40fb5f3ca4693681a4751141a200b3d80daf61b948957c767f7fe8d6f154ac9f56c99fc20721416022afcd9591b8f6fea507c6a7eaf2532eadbd69b74d07d78ca30fad0c56ef29c3b558054fa1eb72bc0535f2d5d54c256f059001c687766351083a05496b2f652a2185020f12677d78a084de2b963f17e46152abec118e6aa09ca5c7558cea39d7fad0056b285567eabd186920575a46202c54005f197688488f58b03ebc1968491063a82e9122d48156b910cf4ce2af560b1f37579cd64a32f653cfc2c44f93abefc92927bc199230ccb2a940c8ef8fed61d8ef31b0b7a2d47fb8c06c9c0c35476a701a28e1f1ef9c427717dc95bc6713cbd4b83998e0774abaf661cbb8d7a1eb6a67b574a0d08ed0f5773ef0b808dd77a2964d5cff64c384fa6deb056bc0925853e9fa104f10524159966a55cb3b466b2fae6ce6bc71e25c7b62fddb680744a407ce461affcbd1356d1cb19e6b18dfcc0df62e4b61f03175aaade9cb2368bfb49f2ae06513db9f0c197fa441883173ebc620347aa25d9c0edef43ff00565b4eeba65afa35799cc06f1db6908e78d35cabd721251aad6aec05cf3922aec95088c59d78aedc93e0463348fed0eaac7d9e29d7149f3e0598b939f886c96a9aabf188008743cceba3c4249ee38379aa13f4d84769942030237312068928dbf5d132f0f033c159628396437854827a09df918be59ec58ad5f35cf18e7e9b21d532c13b0f5614a83f32a5e2d33d83c955bbce233dd6ecb571570ed5f1c100d778ad0997e70ace18bb63fd86d07add8e9506bcb0fc46a8b53f750fc1ced705c03a68ec793017e0c21680ec068440e509f17693b42a4c772cd9e18c637a7121552b32ffc9c336bfa7a1ade8f07ff30d96eaeb9e1030d71a3a2092e4ddd8874504e95a2e632c1a5fdef9045a6389ccdcfa4cc48bd99c5ad9c3e57b2dce254ddc17fbc315e9a6aa3b50345e6d187907254ab5f234790c648641169e386b0072cc84df5702e7cfa2b453f32f034e70d1cd48eecfa4e49458a671d663247425a45907bb5b2a6bbd10f2b3133acf5fdc33dfb735e531be7d7fc1395f70b6a8413d4afae2928c69f97283d00dac81c096020e2644eb0aafa1183fcdc6dbeeefe01eb06032ce155d8acafc84acc9ee1d99c60f6b3236f3a3b06331b611c16b04acc65773dc0e3b712629fec600cea6f8b6be91dfa368644b0614d16fce87901aa07749d47acb1cf11ca42e08d1f23a5a5050d9a19676621f2b7397ad95a6d659df5b1343bdbc1237a44c35b1f323835fbb0ca2c15e412d47fa5d4a811b8a853afcea2b2173599cd97fd11c99c9fd3e9d40ba37bfa9ed2c8d15e1c801eb25720aba256f36727822893a9db8d11b65c140bb5504dd972dc09199256209e5129a67d080df2e93da889c7bfeff400788660f3890b2b5089dbaeff7734c4bd680cead454a7cf6e69cd0e22fa0dac0c99c74cd7ea9438671572340fff6d17564642c38e749a03f4a14ecb3b67db0d47142dab0be13c19d5854c30a9c9cd901969c553c161d064fd697f2e8a5db78ca4b602484ea88ab64d37ae0642de9731d58dc08bb1f4582077573ecf4e8c9d2ada79590ee504aa2781da949cc66b07441f7d87d2aa044171bcf5f96819f771053d12f96c94b3a042fe2b72fbf3ab79cdcf8e32cd8355f6d20115cfd5d57b543188c7e9b0e743acb702e826f8c60686563a53ccfcc48a52687bf1942f1415d17770022cf6504642b6d729c4d0dd072626c147658d59395a725ba235cbe4983245aae087def7aa9f2c607cf4ae523addf38dd377707c87eb02838b8cabe64fa0b8d1399bc43c71ea4d90b5d6b1192c728a214b00b1f7086623ef71d271174ed2ba87b2f8d35a9bd22b3082c4065f43da3b81df2bf97b65ea0bdff959e0d7c476158abd8d010f8466e5e412527f4ed418e955ec407fbe6dd3a4e98804306baa1d1544399a19e89687e07cf554161a38a90dbb3adbee8a45b41b9a45cd160aed8c8602881f327393f336fda3806beba6ec96940387ea3f306f0e44045211d87721ffb7ea90b8e3bb30accf859aa3c16899807b74e3146d80a54ba1df4268321f6d099dcd6937203332cc58ccb0865078c232935135ebd6573270009b5471ca97a22560919cd02d3c9fd1</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
@@ -389,81 +354,6 @@
   </entry>
   <entry>
     <title>windows查杀进程！</title>
-    <url>/post/sErWbiam/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
-
-<br>
-
-<br>
-
-
-
-<h2 id="一-打开命令窗口-以管理员身份运行"><a href="#一-打开命令窗口-以管理员身份运行" class="headerlink" title="一.打开命令窗口(以管理员身份运行)"></a><font face="KaiTi" color="#9400D3">一.打开命令窗口(以管理员身份运行)</font></h2><p>WIN+R 组合键打开</p>
-<p><img src="https://pic.rmb.bdstatic.com/bjh/bfc2c02f475c6062042010cebf3277e9.png"></p>
-<hr>
-
-<br>
-
-<br>
-
-<h2 id="二-查找所有运行的端口"><a href="#二-查找所有运行的端口" class="headerlink" title="二.查找所有运行的端口"></a><font face="KaiTi" color="#9400D3">二.查找所有运行的端口</font></h2><p><strong>输入命令：</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -ano</span><br></pre></td></tr></table></figure>
-
-<p>该命令列出所有端口的使用情况。</p>
-<p>在列表中我们观察被占用的端口，比如是 1224，首先找到它。</p>
-<p><img src="https://pic.rmb.bdstatic.com/bjh/f3699b4c4187a7700fc81b685fa6952d.png"></p>
-<hr>
-
-<br>
-
-<br>
-
-<h2 id="三-查看端口对应的pid"><a href="#三-查看端口对应的pid" class="headerlink" title="三.查看端口对应的pid"></a><font face="KaiTi" color="#9400D3">三.查看端口对应的pid</font></h2><p>输入命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -aon|findstr <span class="string">&quot;8081&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>回车执行该命令，最后一位数字就是 PID, 这里是 9088。</p>
-<p><img src="https://pic.rmb.bdstatic.com/bjh/1ca81fb7f7a6512c27eb97548cc5d028.png"></p>
-<hr>
-
-<br>
-
-<br>
-
-<h2 id="四-查看指定-PID-的进程"><a href="#四-查看指定-PID-的进程" class="headerlink" title="四.查看指定 PID 的进程"></a><font face="KaiTi" color="#9400D3">四.查看指定 PID 的进程</font></h2><p>继续输入命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tasklist|findstr <span class="string">&quot;9088&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>回车执行该命令。</p>
-<p>查看是哪个进程或者程序占用了 8081 端口，结果是：node.exe。</p>
-<p><img src="https://pic.rmb.bdstatic.com/bjh/f59c7632585a5ddab97e12abc4b1f539.png"></p>
-<hr>
-
-<br>
-
-<br>
-
-<h2 id="五-结束进程"><a href="#五-结束进程" class="headerlink" title="五.结束进程"></a><font face="KaiTi" color="#9400D3">五.结束进程</font></h2><p>强制（/F参数）杀死 pid 为 9088 的所有进程包括子进程（/T参数）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">taskkill /T /F /PID 9088 </span><br></pre></td></tr></table></figure>
-
-<p>或者是我们打开任务管理器，切换到进程选项卡，在PID一列查看9088对应的进程是谁，如果看不到PID这一列,如下图：</p>
-<p><img src="https://pic.rmb.bdstatic.com/bjh/efc96c5922a14263e76a8e63173ced92.png"></p>
-<hr>
-
-<br>
-
-<br>
-
-
-
-]]></content>
-      <categories>
-        <category>windows</category>
-      </categories>
-      <tags>
-        <tag>windows命令</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>windows查杀进程！</title>
     <url>/post/reZknLns/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://s6.jpg.cm/2022/07/01/Pq2I24.png" height="80px" width="260px" style="float:right">
 
@@ -504,6 +394,9 @@
 
 <br>
 
+
+<span id="more"></span>
+
 <h2 id="四-查看指定-PID-的进程"><a href="#四-查看指定-PID-的进程" class="headerlink" title="四.查看指定 PID 的进程"></a><font face="KaiTi" color="#9400D3">四.查看指定 PID 的进程</font></h2><p>继续输入命令：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tasklist|findstr <span class="string">&quot;9088&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -531,402 +424,10 @@
 
 ]]></content>
       <categories>
-        <category>技术文章</category>
         <category>windows</category>
       </categories>
       <tags>
         <tag>windows命令</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>百度网盘不限速下载！</title>
-    <url>/post/YSupWwQV/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://s6.jpg.cm/2022/07/01/Pq2I24.png" height="80px" width="260px" style="float:right">
-
-<br>
-
-<br>
-
-
-
-<h2 id="一-下载软件"><a href="#一-下载软件" class="headerlink" title="一.下载软件"></a><font face="KaiTi" color="#9400D3">一.下载软件</font></h2><p><strong>下载数码小站</strong></p>
-<p><a href="https://disk.onji.cn/s/wn5wCm">下载</a></p>
-<h2 id="二-软件使用"><a href="#二-软件使用" class="headerlink" title="二.软件使用"></a><font face="KaiTi" color="#9400D3">二.软件使用</font></h2><p><strong>详细操作流程如下图所示</strong></p>
-<p><strong><font style="background-color:orange;color:white">1.下载</font></strong></p>
-<p><img src="https://pic.rmb.bdstatic.com/bjh/41bc0e654d212fb7aa3ac29854c129ff.png"></p>
-<hr>
-**<font style="background-color:orange;color:white">2.解压</font>**
-
-<p><img src="https://pic.rmb.bdstatic.com/bjh/6c153f72e73fd01dc31c442da923d8bf.png"></p>
-<hr>
-
-<span id="more"></span>
-
-<p><strong><font style="background-color:orange;color:white">3.打开软件</font></strong></p>
-<p><img src="https://pic.rmb.bdstatic.com/bjh/d64fe51036ccd914d3c741f7f1385f34.png"></p>
-<hr>
-**<font style="background-color:orange;color:white">4.输入需要下载的百度云链接点击提交</font>**
-
-<p><img src="https://pic.rmb.bdstatic.com/bjh/70739055e0b11ac9fad0c6ce087d7b38.png"></p>
-<hr>
-**<font style="background-color:orange;color:white">5.输入验证码下载</font>**
-
-<p>输入验证码:120743</p>
-<p>右键下载</p>
-<hr>
-**<font style="background-color:orange;color:white">6.查看下载速度默认文件下载在软件的同级目录</font>**
-
-<p><img src="https://pic.rmb.bdstatic.com/bjh/d421b5ef38cdf2b3b58abe1d1503cee2.png"></p>
-]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>百度网盘</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>个人收集实用网址资源三！</title>
-    <url>/post/CmelfaoW/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://s6.jpg.cm/2022/07/01/Pq2I24.png" height="80px" width="260px" style="float:right">
-
-<br>
-
-<br>
-
-
-
-<p><strong><font style="background: orange" color="white">个人飞书整理</font></strong></p>
-<table>
-<thead>
-<tr>
-<th>网址</th>
-<th><a href="https://vxhz3bfyct.feishu.cn/drive/folder/fldcnsjpmf3b4PSvC7UsE9ZOXXb">访问</a></th>
-</tr>
-</thead>
-</table>
-<p><font style="background: orange" color="white">个人infinity整理分享</font></p>
-<p>安装infinity插件导入即可使用</p>
-<table>
-<thead>
-<tr>
-<th>网址</th>
-<th><a href="https://tmucdhis-my.sharepoint.com/:u:/g/personal/bogedev_plus_u365_org/ES1ORdA3QptLqaUp72EjJGQBlWuIP3DFOaXAULbO1dDgxg?e=pMYqXG">下载</a></th>
-</tr>
-</thead>
-</table>
-<p><font style="background: orange" color="white">个人gitmind整理</font></p>
-<table>
-<thead>
-<tr>
-<th>网址</th>
-<th><a href="https://gitmind.cn/app/doc/d9c3377359">访问</a></th>
-</tr>
-</thead>
-</table>
-]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>网站</category>
-      </categories>
-      <tags>
-        <tag>网站</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>个人收集实用网址资源二！</title>
-    <url>/post/gTYQZXPi/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://s6.jpg.cm/2022/07/01/Pq2I24.png" height="80px" width="260px" style="float:right">
-
-<br>
-
-<br>
-
-
-
-<p><strong><font style="background: orange" color="white">个人收藏</font></strong></p>
-<p>转换工具                                            <a href="https://www.alltoall.net/">https://www.alltoall.net/</a></p>
-<p>认识中国** **                                   <a href="https://www.ageeye.cn/">https://www.ageeye.cn/</a></p>
-<p>有趣网址                                            <a href="https://youquhome.com/">https://youquhome.com/</a></p>
-<p>国外开源项目                                  <a href="https://sourceforge.net/github">https://sourceforge.net/github</a></p>
-<p>白嫖                                                    <a href="https://github.com/anran-world/Anranawsl">https://github.com/anran-world/Anranawsl</a></p>
-<p>薛信工作室                                      <a href="http://xuexinxs.ys168.com/">http://xuexinxs.ys168.com/</a></p>
-<p>热铁盒工具                                     <a href="https://tool.retiehe.com/">https://tool.retiehe.com/</a></p>
-<p>快用工具                                         <a href="https://www.fastools.cn/">https://www.fastools.cn/</a></p>
-<p>爱给网                                              <a href="https://www.aigei.com/">https://www.aigei.com/</a></p>
-<p>油猴脚本                                         <a href="https://sleazyfork.org/zh-CN">https://sleazyfork.org/zh-CN</a></p>
-<p>模型展示图片                                <a href="https://dimmy.club/">https://dimmy.club/</a></p>
-<p>电影主题曲                                    <a href="https://www.tunefind.com/edu">https://www.tunefind.com/edu</a></p>
-<p>邮箱                                                 <a href="https://better-edu.top/?p=130">https://better-edu.top/?p=130</a></p>
-<p>低价购买会员                               <a href="https://shop.3kla.cn/">https://shop.3kla.cn/</a></p>
-<p>吾爱奈菲                                        <a href="https://www.vip6.pro/#/">https://www.vip6.pro/#/</a></p>
-<p>矢量图标                                        <a href="https://fontawesome.dashgame.com/">https://fontawesome.dashgame.com/</a></p>
-<p>免费图标                                       <a href="https://www.flaticon.com/packs/">https://www.flaticon.com/packs/</a></p>
-<p>在想工具箱                                  <a href="https://123apps.com/">https://123apps.com/</a></p>
-<p>个人logo                                       <a href="https://www.logosc.cn/?utm_source=xinquji">https://www.logosc.cn/?utm_source=xinquji</a></p>
-<p>片头动画制作                             <a href="https://panzoid.com/">https://panzoid.com/</a></p>
-<p>图片压缩                                      <a href="https://docsmall.com/">https://docsmall.com/</a></p>
-<p>改图宝                                          <a href="https://www.gaitubao.com/#">https://www.gaitubao.com/#</a></p>
-<p>在线格式转换:</p>
-<p>​                                                        <a href="https://convertio.co/zh/">https://convertio.co/zh/</a></p>
-<p>​                                                        <a href="https://cn.office-converter.com/">https://cn.office-converter.com/</a></p>
-<p>​                                                        <a href="https://www.zhibushi.com/sites/290.html">https://www.zhibushi.com/sites/290.html</a></p>
-<span id="more"></span>
-
-<hr>
-<p><strong><font style="background: orange" color="white">工具导航</font></strong></p>
-<p>孟坤工具箱                             <a href="http://tool.mkblog.cn/">http://tool.mkblog.cn/</a></p>
-<p>搜图导航                                 <a href="https://www.91sotu.com/">https://www.91sotu.com/</a></p>
-<p>小呆导航                                 <a href="https://webjike.com/">https://webjike.com/</a></p>
-<p>轩辕导航                                 <a href="https://xydh.fun/">https://xydh.fun/</a></p>
-<p>效率集                                      <a href="http://www.xiaolvji.com/">http://www.xiaolvji.com/</a></p>
-<p>兰克导航                                  <a href="http://b.lackk.com/">http://b.lackk.com/</a></p>
-<p>龙猫导航                                  <a href="https://ailongmiao.com/">https://ailongmiao.com/</a></p>
-<p>工具达人                                  <a href="https://dartools.com/">https://dartools.com/</a></p>
-<p>快用工具                                  <a href="https://www.fastools.cn/">https://www.fastools.cn/</a></p>
-<p>爱资料                                       <a href="https://www.toolnb.com/">https://www.toolnb.com/</a></p>
-<p>综合工具导航                          <a href="https://www.tooleyes.com/">https://www.tooleyes.com/</a></p>
-<p>陶声网                                       <a href="https://www.tosound.com/search">https://www.tosound.com/search</a></p>
-<p>书签地球                                   <a href="https://www.bookmarkearth.com/">https://www.bookmarkearth.com/</a></p>
-<p>白嫖                                            <a href="https://fdeyb.cn/">https://fdeyb.cn/</a></p>
-<p>工具123                                    <a href="http://www.gjw123.com/list-zzgj">http://www.gjw123.com/list-zzgj</a></p>
-<p>逼格张                                      <a href="https://bigezhang.com/">https://bigezhang.com</a></p>
-<hr>
-<p><strong><font style="background: orange" color="white">开发辅助工具</font></strong></p>
-<p>网站时光机                            <a href="https://web.archive.org/">https://web.archive.org/</a></p>
-<p>在线IDE                                   <a href="https://www.zybuluo.com/bogedev/note/1815937">https://www.zybuluo.com/bogedev/note/1815937</a></p>
-<p>仿站                                          <a href="https://www.toolfk.com/tool-online-website-mirror.html">https://www.toolfk.com/tool-online-website-mirror.html</a></p>
-<p>代码生成器                             <a href="http://coderd.adjustrd.com/">http://coderd.adjustrd.com/</a></p>
-<p>代码美化                                  <a href="https://codeimg.io/github">https://codeimg.io/github</a></p>
-<p>加速                                           <a href="https://ghproxy.com/">https://ghproxy.com/</a></p>
-<p>在线api                                      <a href="https://tool.oschina.net/apidocs">https://tool.oschina.net/apidocs</a></p>
-<p>代码截图                                   <a href="https://carbon.now.sh/">https://carbon.now.sh/</a></p>
-<p>网页托管                                   <a href="https://host.retiehe.com/">https://host.retiehe.com/</a></p>
-<p>短链接生成                               <a href="https://urlify.cn/">https://urlify.cn/</a></p>
-<p>速查表                                        <a href="https://devhints.io/">https://devhints.io/</a></p>
-<p>图床导航                                    <a href="http://imgdh.com/">http://imgdh.com/</a></p>
-<p>开发工具箱                               <a href="https://www.toolfk.com/">https://www.toolfk.com/</a></p>
-<p>程序员专属                               <a href="https://www.8kmm.com/type/devlinux">https://www.8kmm.com/type/devlinux</a></p>
-<p>命令大全                                    <a href="https://www.linuxcool.com/">https://www.linuxcool.com/</a></p>
-<p>力扣                                             <a href="https://leetcode-cn.com/">https://leetcode-cn.com/</a></p>
-<p>码农教程                                    <a href="http://www.manongjc.com/">http://www.manongjc.com/</a></p>
-<p>程序员大本营                           <a href="https://www.pianshen.com/">https://www.pianshen.com/</a></p>
-<p>全栈开发                                    <a href="https://www.axihe.com/?utm_source=nicelinks.site">https://www.axihe.com/?utm_source=nicelinks.site</a></p>
-<p>小表情                                        <a href="https://emoji6.com/">https://emoji6.com/</a></p>
-<hr>
-<p><strong><font style="background: orange" color="white">搜索工具</font></strong></p>
-<p>小蛇搜搜                                       <a href="https://xiaoshesoso.com/">https://xiaoshesoso.com/</a></p>
-<p>漫画搜索                                       <a href="https://www.soman.com/">https://www.soman.com/</a></p>
-<p>无界搜                                            <a href="http://wujiesou.com/">http://wujiesou.com/</a></p>
-<p>综合搜索引擎                               <a href="http://www.eryi.org/">http://www.eryi.org/</a></p>
-<p>懒盘搜索                                        <a href="https://www.lzpan.com/#">https://www.lzpan.com/#</a></p>
-<p>熊崩                                                 <a href="https://www.xiongbeng.com/">https://www.xiongbeng.com/</a></p>
-<p>蓝凑云搜索                                   <a href="https://www.sixyin.com/disk-search">https://www.sixyin.com/disk-search</a></p>
-<hr>
-<p><strong><font style="background: orange" color="white">娱乐休闲</font></strong></p>
-<p>在线游戏2                                    <a href="https://www.crazygames.com/">https://www.crazygames.com/</a></p>
-<p>在现游戏                                       <a href="https://www.yikm.net/">https://www.yikm.net/</a></p>
-<p>在线电子琴                                  <a href="https://www.autopiano.cn/post/3335">https://www.autopiano.cn/post/3335</a></p>
-<p>装逼生成器                                  <a href="http://zb.yuanrenbang.com/">http://zb.yuanrenbang.com/</a></p>
-<p>千亿像素看中国                         <a href="http://pf.bigpixel.cn/zh-CN.html">http://pf.bigpixel.cn/zh-CN.html</a></p>
-<hr>
-<p><strong><font style="background: orange" color="white">资料库</font></strong></p>
-<p>薛信                                           <a href="http://xuexinxs.ys168.com/">http://xuexinxs.ys168.com/</a></p>
-<p>哆啦A梦                                    <a href="http://baozangku.ys168.com/">http://baozangku.ys168.com/</a></p>
-<p>资源汇                                       <a href="http://ziyuanhuishequ.ys168.com/">http://ziyuanhuishequ.ys168.com/</a></p>
-<p>搜小狗                                       <a href="http://huxiaogou.ys168.com/">http://huxiaogou.ys168.com/</a></p>
-<p>储物间                                       <a href="http://badi.ys168.com/">http://badi.ys168.com/</a></p>
-<p>杂货铺                                       <a href="http://thislinda.ys168.com/">http://thislinda.ys168.com/</a></p>
-<p>雨过天晴                                   <a href="http://ygtq.uepan.com/">http://ygtq.uepan.com/</a></p>
-<p>八弟储物间                              <a href="http://badi.ys168.com/">http://badi.ys168.com/</a>    <a href="http://afengxz.ys168.com/">http://afengxz.ys168.com/</a></p>
-<p>大好人资源铺                          <a href="http://babe.ys168.com/">http://babe.ys168.com/</a></p>
-]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>网站</category>
-      </categories>
-      <tags>
-        <tag>网站</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>个人收集实用网址资源一！</title>
-    <url>/post/mNcSopNg/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://s6.jpg.cm/2022/07/01/Pq2I24.png" height="80px" width="260px" style="float:right">
-
-<br>
-
-<br>
-
-
-
-<p><strong><font style="background: orange;color:white" size="4">个人常用</font></strong></p>
-<p>1.noisedh导航         <a href="https://noisedh.cn/">https://noisedh.cn/</a></p>
-<p>2.兰客导航                <a href="http://b.lackk.com/">http://b.lackk.com/</a></p>
-<p>3.阿里云盘导航       <a href="https://aliyun.panpanr.com/">https://aliyun.panpanr.com/</a></p>
-<p>4.轻工具                    <a href="https://qinggongju.com/">https://qinggongju.com/</a></p>
-<p>5.资源聚合                <a href="https://linkfind.cn/">https://linkfind.cn/</a></p>
-<p>6.学习导航                <a href="https://www.nav3.cn/#/sim">https://www.nav3.cn/#/sim</a></p>
-<p>7.墨滴                         <a href="https://editor.mdnice.com/">https://editor.mdnice.com/</a></p>
-<p>8.哆啦a梦                  <a href="http://baozangku.ys168.com/">http://baozangku.ys168.com/</a>    index:15</p>
-<p>9.编程语言                <a href="http://c.biancheng.net/sitemap/">http://c.biancheng.net/sitemap/</a></p>
-<p>10.编程工具             <a href="https://github.com/adoyle-h/my-development-tools">https://github.com/adoyle-h/my-development-tools</a></p>
-<p>11.插件                      <a href="https://www.extfans.com/hot/?page=2">https://www.extfans.com/hot/?page=2</a></p>
-<p>12.windows镜像    <a href="https://msdn.itellyou.cn/">https://msdn.itellyou.cn/</a></p>
-<p>13.测网速                 <a href="https://www.speedtest.net/">https://www.speedtest.net/</a></p>
-<p>14.翻墙后推荐        <a href="https://10beasts.net/recommend/">https://10beasts.net/recommend/</a></p>
-<p>15.爬虫vpn              <a href="https://yugogo.xyz/?page_id=3">https://yugogo.xyz/?page_id=3</a></p>
-<span id="more"></span>
-
-<p><strong><font style="background: orange;color:white" size="4">设计师</font></strong></p>
-<p>1.虎课                               <a href="https://huke88.com/">https://huke88.com/</a> </p>
-<p>2.果汁设计                     <a href="http://guozhivip.com/design/">http://guozhivip.com/design/</a> </p>
-<p>3.兰克设计                     <a href="http://b.lackk.com/design">http://b.lackk.com/design</a></p>
-<p>4.那些免费的砖            <a href="https://www.thosefree.com/">https://www.thosefree.com/</a> </p>
-<p>5.插画                               <a href="https://pixiviz.pwp.app/">https://pixiviz.pwp.app/</a></p>
-<p> 6.creativemass              <a href="https://creativemass.cn/#/">https://creativemass.cn/#/</a> </p>
-<p>7.seeseed                         <a href="https://www.seeseed.com/">https://www.seeseed.com/</a> </p>
-<p>8.短视频                           <a href="https://mazwai.com/#/">https://mazwai.com/#/</a> </p>
-<p>9.自媒体导航                  <a href="https://www.zhuanglo.cn/">https://www.zhuanglo.cn/</a> </p>
-<p>10.媒帮派导航                <a href="http://123.meibp.com/573.html">http://123.meibp.com/573.html</a> </p>
-<p>11.图片工具                     <a href="https://www.iloveimg.com/zh-cn">https://www.iloveimg.com/zh-cn</a> </p>
-<p>12.网易见外                     <a href="https://jianwai.youdao.com/">https://jianwai.youdao.com/</a> </p>
-<p>13.在线视频处理            <a href="https://123apps.com/">https://123apps.com/</a> </p>
-<p>14.票券视频                    <a href="https://www.piaoquantv.com/upload/create">https://www.piaoquantv.com/upload/create</a> </p>
-<p>15.声音处理                    <a href="https://vocalremover.org/ch/cutter">https://vocalremover.org/ch/cutter</a> </p>
-<p>16.自媒体                         <a href="http://alixiaozhan.xyz/d/33618">http://alixiaozhan.xyz/d/33618</a></p>
-<p>17.取色                             <a href="https://color.dumogu.top/">https://color.dumogu.top/</a></p>
-]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>网站</category>
-      </categories>
-      <tags>
-        <tag>网站</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>B站神级插件！</title>
-    <url>/post/HvfrjMtL/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://s6.jpg.cm/2022/07/01/Pq2I24.png" height="80px" width="260px" style="float:right">
-
-<br>
-
-<br>
-
-<br>
-
-<br>
-
-<h2 id="一-安装Blibli-Wovlved插件"><a href="#一-安装Blibli-Wovlved插件" class="headerlink" title="一.安装Blibli-Wovlved插件"></a><font color="orange" face="kaiti">一.安装Blibli-Wovlved插件</font></h2><p><a href="https://cdn.jsdelivr.net/gh/the1812/Bilibili-Evolved@master/bilibili-evolved.user.js">下载连接</a></p>
-<p>可以对b站做完美的定制,极大扩展b站功能，增加使用体验</p>
-]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>浏览器插件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>油猴插件的使用！</title>
-    <url>/post/pslRsaYu/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://s6.jpg.cm/2022/07/01/Pq2I24.png" height="80px" width="260px" style="float:right">
-
-<br>
-
-<br>
-
-
-
-<h2 id="使用油猴插件免费观看全网vip视频"><a href="#使用油猴插件免费观看全网vip视频" class="headerlink" title="使用油猴插件免费观看全网vip视频"></a><font color="orange" face="kaiti">使用油猴插件免费观看全网vip视频</font></h2><p><strong>1.下载微软edge浏览器</strong></p>
-<p> 官方下载链接:</p>
-<p><a href="https://www.microsoft.com/en-us/edge?r=1">下载</a></p>
-<p><strong>2.打开edge浏览器右侧扩展</strong></p>
-<p>在应用市场安装<strong>Tampermonkey</strong>插件</p>
-<h4 id="3-进入油猴脚本市场下载免vip观看视频脚本"><a href="#3-进入油猴脚本市场下载免vip观看视频脚本" class="headerlink" title="3.进入油猴脚本市场下载免vip观看视频脚本"></a>3.进入油猴脚本市场下载免vip观看视频脚本</h4><p>油猴脚本市场地址:<a href="https://greasyfork.org/zh-CN/">https://greasyfork.org/zh-CN/</a></p>
-<p>搜索vip        <font color="red">安装懒人专用全网vip脚本</font></p>
-<p><strong>4.安装脚本</strong></p>
-<p><strong>5.进入视频网站观看vip视频</strong></p>
-]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>浏览器插件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vip终结者！</title>
-    <url>/post/FmiOZKbl/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><br>
-
-<br>
-
-<img src="https://s6.jpg.cm/2022/07/01/Pq2I24.png" height="80px" width="260px" style="float:right">
-
-<h2 id="一-下载连接"><a href="#一-下载连接" class="headerlink" title="一.下载连接"></a><font color="orange" face="kaiti">一.下载连接</font></h2><p><a href="https://www.lanzouw.com/icSBFuxmc3a">https://www.lanzouw.com/icSBFuxmc3a</a>              密码:1ibt</p>
-]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>视频播放</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用potplayer轻松播放中国所有电视直播频道！</title>
-    <url>/post/upvEVyck/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><br>
-
-<br>
-
-<img src="https://s6.jpg.cm/2022/07/01/Pq2I24.png" height="80px" width="260px" style="float:right">
-
-<h2 id="一-下载potplayer"><a href="#一-下载potplayer" class="headerlink" title="一.下载potplayer"></a><font color="orange" face="kaiti">一.下载potplayer</font></h2><p><a href="https://disk.onji.cn/s/8v6Lso">下载地址</a></p>
-<h2 id="二-导入国内直播源地址"><a href="#二-导入国内直播源地址" class="headerlink" title="二.导入国内直播源地址"></a><font color="orange" face="kaiti">二.导入国内直播源地址</font></h2><p>直播源码地址:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;iptv-org.github.io&#x2F;iptv&#x2F;countries&#x2F;cn.m3u</span><br></pre></td></tr></table></figure>
-
-<p><strong>1.打开potplay播放器</strong></p>
-<p><strong>2.右键打开连接，将直播源地址粘贴</strong></p>
-<p><strong>3.测试观看所有电视直播频道</strong></p>
-]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>视频播放</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>win10桌面美化！</title>
-    <url>/post/BuwjfYzj/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><br>
-
-<br>
-
-<img src="https://s6.jpg.cm/2022/07/01/Pq2I24.png" height="80px" width="260px" style="float:right">
-
-<h2 id="桌面美化需要的软件"><a href="#桌面美化需要的软件" class="headerlink" title="桌面美化需要的软件"></a><font color="orange" face="kaiti">桌面美化需要的软件</font></h2><p><strong>(1)任务栏透明</strong></p>
-<p><a href="https://disk.onji.cn/s/rl3Mcb">下载连接</a></p>
-<p><strong>(2)动态桌面软件</strong></p>
-<p><a href="https://disk.onji.cn/s/bNOrtg">下载连接</a></p>
-<p><strong>(3)博哥提供的20个动态桌面素材</strong></p>
-<p><a href="https://mmitacnz2-my.sharepoint.com/personal/bhydev_ceo_co_ax/_layouts/15/onedrive.aspx?id=/personal/bhydev_ceo_co_ax/Documents/%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6/%E8%BD%AF%E4%BB%B6/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/%E7%BE%8E%E5%8C%96%E6%A1%8C%E9%9D%A2/20%E4%B8%AA%E9%AB%98%E6%B8%85%E5%8A%A8%E6%80%81%E6%A1%8C%E9%9D%A2/%E5%8A%A8%E6%80%81%E6%A1%8C%E9%9D%A2.7z&parent=/personal/bhydev_ceo_co_ax/Documents/%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6/%E8%BD%AF%E4%BB%B6/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/%E7%BE%8E%E5%8C%96%E6%A1%8C%E9%9D%A2/20%E4%B8%AA%E9%AB%98%E6%B8%85%E5%8A%A8%E6%80%81%E6%A1%8C%E9%9D%A2">下载连接</a></p>
-<p><strong>(4)10个好用的壁纸素材网站</strong></p>
-<p>.<a href="https://www.jianshu.com/p/1454bcdff9f6">https://www.jianshu.com/p/1454bcdff9f6</a></p>
-]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>win10</tag>
       </tags>
   </entry>
   <entry>
@@ -945,7 +446,7 @@
   </entry>
   <entry>
     <title>博哥整理秒面试题库?</title>
-    <url>/post/ZcsxUcnx/</url>
+    <url>/post/qvJcQlrb/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://s6.jpg.cm/2022/07/01/Pq2I24.png" height="80px" width="260px" style="float:right">
 
 <p><a href="https://www.aliyundrive.com/s/XWG23zFR5yq">面试题库下载地址</a></p>
@@ -978,6 +479,8 @@
 <blockquote>
 <p>Settings是对软件本身的一些属性进行配置，例如字体 主题 背景图 插件等。</p>
 </blockquote>
+<!--more-->
+
 <h3 id="如何打开Settings设置页面"><a href="#如何打开Settings设置页面" class="headerlink" title="如何打开Settings设置页面"></a>如何打开Settings设置页面</h3><p><img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/19/1705d918f35750ba~tplv-t2oaga2asx-watermark.awebp" alt="img"></p>
 <h3 id="Settings设置页面结构详解"><a href="#Settings设置页面结构详解" class="headerlink" title="Settings设置页面结构详解"></a>Settings设置页面结构详解</h3><p><img src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/2/19/1705d919115c4e9e~tplv-t2oaga2asx-watermark.awebp" alt="img"></p>
 <p>结构</p>
@@ -1560,11 +1063,7 @@
   <entry>
     <title>后端学习路线图</title>
     <url>/post/bmQjVybF/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/164075381724746.5gwqgtycpys0.webp" height="80px" width="260px" style="float:right">
-
-
-
-<p><img src="https://cdn.jsdelivr.net/gh/zbbhy/boge_img@main/docimg/%E5%90%8E%E7%AB%AF.1769qe4z4a0w.png"></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>[学习路线]<a href="https://zmkj_8073.gitee.io/boge_code_repository/boge_lx/index.html">https://zmkj_8073.gitee.io/boge_code_repository/boge_lx/index.html</a></p>
 ]]></content>
       <categories>
         <category>技术文章</category>
@@ -1583,7 +1082,178 @@
 
 <br>
 
-<h2 id="搜索技巧汇总"><a href="#搜索技巧汇总" class="headerlink" title="搜索技巧汇总"></a><font color="orange" face="kaiti">搜索技巧汇总</font></h2><table>
+
+
+<h1 id="搜索技巧-1"><a href="#搜索技巧-1" class="headerlink" title="搜索技巧_1"></a>搜索技巧_1</h1><h2 id="一-常用词含义"><a href="#一-常用词含义" class="headerlink" title="一.常用词含义"></a>一.常用词含义</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">boundary-start ---内容---</span><br><span class="line"></span><br><span class="line">- **watch：**会持续收到该项目的动态</span><br><span class="line">- **fork：**复制某个仓库到自己的Github仓库中</span><br><span class="line">- **star：**可以理解为点赞</span><br><span class="line">- **clone：**将项目下载至本地</span><br><span class="line">- **follow：**关注你感兴趣的作者，会收到他们的动态</span><br><span class="line"></span><br><span class="line">boundary-end ------</span><br></pre></td></tr></table></figure>
+
+<h2 id="二-查询大于或小于另一个值的值"><a href="#二-查询大于或小于另一个值的值" class="headerlink" title="二.查询大于或小于另一个值的值"></a>二.查询大于或小于另一个值的值</h2><table>
+<thead>
+<tr>
+<th>查询</th>
+<th>事例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&gt;n</td>
+<td>spring-boot stars:&gt;2000  匹配含有 “spring-boot” 字样 、星标 超过 1000 个的仓库。</td>
+</tr>
+<tr>
+<td>&gt;=n</td>
+<td>spring-boot topics:&gt;=5 匹配含有 “spring-boot” 字样、有 5 个或更多主题的仓库</td>
+</tr>
+<tr>
+<td>&lt;n</td>
+<td>spring-boot size:&lt;10000 匹配小于 10 KB 的文件中含有 “spring-boot” 字样的代码。</td>
+</tr>
+<tr>
+<td>&lt;=n</td>
+<td>spring-boot stars:&lt;=50 匹配含有 “spring-boot” 字样、星标不超过 50 个的仓库。</td>
+</tr>
+</tbody></table>
+<span id="more"></span>
+
+<h2 id="三-查询范围之间的值"><a href="#三-查询范围之间的值" class="headerlink" title="三.查询范围之间的值"></a>三.查询范围之间的值</h2><table>
+<thead>
+<tr>
+<th>查询</th>
+<th>事例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>n..n</td>
+<td>spring-boot stars:4000..5000  匹配含有 “spring-boot” 字样、有4000到5000个星号的仓库</td>
+</tr>
+</tbody></table>
+<h2 id="四-查询日期"><a href="#四-查询日期" class="headerlink" title="四.查询日期"></a>四.查询日期</h2><table>
+<thead>
+<tr>
+<th>查询</th>
+<th>实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&gt;YYYY-MM-DD</td>
+<td>spring-boot created:&gt;2016-04-29 匹配含有 “spring-boot” 字样、在 2016 年 4 月 29 日之后创建的议题。</td>
+</tr>
+<tr>
+<td>&gt;=YYYY-MM-DD</td>
+<td>spring-boot created:&gt;=2017-04-01 匹配含有 “spring-boot” 字样、在 2017 年 4 月 1 日或之后创建的议题。</td>
+</tr>
+<tr>
+<td>&lt;YYYY-MM-DD</td>
+<td>spring-boot pushed:&lt;2012-07-05 匹配在 2012 年 7 月 5 日之前推送的仓库中含有 “spring-boot” 字样的代码。</td>
+</tr>
+<tr>
+<td>&lt;=YYYY-MM-DD</td>
+<td>spring-boot created:&lt;=2012-07-04 匹配含有 “spring-boot” 字样、在 2012 年 7 月 4 日或之前创建的议题。</td>
+</tr>
+<tr>
+<td>YYYY-MM-DD..YYYY-MM-DD</td>
+<td>spring-boot pushed:2016-04-30..2016-07-04 匹配含有 “spring-boot” 字样、在 2016 年 4 月末到 7 月之间推送的仓库</td>
+</tr>
+</tbody></table>
+<h2 id="五-排除特定结果和缩小查询范围"><a href="#五-排除特定结果和缩小查询范围" class="headerlink" title="五.排除特定结果和缩小查询范围"></a>五.排除特定结果和缩小查询范围</h2><table>
+<thead>
+<tr>
+<th>查询</th>
+<th>事例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>not</td>
+<td>hello NOT world 匹配含有 “hello” 字样但不含有 “world” 字样的仓库</td>
+</tr>
+<tr>
+<td>-QUALIFIER</td>
+<td>spring-boot stars:&gt;1000 -language:kotlin 匹配含有 “spring-boot” 字样、有超过 1000 个星号但并非以 kotlin 编写的仓库。 mentions:defunkt -org:github 匹配提及 @defunkt 且不在 GitHub 组织仓库中的议题</td>
+</tr>
+<tr>
+<td>对带有空格的查询使用引号</td>
+<td>spring-boot NOT “hello world” 匹配含有 “spring-boot” 字样但不含有 “hello world” 字样的仓库。</td>
+</tr>
+<tr>
+<td>QUALIFIER:USERNAME</td>
+<td>author:nat 匹配 @nat 创作的提交。</td>
+</tr>
+<tr>
+<td>QUALIFIER:@me</td>
+<td>is:issue assignee:@me</td>
+</tr>
+</tbody></table>
+<h2 id="六-其他高级搜索"><a href="#六-其他高级搜索" class="headerlink" title="六.其他高级搜索"></a>六.其他高级搜索</h2><h3 id="followers-n-按关注者数量搜索"><a href="#followers-n-按关注者数量搜索" class="headerlink" title="followers:n 按关注者数量搜索"></a>followers:n 按关注者数量搜索</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**spring-boot followers:&gt;&#x3D;10000匹配有 10000 或更多关注者提及文字 &quot;spring-boot&quot; 的仓库。spring followers:1..10 匹配拥有 1 到 10 个关注者并且提及 &quot;spring&quot; 一词的的仓库。**</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="按复刻数量搜索-forks-n"><a href="#按复刻数量搜索-forks-n" class="headerlink" title="按复刻数量搜索 forks:n"></a>按复刻数量搜索 <strong>forks:n</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">forks:5 匹配只有 5 个复刻的仓库。**</span><br><span class="line"></span><br><span class="line">**forks:&gt;&#x3D;205 匹配具有至少 205 个复刻的仓库。**</span><br><span class="line"></span><br><span class="line">**forks:&lt;90 匹配具有少于 90 个复刻的仓库。**</span><br><span class="line"></span><br><span class="line">**forks:10..20 匹配具有 10 到 20 个复刻的仓库</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="按星号数量搜索-stars-n"><a href="#按星号数量搜索-stars-n" class="headerlink" title="按星号数量搜索 stars:n"></a>按星号数量搜索 stars:n</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">stars:500 匹配恰好具有 500 个星号的仓库。**</span><br><span class="line"></span><br><span class="line">**stars:10..20 匹配具有 10 到 20 个星号、小于 1000 KB 的仓库。**</span><br><span class="line"></span><br><span class="line">**stars:&gt;&#x3D;500 fork:true language:php 匹配具有至少 500 个星号，包括复刻的星号（以 PHP 编写）的仓库。</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="按仓库创建或上次更新时间搜索"><a href="#按仓库创建或上次更新时间搜索" class="headerlink" title="按仓库创建或上次更新时间搜索"></a>按仓库创建或上次更新时间搜索</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">webos created:&lt;2011-01-01 匹配具有 &quot;webos&quot; 字样、在 2011 年之前创建的仓库。**</span><br><span class="line"></span><br><span class="line">**css pushed:&gt;2013-02-01 匹配具有 &quot;css&quot; 字样、在 2013 年 1 月之后收到推送的仓库。**</span><br><span class="line"></span><br><span class="line">**case pushed:&gt;&#x3D;2013-03-06 fork:only 匹配具有 &quot;case&quot; 字样、在 2013 年 3 月 6 日或之后收到推送并且作为复刻的仓库。</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="按语言搜索"><a href="#按语言搜索" class="headerlink" title="按语言搜索"></a>按语言搜索</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**language:javascript 匹配具有 &quot;rails&quot; 字样、以 JavaScript 编写的仓库。**</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="按主题搜索"><a href="#按主题搜索" class="headerlink" title="按主题搜索"></a>按主题搜索</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**topic:TOPIC        topic:jekyll匹配已归类为 &quot;jekyll&quot; 主题的仓库。**</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="按主题数量搜索"><a href="#按主题数量搜索" class="headerlink" title="按主题数量搜索"></a>按主题数量搜索</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**topics:5 匹配具有五个主题的仓库。topics:&gt;3 匹配超过三个主题的仓库。**</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="按仓库可见性搜索"><a href="#按仓库可见性搜索" class="headerlink" title="按仓库可见性搜索"></a>按仓库可见性搜索</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">is:publicis:public org:github 匹配 GitHub 拥有的公共仓库。**</span><br><span class="line"></span><br><span class="line">**is:internalis:internal test 匹配您可以访问并且包含单词 &quot;test&quot; 的内部仓库。**</span><br><span class="line"></span><br><span class="line">**is:privateis:private pages 匹配您可以访问并且包含单词 &quot;pages&quot; 的私有仓库。</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="基于仓库是否为镜像搜索"><a href="#基于仓库是否为镜像搜索" class="headerlink" title="基于仓库是否为镜像搜索"></a>基于仓库是否为镜像搜索</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mirror:true     mirror:true GNOME 匹配是镜像且包含 &quot;GNOME&quot; 字样的仓库。**</span><br><span class="line"></span><br><span class="line">**mirror:false     mirror:false GNOME 匹配并非镜像且包含 &quot;GNOME&quot; 字样的仓库。**</span><br><span class="line"></span><br><span class="line">### (10)按用户拥有的仓库数量搜索</span><br></pre></td></tr></table></figure>
+
+<p><strong>repos:n</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">repos:&gt;9000 匹配其仓库数超过 9,000 的用户。**</span><br><span class="line"></span><br><span class="line">**bert repos:10..30 匹配拥有 10 到 30 个仓库、其用户名或真实姓名含有 &quot;bert&quot; 字样的用户。</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="搜索某个地区内-某种语言的大佬"><a href="#搜索某个地区内-某种语言的大佬" class="headerlink" title="搜索某个地区内,某种语言的大佬"></a>搜索某个地区内,某种语言的大佬</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**ocation:beijing language:java**</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="按仓库名称、说明或自述文件内容搜索"><a href="#按仓库名称、说明或自述文件内容搜索" class="headerlink" title="按仓库名称、说明或自述文件内容搜索"></a>按仓库名称、说明或自述文件内容搜索</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">in:name    seckill in:name 匹配仓库名称中含有 &quot;seckill&quot; 的仓库。**</span><br><span class="line"></span><br><span class="line">**in:description seckill in:name,description 匹配仓库名称或说明中含有 &quot;seckill&quot; 的仓库**</span><br><span class="line"></span><br><span class="line">**in:readme       seckill in:readme 匹配仓库自述文件中提及 &quot;seckill&quot; 的仓库。**</span><br><span class="line"></span><br><span class="line">**repo:owner&#x2F;namerepo:codingXiaxw&#x2F;seckill  匹配特定仓库名称。</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="按仓库大小搜索size-n"><a href="#按仓库大小搜索size-n" class="headerlink" title="按仓库大小搜索size:n"></a>按仓库大小搜索size:n</h3><p>**</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">size:1000 匹配恰好为 1 MB 的仓库。**</span><br><span class="line"></span><br><span class="line">**size:&gt;&#x3D;30000 匹配至少为 30 MB 的仓库。**</span><br><span class="line"></span><br><span class="line">**size:&lt;50 匹配小于 50 KB 的仓库。**</span><br><span class="line"></span><br><span class="line">**size:50..120 匹配介于 50 KB 与 120 KB 之间的仓库。**</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<br>
+
+<hr>
+
+<h1 id="搜索技巧-2"><a href="#搜索技巧-2" class="headerlink" title="搜索技巧_2"></a>搜索技巧_2</h1><h2 id="GitHub-Trending"><a href="#GitHub-Trending" class="headerlink" title="GitHub Trending"></a><strong>GitHub Trending</strong></h2><p><strong>这个相信是大家使用频率最高的渠道了，它是来自于 GitHub 官方的项目趋势列表，一些 Star 增长比较快的项目会在这里出现。开发者可以针对不同编程语言进行过滤筛选，是个挖掘优质项目的好渠道。</strong></p>
+<p><a href="https://github.com/trending">链接地址</a></p>
+<h2 id="GitHub-动态"><a href="#GitHub-动态" class="headerlink" title="** GitHub 动态**"></a>** GitHub 动态**</h2><p><strong>GitHub 上的一些大神经常会关注一些比较优秀的项目，如果你有关注他们，则可以通过 GitHub 动态流了解到一些他们认为不错的开源项目，甚至有时他们准备搞一些大动作时，你也可以在第一时间知晓。</strong></p>
+<p><strong>GitHub 上大神很多，不同领域可关注的人也不同，这块等后面有时间我再分类整理一下，敬请关注。</strong></p>
+<h2 id="GitHub-Topic"><a href="#GitHub-Topic" class="headerlink" title="** GitHub Topic**"></a>** GitHub Topic**</h2><p><strong>从去年微软收购 GitHub 后，可以很明显的感知到的一点是，GitHub 正在慢慢优化项目的信息分类，让一些优质开源项目得到更有针对性的推送。</strong></p>
+<p><strong>早期大部分开发者都是 Trending 或关注的人的动态来了解一些开源项目，但这样的曝光量显然对一个新启动的开源项目不太友好，因此后续 GitHub 应该会推出一些更为丰富的渠道，让大家可以更好的挖掘一些优质的开源项目。</strong></p>
+<p><a href="https://github.com/topics">链接地址</a></p>
+<h2 id="技术周报"><a href="#技术周报" class="headerlink" title="技术周报"></a>技术周报</h2><p><strong>各类技术周报，这里就不展开说了，你可以根据自己的技术领域在 Google 加关键词 Weekly 搜索订阅。他们一般每周都会定时推送所在领域相关的开源项目</strong></p>
+<p><a href="https://github.com/ascoders/weekly">weekly</a></p>
+<p><a href="https://github.com/ruanyf/weekly">ruanyf/weekly</a></p>
+<p><a href="https://github.com/vitalets/github-trending-repos">trending</a></p>
+<h2 id="其他推荐"><a href="#其他推荐" class="headerlink" title="其他推荐"></a>其他推荐</h2><p><a href="https://gitstar-ranking.com/">github全球排行</a></p>
+<p><a href="https://www.libhunt.com/">github排行榜</a></p>
+<p><a href="https://github.com/521xueweihan/HelloGitHub">HelloGithub</a></p>
+<p><a href="https://github.com/kon9chunkit/GitHub-Chinese-Top-Charts">github中文排行榜</a></p>
+<p><a href="https://github.com/search?q=Awesome">Awesome</a></p>
+<p><a href="https://github.com/biaochenxuying/blog/issues/45">github挖矿技巧</a></p>
+<h2 id="其他搜索技巧汇总"><a href="#其他搜索技巧汇总" class="headerlink" title="其他搜索技巧汇总"></a><font color="orange" face="kaiti">其他搜索技巧汇总</font></h2><table>
 <thead>
 <tr>
 <th>序号</th>
@@ -1639,88 +1309,6 @@
       </tags>
   </entry>
   <entry>
-    <title>youtube搜索下载技巧</title>
-    <url>/post/DgSnWkfD/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://s6.jpg.cm/2022/07/01/Pq2I24.png" height="80px" width="260px" style="float:right">
-
-<br>
-
-<br>
-
-<h2 id="一-搜索技巧"><a href="#一-搜索技巧" class="headerlink" title="一.搜索技巧"></a><font color="orange" face="kaiti">一.搜索技巧</font></h2><h3 id="1-找到特定的YouTube的频道"><a href="#1-找到特定的YouTube的频道" class="headerlink" title="1.找到特定的YouTube的频道"></a><strong>1.找到特定的YouTube的频道</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">royal wedding, channel</span><br><span class="line">YouTube里面有很多关于royal wedding的视频，但是如果你希望检索到官方的视频页面，只要在后面加上channel就可以了。</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-检索近期上传视频"><a href="#2-检索近期上传视频" class="headerlink" title="2.检索近期上传视频"></a><strong>2.检索近期上传视频</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">oprah winfrey, this week上面的检索关键字将会显示过去一周内上传到YouTube的视频，当然你还可以使用&quot;today&quot;或者&quot;this mouth&quot;来限制时间。</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-找到原汁原味的视频"><a href="#3-找到原汁原味的视频" class="headerlink" title="3.找到原汁原味的视频"></a><strong>3.找到原汁原味的视频</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">never say never, partner如果你想要听到原版的音乐或者视频，而不是网友们翻版的或者恶搞的，加上partner就可以了。</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-找到全时长的电影"><a href="#4-找到全时长的电影" class="headerlink" title="4.找到全时长的电影"></a><strong>4.找到全时长的电影</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">jackie chan, movie</span><br><span class="line">如果你项找到完整版的电影，该加上什么，你懂的。甚至你能看到宝莱坞的电影哦。</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<h3 id="5-找出高清电影"><a href="#5-找出高清电影" class="headerlink" title="5.找出高清电影"></a><strong>5.找出高清电影</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">the king&#39;s speech trailer, hd你既然已经知道hd是高清的意思，我额外想要告诉你的信息就是你可以看到结果里面全部时720p或者1080p的电影鸟～</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-看3D电影"><a href="#6-看3D电影" class="headerlink" title="6.看3D电影"></a><strong>6.看3D电影</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">avatar, 3d高清的还不过瘾，你有一副3D眼镜摆在家里？那就来尝试3D的电影吧，看3D电影不一定要3D眼镜哦，详情猛击此处。</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-找出播放列表"><a href="#7-找出播放列表" class="headerlink" title="7.找出播放列表"></a><strong>7.找出播放列表</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">bryan adams, playlist你可以找出播放列表和一些相关类型的演员或者是电影，为了保存他们，你可以添加到你的账户中，以备下次观看。详情猛击此处。</span><br></pre></td></tr></table></figure>
-
-<h3 id="8-在-YouTube-中找到长影片"><a href="#8-在-YouTube-中找到长影片" class="headerlink" title="8.在 YouTube 中找到长影片"></a><strong>8.在 YouTube 中找到长影片</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tom and jerry cartoons, long加上 long ，你可以找到20分钟时长以上的影片。</span><br></pre></td></tr></table></figure>
-
-<h3 id="9-标题的精确匹配"><a href="#9-标题的精确匹配" class="headerlink" title="9.标题的精确匹配"></a><strong>9.标题的精确匹配</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">allintitle:&quot;google goes gaga&quot;你可以进行精确地匹配以便于找到一些可能由于地理位置限制而不允许在你们国家看的电影哦。</span><br></pre></td></tr></table></figure>
-
-<h3 id="10-混合条件匹配"><a href="#10-混合条件匹配" class="headerlink" title="10.混合条件匹配"></a><strong>10.混合条件匹配</strong></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ted talks, hd, this month, long</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="二-下载技巧"><a href="#二-下载技巧" class="headerlink" title="二.下载技巧"></a><font color="orange" face="kaiti">二.下载技巧</font></h2><p>1.于 YouTube 网址前方加入 ss</p>
-<p>2.于 YouTube 网址后方加入 my</p>
-]]></content>
-      <categories>
-        <category>其他</category>
-        <category>搜索技巧</category>
-      </categories>
-      <tags>
-        <tag>youtube</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>google必备搜索技巧</title>
-    <url>/post/yZEhjmpm/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://s6.jpg.cm/2022/07/01/Pq2I24.png" height="80px" width="260px" style="float:right">
-
-<br>
-
-<br>
-
-<h2 id="1-准确搜索"><a href="#1-准确搜索" class="headerlink" title="1. 准确搜索"></a><font color="orange" face="kaiti">1. 准确搜索</font></h2><p>最简单和最有效的搜索方式是给关键词加上双引号，这样搜索引擎会反馈和关键词完全吻合的搜索结果</p>
-<p>例如，搜索 Joe Bloggs 时，搜索引擎会返回同时跟 Joe 和 Bloggs 相关的结果，而搜索 “Joe Bloggs” 时，搜索引擎只返回跟 “Joe Bloggs” 相关的结果。</p>
-<p>准确搜索会排除常见但相关度偏低的信息，会提高搜索的精确性。</p>
-<h2 id="2-排除关键字"><a href="#2-排除关键字" class="headerlink" title="2. 排除关键字"></a><font color="orange" face="kaiti">2. 排除关键字</font></h2><p>如果准确搜索不能得到想要的结果，你可以通过使用<strong>减号</strong>的方式来排除特定词汇。</p>
-<p>例如搜索 Joe Bloggs -jeans 时，搜索引擎会返回与 Joe Bloggs 匹配但已经排除关键字 jeans 的信息。</p>
-<h2 id="3-用-or-进行搜索"><a href="#3-用-or-进行搜索" class="headerlink" title="3. 用 or 进行搜索"></a><font color="orange" face="kaiti">3. 用 or 进行搜索</font></h2><p>默认的文本搜索会返回所有和关键字相关的信息，通过使用 OR，不仅能返回和关键字都相关的信息，还能返回和两个关键字分别相关的信息。在不确定哪个哪个关键字对搜索结果起决定作用时，OR 搜索是很有用的。</p>
-<span id="more"></span>
-
-<h2 id="4-同义词搜索"><a href="#4-同义词搜索" class="headerlink" title="4. 同义词搜索"></a><font color="orange" face="kaiti">4. 同义词搜索</font></h2><p>有时使用不确定的关键词进行搜索反而更有用。如果你不确定使用哪个关键词，可以试试使用同义词搜索。</p>
-<p>例如，你搜索 plumbing ~university，则搜索引擎会返回包含 plumbing universities 和 plumbing colleges 的信息。</p>
-<h2 id="5-站内搜索"><a href="#5-站内搜索" class="headerlink" title="5. 站内搜索"></a><font color="orange" face="kaiti">5. 站内搜索</font></h2><p>很多网站缺乏搜索功能，但你可以通过谷歌等搜索引擎对站内进行搜索。</p>
-<p>在搜索引擎上输入 <strong>site:theguardian.com</strong> 和搜索关键字，搜索引擎会返回网站 <a href="http://theguardian.com/">theguardian.com</a> 内和关键词相关的信息。结合准确搜索，能使这项功能更强大。</p>
-<h2 id="6-星号搜索"><a href="#6-星号搜索" class="headerlink" title="6. 星号搜索"></a><font color="orange" face="kaiti">6. 星号搜索</font></h2><p>类似拼图游戏 Scrabble 的空白方块，在搜索引擎中，不管关键字缺失的是一连串单词中的其中一个还是一个单词的某一部分，都可以使用星号来填补缺失的部分，这同样适用于搜索一篇确定性偏低的文章。</p>
-<p>例如，在搜索引擎输入 architect*，则会得到所有包含 architect、architectural、architecture、architected、architecting 以及其他所有以architect 作为开头的词汇的信息。</p>
-<h2 id="7-两个值之间的搜索"><a href="#7-两个值之间的搜索" class="headerlink" title="7. 两个值之间的搜索"></a><font color="orange" face="kaiti">7. 两个值之间的搜索</font></h2><p>在一定范围内使用限定词来搜索某些东西是一个不错的方法。例如想要找出 1920 至 1950 年间的英国首相，直接在搜索引擎中输入 英国首相 1920.. 1950 即可得出想要的结果。</p>
-<p><strong>记住，数值之间的符号是两个英文句号加一个空格键。</strong></p>
-<h2 id="8-关键字标题搜索"><a href="#8-关键字标题搜索" class="headerlink" title="8. 关键字标题搜索"></a><font color="orange" face="kaiti">8. 关键字标题搜索</font></h2><p>有时，你只想找出所有和关键词相关的网页链接、网页主体(内容)和标题，这时，就可以使用对应的限定词：<strong>inurl:</strong> 、<strong>intext</strong> 和 <strong>intitle</strong>。</p>
-<p>例如，在搜索引擎中输入 intitle: 评测 会得到所有和关键词 评测 相关的网页标题。</p>
-<h2 id="9-准确搜索"><a href="#9-准确搜索" class="headerlink" title="9. 准确搜索"></a><font color="orange" face="kaiti">9. 准确搜索</font></h2><p>相关的限定词可用于搜索相关网站时使用。例如，你仅需在搜索引擎中输入 related:theguardian.com 即可得到所有和 <a href="http://theguardian.com/">theguardian.com</a> 相关的网站的搜索结果。</p>
-<h2 id="10-组合上述搜索技巧"><a href="#10-组合上述搜索技巧" class="headerlink" title="10. 组合上述搜索技巧"></a><font color="orange" face="kaiti">10. 组合上述搜索技巧</font></h2><p>你可以组合使用上述的搜索技巧来缩小或扩大搜索范围。尽管一些搜索技巧不常使用，但是准确搜索和站内搜索的使用范围是很广的。</p>
-<p>随着 Google 等搜索引擎对用户自然语言理解程度的提高，这些搜索技能的适用场景会越来越少，至少这是搜索引擎的共同追求目标。但是在当下，掌握这些搜索技巧还是非常有用的</p>
-]]></content>
-      <categories>
-        <category>其他</category>
-        <category>搜索技巧</category>
-      </categories>
-      <tags>
-        <tag>google</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2020最新面试合集?</title>
     <url>/post/ZvTmuYBt/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://s6.jpg.cm/2022/07/01/Pq2I24.png" height="80px" width="260px" style="float:right">
@@ -1758,196 +1346,6 @@
       </categories>
       <tags>
         <tag>面试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>个人写作笔记汇总！</title>
-    <url>/post/SgtOwibX/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://s6.jpg.cm/2022/07/01/Pq2I24.png" height="80px" width="260px" style="float:right">
-
-<br>
-
-<br>
-
-<h2 id="笔记软件列表"><a href="#笔记软件列表" class="headerlink" title="笔记软件列表"></a><font color="orange" face="kaiti">笔记软件列表</font></h2><table>
-<thead>
-<tr>
-<th>软件</th>
-<th>简介</th>
-<th>Windows</th>
-<th>macOS</th>
-<th>Linux</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a href="https://flomoapp.com/"><font color="orange">浮墨笔记</font></a></td>
-<td>像发微博一样记笔记</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://gitnoteapp.com/zh/"><font color="orange">GitNote</font></a></td>
-<td>基于Git 的跨平台云笔记工具</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://gridea.dev/"><font color="orange">Gridea</font></a></td>
-<td>静态博客写作客户端</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="github.com/onblog/JustWrite"><font color="orange">简单写作</font></a></td>
-<td>一款支持同步滑动预览的跨平台Markdown编辑器</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://minnote.v8cloud.cn/index.html"><font color="orange">极简笔记</font></a></td>
-<td>一款现代化 Markdown 笔记软件</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://www.kancloud.cn/"><font color="orange">看云</font></a></td>
-<td>一个现代化文档写作、托管及数字出版平台</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://marktext.app/"><font color="orange">Mark Text</font></a></td>
-<td>简洁优雅的 Markdown 编辑器</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://leanote.com/"><font color="orange">蚂蚁笔记</font></a></td>
-<td>蚂蚁笔记 = 笔记 + 博客 + 协作 + 私有云</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://www.notion.so/"><font color="orange">Notion</font></a></td>
-<td>提供笔记、任务、数据库、看板、维基、日历和提醒等组件的笔记应用</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://notable.app/"><font color="orange">Notable</font></a></td>
-<td>跨平台 Markdown 本地编辑器</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://www.onenote.com/download"><font color="orange">OneNote</font></a></td>
-<td>微软出品，记录想法、观点和待办事项</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://simplenote.com/"><font color="orange">Simplenote</font></a></td>
-<td>一款轻量级笔记软件</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://typora.io/"><font color="orange">Typora</font></a></td>
-<td>一款极简所见即所得的 Markdown 笔记软件</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://getupnote.com/"><font color="orange">UpNote</font></a></td>
-<td>一款简洁干净的笔记软件</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://github.com/Vanessa219/vditor"><font color="orange">Vditor</font></a></td>
-<td>易于使用的 Markdown 编辑器，为适配不同的应用场景而生</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://www.wolai.com/"><font color="orange">wolai</font></a></td>
-<td>面向未来的云端笔记</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://www.wiz.cn/zh-cn/"><font color="orange">为知笔记</font></a></td>
-<td>云笔记、个人知识管理、团队协作……</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://bear.app/cn/"><font color="orange">熊掌记</font></a></td>
-<td>优雅、灵活的写作笔记应用</td>
-<td></td>
-<td>:heart:</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="http://soft.xiaoshujiang.com/"><font color="orange">小书匠</font></a></td>
-<td>既是一款 Markdown 编辑器，更是一款功能丰富、强大的知识管理工具</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://staging.yinxiang.com/"><font color="orange">印象笔记</font></a></td>
-<td>工作必备效率应用</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="https://note.youdao.com/"><font color="orange">有道云笔记</font></a></td>
-<td>专注办公提效的笔记软件</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td>:heart:</td>
-</tr>
-<tr>
-<td><a href="https://www.yuque.com/install/desktop"><font color="orange">语雀</font></a></td>
-<td>新一代云端知识库</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td></td>
-</tr>
-<tr>
-<td><a href="http://focusapp.ink/#/"><font color="orange">专注笔记</font></a></td>
-<td>精美的电子笔记软件</td>
-<td>:heart:</td>
-<td>:heart:</td>
-<td></td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>写作软件</tag>
       </tags>
   </entry>
   <entry>
@@ -2165,54 +1563,6 @@
       </categories>
       <tags>
         <tag>团队博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>掌握notion让你的工作效率起飞</title>
-    <url>/post/cvZgXago/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://s6.jpg.cm/2022/07/01/Pq2I24.png" height="80px" width="260px" style="float:right">
-
-<br>
-
-<br>
-
-<h2 id="notion的使用"><a href="#notion的使用" class="headerlink" title="notion的使用"></a>notion的使用</h2><iframe style="overflow:auto;" width="100%" height="100%" src="//player.bilibili.com/player.html?aid=46349671&bvid=BV1Zb411H7xC&cid=81208364&page=1" scrolling="auto" border="0" frameborder="none" framespacing="0" allowfullscreen="true">
-</iframe>
-]]></content>
-      <categories>
-        <category>优质推荐</category>
-        <category>视频</category>
-      </categories>
-      <tags>
-        <tag>写作软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>5个 Chrome必备技巧【秘籍】！</title>
-    <url>/post/tIPSFuYY/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><img src="https://s6.jpg.cm/2022/07/01/Pq2I24.png" height="80px" width="260px" style="float:right">
-
-<br>
-
-<br>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.Ctrl+Shift+T 恢复关闭书签</span><br><span class="line"></span><br><span class="line">2.Ctrl+Shift+D 快速保存页面链接到书签</span><br><span class="line"></span><br><span class="line">3.右键向群组添加标签页—标签分组</span><br><span class="line"></span><br><span class="line">4.右键为页面创建二维码</span><br><span class="line"></span><br><span class="line">5.windows+?键盘 调用谷歌自带表情</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>其他</category>
-        <category>搜索技巧</category>
-      </categories>
-      <tags>
-        <tag>google</tag>
       </tags>
   </entry>
 </search>
