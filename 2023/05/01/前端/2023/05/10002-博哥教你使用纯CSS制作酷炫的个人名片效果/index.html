@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="前言 该文档对应的视频教程，请移步B站观看！ 去B站播放该教程  需要掌握的前置知识和用的素材前置知识  HTML CSS SASS FLEX 媒体查询响应式布局   图标网站 https:&#x2F;&#x2F;tabler-icons.io&#x2F;  需要提前下载的css库 重置网页样式的css库:   reset.css     博哥素材提供&amp;自行从网上下载  该案例效果用的图片素材 博哥素材提供&amp;自">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博哥教你使用纯CSS制作酷炫的个人名片效果">
+<meta property="og:url" content="http://example.com/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10002-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E4%BD%BF%E7%94%A8%E7%BA%AFCSS%E5%88%B6%E4%BD%9C%E9%85%B7%E7%82%AB%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%90%8D%E7%89%87%E6%95%88%E6%9E%9C/index.html">
+<meta property="og:site_name" content="博哥编程日记">
+<meta property="og:description" content="前言 该文档对应的视频教程，请移步B站观看！ 去B站播放该教程  需要掌握的前置知识和用的素材前置知识  HTML CSS SASS FLEX 媒体查询响应式布局   图标网站 https:&#x2F;&#x2F;tabler-icons.io&#x2F;  需要提前下载的css库 重置网页样式的css库:   reset.css     博哥素材提供&amp;自行从网上下载  该案例效果用的图片素材 博哥素材提供&amp;自">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/%E5%89%8D%E7%AB%AF/05/A2/1.png">
+<meta property="og:image" content="http://example.com/images/%E5%89%8D%E7%AB%AF/05/A2/2.png">
+<meta property="og:image" content="http://example.com/images/%E5%89%8D%E7%AB%AF/05/A2/3.png">
+<meta property="og:image" content="http://example.com/images/%E5%89%8D%E7%AB%AF/05/A2/4.png">
+<meta property="og:image" content="http://example.com/images/%E5%89%8D%E7%AB%AF/05/A2/5.png">
+<meta property="og:image" content="http://example.com/images/%E5%89%8D%E7%AB%AF/05/A2/6.png">
+<meta property="og:image" content="http://example.com/images/%E5%89%8D%E7%AB%AF/05/A2/7.png">
+<meta property="og:image" content="http://example.com/images/%E5%89%8D%E7%AB%AF/05/A2/8.png">
+<meta property="og:image" content="http://example.com/images/%E5%89%8D%E7%AB%AF/05/A2/9.png">
+<meta property="og:image" content="http://example.com/images/%E5%89%8D%E7%AB%AF/05/A2/10.png">
+<meta property="article:published_time" content="2023-05-01T04:39:04.000Z">
+<meta property="article:modified_time" content="2023-05-02T09:28:17.125Z">
+<meta property="article:author" content="博哥">
+<meta property="article:tag" content="HTML">
+<meta property="article:tag" content="CSS">
+<meta property="article:tag" content="前端案列">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/%E5%89%8D%E7%AB%AF/05/A2/1.png">
+
+<link rel="canonical" href="http://example.com/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10002-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E4%BD%BF%E7%94%A8%E7%BA%AFCSS%E5%88%B6%E4%BD%9C%E9%85%B7%E7%82%AB%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%90%8D%E7%89%87%E6%95%88%E6%9E%9C/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>博哥教你使用纯CSS制作酷炫的个人名片效果 | 博哥编程日记</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">博哥编程日记</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10002-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E4%BD%BF%E7%94%A8%E7%BA%AFCSS%E5%88%B6%E4%BD%9C%E9%85%B7%E7%82%AB%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%90%8D%E7%89%87%E6%95%88%E6%9E%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="博哥">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="博哥编程日记">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          博哥教你使用纯CSS制作酷炫的个人名片效果
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-01 12:39:04" itemprop="dateCreated datePublished" datetime="2023-05-01T12:39:04+08:00">2023-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-05-02 17:28:17" itemprop="dateModified" datetime="2023-05-02T17:28:17+08:00">2023-05-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>3.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>11 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
+<li><strong>该文档对应的视频教程，请移步B站观看！</strong></li>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1uT411m7k7/?spm_id_from=333.999.0.0">去B站播放该教程</a></li>
+</ul>
+<h2 id="需要掌握的前置知识和用的素材"><a href="#需要掌握的前置知识和用的素材" class="headerlink" title="需要掌握的前置知识和用的素材"></a>需要掌握的前置知识和用的素材</h2><h3 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h3><blockquote>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>SASS</li>
+<li>FLEX</li>
+<li>媒体查询响应式布局</li>
+</ul>
+</blockquote>
+<h3 id="图标网站"><a href="#图标网站" class="headerlink" title="图标网站"></a>图标网站</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://tabler-icons.io/">https://tabler-icons.io/</a></p>
+</blockquote>
+<h3 id="需要提前下载的css库"><a href="#需要提前下载的css库" class="headerlink" title="需要提前下载的css库"></a>需要提前下载的css库</h3><blockquote>
+<p>重置网页样式的css库:   <font color="red">reset.css </font>   </p>
+<p>博哥素材提供&amp;自行从网上下载</p>
+</blockquote>
+<h3 id="该案例效果用的图片素材"><a href="#该案例效果用的图片素材" class="headerlink" title="该案例效果用的图片素材"></a>该案例效果用的图片素材</h3><blockquote>
+<p>博哥素材提供&amp;自行从网上下载</p>
+</blockquote>
+<h2 id="重要参数准备"><a href="#重要参数准备" class="headerlink" title="重要参数准备"></a>重要参数准备</h2><table>
+<thead>
+<tr>
+<th>作用的位置</th>
+<th align="left">参数值</th>
+<th>具体说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.头像</td>
+<td align="left">height&#x3D;”260px”     width&#x3D;”650px”<br>height&#x3D;”200px”     width&#x3D;”200px”   圆角-50%<br>box-shadow: 0 10px 60px -10px rgba(13,28,39,.5)<br></td>
+<td>设置初始大小<br>电脑屏幕下尺寸和圆角<br>阴影效果br&gt;</td>
+</tr>
+<tr>
+<td>2.body</td>
+<td align="left">padding: 2rem; color:skyBlue</td>
+<td>初始化时body元素内间距 字体颜色等</td>
+</tr>
+<tr>
+<td>3.背景图片</td>
+<td align="left">scale(1)—scale(1.3)</td>
+<td>背景放大比例变化</td>
+</tr>
+<tr>
+<td>4.个人主页卡片容器</td>
+<td align="left">box-shadow: 0 18px 200px -60px black;<br>border-radius: 50px;<br>width: 560px;<br>backdrop-filter: blur(50px);<br>border: 2px solid #ffffff40;</td>
+<td>阴影<br>圆角<br>宽度<br>滤镜模糊<br>边框</td>
+</tr>
+<tr>
+<td>5.个人简介容器</td>
+<td align="left">25px<br>2.5rem<br>20px<br></td>
+<td>flex布局后容器元素间隔<br>子元素h1(昵称)字体大小<br>子元素div(岗位)字体大小<br></td>
+</tr>
+<tr>
+<td>6.个人详情容器</td>
+<td align="left">50px<br>1px<br>3px<br>2rem<br>15px<br>16px<br>0.7<br></td>
+<td>flex布局后容器元素间隔<br>子元素文本间隔<br>关注者 粉丝数  点赞数文本间隔<br>关注者 粉丝数  点赞数字体大小<br>关注者 粉丝数  点赞数 底部间距<br>关注者。。。数据–字体大小<br>关注者。。。数据–透明度<br></td>
+</tr>
+<tr>
+<td>7.社交平台容器</td>
+<td align="left">55px<br>55px<br>15px<br>color:#fff<br>40%<br></td>
+<td>A标签宽度<br>A标签高度<br>A标签间距<br>图标颜色<br>圆角<br></td>
+</tr>
+<tr>
+<td>8.社交平台图标</td>
+<td align="left">background:  linear-gradient(45deg,#3b5998,#0078d7); box-shadow: 0 40px 30px rgba(43,98,169,0.5);<br>background:  linear-gradient(45deg,#1da1f2,#0e71c8); box-shadow: 0 40px 30px rgba(19,127,211,0.7);<br>background:  linear-gradient(45deg,#405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d); box-shadow: 0 40px 30px rgba(120,64,190,0.6);</td>
+<td>QQ<br>微信<br>抖音<br></td>
+</tr>
+<tr>
+<td>9.我的互动容器</td>
+<td align="left">2rem<br>22px<br>15px<br>250px<br>color:white<br></td>
+<td>flex布局容器间隔<br>按钮字体大小<br>按钮内间距<br>按钮最小宽度<br>按钮字体颜色<br></td>
+</tr>
+</tbody></table>
+<h2 id="三-案列实现思路解析"><a href="#三-案列实现思路解析" class="headerlink" title="三.案列实现思路解析"></a>三.案列实现思路解析</h2><h3 id="页面实现思路解析"><a href="#页面实现思路解析" class="headerlink" title="页面实现思路解析"></a>页面实现思路解析</h3><h4 id="创建个人主页页面容器"><a href="#创建个人主页页面容器" class="headerlink" title="创建个人主页页面容器"></a>创建个人主页页面容器</h4><blockquote>
+<ul>
+<li>需要一个大的容器元素    个人主页卡片&gt;&gt;Div容器&gt;&gt; <strong>profile-card</strong></li>
+</ul>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">&lt;!--个人主页卡片--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;profile-card&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="个人主页容器中的子元素"><a href="#个人主页容器中的子元素" class="headerlink" title="个人主页容器中的子元素"></a>个人主页容器中的子元素</h4><h5 id="1-头像元素"><a href="#1-头像元素" class="headerlink" title="(1) 头像元素"></a>(1) 头像元素</h5><blockquote>
+<ul>
+<li><p>头像元素            头像&gt;&gt;Div容器&gt;&gt;<strong>profile-card-img</strong> </p>
+</li>
+<li><p>头像的子元素</p>
+</li>
+</ul>
+<p> ​    img—-头像图片</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--个人主页卡片--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;profile-card&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--1.头像容器--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;profile-card-img&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;img/head.jpg&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2-个人简介元素"><a href="#2-个人简介元素" class="headerlink" title="(2) 个人简介元素"></a>(2) 个人简介元素</h5><blockquote>
+<ul>
+<li><p>个人简介            个人简介&gt;&gt;Div容器&gt;&gt;   <strong>profile-card-desc</strong> </p>
+</li>
+<li><p>个人简介子元素</p>
+<p> h1—————————–个人名称的标题文字</p>
+<p> div—————————–职位|职位介绍</p>
+<p> div—————————–地理位置图标————使用在线图标库——搜索map-pin</p>
+</li>
+</ul>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--2.个人简介容器--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;&gt;profile-card-desc&quot;</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">h1</span>&gt;</span>博哥的编程日记<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">div</span>&gt;</span>全栈开发者<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="attr">class</span>=<span class="string">&quot;icon icon-tabler icon-tabler-map-pin&quot;</span> <span class="attr">width</span>=<span class="string">&quot;24&quot;</span> <span class="attr">height</span>=<span class="string">&quot;24&quot;</span>               <span class="attr">viewBox</span>=<span class="string">&quot;0 0 24 24&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;currentColor&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke-linecap</span>=<span class="string">&quot;round&quot;</span> <span class="attr">stroke-</span>                   <span class="attr">linejoin</span>=<span class="string">&quot;round&quot;</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">path</span> <span class="attr">stroke</span>=<span class="string">&quot;none&quot;</span> <span class="attr">d</span>=<span class="string">&quot;M0 0h24v24H0z&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;12&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;11&quot;</span> <span class="attr">r</span>=<span class="string">&quot;3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">circle</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="3-个人详情元素"><a href="#3-个人详情元素" class="headerlink" title="(3) 个人详情元素"></a>(3) 个人详情元素</h5><blockquote>
+<ul>
+<li><p>个人详细信息            个人详细信息&gt;&gt;Div容器&gt;&gt;<strong>profile-card-info</strong> </p>
+</li>
+<li><p>个人详细信息子元素</p>
+<p> div—————————————-个人详情</p>
+</li>
+</ul>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> &lt;!--<span class="number">3</span>.个人详细信息--&gt;</span><br><span class="line">&lt;<span class="selector-tag">div</span> class=&quot;profile-card-info&quot;&gt;</span><br><span class="line">    &lt;<span class="selector-tag">div</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">div</span>&gt;<span class="number">800</span>W&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">div</span>&gt;粉丝数&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">    &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">    &lt;<span class="selector-tag">div</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">div</span>&gt;<span class="number">50</span>&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">div</span>&gt;关注者&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">    &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">    &lt;<span class="selector-tag">div</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">div</span>&gt;<span class="number">5000</span>&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">div</span>&gt;点赞数&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">    &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">&lt;/<span class="selector-tag">div</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="4-社交平台"><a href="#4-社交平台" class="headerlink" title="(4)  社交平台"></a>(4)  社交平台</h5><blockquote>
+<ul>
+<li><p>社交平台            社交平台&gt;&gt;Div容器&gt;&gt;<strong>profile-card-social</strong> </p>
+</li>
+<li><p>社交平台子元素</p>
+</li>
+</ul>
+<p> a———————-存放对应平台图标———————-使用在线图标</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--4.社交平台--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;profile-card-social&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;qq&quot;</span>&gt;</span>QQ<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wechat&quot;</span>&gt;</span>微信<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;douyin&quot;</span>&gt;</span>抖音<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="5-底部活动元素"><a href="#5-底部活动元素" class="headerlink" title="(5) 底部活动元素"></a>(5) 底部活动元素</h5><blockquote>
+<ul>
+<li><p>底部活动             底部活动&gt;&gt;Div容器&gt;&gt;<strong>profile-card-action</strong> </p>
+</li>
+<li><p>底部活动子元素</p>
+</li>
+</ul>
+<p> ​    button——————————————–相关按钮</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">&lt;!--5.社交平台--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;profile-card-action&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;blue&quot;</span>&gt;</span>联系我<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;orange&quot;</span>&gt;</span>关注我<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="6-完整页面代码"><a href="#6-完整页面代码" class="headerlink" title="(6) 完整页面代码"></a>(6) 完整页面代码</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>个人资料卡设计<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/reset.css&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/style.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!--个人主页卡片--&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;profile-card&quot;</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--1.头像容器--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;profile-card-img&quot;</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;img/head.jpg&quot;</span> <span class="attr">height</span>=<span class="string">&quot;300&quot;</span> <span class="attr">width</span>=<span class="string">&quot;600px&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--2.个人简介容器--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;&gt;profile-card-desc&quot;</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">h1</span>&gt;</span>博哥的编程日记<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">div</span>&gt;</span>全栈开发者<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="attr">class</span>=<span class="string">&quot;icon icon-tabler icon-tabler-map-pin&quot;</span> <span class="attr">width</span>=<span class="string">&quot;24&quot;</span> <span class="attr">height</span>=<span class="string">&quot;24&quot;</span> <span class="attr">viewBox</span>=<span class="string">&quot;0 0 24 24&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;currentColor&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke-linecap</span>=<span class="string">&quot;round&quot;</span> <span class="attr">stroke-linejoin</span>=<span class="string">&quot;round&quot;</span>&gt;</span></span><br><span class="line">                   <span class="tag">&lt;<span class="name">path</span> <span class="attr">stroke</span>=<span class="string">&quot;none&quot;</span> <span class="attr">d</span>=<span class="string">&quot;M0 0h24v24H0z&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                   <span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;12&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;11&quot;</span> <span class="attr">r</span>=<span class="string">&quot;3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">circle</span>&gt;</span></span><br><span class="line">                   <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">span</span>&gt;</span>河南-洛阳-洛龙<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--3.个人详细信息--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;profile-card-info&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">div</span>&gt;</span>800W<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">div</span>&gt;</span>粉丝数<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">                   <span class="tag">&lt;<span class="name">div</span>&gt;</span>50<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                   <span class="tag">&lt;<span class="name">div</span>&gt;</span>关注者<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">                   <span class="tag">&lt;<span class="name">div</span>&gt;</span>5000<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                   <span class="tag">&lt;<span class="name">div</span>&gt;</span>点赞数<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--4.社交平台--&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;profile-card-social&quot;</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;qq&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="attr">class</span>=<span class="string">&quot;icon icon-tabler icon-tabler-brand-qq&quot;</span> <span class="attr">width</span>=<span class="string">&quot;24&quot;</span> <span class="attr">height</span>=<span class="string">&quot;24&quot;</span> <span class="attr">viewBox</span>=<span class="string">&quot;0 0 24 24&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;currentColor&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke-linecap</span>=<span class="string">&quot;round&quot;</span> <span class="attr">stroke-linejoin</span>=<span class="string">&quot;round&quot;</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">stroke</span>=<span class="string">&quot;none&quot;</span> <span class="attr">d</span>=<span class="string">&quot;M0 0h24v24H0z&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M14 7h.01&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M10 7h.01&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M6 11c4 4 8 4 12 0&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M9 13.5v2.5&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M10.5 10c.667 1.333 2.333 1.333 3 0h-3z&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M16 21c1.5 0 3.065 -1 1 -3c4.442 2 1.987 -4.5 1 -7c0 -4 -1.558 -8 -6 -8s-6 4 -6 8c-.987 2.5 -3.442 9 1 7c-2.065 2 -.5 3 1 3h8z&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wechat&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="attr">class</span>=<span class="string">&quot;icon icon-tabler icon-tabler-brand-wechat&quot;</span> <span class="attr">width</span>=<span class="string">&quot;24&quot;</span> <span class="attr">height</span>=<span class="string">&quot;24&quot;</span> <span class="attr">viewBox</span>=<span class="string">&quot;0 0 24 24&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;currentColor&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke-linecap</span>=<span class="string">&quot;round&quot;</span> <span class="attr">stroke-linejoin</span>=<span class="string">&quot;round&quot;</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">stroke</span>=<span class="string">&quot;none&quot;</span> <span class="attr">d</span>=<span class="string">&quot;M0 0h24v24H0z&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M16.5 10c3.038 0 5.5 2.015 5.5 4.5c0 1.397 -.778 2.645 -1.999 3.47l-.001 2.03l-1.964 -1.178a6.649 6.649 0 0 1 -1.536 .178c-3.038 0 -5.5 -2.015 -5.5 -4.5s2.462 -4.5 5.5 -4.5z&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M11.197 15.698c-.69 .196 -1.43 .302 -2.197 .302a8.008 8.008 0 0 1 -2.612 -.432l-2.388 1.432v-2.801c-1.237 -1.082 -2 -2.564 -2 -4.199c0 -3.314 3.134 -6 7 -6c3.782 0 6.863 2.57 6.996 5.785l.004 .233&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M10 8h.01&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M7 8h.01&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M15 14h.01&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M18 14h.01&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;douyin&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="attr">class</span>=<span class="string">&quot;icon icon-tabler icon-tabler-brand-tiktok&quot;</span> <span class="attr">width</span>=<span class="string">&quot;24&quot;</span> <span class="attr">height</span>=<span class="string">&quot;24&quot;</span> <span class="attr">viewBox</span>=<span class="string">&quot;0 0 24 24&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;currentColor&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke-linecap</span>=<span class="string">&quot;round&quot;</span> <span class="attr">stroke-linejoin</span>=<span class="string">&quot;round&quot;</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">stroke</span>=<span class="string">&quot;none&quot;</span> <span class="attr">d</span>=<span class="string">&quot;M0 0h24v24H0z&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M9 12a4 4 0 1 0 4 4v-12a5 5 0 0 0 5 5&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="comment">&lt;!--5.社交平台--&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;profile-card-action&quot;</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;blue&quot;</span>&gt;</span>联系我<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;orange&quot;</span>&gt;</span>关注我<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="7-页面效果"><a href="#7-页面效果" class="headerlink" title="(7) 页面效果"></a>(7) 页面效果</h5><p><img src="/images/%E5%89%8D%E7%AB%AF/05/A2/1.png" alt="页面效果"></p>
+<h3 id="样式实现思路解析"><a href="#样式实现思路解析" class="headerlink" title="样式实现思路解析"></a>样式实现思路解析</h3><h4 id="body初始化样式设置"><a href="#body初始化样式设置" class="headerlink" title="body初始化样式设置"></a>body初始化样式设置</h4><blockquote>
+<p>字体风格—-     自定义即可</p>
+<p>字体颜色—-     自定义即可</p>
+<p>最小高度—-      屏幕高度</p>
+<p>布局设置———  Flex布局  水平居中对齐</p>
+<p>内间距设置——看重要参数准备中给定的值</p>
+</blockquote>
+<h5 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h5><p><img src="/images/%E5%89%8D%E7%AB%AF/05/A2/2.png" alt="页面效果"></p>
+<h4 id="页面背景实现思路"><a href="#页面背景实现思路" class="headerlink" title="页面背景实现思路"></a>页面背景实现思路</h4><blockquote>
+<p><strong>实现思路</strong></p>
+<ul>
+<li>body添加伪元素铺满屏幕即可</li>
+</ul>
+<p><strong>伪元素样式设置</strong></p>
+<ul>
+<li><p>定位属性———-固定定位</p>
+</li>
+<li><p>间距调整———– 0</p>
+</li>
+<li><p>层级关系设置——– 调小层级关系</p>
+</li>
+<li><p>背景图片设置———  不平铺  位置居中</p>
+</li>
+<li><p>背景图片尺寸—–自适应</p>
+</li>
+</ul>
+<p><strong>伪元素背景需要添加放大动画效果</strong></p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"> &amp;<span class="selector-pseudo">::before</span>&#123;</span><br><span class="line">     <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">     <span class="attribute">position</span>: fixed;</span><br><span class="line">     inset:<span class="number">0</span> ;</span><br><span class="line">     <span class="attribute">z-index</span>: -<span class="number">1</span>;</span><br><span class="line">     <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">&quot;../img/bg.jpg&quot;</span>) no-repeat center;</span><br><span class="line">     <span class="attribute">background-size</span>: cover;</span><br><span class="line">     <span class="attribute">animation</span>: backGroundImgAnimate <span class="number">20s</span> forwards;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> backGroundImgAnimate  &#123;</span><br><span class="line">    <span class="selector-tag">from</span>&#123;</span><br><span class="line">       <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-tag">to</span>&#123;</span><br><span class="line">      <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">1.3</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="效果-1"><a href="#效果-1" class="headerlink" title="效果"></a>效果</h5><p><img src="/images/%E5%89%8D%E7%AB%AF/05/A2/3.png" alt="页面效果"></p>
+<h4 id="个人主页卡片样式设置"><a href="#个人主页卡片样式设置" class="headerlink" title="个人主页卡片样式设置"></a>个人主页卡片样式设置</h4><blockquote>
+<p>阴影效果——————————–看重要参数准备中给定的值</p>
+<p>圆角————————————–看重要参数准备中给定的值</p>
+<p>宽度—————————————看重要参数准备中给定的值</p>
+<p>模糊效果———————————看重要参数准备中给定的值</p>
+<p>边框—————————————-看重要参数准备中给定的值</p>
+<p>内间距————————————-看重要参数准备中给定的值</p>
+<p>布局设置———————————-采用Flex布局    主轴Y轴      间距 40px</p>
+</blockquote>
+<h5 id="自适应效果考虑-方案-媒体查询"><a href="#自适应效果考虑-方案-媒体查询" class="headerlink" title="自适应效果考虑:方案:媒体查询"></a>自适应效果考虑:方案:媒体查询</h5><blockquote>
+<p>设备宽度 &lt;768px时候</p>
+<p>宽度——————————————auto自动匹配</p>
+</blockquote>
+<p><strong>效果</strong></p>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A2/4.png" alt="页面效果"></p>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A2/5.png" alt="页面效果"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.profile-card</span>&#123;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">18px</span> <span class="number">200px</span> -<span class="number">60px</span> black;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">560px</span>;</span><br><span class="line">  backdrop-<span class="attribute">filter</span>: <span class="built_in">blur</span>(<span class="number">50px</span>);</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">2px</span> solid <span class="number">#ffffff40</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">3rem</span> <span class="number">5rem</span>;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-direction</span>: column;</span><br><span class="line">  <span class="attribute">gap</span>: <span class="number">40px</span>;</span><br><span class="line">  <span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">768px</span>) &#123;</span><br><span class="line">     <span class="attribute">width</span>: auto;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="头像元素样式设计"><a href="#头像元素样式设计" class="headerlink" title="头像元素样式设计"></a>头像元素样式设计</h4><blockquote>
+<p>外间距margin———————————————————自适应居中</p>
+<p>圆角———————————————————————</p>
+<p>圆形头像尺寸设置—————————————————————中心</p>
+<p>阴影效果设置——————————————————————–看重要参数准备中给定的值</p>
+<p>头像居中————————————————————————–设置为块元素即可</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&amp;-<span class="selector-tag">img</span> <span class="selector-tag">img</span>&#123;</span><br><span class="line">  <span class="attribute">margin</span>: auto;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">object-fit</span>: cover;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">10px</span> <span class="number">60px</span> -<span class="number">10px</span> <span class="built_in">rgba</span>(<span class="number">13</span>,<span class="number">28</span>,<span class="number">39</span>,.<span class="number">5</span>);</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A2/6.png" alt="页面效果"></p>
+<h4 id="个人简介元素样式设计"><a href="#个人简介元素样式设计" class="headerlink" title="个人简介元素样式设计"></a>个人简介元素样式设计</h4><blockquote>
+<p>内容居中——————————–</p>
+<p>布局设置———————————</p>
+<p>布局容器元素间距设置——————————–看重要参数准备中给定的值</p>
+</blockquote>
+<h5 id="个人简介元素子元素标题样式设计"><a href="#个人简介元素子元素标题样式设计" class="headerlink" title="个人简介元素子元素标题样式设计"></a>个人简介元素子元素标题样式设计</h5><blockquote>
+<p>字体大小——————————————–看重要参数准备中给定的值</p>
+<p>加粗—————————————————–</p>
+</blockquote>
+<h5 id="个人简介元素子元素职位样式设计"><a href="#个人简介元素子元素职位样式设计" class="headerlink" title="个人简介元素子元素职位样式设计"></a>个人简介元素子元素职位样式设计</h5><blockquote>
+<p>字体大小———————————————-看重要参数准备中给定的值</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&amp;-desc &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-direction</span>: column;</span><br><span class="line">    <span class="attribute">gap</span>: <span class="number">25px</span>;</span><br><span class="line">    <span class="selector-tag">h1</span>&#123;</span><br><span class="line">      <span class="attribute">font-size</span>: <span class="number">2.5rem</span>;</span><br><span class="line">      <span class="attribute">font-weight</span>: bold;</span><br><span class="line">      &amp; + <span class="selector-tag">div</span>&#123;</span><br><span class="line">         <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="效果-2"><a href="#效果-2" class="headerlink" title="效果"></a>效果</h5><p><img src="/images/%E5%89%8D%E7%AB%AF/05/A2/7.png" alt="页面效果"></p>
+<h4 id="个人详情元素样式设计"><a href="#个人详情元素样式设计" class="headerlink" title="个人详情元素样式设计"></a>个人详情元素样式设计</h4><blockquote>
+<p>布局———————————————–flex  对齐方式设置</p>
+<p>布局容器间隔————————————看重要参数准备中给定的值</p>
+</blockquote>
+<h5 id="自适应效果考虑-方案-媒体查询-1"><a href="#自适应效果考虑-方案-媒体查询-1" class="headerlink" title="自适应效果考虑:方案:媒体查询"></a>自适应效果考虑:方案:媒体查询</h5><blockquote>
+<p>设备宽度 &lt;576px时候</p>
+<p>flex布局容器中的元素间隔 30px</p>
+</blockquote>
+<h5 id="个人详情子元素样式"><a href="#个人详情子元素样式" class="headerlink" title="个人详情子元素样式"></a>个人详情子元素样式</h5><blockquote>
+<p>字体加粗————————————————————–</p>
+<p>文本间隔————————————————————–看重要参数准备中给定的值</p>
+<p>内容居中—————————————————————</p>
+</blockquote>
+<h5 id="标题子元素样式-粉丝数-关注者-点赞数"><a href="#标题子元素样式-粉丝数-关注者-点赞数" class="headerlink" title="标题子元素样式    粉丝数  关注者  点赞数"></a>标题子元素样式    粉丝数  关注者  点赞数</h5><blockquote>
+<p>字体加粗———————————————————-</p>
+<p>文本间距———————————————————-看重要参数准备中给定的值</p>
+<p>字体大小———————————————————–看重要参数准备中给定的值</p>
+<p>底部间隔———————————————————–看重要参数准备中给定的值</p>
+</blockquote>
+<h5 id="标题子元素样式-粉丝数-关注者-点赞数-gt-gt-数据"><a href="#标题子元素样式-粉丝数-关注者-点赞数-gt-gt-数据" class="headerlink" title="标题子元素样式    粉丝数  关注者  点赞数&gt;&gt;数据"></a>标题子元素样式    粉丝数  关注者  点赞数&gt;&gt;数据</h5><blockquote>
+<p>字体大小—————————————————————-看重要参数准备中给定的值</p>
+<p>透明度——————————————————————–看重要参数准备中给定的值</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&amp;-info&#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">    <span class="attribute">gap</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="keyword">@media</span> screen  <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">576px</span>)&#123;</span><br><span class="line">       <span class="attribute">gap</span>: <span class="number">30px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    &amp; &gt;<span class="selector-tag">div</span>&#123;</span><br><span class="line">      <span class="attribute">font-weight</span>: bold;</span><br><span class="line">      <span class="attribute">text-align</span>: center;</span><br><span class="line">      text-space: <span class="number">1px</span>;</span><br><span class="line">      &amp; &gt; *<span class="selector-pseudo">:first</span>-child&#123;</span><br><span class="line">         <span class="attribute">font-weight</span>: bold;</span><br><span class="line">         <span class="attribute">letter-spacing</span>: <span class="number">3px</span>;</span><br><span class="line">         <span class="attribute">font-size</span>: <span class="number">2rem</span>;</span><br><span class="line">         <span class="attribute">margin-bottom</span>: <span class="number">15px</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      &amp; &gt; *<span class="selector-pseudo">:last-child</span>&#123;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">        <span class="attribute">opacity</span>: .<span class="number">7</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A2/8.png" alt="页面效果"></p>
+<h4 id="社交平台元素样式设计"><a href="#社交平台元素样式设计" class="headerlink" title="社交平台元素样式设计"></a>社交平台元素样式设计</h4><blockquote>
+<p>布局——————————————flex    对齐    不换行</p>
+</blockquote>
+<h5 id="子标签A样式设定"><a href="#子标签A样式设定" class="headerlink" title="子标签A样式设定"></a>子标签A样式设定</h5><blockquote>
+<p>布局——————————————–行内元素采用flex布局</p>
+<p>高度——————————————看重要参数准备中给定的值</p>
+<p>宽度—————————————-看重要参数准备中给定的值</p>
+<p>定位—————————————–相对定位</p>
+<p>缩放—————————————–禁止</p>
+<p>圆角—————————————–</p>
+<p>过渡效果————————————–</p>
+</blockquote>
+<h5 id="子标签A在移动设备上的移入效果"><a href="#子标签A在移动设备上的移入效果" class="headerlink" title="子标签A在移动设备上的移入效果"></a>子标签A在移动设备上的移入效果</h5><blockquote>
+<p>设备宽度 768px时候</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;height: 50px;</span><br><span class="line">&gt;width:  50px;</span><br><span class="line">&gt;margin: 10px;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>移入效果</p>
+<p>放大 1.2倍   移动 -5px</p>
+</blockquote>
+<h5 id="社交图标设置不同背景色和阴影效果"><a href="#社交图标设置不同背景色和阴影效果" class="headerlink" title="社交图标设置不同背景色和阴影效果"></a>社交图标设置不同背景色和阴影效果</h5><blockquote>
+<p>背景色—————————————-看重要参数准备中给定的值</p>
+<p>阴影———————————————看重要参数准备中给定的值</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">&amp;-social&#123;</span><br><span class="line">   <span class="attribute">display</span>: flex;</span><br><span class="line">   <span class="attribute">justify-content</span>: center;</span><br><span class="line">   <span class="attribute">align-items</span>: center;</span><br><span class="line">   <span class="attribute">flex-wrap</span>: nowrap;</span><br><span class="line">   <span class="selector-tag">a</span>&#123;</span><br><span class="line">     <span class="attribute">display</span>: inline-flex;</span><br><span class="line">     <span class="attribute">height</span>: <span class="number">55px</span>;</span><br><span class="line">     <span class="attribute">width</span>: <span class="number">55px</span>;</span><br><span class="line">     <span class="attribute">margin</span>: <span class="number">15px</span>;</span><br><span class="line">     <span class="attribute">color</span>: white;</span><br><span class="line">     <span class="attribute">border-radius</span>: <span class="number">40%</span>;</span><br><span class="line">     <span class="attribute">align-items</span>: center;</span><br><span class="line">     <span class="attribute">justify-content</span>: center;</span><br><span class="line">     <span class="attribute">position</span>: relative;</span><br><span class="line">     <span class="attribute">flex-shrink</span>: <span class="number">0</span>;</span><br><span class="line">     <span class="attribute">transition</span>: all .<span class="number">3s</span>;</span><br><span class="line">     <span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">768px</span>)&#123;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">            <span class="attribute">margin</span>: <span class="number">10px</span>;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">min-width</span>: <span class="number">768px</span>)&#123;</span><br><span class="line">       &amp;<span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">           <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">1.2</span>) <span class="built_in">translateX</span>(-<span class="number">5px</span>);</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;</span><br><span class="line">     &amp;<span class="selector-class">.qq</span>&#123;</span><br><span class="line">       <span class="attribute">background</span>:  <span class="built_in">linear-gradient</span>(<span class="number">45deg</span>,<span class="number">#3b5998</span>,<span class="number">#0078d7</span>);</span><br><span class="line">       <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">40px</span> <span class="number">30px</span> <span class="built_in">rgba</span>(<span class="number">43</span>,<span class="number">98</span>,<span class="number">169</span>,<span class="number">0.5</span>);</span><br><span class="line">     &#125;</span><br><span class="line">     &amp;<span class="selector-class">.wechat</span>&#123;</span><br><span class="line">       <span class="attribute">background</span>:  <span class="built_in">linear-gradient</span>(<span class="number">45deg</span>,<span class="number">#1da1f2</span>,<span class="number">#0e71c8</span>);</span><br><span class="line">       <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">40px</span> <span class="number">30px</span> <span class="built_in">rgba</span>(<span class="number">19</span>,<span class="number">127</span>,<span class="number">211</span>,<span class="number">0.7</span>);</span><br><span class="line">     &#125;</span><br><span class="line">     &amp;<span class="selector-class">.douyin</span>&#123;</span><br><span class="line">       <span class="attribute">background</span>:  <span class="built_in">linear-gradient</span>(<span class="number">45deg</span>,<span class="number">#405de6</span>,</span><br><span class="line">       <span class="number">#5851db</span>,</span><br><span class="line">       <span class="number">#833ab4</span>,</span><br><span class="line">       <span class="number">#c13584</span>,</span><br><span class="line">       <span class="number">#e1306c</span>,</span><br><span class="line">       <span class="number">#fd1d1d</span>);</span><br><span class="line">       <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">40px</span> <span class="number">30px</span> <span class="built_in">rgba</span>(<span class="number">120</span>,<span class="number">64</span>,<span class="number">190</span>,<span class="number">0.6</span>);</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A2/9.png" alt="页面效果"></p>
+<h4 id="和我互动容器样式设计"><a href="#和我互动容器样式设计" class="headerlink" title="和我互动容器样式设计"></a>和我互动容器样式设计</h4><blockquote>
+<p>布局————————————-flex    </p>
+<p>flex布局容器元素间隔—-看重要参数准备中给定的值</p>
+</blockquote>
+<h5 id="自适应效果考虑-方案-媒体查询-2"><a href="#自适应效果考虑-方案-媒体查询-2" class="headerlink" title="自适应效果考虑:方案:媒体查询"></a>自适应效果考虑:方案:媒体查询</h5><blockquote>
+<p>设备宽度 &lt;768px时候</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="attribute">flex-direction</span>: column;</span><br><span class="line">&gt;<span class="attribute">gap</span>:<span class="number">1.5rem</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<h5 id="按钮子元素样式"><a href="#按钮子元素样式" class="headerlink" title="按钮子元素样式"></a>按钮子元素样式</h5><blockquote>
+<p>加粗——————————————-</p>
+<p>字体大小————————————–看重要参数准备中给定的值</p>
+<p>内间距—————————————-看重要参数准备中给定的值</p>
+<p>最小宽度————————————–看重要参数准备中给定的值</p>
+<p>鼠标指针—————————————-</p>
+</blockquote>
+<h5 id="自适应效果考虑-方案-媒体查询-按钮尺寸"><a href="#自适应效果考虑-方案-媒体查询-按钮尺寸" class="headerlink" title="自适应效果考虑:方案:媒体查询:按钮尺寸"></a>自适应效果考虑:方案:媒体查询:按钮尺寸</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">768px</span>) &#123;</span><br><span class="line">        <span class="attribute">min-width</span>: <span class="number">170px</span>;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">576px</span>) &#123;</span><br><span class="line">    <span class="attribute">min-width</span>: inherit;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">max-width</span>:<span class="number">350px</span> ;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">min-width</span>: <span class="number">576px</span>) &#123;</span><br><span class="line">    &amp;<span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-<span class="number">5px</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="按钮样式"><a href="#按钮样式" class="headerlink" title="按钮样式"></a>按钮样式</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&amp;<span class="selector-class">.blue</span>&#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">45deg</span>,<span class="number">#1da1f2</span>,<span class="number">#0e71c8</span>);</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">4px</span> <span class="number">30px</span> <span class="built_in">rgba</span>(<span class="number">19</span>,<span class="number">127</span>,<span class="number">212</span>,.<span class="number">4</span>);</span><br><span class="line">  &amp;<span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">4px</span> <span class="number">30px</span> <span class="built_in">rgba</span>(<span class="number">19</span>,<span class="number">127</span>,<span class="number">212</span>,.<span class="number">75</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&amp;<span class="selector-class">.orange</span>&#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">45deg</span>,<span class="number">#d5135a</span>,<span class="number">#f05924</span>);</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">4px</span> <span class="number">30px</span> <span class="built_in">rgba</span>(<span class="number">223</span>,<span class="number">45</span>,<span class="number">70</span>,.<span class="number">35</span>);</span><br><span class="line">  &amp;<span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">4px</span> <span class="number">30px</span> <span class="built_in">rgba</span>(<span class="number">19</span>,<span class="number">127</span>,<span class="number">212</span>,.<span class="number">75</span>);</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A2/10.png" alt="页面效果"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/HTML/" rel="tag"># HTML</a>
+              <a href="/tags/CSS/" rel="tag"># CSS</a>
+              <a href="/tags/%E5%89%8D%E7%AB%AF%E6%A1%88%E5%88%97/" rel="tag"># 前端案列</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10001-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E5%85%AB%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9AFlex%E5%B8%83%E5%B1%80/" rel="prev" title="博哥教你八分钟学会Flex布局">
+      <i class="fa fa-chevron-left"></i> 博哥教你八分钟学会Flex布局
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9C%80%E8%A6%81%E6%8E%8C%E6%8F%A1%E7%9A%84%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86%E5%92%8C%E7%94%A8%E7%9A%84%E7%B4%A0%E6%9D%90"><span class="nav-number">2.</span> <span class="nav-text">需要掌握的前置知识和用的素材</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E7%BD%AE%E7%9F%A5%E8%AF%86"><span class="nav-number">2.1.</span> <span class="nav-text">前置知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E6%A0%87%E7%BD%91%E7%AB%99"><span class="nav-number">2.2.</span> <span class="nav-text">图标网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9C%80%E8%A6%81%E6%8F%90%E5%89%8D%E4%B8%8B%E8%BD%BD%E7%9A%84css%E5%BA%93"><span class="nav-number">2.3.</span> <span class="nav-text">需要提前下载的css库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%A5%E6%A1%88%E4%BE%8B%E6%95%88%E6%9E%9C%E7%94%A8%E7%9A%84%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90"><span class="nav-number">2.4.</span> <span class="nav-text">该案例效果用的图片素材</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E8%A6%81%E5%8F%82%E6%95%B0%E5%87%86%E5%A4%87"><span class="nav-number">3.</span> <span class="nav-text">重要参数准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89-%E6%A1%88%E5%88%97%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF%E8%A7%A3%E6%9E%90"><span class="nav-number">4.</span> <span class="nav-text">三.案列实现思路解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF%E8%A7%A3%E6%9E%90"><span class="nav-number">4.1.</span> <span class="nav-text">页面实现思路解析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E9%A1%B5%E9%9D%A2%E5%AE%B9%E5%99%A8"><span class="nav-number">4.1.1.</span> <span class="nav-text">创建个人主页页面容器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E5%AE%B9%E5%99%A8%E4%B8%AD%E7%9A%84%E5%AD%90%E5%85%83%E7%B4%A0"><span class="nav-number">4.1.2.</span> <span class="nav-text">个人主页容器中的子元素</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E5%A4%B4%E5%83%8F%E5%85%83%E7%B4%A0"><span class="nav-number">4.1.2.1.</span> <span class="nav-text">(1) 头像元素</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E4%B8%AA%E4%BA%BA%E7%AE%80%E4%BB%8B%E5%85%83%E7%B4%A0"><span class="nav-number">4.1.2.2.</span> <span class="nav-text">(2) 个人简介元素</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E4%B8%AA%E4%BA%BA%E8%AF%A6%E6%83%85%E5%85%83%E7%B4%A0"><span class="nav-number">4.1.2.3.</span> <span class="nav-text">(3) 个人详情元素</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-%E7%A4%BE%E4%BA%A4%E5%B9%B3%E5%8F%B0"><span class="nav-number">4.1.2.4.</span> <span class="nav-text">(4)  社交平台</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-%E5%BA%95%E9%83%A8%E6%B4%BB%E5%8A%A8%E5%85%83%E7%B4%A0"><span class="nav-number">4.1.2.5.</span> <span class="nav-text">(5) 底部活动元素</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-%E5%AE%8C%E6%95%B4%E9%A1%B5%E9%9D%A2%E4%BB%A3%E7%A0%81"><span class="nav-number">4.1.2.6.</span> <span class="nav-text">(6) 完整页面代码</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7-%E9%A1%B5%E9%9D%A2%E6%95%88%E6%9E%9C"><span class="nav-number">4.1.2.7.</span> <span class="nav-text">(7) 页面效果</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B7%E5%BC%8F%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF%E8%A7%A3%E6%9E%90"><span class="nav-number">4.2.</span> <span class="nav-text">样式实现思路解析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#body%E5%88%9D%E5%A7%8B%E5%8C%96%E6%A0%B7%E5%BC%8F%E8%AE%BE%E7%BD%AE"><span class="nav-number">4.2.1.</span> <span class="nav-text">body初始化样式设置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%95%88%E6%9E%9C"><span class="nav-number">4.2.1.1.</span> <span class="nav-text">效果</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2%E8%83%8C%E6%99%AF%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF"><span class="nav-number">4.2.2.</span> <span class="nav-text">页面背景实现思路</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%95%88%E6%9E%9C-1"><span class="nav-number">4.2.2.1.</span> <span class="nav-text">效果</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E5%8D%A1%E7%89%87%E6%A0%B7%E5%BC%8F%E8%AE%BE%E7%BD%AE"><span class="nav-number">4.2.3.</span> <span class="nav-text">个人主页卡片样式设置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%87%AA%E9%80%82%E5%BA%94%E6%95%88%E6%9E%9C%E8%80%83%E8%99%91-%E6%96%B9%E6%A1%88-%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2"><span class="nav-number">4.2.3.1.</span> <span class="nav-text">自适应效果考虑:方案:媒体查询</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%B4%E5%83%8F%E5%85%83%E7%B4%A0%E6%A0%B7%E5%BC%8F%E8%AE%BE%E8%AE%A1"><span class="nav-number">4.2.4.</span> <span class="nav-text">头像元素样式设计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%AA%E4%BA%BA%E7%AE%80%E4%BB%8B%E5%85%83%E7%B4%A0%E6%A0%B7%E5%BC%8F%E8%AE%BE%E8%AE%A1"><span class="nav-number">4.2.5.</span> <span class="nav-text">个人简介元素样式设计</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%AA%E4%BA%BA%E7%AE%80%E4%BB%8B%E5%85%83%E7%B4%A0%E5%AD%90%E5%85%83%E7%B4%A0%E6%A0%87%E9%A2%98%E6%A0%B7%E5%BC%8F%E8%AE%BE%E8%AE%A1"><span class="nav-number">4.2.5.1.</span> <span class="nav-text">个人简介元素子元素标题样式设计</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%AA%E4%BA%BA%E7%AE%80%E4%BB%8B%E5%85%83%E7%B4%A0%E5%AD%90%E5%85%83%E7%B4%A0%E8%81%8C%E4%BD%8D%E6%A0%B7%E5%BC%8F%E8%AE%BE%E8%AE%A1"><span class="nav-number">4.2.5.2.</span> <span class="nav-text">个人简介元素子元素职位样式设计</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%95%88%E6%9E%9C-2"><span class="nav-number">4.2.5.3.</span> <span class="nav-text">效果</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%AA%E4%BA%BA%E8%AF%A6%E6%83%85%E5%85%83%E7%B4%A0%E6%A0%B7%E5%BC%8F%E8%AE%BE%E8%AE%A1"><span class="nav-number">4.2.6.</span> <span class="nav-text">个人详情元素样式设计</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%87%AA%E9%80%82%E5%BA%94%E6%95%88%E6%9E%9C%E8%80%83%E8%99%91-%E6%96%B9%E6%A1%88-%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2-1"><span class="nav-number">4.2.6.1.</span> <span class="nav-text">自适应效果考虑:方案:媒体查询</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%AA%E4%BA%BA%E8%AF%A6%E6%83%85%E5%AD%90%E5%85%83%E7%B4%A0%E6%A0%B7%E5%BC%8F"><span class="nav-number">4.2.6.2.</span> <span class="nav-text">个人详情子元素样式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%A0%87%E9%A2%98%E5%AD%90%E5%85%83%E7%B4%A0%E6%A0%B7%E5%BC%8F-%E7%B2%89%E4%B8%9D%E6%95%B0-%E5%85%B3%E6%B3%A8%E8%80%85-%E7%82%B9%E8%B5%9E%E6%95%B0"><span class="nav-number">4.2.6.3.</span> <span class="nav-text">标题子元素样式    粉丝数  关注者  点赞数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%A0%87%E9%A2%98%E5%AD%90%E5%85%83%E7%B4%A0%E6%A0%B7%E5%BC%8F-%E7%B2%89%E4%B8%9D%E6%95%B0-%E5%85%B3%E6%B3%A8%E8%80%85-%E7%82%B9%E8%B5%9E%E6%95%B0-gt-gt-%E6%95%B0%E6%8D%AE"><span class="nav-number">4.2.6.4.</span> <span class="nav-text">标题子元素样式    粉丝数  关注者  点赞数&gt;&gt;数据</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A4%BE%E4%BA%A4%E5%B9%B3%E5%8F%B0%E5%85%83%E7%B4%A0%E6%A0%B7%E5%BC%8F%E8%AE%BE%E8%AE%A1"><span class="nav-number">4.2.7.</span> <span class="nav-text">社交平台元素样式设计</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AD%90%E6%A0%87%E7%AD%BEA%E6%A0%B7%E5%BC%8F%E8%AE%BE%E5%AE%9A"><span class="nav-number">4.2.7.1.</span> <span class="nav-text">子标签A样式设定</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AD%90%E6%A0%87%E7%AD%BEA%E5%9C%A8%E7%A7%BB%E5%8A%A8%E8%AE%BE%E5%A4%87%E4%B8%8A%E7%9A%84%E7%A7%BB%E5%85%A5%E6%95%88%E6%9E%9C"><span class="nav-number">4.2.7.2.</span> <span class="nav-text">子标签A在移动设备上的移入效果</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%A4%BE%E4%BA%A4%E5%9B%BE%E6%A0%87%E8%AE%BE%E7%BD%AE%E4%B8%8D%E5%90%8C%E8%83%8C%E6%99%AF%E8%89%B2%E5%92%8C%E9%98%B4%E5%BD%B1%E6%95%88%E6%9E%9C"><span class="nav-number">4.2.7.3.</span> <span class="nav-text">社交图标设置不同背景色和阴影效果</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%92%8C%E6%88%91%E4%BA%92%E5%8A%A8%E5%AE%B9%E5%99%A8%E6%A0%B7%E5%BC%8F%E8%AE%BE%E8%AE%A1"><span class="nav-number">4.2.8.</span> <span class="nav-text">和我互动容器样式设计</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%87%AA%E9%80%82%E5%BA%94%E6%95%88%E6%9E%9C%E8%80%83%E8%99%91-%E6%96%B9%E6%A1%88-%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2-2"><span class="nav-number">4.2.8.1.</span> <span class="nav-text">自适应效果考虑:方案:媒体查询</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8C%89%E9%92%AE%E5%AD%90%E5%85%83%E7%B4%A0%E6%A0%B7%E5%BC%8F"><span class="nav-number">4.2.8.2.</span> <span class="nav-text">按钮子元素样式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%87%AA%E9%80%82%E5%BA%94%E6%95%88%E6%9E%9C%E8%80%83%E8%99%91-%E6%96%B9%E6%A1%88-%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2-%E6%8C%89%E9%92%AE%E5%B0%BA%E5%AF%B8"><span class="nav-number">4.2.8.3.</span> <span class="nav-text">自适应效果考虑:方案:媒体查询:按钮尺寸</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8C%89%E9%92%AE%E6%A0%B7%E5%BC%8F"><span class="nav-number">4.2.8.4.</span> <span class="nav-text">按钮样式</span></a></li></ol></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="博哥"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">博哥</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">博哥</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">23k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:25</span>
+</div>
+
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+-->
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

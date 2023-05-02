@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="使用Xshell连接到Linux服务器 卸载历史版本MySQL非首次安装需卸载历史版本MySQL，命令查看是否有安装MySQL历史版本组件 1# rpm -qa|grep mysql   上图中没有mysql环境–无需删除卸载 如果存在之前的安装程序需要卸载 查看MySQL服务状态1# service mysqld status  暂停MySQL服务1# service mysqld stop">
+<meta property="og:type" content="article">
+<meta property="og:title" content="快速在Linux环境下安装使用Mysql8">
+<meta property="og:url" content="http://example.com/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10004-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8Mysql/index.html">
+<meta property="og:site_name" content="博哥编程日记">
+<meta property="og:description" content="使用Xshell连接到Linux服务器 卸载历史版本MySQL非首次安装需卸载历史版本MySQL，命令查看是否有安装MySQL历史版本组件 1# rpm -qa|grep mysql   上图中没有mysql环境–无需删除卸载 如果存在之前的安装程序需要卸载 查看MySQL服务状态1# service mysqld status  暂停MySQL服务1# service mysqld stop">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A4/1.png">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A4/2.png">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A4/3.png">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A4/4.png">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A4/5.png">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A4/6.png">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A4/7.png">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A4/8.png">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A4/9.png">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A4/10.png">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A4/11.png">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A4/12.png">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A4/13.png">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A4/14.png">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A4/15.png">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A4/16.png">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A4/17.png">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A4/18.png">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A4/19.png">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A4/20.png">
+<meta property="article:published_time" content="2023-04-22T04:39:04.000Z">
+<meta property="article:modified_time" content="2023-05-02T06:44:57.735Z">
+<meta property="article:author" content="博哥">
+<meta property="article:tag" content="mysql">
+<meta property="article:tag" content="linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A4/1.png">
+
+<link rel="canonical" href="http://example.com/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10004-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8Mysql/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>快速在Linux环境下安装使用Mysql8 | 博哥编程日记</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">博哥编程日记</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10004-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8Mysql/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="博哥">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="博哥编程日记">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          快速在Linux环境下安装使用Mysql8
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-04-22 12:39:04" itemprop="dateCreated datePublished" datetime="2023-04-22T12:39:04+08:00">2023-04-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-05-02 14:44:57" itemprop="dateModified" datetime="2023-05-02T14:44:57+08:00">2023-05-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%8D%E5%8A%A1/" itemprop="url" rel="index"><span itemprop="name">服务</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>719</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="使用Xshell连接到Linux服务器"><a href="#使用Xshell连接到Linux服务器" class="headerlink" title="使用Xshell连接到Linux服务器"></a>使用Xshell连接到Linux服务器</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/1.png" alt="页面效果"></p>
+<h2 id="卸载历史版本MySQL"><a href="#卸载历史版本MySQL" class="headerlink" title="卸载历史版本MySQL"></a>卸载历史版本MySQL</h2><p>非首次安装需卸载历史版本MySQL，命令查看是否有安装MySQL历史版本组件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># rpm -qa|grep mysql</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/2.png" alt="页面效果"></p>
+<p>上图中没有mysql环境–无需删除卸载</p>
+<p>如果存在之前的安装程序需要卸载</p>
+<h3 id="查看MySQL服务状态"><a href="#查看MySQL服务状态" class="headerlink" title="查看MySQL服务状态"></a>查看MySQL服务状态</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># service mysqld status</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="暂停MySQL服务"><a href="#暂停MySQL服务" class="headerlink" title="暂停MySQL服务"></a>暂停MySQL服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># service mysqld stop</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="卸载MySQL服务"><a href="#卸载MySQL服务" class="headerlink" title="卸载MySQL服务"></a>卸载MySQL服务</h3><p>需要把每个组件全部移除，注意可能会有组件的依赖前后顺序。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># rpm -ev [需要移除组件的名称]</span></span><br><span class="line">或者</span><br><span class="line"><span class="meta"># rpm -e --nodeps [需要移除组件的名称]  <span class="comment">//此命令为强制卸载</span></span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h2><h3 id="使用rpm来安装MySQL"><a href="#使用rpm来安装MySQL" class="headerlink" title="使用rpm来安装MySQL"></a>使用rpm来安装MySQL</h3><p>因为CentOS 7默认安装的数据库是Mariadb,所以使用YUM命令是无法安装MySQL的，只会更新Mariadb。使用rpm来进行安装。可以在<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=http://repo.mysql.com/">mysql的repo源仓库</a>右键复制指定版本的数据库。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">wget http://repo.mysql.com/mysql80-community-release-el7-1.noarch.rpm</span></span><br></pre></td></tr></table></figure>
+
+<p>先切换到opt目录</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/3.png" alt="页面效果"></p>
+<h3 id="下载rpm包"><a href="#下载rpm包" class="headerlink" title="下载rpm包"></a>下载rpm包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># wget http://repo.mysql.com/mysql80-community-release-el7-1.noarch.rpm</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/4.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/5.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/6.png" alt="页面效果"></p>
+<h3 id="安装mysql80-community-release-el7-1-noarch-rpm包"><a href="#安装mysql80-community-release-el7-1-noarch-rpm包" class="headerlink" title="安装mysql80-community-release-el7-1.noarch.rpm包"></a>安装mysql80-community-release-el7-1.noarch.rpm包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sudo rpm -ivh mysql80-community-release-el7-1.noarch.rpm</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/7.png"></p>
+<p>安装完成后会在 &#x2F;etc&#x2F;yum.repos.d文件夹里面获得两个文件：</p>
+<p>mysql-community.repo &amp;&amp; mysql-community-source.repo</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/8.png"></p>
+<h3 id="使用yum安装mysql服务"><a href="#使用yum安装mysql服务" class="headerlink" title="使用yum安装mysql服务"></a>使用yum安装mysql服务</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install mysql-server --nogpgcheck</span><br></pre></td></tr></table></figure>
+
+<p>如果显示以下内容说明安装成功<br><strong>Complete!</strong></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/9.png"></p>
+<p>检查是否已经设置为开机启动MySQL服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># systemctl list-unit-files|grep mysqld</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/10.png"></p>
+<p> 如果显示上图所示,则表示已经设置为开机启动，如果没有设置为开机启动则执行</p>
+<h3 id="设置mysql开机启动"><a href="#设置mysql开机启动" class="headerlink" title="设置mysql开机启动"></a>设置mysql开机启动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># systemctl enable mysqld.service</span></span><br></pre></td></tr></table></figure>
+
+<p>查看MySQL是否启动未启动则执行启动服务命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">查看是否启动MySQL服务</span><br><span class="line"><span class="comment"># ps -ef|grep mysql</span></span><br><span class="line"></span><br><span class="line">启动服务</span><br><span class="line"><span class="comment"># systemctl start mysqld.service</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/11.png"></p>
+<h3 id="初始化mysql"><a href="#初始化mysql" class="headerlink" title="初始化mysql"></a>初始化mysql</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mysqld --initialize</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/12.png"></p>
+<h3 id="查看MySQL初始默认密码"><a href="#查看MySQL初始默认密码" class="headerlink" title="查看MySQL初始默认密码"></a>查看MySQL初始默认密码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep <span class="string">&#x27;temporary password&#x27;</span> /var/log/mysqld.log</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/13.png"></p>
+<blockquote>
+<p>密码:_.XGsj+(F7tQ</p>
+</blockquote>
+<p>复制 root@localhost: 后面的密码。登录mysql，并粘贴默认密码<br>因为MySQL8.0的更改，导致必须要重置密码</p>
+<p>如果启动mysql失败</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/14.png"></p>
+<p>需要修改数据目录权限</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">chmod -R 777 /root/</span><br><span class="line">chown -R mysql /var/lib/mysql</span><br><span class="line">chgrp -R mysql /var/lib/mysql</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/15.png"></p>
+<h3 id="登录mysql修改默认密码"><a href="#登录mysql修改默认密码" class="headerlink" title="登录mysql修改默认密码"></a>登录mysql修改默认密码</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/16.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alter user &#x27;root&#x27;@&#x27;localhost&#x27; identified by &#x27;root123&#x27;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>如果设置密码时候出现提示</p>
+<blockquote>
+<p>ERROR 1819 (HY000): Your password does not satisfy the current policy requirements</p>
+</blockquote>
+<p>代表需要降低policy的等级后在执行</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SHOW VARIABLES LIKE <span class="string">&#x27;validate_password%&#x27;</span>;     查看密码策略</span><br><span class="line"><span class="keyword">set</span> <span class="keyword">global</span> validate_password.policy=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">set</span> <span class="keyword">global</span> validate_password.length=<span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/17.png"></p>
+<h3 id="开启MySQL远程连接"><a href="#开启MySQL远程连接" class="headerlink" title="开启MySQL远程连接"></a>开启MySQL远程连接</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">use mysql;</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改root账户权限</span></span><br><span class="line">update user set host = &#x27;%&#x27; where user = &#x27;root&#x27;;</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">刷新权限</span></span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/18.png"></p>
+<h2 id="使用Navicat测试连接服务器mysql"><a href="#使用Navicat测试连接服务器mysql" class="headerlink" title="使用Navicat测试连接服务器mysql"></a>使用Navicat测试连接服务器mysql</h2><h3 id="如果连接不上-尝试防火墙打开3306端口"><a href="#如果连接不上-尝试防火墙打开3306端口" class="headerlink" title="如果连接不上,尝试防火墙打开3306端口"></a>如果连接不上,尝试防火墙打开3306端口</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/19.png"></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=3306/tcp --permanent</span><br><span class="line">firewall-cmd --reload</span><br><span class="line">firewall-cmd --list-port</span><br></pre></td></tr></table></figure>
+
+<h3 id="再次尝试"><a href="#再次尝试" class="headerlink" title="再次尝试"></a>再次尝试</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/20.png"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/mysql/" rel="tag"># mysql</a>
+              <a href="/tags/linux/" rel="tag"># linux</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10006-%E5%A6%82%E4%BD%95%E5%9C%A8windows%E4%B8%8B%E5%BF%AB%E9%80%9F%E6%A8%A1%E6%8B%9F%E6%90%AD%E5%BB%BALinux%E7%8E%AF%E5%A2%83/" rel="prev" title="如何在windows下快速模拟搭建Linux环境">
+      <i class="fa fa-chevron-left"></i> 如何在windows下快速模拟搭建Linux环境
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10003-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJDK/" rel="next" title="快速在Linux环境下安装配置JDk">
+      快速在Linux环境下安装配置JDk <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Xshell%E8%BF%9E%E6%8E%A5%E5%88%B0Linux%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">1.</span> <span class="nav-text">使用Xshell连接到Linux服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%B8%E8%BD%BD%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%ACMySQL"><span class="nav-number">2.</span> <span class="nav-text">卸载历史版本MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8BMySQL%E6%9C%8D%E5%8A%A1%E7%8A%B6%E6%80%81"><span class="nav-number">2.1.</span> <span class="nav-text">查看MySQL服务状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9A%82%E5%81%9CMySQL%E6%9C%8D%E5%8A%A1"><span class="nav-number">2.2.</span> <span class="nav-text">暂停MySQL服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%B8%E8%BD%BDMySQL%E6%9C%8D%E5%8A%A1"><span class="nav-number">2.3.</span> <span class="nav-text">卸载MySQL服务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85MySQL"><span class="nav-number">3.</span> <span class="nav-text">安装MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8rpm%E6%9D%A5%E5%AE%89%E8%A3%85MySQL"><span class="nav-number">3.1.</span> <span class="nav-text">使用rpm来安装MySQL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDrpm%E5%8C%85"><span class="nav-number">3.2.</span> <span class="nav-text">下载rpm包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85mysql80-community-release-el7-1-noarch-rpm%E5%8C%85"><span class="nav-number">3.3.</span> <span class="nav-text">安装mysql80-community-release-el7-1.noarch.rpm包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8yum%E5%AE%89%E8%A3%85mysql%E6%9C%8D%E5%8A%A1"><span class="nav-number">3.4.</span> <span class="nav-text">使用yum安装mysql服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AEmysql%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8"><span class="nav-number">3.5.</span> <span class="nav-text">设置mysql开机启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96mysql"><span class="nav-number">3.6.</span> <span class="nav-text">初始化mysql</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8BMySQL%E5%88%9D%E5%A7%8B%E9%BB%98%E8%AE%A4%E5%AF%86%E7%A0%81"><span class="nav-number">3.7.</span> <span class="nav-text">查看MySQL初始默认密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BB%E5%BD%95mysql%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E5%AF%86%E7%A0%81"><span class="nav-number">3.8.</span> <span class="nav-text">登录mysql修改默认密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%90%AFMySQL%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5"><span class="nav-number">3.9.</span> <span class="nav-text">开启MySQL远程连接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Navicat%E6%B5%8B%E8%AF%95%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8mysql"><span class="nav-number">4.</span> <span class="nav-text">使用Navicat测试连接服务器mysql</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E6%9E%9C%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A-%E5%B0%9D%E8%AF%95%E9%98%B2%E7%81%AB%E5%A2%99%E6%89%93%E5%BC%803306%E7%AB%AF%E5%8F%A3"><span class="nav-number">4.1.</span> <span class="nav-text">如果连接不上,尝试防火墙打开3306端口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%8D%E6%AC%A1%E5%B0%9D%E8%AF%95"><span class="nav-number">4.2.</span> <span class="nav-text">再次尝试</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="博哥"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">博哥</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">博哥</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">23k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:25</span>
+</div>
+
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+-->
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

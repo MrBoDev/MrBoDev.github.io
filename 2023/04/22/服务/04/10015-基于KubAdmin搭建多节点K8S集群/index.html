@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="准备好至少Centos8环境并且没有安装过Docker K8S多节点集群搭建过程过程 简介：基于KubeAdm搭建多节点K8S集群  安装docker（主节点+工作节点） centos-8环境  解决Centos8环境Yum不可用问题 12345678910111213141516171819#1.先安装ymlsudo yum install -y yum-utils \  device-mapp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于KubAdmin搭建多节点K8S集群">
+<meta property="og:url" content="http://example.com/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10015-%E5%9F%BA%E4%BA%8EKubAdmin%E6%90%AD%E5%BB%BA%E5%A4%9A%E8%8A%82%E7%82%B9K8S%E9%9B%86%E7%BE%A4/index.html">
+<meta property="og:site_name" content="博哥编程日记">
+<meta property="og:description" content="准备好至少Centos8环境并且没有安装过Docker K8S多节点集群搭建过程过程 简介：基于KubeAdm搭建多节点K8S集群  安装docker（主节点+工作节点） centos-8环境  解决Centos8环境Yum不可用问题 12345678910111213141516171819#1.先安装ymlsudo yum install -y yum-utils \  device-mapp">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A15/1.png">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A16/1.png">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A16/2.png">
+<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A16/3.png">
+<meta property="article:published_time" content="2023-04-22T04:39:04.000Z">
+<meta property="article:modified_time" content="2023-05-02T09:23:46.733Z">
+<meta property="article:author" content="博哥">
+<meta property="article:tag" content="K8s">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A15/1.png">
+
+<link rel="canonical" href="http://example.com/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10015-%E5%9F%BA%E4%BA%8EKubAdmin%E6%90%AD%E5%BB%BA%E5%A4%9A%E8%8A%82%E7%82%B9K8S%E9%9B%86%E7%BE%A4/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>基于KubAdmin搭建多节点K8S集群 | 博哥编程日记</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">博哥编程日记</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10015-%E5%9F%BA%E4%BA%8EKubAdmin%E6%90%AD%E5%BB%BA%E5%A4%9A%E8%8A%82%E7%82%B9K8S%E9%9B%86%E7%BE%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="博哥">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="博哥编程日记">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          基于KubAdmin搭建多节点K8S集群
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-04-22 12:39:04" itemprop="dateCreated datePublished" datetime="2023-04-22T12:39:04+08:00">2023-04-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-05-02 17:23:46" itemprop="dateModified" datetime="2023-05-02T17:23:46+08:00">2023-05-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%8D%E5%8A%A1/" itemprop="url" rel="index"><span itemprop="name">服务</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>655</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="准备好至少Centos8环境并且没有安装过Docker"><a href="#准备好至少Centos8环境并且没有安装过Docker" class="headerlink" title="准备好至少Centos8环境并且没有安装过Docker"></a>准备好至少Centos8环境并且没有安装过Docker</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A15/1.png"></p>
+<h2 id="K8S多节点集群搭建过程过程"><a href="#K8S多节点集群搭建过程过程" class="headerlink" title="K8S多节点集群搭建过程过程"></a>K8S多节点集群搭建过程过程</h2><blockquote>
+<p><strong>简介：基于KubeAdm搭建多节点K8S集群</strong></p>
+</blockquote>
+<h3 id="安装docker（主节点-工作节点）"><a href="#安装docker（主节点-工作节点）" class="headerlink" title="安装docker（主节点+工作节点）"></a><strong>安装docker（主节点+工作节点）</strong></h3><ul>
+<li><strong><font color="red">centos-8环境</font></strong></li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/hkl_Forever/article/details/125383667">解决Centos8环境Yum不可用问题</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">1.先安装yml</span></span><br><span class="line">sudo yum install -y yum-utils \</span><br><span class="line">  device-mapper-persistent-data \</span><br><span class="line">  lvm2</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment"># 2.设置阿里云镜像</span></span></span><br><span class="line">sudo yum-config-manager \</span><br><span class="line">    --add-repo \</span><br><span class="line">    https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">##3. 安装docker</span></span></span><br><span class="line">安装最新版本的 Docker Engine-Community 和 containerd，或者转到下一步安装特定版本：</span><br><span class="line">sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">4. 查看docker版本</span></span><br><span class="line">docker -v</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">5.配置开机自启动</span></span><br><span class="line">systemctl enable docker.service</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">6. 启动docker</span></span><br><span class="line">systemctl start docker</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">7. 查看docker 启动状态</span></span><br><span class="line">systemctl status docker</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li><strong><font color="red">centos-7环境</font></strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1.先安装yml</span></span><br><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br><span class="line"><span class="comment">#2.设置阿里云镜像</span></span><br><span class="line">sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line"><span class="comment">#3. 安装docker</span></span><br><span class="line">yum -y install docker-ce-20.10.10-3.el7</span><br><span class="line"><span class="comment">#4. 查看docker版本</span></span><br><span class="line">docker -v</span><br><span class="line"><span class="comment">#5.配置开机自启动</span></span><br><span class="line">systemctl <span class="built_in">enable</span> docker.service</span><br><span class="line"><span class="comment">#6. 启动docker</span></span><br><span class="line">systemctl start docker</span><br><span class="line"><span class="comment">#7. 查看docker 启动状态</span></span><br><span class="line">systemctl status docker</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="配镜docker镜像源"><a href="#配镜docker镜像源" class="headerlink" title="配镜docker镜像源"></a>配镜docker镜像源</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> &gt; /etc/yum.repos.d/kubernetes.repo &lt;&lt; <span class="string">EOF</span></span><br><span class="line"><span class="string">[kubernetes]</span></span><br><span class="line"><span class="string">name=Kubernetes</span></span><br><span class="line"><span class="string">baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64</span></span><br><span class="line"><span class="string">enabled=1</span></span><br><span class="line"><span class="string">gpgcheck=0</span></span><br><span class="line"><span class="string">repo_gpgcheck=0</span></span><br><span class="line"><span class="string">gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg</span></span><br><span class="line"><span class="string">EOF</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="安装kubelet-kubeadm-kubectl（主节点-工作节点）"><a href="#安装kubelet-kubeadm-kubectl（主节点-工作节点）" class="headerlink" title="安装kubelet kubeadm kubectl（主节点+工作节点）"></a>安装kubelet kubeadm kubectl（主节点+工作节点）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y kubelet-1.18.0 kubeadm-1.18.0 kubectl-1.18.0</span><br></pre></td></tr></table></figure>
+
+<h3 id="主节点初始化（主节点）"><a href="#主节点初始化（主节点）" class="headerlink" title="主节点初始化（主节点）"></a><strong>主节点初始化（主节点）</strong></h3><ul>
+<li><strong>提前准备工作</strong></li>
+</ul>
+<blockquote>
+<ol>
+<li><p>停止防火墙 systemctl stop firewalld.service</p>
+</li>
+<li><p>关闭swap</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo swapoff -a</span><br><span class="line">sed -ri <span class="string">&#x27;s/.*swap.*/#&amp;/&#x27;</span> /etc/fstab</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">kubeadm init \</span><br><span class="line">--apiserver-advertise-address=192.168.195.131 \</span><br><span class="line">--image-repository registry.aliyuncs.com/google_containers \</span><br><span class="line">--kubernetes-version v1.18.0 \</span><br><span class="line">--service-cidr=10.96.0.0/12 \</span><br><span class="line">--pod-network-cidr=10.244.0.0/16</span><br><span class="line">只修改两个地方(master主机【内网IP】，k8s软件版本)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>说明：</p>
+<ul>
+<li>–apiserver-advertise-address：主节点的内网ip地址</li>
+<li>–image-repository 镜像仓库</li>
+<li>–kubernetes-version k8s版本</li>
+<li>–service-cidr + –pod-network-cidr 网段不重复即可</li>
+</ul>
+</blockquote>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A16/1.png"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A16/2.png"></p>
+<h3 id="当初始化完成之后执行命令，并加入工作节点"><a href="#当初始化完成之后执行命令，并加入工作节点" class="headerlink" title="当初始化完成之后执行命令，并加入工作节点"></a><strong>当初始化完成之后执行命令，并加入工作节点</strong></h3><ul>
+<li>主节点执行命令</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p <span class="variable">$HOME</span>/.kube</span><br><span class="line">sudo <span class="built_in">cp</span> -i /etc/kubernetes/admin.conf <span class="variable">$HOME</span>/.kube/config</span><br><span class="line">sudo <span class="built_in">chown</span> $(<span class="built_in">id</span> -u):$(<span class="built_in">id</span> -g) <span class="variable">$HOME</span>/.kube/config</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>加入工作节点</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kubeadm <span class="built_in">join</span> 192.168.1.11:6443 --token edrpxk.4u2nlpgq5xztzxu8 \</span><br><span class="line">    --discovery-token-ca-cert-hash sha256:91f8845d82c8f278020da4623604b5c4d9d125df717318fc760c465262d59d1c</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>如果加入工作节点时报错可执行一下命令**<font color="red">(否则忽略)</font>**</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hostnamectl set-hostname k8s-node2</span><br><span class="line">kubeadm reset</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装网格插件"><a href="#安装网格插件" class="headerlink" title="安装网格插件"></a>安装网格插件</h3><p><strong><font color="red">centos8(环境需做以下操作)</font></strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#在/etc/hosts增加以下这条</span></span><br><span class="line">199.232.28.133 raw.githubusercontent.com</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f  https://raw.githubusercontent.com/flannel-io/flannel/master/Documentation/kube-flannel.yml</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看节点状态"><a href="#查看节点状态" class="headerlink" title="查看节点状态"></a>查看节点状态</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A16/3.png"></p>
+<h3 id="查看pod状态"><a href="#查看pod状态" class="headerlink" title="查看pod状态"></a>查看pod状态</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">kubectl get pods -n kube-system</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">如果不行请重启K8S服务 将k8s做成开机启动服务</span></span><br><span class="line">systemctl start kubelet.service</span><br><span class="line">systemctl enable docker.service</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/K8s/" rel="tag"># K8s</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10016-%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92%E8%B0%83%E5%BA%A6-K8S%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7Rancher2.x%E5%AE%9E%E6%88%98/" rel="prev" title="容器编排调度-K8S可视化工具Rancher2.x实战">
+      <i class="fa fa-chevron-left"></i> 容器编排调度-K8S可视化工具Rancher2.x实战
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10014-%E5%9F%BA%E4%BA%8EMinikube%E6%90%AD%E5%BB%BA%E5%8D%95%E8%8A%82%E7%82%B9K8S%E9%9B%86%E7%BE%A4/" rel="next" title="基于Minikube搭建单节点K8S集群并快速部署应用">
+      基于Minikube搭建单节点K8S集群并快速部署应用 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%A5%BD%E8%87%B3%E5%B0%91Centos8%E7%8E%AF%E5%A2%83%E5%B9%B6%E4%B8%94%E6%B2%A1%E6%9C%89%E5%AE%89%E8%A3%85%E8%BF%87Docker"><span class="nav-number">1.</span> <span class="nav-text">准备好至少Centos8环境并且没有安装过Docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#K8S%E5%A4%9A%E8%8A%82%E7%82%B9%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E8%BF%87%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">K8S多节点集群搭建过程过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85docker%EF%BC%88%E4%B8%BB%E8%8A%82%E7%82%B9-%E5%B7%A5%E4%BD%9C%E8%8A%82%E7%82%B9%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">安装docker（主节点+工作节点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E9%95%9Cdocker%E9%95%9C%E5%83%8F%E6%BA%90"><span class="nav-number">2.2.</span> <span class="nav-text">配镜docker镜像源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85kubelet-kubeadm-kubectl%EF%BC%88%E4%B8%BB%E8%8A%82%E7%82%B9-%E5%B7%A5%E4%BD%9C%E8%8A%82%E7%82%B9%EF%BC%89"><span class="nav-number">2.3.</span> <span class="nav-text">安装kubelet kubeadm kubectl（主节点+工作节点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%8A%82%E7%82%B9%E5%88%9D%E5%A7%8B%E5%8C%96%EF%BC%88%E4%B8%BB%E8%8A%82%E7%82%B9%EF%BC%89"><span class="nav-number">2.4.</span> <span class="nav-text">主节点初始化（主节点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BD%93%E5%88%9D%E5%A7%8B%E5%8C%96%E5%AE%8C%E6%88%90%E4%B9%8B%E5%90%8E%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4%EF%BC%8C%E5%B9%B6%E5%8A%A0%E5%85%A5%E5%B7%A5%E4%BD%9C%E8%8A%82%E7%82%B9"><span class="nav-number">2.5.</span> <span class="nav-text">当初始化完成之后执行命令，并加入工作节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%BD%91%E6%A0%BC%E6%8F%92%E4%BB%B6"><span class="nav-number">2.6.</span> <span class="nav-text">安装网格插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E8%8A%82%E7%82%B9%E7%8A%B6%E6%80%81"><span class="nav-number">2.7.</span> <span class="nav-text">查看节点状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8Bpod%E7%8A%B6%E6%80%81"><span class="nav-number">2.8.</span> <span class="nav-text">查看pod状态</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="博哥"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">博哥</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">博哥</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">23k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:25</span>
+</div>
+
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+-->
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

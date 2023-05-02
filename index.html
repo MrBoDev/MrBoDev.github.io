@@ -1,0 +1,2039 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="博哥编程日记">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="博哥编程日记">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="博哥">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>博哥编程日记</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">博哥编程日记</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10002-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E4%BD%BF%E7%94%A8%E7%BA%AFCSS%E5%88%B6%E4%BD%9C%E9%85%B7%E7%82%AB%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%90%8D%E7%89%87%E6%95%88%E6%9E%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="博哥">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="博哥编程日记">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10002-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E4%BD%BF%E7%94%A8%E7%BA%AFCSS%E5%88%B6%E4%BD%9C%E9%85%B7%E7%82%AB%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%90%8D%E7%89%87%E6%95%88%E6%9E%9C/" class="post-title-link" itemprop="url">博哥教你使用纯CSS制作酷炫的个人名片效果</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-01 12:39:04" itemprop="dateCreated datePublished" datetime="2023-05-01T12:39:04+08:00">2023-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-05-02 17:28:17" itemprop="dateModified" datetime="2023-05-02T17:28:17+08:00">2023-05-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>3.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>11 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
+<li><strong>该文档对应的视频教程，请移步B站观看！</strong></li>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1uT411m7k7/?spm_id_from=333.999.0.0">去B站播放该教程</a></li>
+</ul>
+<h2 id="需要掌握的前置知识和用的素材"><a href="#需要掌握的前置知识和用的素材" class="headerlink" title="需要掌握的前置知识和用的素材"></a>需要掌握的前置知识和用的素材</h2><h3 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h3><blockquote>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>SASS</li>
+<li>FLEX</li>
+<li>媒体查询响应式布局</li>
+</ul>
+</blockquote>
+<h3 id="图标网站"><a href="#图标网站" class="headerlink" title="图标网站"></a>图标网站</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://tabler-icons.io/">https://tabler-icons.io/</a></p>
+</blockquote>
+<h3 id="需要提前下载的css库"><a href="#需要提前下载的css库" class="headerlink" title="需要提前下载的css库"></a>需要提前下载的css库</h3><blockquote>
+<p>重置网页样式的css库:   <font color="red">reset.css </font>   </p>
+<p>博哥素材提供&amp;自行从网上下载</p>
+</blockquote>
+<h3 id="该案例效果用的图片素材"><a href="#该案例效果用的图片素材" class="headerlink" title="该案例效果用的图片素材"></a>该案例效果用的图片素材</h3><blockquote>
+<p>博哥素材提供&amp;自行从网上下载</p>
+</blockquote>
+<h2 id="重要参数准备"><a href="#重要参数准备" class="headerlink" title="重要参数准备"></a>重要参数准备</h2><table>
+<thead>
+<tr>
+<th>作用的位置</th>
+<th align="left">参数值</th>
+<th>具体说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1.头像</td>
+<td align="left">height&#x3D;”260px”     width&#x3D;”650px”<br>height&#x3D;”200px”     width&#x3D;”200px”   圆角-50%<br>box-shadow: 0 10px 60px -10px rgba(13,28,39,.5)<br></td>
+<td>设置初始大小<br>电脑屏幕下尺寸和圆角<br>阴影效果br&gt;</td>
+</tr>
+<tr>
+<td>2.body</td>
+<td align="left">padding: 2rem; color:skyBlue</td>
+<td>初始化时body元素内间距 字体颜色等</td>
+</tr>
+<tr>
+<td>3.背景图片</td>
+<td align="left">scale(1)—scale(1.3)</td>
+<td>背景放大比例变化</td>
+</tr>
+<tr>
+<td>4.个人主页卡片容器</td>
+<td align="left">box-shadow: 0 18px 200px -60px black;<br>border-radius: 50px;<br>width: 560px;<br>backdrop-filter: blur(50px);<br>border: 2px solid #ffffff40;</td>
+<td>阴影<br>圆角<br>宽度<br>滤镜模糊<br>边框</td>
+</tr>
+<tr>
+<td>5.个人简介容器</td>
+<td align="left">25px<br>2.5rem<br>20px<br></td>
+<td>flex布局后容器元素间隔<br>子元素h1(昵称)字体大小<br>子元素div(岗位)字体大小<br></td>
+</tr>
+<tr>
+<td>6.个人详情容器</td>
+<td align="left">50px<br>1px<br>3px<br>2rem<br>15px<br>16px<br>0.7<br></td>
+<td>flex布局后容器元素间隔<br>子元素文本间隔<br>关注者 粉丝数  点赞数文本间隔<br>关注者 粉丝数  点赞数字体大小<br>关注者 粉丝数  点赞数 底部间距<br>关注者。。。数据–字体大小<br>关注者。。。数据–透明度<br></td>
+</tr>
+<tr>
+<td>7.社交平台容器</td>
+<td align="left">55px<br>55px<br>15px<br>color:#fff<br>40%<br></td>
+<td>A标签宽度<br>A标签高度<br>A标签间距<br>图标颜色<br>圆角<br></td>
+</tr>
+<tr>
+<td>8.社交平台图标</td>
+<td align="left">background:  linear-gradient(45deg,#3b5998,#0078d7); box-shadow: 0 40px 30px rgba(43,98,169,0.5);<br>background:  linear-gradient(45deg,#1da1f2,#0e71c8); box-shadow: 0 40px 30px rgba(19,127,211,0.7);<br>background:  linear-gradient(45deg,#405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d); box-shadow: 0 40px 30px rgba(120,64,190,0.6);</td>
+<td>QQ<br>微信<br>抖音<br></td>
+</tr>
+<tr>
+<td>9.我的互动容器</td>
+<td align="left">2rem<br>22px<br>15px<br>250px<br>color:white<br></td>
+<td>flex布局容器间隔<br>按钮字体大小<br>按钮内间距<br>按钮最小宽度<br>按钮字体颜色<br></td>
+</tr>
+</tbody></table>
+<h2 id="三-案列实现思路解析"><a href="#三-案列实现思路解析" class="headerlink" title="三.案列实现思路解析"></a>三.案列实现思路解析</h2><h3 id="页面实现思路解析"><a href="#页面实现思路解析" class="headerlink" title="页面实现思路解析"></a>页面实现思路解析</h3><h4 id="创建个人主页页面容器"><a href="#创建个人主页页面容器" class="headerlink" title="创建个人主页页面容器"></a>创建个人主页页面容器</h4><blockquote>
+<ul>
+<li>需要一个大的容器元素    个人主页卡片&gt;&gt;Div容器&gt;&gt; <strong>profile-card</strong></li>
+</ul>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">&lt;!--个人主页卡片--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;profile-card&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="个人主页容器中的子元素"><a href="#个人主页容器中的子元素" class="headerlink" title="个人主页容器中的子元素"></a>个人主页容器中的子元素</h4><h5 id="1-头像元素"><a href="#1-头像元素" class="headerlink" title="(1) 头像元素"></a>(1) 头像元素</h5><blockquote>
+<ul>
+<li><p>头像元素            头像&gt;&gt;Div容器&gt;&gt;<strong>profile-card-img</strong> </p>
+</li>
+<li><p>头像的子元素</p>
+</li>
+</ul>
+<p> ​    img—-头像图片</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--个人主页卡片--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;profile-card&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--1.头像容器--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;profile-card-img&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;img/head.jpg&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2-个人简介元素"><a href="#2-个人简介元素" class="headerlink" title="(2) 个人简介元素"></a>(2) 个人简介元素</h5><blockquote>
+<ul>
+<li><p>个人简介            个人简介&gt;&gt;Div容器&gt;&gt;   <strong>profile-card-desc</strong> </p>
+</li>
+<li><p>个人简介子元素</p>
+<p> h1—————————–个人名称的标题文字</p>
+<p> div—————————–职位|职位介绍</p>
+<p> div—————————–地理位置图标————使用在线图标库——搜索map-pin</p>
+</li>
+</ul>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--2.个人简介容器--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;&gt;profile-card-desc&quot;</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">h1</span>&gt;</span>博哥的编程日记<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">div</span>&gt;</span>全栈开发者<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="attr">class</span>=<span class="string">&quot;icon icon-tabler icon-tabler-map-pin&quot;</span> <span class="attr">width</span>=<span class="string">&quot;24&quot;</span> <span class="attr">height</span>=<span class="string">&quot;24&quot;</span>               <span class="attr">viewBox</span>=<span class="string">&quot;0 0 24 24&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;currentColor&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke-linecap</span>=<span class="string">&quot;round&quot;</span> <span class="attr">stroke-</span>                   <span class="attr">linejoin</span>=<span class="string">&quot;round&quot;</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">path</span> <span class="attr">stroke</span>=<span class="string">&quot;none&quot;</span> <span class="attr">d</span>=<span class="string">&quot;M0 0h24v24H0z&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;12&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;11&quot;</span> <span class="attr">r</span>=<span class="string">&quot;3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">circle</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="3-个人详情元素"><a href="#3-个人详情元素" class="headerlink" title="(3) 个人详情元素"></a>(3) 个人详情元素</h5><blockquote>
+<ul>
+<li><p>个人详细信息            个人详细信息&gt;&gt;Div容器&gt;&gt;<strong>profile-card-info</strong> </p>
+</li>
+<li><p>个人详细信息子元素</p>
+<p> div—————————————-个人详情</p>
+</li>
+</ul>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> &lt;!--<span class="number">3</span>.个人详细信息--&gt;</span><br><span class="line">&lt;<span class="selector-tag">div</span> class=&quot;profile-card-info&quot;&gt;</span><br><span class="line">    &lt;<span class="selector-tag">div</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">div</span>&gt;<span class="number">800</span>W&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">div</span>&gt;粉丝数&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">    &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">    &lt;<span class="selector-tag">div</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">div</span>&gt;<span class="number">50</span>&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">div</span>&gt;关注者&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">    &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">    &lt;<span class="selector-tag">div</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">div</span>&gt;<span class="number">5000</span>&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">div</span>&gt;点赞数&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">    &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">&lt;/<span class="selector-tag">div</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="4-社交平台"><a href="#4-社交平台" class="headerlink" title="(4)  社交平台"></a>(4)  社交平台</h5><blockquote>
+<ul>
+<li><p>社交平台            社交平台&gt;&gt;Div容器&gt;&gt;<strong>profile-card-social</strong> </p>
+</li>
+<li><p>社交平台子元素</p>
+</li>
+</ul>
+<p> a———————-存放对应平台图标———————-使用在线图标</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--4.社交平台--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;profile-card-social&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;qq&quot;</span>&gt;</span>QQ<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wechat&quot;</span>&gt;</span>微信<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;douyin&quot;</span>&gt;</span>抖音<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="5-底部活动元素"><a href="#5-底部活动元素" class="headerlink" title="(5) 底部活动元素"></a>(5) 底部活动元素</h5><blockquote>
+<ul>
+<li><p>底部活动             底部活动&gt;&gt;Div容器&gt;&gt;<strong>profile-card-action</strong> </p>
+</li>
+<li><p>底部活动子元素</p>
+</li>
+</ul>
+<p> ​    button——————————————–相关按钮</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">&lt;!--5.社交平台--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;profile-card-action&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;blue&quot;</span>&gt;</span>联系我<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;orange&quot;</span>&gt;</span>关注我<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="6-完整页面代码"><a href="#6-完整页面代码" class="headerlink" title="(6) 完整页面代码"></a>(6) 完整页面代码</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>个人资料卡设计<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/reset.css&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/style.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!--个人主页卡片--&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;profile-card&quot;</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--1.头像容器--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;profile-card-img&quot;</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;img/head.jpg&quot;</span> <span class="attr">height</span>=<span class="string">&quot;300&quot;</span> <span class="attr">width</span>=<span class="string">&quot;600px&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--2.个人简介容器--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;&gt;profile-card-desc&quot;</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">h1</span>&gt;</span>博哥的编程日记<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">div</span>&gt;</span>全栈开发者<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="attr">class</span>=<span class="string">&quot;icon icon-tabler icon-tabler-map-pin&quot;</span> <span class="attr">width</span>=<span class="string">&quot;24&quot;</span> <span class="attr">height</span>=<span class="string">&quot;24&quot;</span> <span class="attr">viewBox</span>=<span class="string">&quot;0 0 24 24&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;currentColor&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke-linecap</span>=<span class="string">&quot;round&quot;</span> <span class="attr">stroke-linejoin</span>=<span class="string">&quot;round&quot;</span>&gt;</span></span><br><span class="line">                   <span class="tag">&lt;<span class="name">path</span> <span class="attr">stroke</span>=<span class="string">&quot;none&quot;</span> <span class="attr">d</span>=<span class="string">&quot;M0 0h24v24H0z&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                   <span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;12&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;11&quot;</span> <span class="attr">r</span>=<span class="string">&quot;3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">circle</span>&gt;</span></span><br><span class="line">                   <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;<span class="name">span</span>&gt;</span>河南-洛阳-洛龙<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--3.个人详细信息--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;profile-card-info&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">div</span>&gt;</span>800W<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">div</span>&gt;</span>粉丝数<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">                   <span class="tag">&lt;<span class="name">div</span>&gt;</span>50<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                   <span class="tag">&lt;<span class="name">div</span>&gt;</span>关注者<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                 <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">                   <span class="tag">&lt;<span class="name">div</span>&gt;</span>5000<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                   <span class="tag">&lt;<span class="name">div</span>&gt;</span>点赞数<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--4.社交平台--&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;profile-card-social&quot;</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;qq&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="attr">class</span>=<span class="string">&quot;icon icon-tabler icon-tabler-brand-qq&quot;</span> <span class="attr">width</span>=<span class="string">&quot;24&quot;</span> <span class="attr">height</span>=<span class="string">&quot;24&quot;</span> <span class="attr">viewBox</span>=<span class="string">&quot;0 0 24 24&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;currentColor&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke-linecap</span>=<span class="string">&quot;round&quot;</span> <span class="attr">stroke-linejoin</span>=<span class="string">&quot;round&quot;</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">stroke</span>=<span class="string">&quot;none&quot;</span> <span class="attr">d</span>=<span class="string">&quot;M0 0h24v24H0z&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M14 7h.01&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M10 7h.01&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M6 11c4 4 8 4 12 0&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M9 13.5v2.5&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M10.5 10c.667 1.333 2.333 1.333 3 0h-3z&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M16 21c1.5 0 3.065 -1 1 -3c4.442 2 1.987 -4.5 1 -7c0 -4 -1.558 -8 -6 -8s-6 4 -6 8c-.987 2.5 -3.442 9 1 7c-2.065 2 -.5 3 1 3h8z&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wechat&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="attr">class</span>=<span class="string">&quot;icon icon-tabler icon-tabler-brand-wechat&quot;</span> <span class="attr">width</span>=<span class="string">&quot;24&quot;</span> <span class="attr">height</span>=<span class="string">&quot;24&quot;</span> <span class="attr">viewBox</span>=<span class="string">&quot;0 0 24 24&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;currentColor&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke-linecap</span>=<span class="string">&quot;round&quot;</span> <span class="attr">stroke-linejoin</span>=<span class="string">&quot;round&quot;</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">stroke</span>=<span class="string">&quot;none&quot;</span> <span class="attr">d</span>=<span class="string">&quot;M0 0h24v24H0z&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M16.5 10c3.038 0 5.5 2.015 5.5 4.5c0 1.397 -.778 2.645 -1.999 3.47l-.001 2.03l-1.964 -1.178a6.649 6.649 0 0 1 -1.536 .178c-3.038 0 -5.5 -2.015 -5.5 -4.5s2.462 -4.5 5.5 -4.5z&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M11.197 15.698c-.69 .196 -1.43 .302 -2.197 .302a8.008 8.008 0 0 1 -2.612 -.432l-2.388 1.432v-2.801c-1.237 -1.082 -2 -2.564 -2 -4.199c0 -3.314 3.134 -6 7 -6c3.782 0 6.863 2.57 6.996 5.785l.004 .233&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M10 8h.01&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M7 8h.01&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M15 14h.01&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M18 14h.01&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;douyin&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="attr">class</span>=<span class="string">&quot;icon icon-tabler icon-tabler-brand-tiktok&quot;</span> <span class="attr">width</span>=<span class="string">&quot;24&quot;</span> <span class="attr">height</span>=<span class="string">&quot;24&quot;</span> <span class="attr">viewBox</span>=<span class="string">&quot;0 0 24 24&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;currentColor&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke-linecap</span>=<span class="string">&quot;round&quot;</span> <span class="attr">stroke-linejoin</span>=<span class="string">&quot;round&quot;</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">stroke</span>=<span class="string">&quot;none&quot;</span> <span class="attr">d</span>=<span class="string">&quot;M0 0h24v24H0z&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M9 12a4 4 0 1 0 4 4v-12a5 5 0 0 0 5 5&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="comment">&lt;!--5.社交平台--&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;profile-card-action&quot;</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;blue&quot;</span>&gt;</span>联系我<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;orange&quot;</span>&gt;</span>关注我<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="7-页面效果"><a href="#7-页面效果" class="headerlink" title="(7) 页面效果"></a>(7) 页面效果</h5><p><img src="/images/%E5%89%8D%E7%AB%AF/05/A2/1.png" alt="页面效果"></p>
+<h3 id="样式实现思路解析"><a href="#样式实现思路解析" class="headerlink" title="样式实现思路解析"></a>样式实现思路解析</h3><h4 id="body初始化样式设置"><a href="#body初始化样式设置" class="headerlink" title="body初始化样式设置"></a>body初始化样式设置</h4><blockquote>
+<p>字体风格—-     自定义即可</p>
+<p>字体颜色—-     自定义即可</p>
+<p>最小高度—-      屏幕高度</p>
+<p>布局设置———  Flex布局  水平居中对齐</p>
+<p>内间距设置——看重要参数准备中给定的值</p>
+</blockquote>
+<h5 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h5><p><img src="/images/%E5%89%8D%E7%AB%AF/05/A2/2.png" alt="页面效果"></p>
+<h4 id="页面背景实现思路"><a href="#页面背景实现思路" class="headerlink" title="页面背景实现思路"></a>页面背景实现思路</h4><blockquote>
+<p><strong>实现思路</strong></p>
+<ul>
+<li>body添加伪元素铺满屏幕即可</li>
+</ul>
+<p><strong>伪元素样式设置</strong></p>
+<ul>
+<li><p>定位属性———-固定定位</p>
+</li>
+<li><p>间距调整———– 0</p>
+</li>
+<li><p>层级关系设置——– 调小层级关系</p>
+</li>
+<li><p>背景图片设置———  不平铺  位置居中</p>
+</li>
+<li><p>背景图片尺寸—–自适应</p>
+</li>
+</ul>
+<p><strong>伪元素背景需要添加放大动画效果</strong></p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"> &amp;<span class="selector-pseudo">::before</span>&#123;</span><br><span class="line">     <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">     <span class="attribute">position</span>: fixed;</span><br><span class="line">     inset:<span class="number">0</span> ;</span><br><span class="line">     <span class="attribute">z-index</span>: -<span class="number">1</span>;</span><br><span class="line">     <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">&quot;../img/bg.jpg&quot;</span>) no-repeat center;</span><br><span class="line">     <span class="attribute">background-size</span>: cover;</span><br><span class="line">     <span class="attribute">animation</span>: backGroundImgAnimate <span class="number">20s</span> forwards;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> backGroundImgAnimate  &#123;</span><br><span class="line">    <span class="selector-tag">from</span>&#123;</span><br><span class="line">       <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-tag">to</span>&#123;</span><br><span class="line">      <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">1.3</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="效果-1"><a href="#效果-1" class="headerlink" title="效果"></a>效果</h5><p><img src="/images/%E5%89%8D%E7%AB%AF/05/A2/3.png" alt="页面效果"></p>
+<h4 id="个人主页卡片样式设置"><a href="#个人主页卡片样式设置" class="headerlink" title="个人主页卡片样式设置"></a>个人主页卡片样式设置</h4><blockquote>
+<p>阴影效果——————————–看重要参数准备中给定的值</p>
+<p>圆角————————————–看重要参数准备中给定的值</p>
+<p>宽度—————————————看重要参数准备中给定的值</p>
+<p>模糊效果———————————看重要参数准备中给定的值</p>
+<p>边框—————————————-看重要参数准备中给定的值</p>
+<p>内间距————————————-看重要参数准备中给定的值</p>
+<p>布局设置———————————-采用Flex布局    主轴Y轴      间距 40px</p>
+</blockquote>
+<h5 id="自适应效果考虑-方案-媒体查询"><a href="#自适应效果考虑-方案-媒体查询" class="headerlink" title="自适应效果考虑:方案:媒体查询"></a>自适应效果考虑:方案:媒体查询</h5><blockquote>
+<p>设备宽度 &lt;768px时候</p>
+<p>宽度——————————————auto自动匹配</p>
+</blockquote>
+<p><strong>效果</strong></p>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A2/4.png" alt="页面效果"></p>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A2/5.png" alt="页面效果"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.profile-card</span>&#123;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">18px</span> <span class="number">200px</span> -<span class="number">60px</span> black;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">560px</span>;</span><br><span class="line">  backdrop-<span class="attribute">filter</span>: <span class="built_in">blur</span>(<span class="number">50px</span>);</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">2px</span> solid <span class="number">#ffffff40</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">3rem</span> <span class="number">5rem</span>;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-direction</span>: column;</span><br><span class="line">  <span class="attribute">gap</span>: <span class="number">40px</span>;</span><br><span class="line">  <span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">768px</span>) &#123;</span><br><span class="line">     <span class="attribute">width</span>: auto;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="头像元素样式设计"><a href="#头像元素样式设计" class="headerlink" title="头像元素样式设计"></a>头像元素样式设计</h4><blockquote>
+<p>外间距margin———————————————————自适应居中</p>
+<p>圆角———————————————————————</p>
+<p>圆形头像尺寸设置—————————————————————中心</p>
+<p>阴影效果设置——————————————————————–看重要参数准备中给定的值</p>
+<p>头像居中————————————————————————–设置为块元素即可</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&amp;-<span class="selector-tag">img</span> <span class="selector-tag">img</span>&#123;</span><br><span class="line">  <span class="attribute">margin</span>: auto;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">object-fit</span>: cover;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">10px</span> <span class="number">60px</span> -<span class="number">10px</span> <span class="built_in">rgba</span>(<span class="number">13</span>,<span class="number">28</span>,<span class="number">39</span>,.<span class="number">5</span>);</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A2/6.png" alt="页面效果"></p>
+<h4 id="个人简介元素样式设计"><a href="#个人简介元素样式设计" class="headerlink" title="个人简介元素样式设计"></a>个人简介元素样式设计</h4><blockquote>
+<p>内容居中——————————–</p>
+<p>布局设置———————————</p>
+<p>布局容器元素间距设置——————————–看重要参数准备中给定的值</p>
+</blockquote>
+<h5 id="个人简介元素子元素标题样式设计"><a href="#个人简介元素子元素标题样式设计" class="headerlink" title="个人简介元素子元素标题样式设计"></a>个人简介元素子元素标题样式设计</h5><blockquote>
+<p>字体大小——————————————–看重要参数准备中给定的值</p>
+<p>加粗—————————————————–</p>
+</blockquote>
+<h5 id="个人简介元素子元素职位样式设计"><a href="#个人简介元素子元素职位样式设计" class="headerlink" title="个人简介元素子元素职位样式设计"></a>个人简介元素子元素职位样式设计</h5><blockquote>
+<p>字体大小———————————————-看重要参数准备中给定的值</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&amp;-desc &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-direction</span>: column;</span><br><span class="line">    <span class="attribute">gap</span>: <span class="number">25px</span>;</span><br><span class="line">    <span class="selector-tag">h1</span>&#123;</span><br><span class="line">      <span class="attribute">font-size</span>: <span class="number">2.5rem</span>;</span><br><span class="line">      <span class="attribute">font-weight</span>: bold;</span><br><span class="line">      &amp; + <span class="selector-tag">div</span>&#123;</span><br><span class="line">         <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="效果-2"><a href="#效果-2" class="headerlink" title="效果"></a>效果</h5><p><img src="/images/%E5%89%8D%E7%AB%AF/05/A2/7.png" alt="页面效果"></p>
+<h4 id="个人详情元素样式设计"><a href="#个人详情元素样式设计" class="headerlink" title="个人详情元素样式设计"></a>个人详情元素样式设计</h4><blockquote>
+<p>布局———————————————–flex  对齐方式设置</p>
+<p>布局容器间隔————————————看重要参数准备中给定的值</p>
+</blockquote>
+<h5 id="自适应效果考虑-方案-媒体查询-1"><a href="#自适应效果考虑-方案-媒体查询-1" class="headerlink" title="自适应效果考虑:方案:媒体查询"></a>自适应效果考虑:方案:媒体查询</h5><blockquote>
+<p>设备宽度 &lt;576px时候</p>
+<p>flex布局容器中的元素间隔 30px</p>
+</blockquote>
+<h5 id="个人详情子元素样式"><a href="#个人详情子元素样式" class="headerlink" title="个人详情子元素样式"></a>个人详情子元素样式</h5><blockquote>
+<p>字体加粗————————————————————–</p>
+<p>文本间隔————————————————————–看重要参数准备中给定的值</p>
+<p>内容居中—————————————————————</p>
+</blockquote>
+<h5 id="标题子元素样式-粉丝数-关注者-点赞数"><a href="#标题子元素样式-粉丝数-关注者-点赞数" class="headerlink" title="标题子元素样式    粉丝数  关注者  点赞数"></a>标题子元素样式    粉丝数  关注者  点赞数</h5><blockquote>
+<p>字体加粗———————————————————-</p>
+<p>文本间距———————————————————-看重要参数准备中给定的值</p>
+<p>字体大小———————————————————–看重要参数准备中给定的值</p>
+<p>底部间隔———————————————————–看重要参数准备中给定的值</p>
+</blockquote>
+<h5 id="标题子元素样式-粉丝数-关注者-点赞数-gt-gt-数据"><a href="#标题子元素样式-粉丝数-关注者-点赞数-gt-gt-数据" class="headerlink" title="标题子元素样式    粉丝数  关注者  点赞数&gt;&gt;数据"></a>标题子元素样式    粉丝数  关注者  点赞数&gt;&gt;数据</h5><blockquote>
+<p>字体大小—————————————————————-看重要参数准备中给定的值</p>
+<p>透明度——————————————————————–看重要参数准备中给定的值</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&amp;-info&#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">    <span class="attribute">gap</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="keyword">@media</span> screen  <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">576px</span>)&#123;</span><br><span class="line">       <span class="attribute">gap</span>: <span class="number">30px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    &amp; &gt;<span class="selector-tag">div</span>&#123;</span><br><span class="line">      <span class="attribute">font-weight</span>: bold;</span><br><span class="line">      <span class="attribute">text-align</span>: center;</span><br><span class="line">      text-space: <span class="number">1px</span>;</span><br><span class="line">      &amp; &gt; *<span class="selector-pseudo">:first</span>-child&#123;</span><br><span class="line">         <span class="attribute">font-weight</span>: bold;</span><br><span class="line">         <span class="attribute">letter-spacing</span>: <span class="number">3px</span>;</span><br><span class="line">         <span class="attribute">font-size</span>: <span class="number">2rem</span>;</span><br><span class="line">         <span class="attribute">margin-bottom</span>: <span class="number">15px</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      &amp; &gt; *<span class="selector-pseudo">:last-child</span>&#123;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">        <span class="attribute">opacity</span>: .<span class="number">7</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A2/8.png" alt="页面效果"></p>
+<h4 id="社交平台元素样式设计"><a href="#社交平台元素样式设计" class="headerlink" title="社交平台元素样式设计"></a>社交平台元素样式设计</h4><blockquote>
+<p>布局——————————————flex    对齐    不换行</p>
+</blockquote>
+<h5 id="子标签A样式设定"><a href="#子标签A样式设定" class="headerlink" title="子标签A样式设定"></a>子标签A样式设定</h5><blockquote>
+<p>布局——————————————–行内元素采用flex布局</p>
+<p>高度——————————————看重要参数准备中给定的值</p>
+<p>宽度—————————————-看重要参数准备中给定的值</p>
+<p>定位—————————————–相对定位</p>
+<p>缩放—————————————–禁止</p>
+<p>圆角—————————————–</p>
+<p>过渡效果————————————–</p>
+</blockquote>
+<h5 id="子标签A在移动设备上的移入效果"><a href="#子标签A在移动设备上的移入效果" class="headerlink" title="子标签A在移动设备上的移入效果"></a>子标签A在移动设备上的移入效果</h5><blockquote>
+<p>设备宽度 768px时候</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;height: 50px;</span><br><span class="line">&gt;width:  50px;</span><br><span class="line">&gt;margin: 10px;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>移入效果</p>
+<p>放大 1.2倍   移动 -5px</p>
+</blockquote>
+<h5 id="社交图标设置不同背景色和阴影效果"><a href="#社交图标设置不同背景色和阴影效果" class="headerlink" title="社交图标设置不同背景色和阴影效果"></a>社交图标设置不同背景色和阴影效果</h5><blockquote>
+<p>背景色—————————————-看重要参数准备中给定的值</p>
+<p>阴影———————————————看重要参数准备中给定的值</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">&amp;-social&#123;</span><br><span class="line">   <span class="attribute">display</span>: flex;</span><br><span class="line">   <span class="attribute">justify-content</span>: center;</span><br><span class="line">   <span class="attribute">align-items</span>: center;</span><br><span class="line">   <span class="attribute">flex-wrap</span>: nowrap;</span><br><span class="line">   <span class="selector-tag">a</span>&#123;</span><br><span class="line">     <span class="attribute">display</span>: inline-flex;</span><br><span class="line">     <span class="attribute">height</span>: <span class="number">55px</span>;</span><br><span class="line">     <span class="attribute">width</span>: <span class="number">55px</span>;</span><br><span class="line">     <span class="attribute">margin</span>: <span class="number">15px</span>;</span><br><span class="line">     <span class="attribute">color</span>: white;</span><br><span class="line">     <span class="attribute">border-radius</span>: <span class="number">40%</span>;</span><br><span class="line">     <span class="attribute">align-items</span>: center;</span><br><span class="line">     <span class="attribute">justify-content</span>: center;</span><br><span class="line">     <span class="attribute">position</span>: relative;</span><br><span class="line">     <span class="attribute">flex-shrink</span>: <span class="number">0</span>;</span><br><span class="line">     <span class="attribute">transition</span>: all .<span class="number">3s</span>;</span><br><span class="line">     <span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">768px</span>)&#123;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">            <span class="attribute">margin</span>: <span class="number">10px</span>;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">min-width</span>: <span class="number">768px</span>)&#123;</span><br><span class="line">       &amp;<span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">           <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">1.2</span>) <span class="built_in">translateX</span>(-<span class="number">5px</span>);</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;</span><br><span class="line">     &amp;<span class="selector-class">.qq</span>&#123;</span><br><span class="line">       <span class="attribute">background</span>:  <span class="built_in">linear-gradient</span>(<span class="number">45deg</span>,<span class="number">#3b5998</span>,<span class="number">#0078d7</span>);</span><br><span class="line">       <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">40px</span> <span class="number">30px</span> <span class="built_in">rgba</span>(<span class="number">43</span>,<span class="number">98</span>,<span class="number">169</span>,<span class="number">0.5</span>);</span><br><span class="line">     &#125;</span><br><span class="line">     &amp;<span class="selector-class">.wechat</span>&#123;</span><br><span class="line">       <span class="attribute">background</span>:  <span class="built_in">linear-gradient</span>(<span class="number">45deg</span>,<span class="number">#1da1f2</span>,<span class="number">#0e71c8</span>);</span><br><span class="line">       <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">40px</span> <span class="number">30px</span> <span class="built_in">rgba</span>(<span class="number">19</span>,<span class="number">127</span>,<span class="number">211</span>,<span class="number">0.7</span>);</span><br><span class="line">     &#125;</span><br><span class="line">     &amp;<span class="selector-class">.douyin</span>&#123;</span><br><span class="line">       <span class="attribute">background</span>:  <span class="built_in">linear-gradient</span>(<span class="number">45deg</span>,<span class="number">#405de6</span>,</span><br><span class="line">       <span class="number">#5851db</span>,</span><br><span class="line">       <span class="number">#833ab4</span>,</span><br><span class="line">       <span class="number">#c13584</span>,</span><br><span class="line">       <span class="number">#e1306c</span>,</span><br><span class="line">       <span class="number">#fd1d1d</span>);</span><br><span class="line">       <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">40px</span> <span class="number">30px</span> <span class="built_in">rgba</span>(<span class="number">120</span>,<span class="number">64</span>,<span class="number">190</span>,<span class="number">0.6</span>);</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A2/9.png" alt="页面效果"></p>
+<h4 id="和我互动容器样式设计"><a href="#和我互动容器样式设计" class="headerlink" title="和我互动容器样式设计"></a>和我互动容器样式设计</h4><blockquote>
+<p>布局————————————-flex    </p>
+<p>flex布局容器元素间隔—-看重要参数准备中给定的值</p>
+</blockquote>
+<h5 id="自适应效果考虑-方案-媒体查询-2"><a href="#自适应效果考虑-方案-媒体查询-2" class="headerlink" title="自适应效果考虑:方案:媒体查询"></a>自适应效果考虑:方案:媒体查询</h5><blockquote>
+<p>设备宽度 &lt;768px时候</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="attribute">flex-direction</span>: column;</span><br><span class="line">&gt;<span class="attribute">gap</span>:<span class="number">1.5rem</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<h5 id="按钮子元素样式"><a href="#按钮子元素样式" class="headerlink" title="按钮子元素样式"></a>按钮子元素样式</h5><blockquote>
+<p>加粗——————————————-</p>
+<p>字体大小————————————–看重要参数准备中给定的值</p>
+<p>内间距—————————————-看重要参数准备中给定的值</p>
+<p>最小宽度————————————–看重要参数准备中给定的值</p>
+<p>鼠标指针—————————————-</p>
+</blockquote>
+<h5 id="自适应效果考虑-方案-媒体查询-按钮尺寸"><a href="#自适应效果考虑-方案-媒体查询-按钮尺寸" class="headerlink" title="自适应效果考虑:方案:媒体查询:按钮尺寸"></a>自适应效果考虑:方案:媒体查询:按钮尺寸</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">768px</span>) &#123;</span><br><span class="line">        <span class="attribute">min-width</span>: <span class="number">170px</span>;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">576px</span>) &#123;</span><br><span class="line">    <span class="attribute">min-width</span>: inherit;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">max-width</span>:<span class="number">350px</span> ;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">min-width</span>: <span class="number">576px</span>) &#123;</span><br><span class="line">    &amp;<span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">        <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-<span class="number">5px</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="按钮样式"><a href="#按钮样式" class="headerlink" title="按钮样式"></a>按钮样式</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&amp;<span class="selector-class">.blue</span>&#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">45deg</span>,<span class="number">#1da1f2</span>,<span class="number">#0e71c8</span>);</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">4px</span> <span class="number">30px</span> <span class="built_in">rgba</span>(<span class="number">19</span>,<span class="number">127</span>,<span class="number">212</span>,.<span class="number">4</span>);</span><br><span class="line">  &amp;<span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">4px</span> <span class="number">30px</span> <span class="built_in">rgba</span>(<span class="number">19</span>,<span class="number">127</span>,<span class="number">212</span>,.<span class="number">75</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&amp;<span class="selector-class">.orange</span>&#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">45deg</span>,<span class="number">#d5135a</span>,<span class="number">#f05924</span>);</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">4px</span> <span class="number">30px</span> <span class="built_in">rgba</span>(<span class="number">223</span>,<span class="number">45</span>,<span class="number">70</span>,.<span class="number">35</span>);</span><br><span class="line">  &amp;<span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">4px</span> <span class="number">30px</span> <span class="built_in">rgba</span>(<span class="number">19</span>,<span class="number">127</span>,<span class="number">212</span>,.<span class="number">75</span>);</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A2/10.png" alt="页面效果"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10001-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E5%85%AB%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9AFlex%E5%B8%83%E5%B1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="博哥">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="博哥编程日记">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10001-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E5%85%AB%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9AFlex%E5%B8%83%E5%B1%80/" class="post-title-link" itemprop="url">博哥教你八分钟学会Flex布局</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-01 12:39:04" itemprop="dateCreated datePublished" datetime="2023-05-01T12:39:04+08:00">2023-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-05-02 17:26:53" itemprop="dateModified" datetime="2023-05-02T17:26:53+08:00">2023-05-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>1.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="创建index-html-编写如下代码"><a href="#创建index-html-编写如下代码" class="headerlink" title="创建index.html 编写如下代码"></a>创建index.html 编写如下代码</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>8分钟学会Flex布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="引入如下初始化样式"><a href="#引入如下初始化样式" class="headerlink" title="引入如下初始化样式"></a>引入如下初始化样式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span>&#123;  </span><br><span class="line">  <span class="attr">--clr-dark</span>: <span class="number">#0f172a</span>;  </span><br><span class="line">  <span class="attr">--clr-light</span>: <span class="number">#f1f5f9</span>;  </span><br><span class="line">  <span class="attr">--clr-accent</span>: <span class="number">#e11d48</span>;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">*,  </span><br><span class="line">*<span class="selector-pseudo">::before</span>,  </span><br><span class="line">*<span class="selector-pseudo">::after</span>&#123;  </span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-tag">body</span>&#123;  </span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;  </span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;  </span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">1.6</span>;  </span><br><span class="line">  <span class="attribute">word-spacing</span>: <span class="number">1.4px</span>;  </span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&#x27;Roboto&#x27;</span>, sans-serif;  </span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--clr-dark);  </span><br><span class="line">  <span class="attribute">background-color</span>:<span class="built_in">var</span>( --clr-light) ;  </span><br><span class="line">  <span class="attribute">display</span>: flex;  </span><br><span class="line">  <span class="attribute">justify-content</span>: center;  </span><br><span class="line">  <span class="attribute">align-items</span>: center;  </span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100vh</span>;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">   <span class="attribute">width</span>: <span class="number">80%</span>;  </span><br><span class="line">   <span class="attribute">height</span>: <span class="number">700px</span>;  </span><br><span class="line">   <span class="attribute">margin</span>: <span class="number">0</span> auto;  </span><br><span class="line">   <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="built_in">var</span>(--clr-dark);  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.item</span>&#123;  </span><br><span class="line">  <span class="attribute">width</span>: <span class="number">150px</span>;  </span><br><span class="line">  <span class="attribute">height</span>: <span class="number">150px</span>;  </span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fb7185</span>;  </span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">1em</span>;  </span><br><span class="line">  <span class="attribute">font-weight</span>: <span class="number">700</span>;  </span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--clr-light);  </span><br><span class="line">  <span class="attribute">text-align</span>: center;  </span><br><span class="line">  <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="built_in">var</span>(--clr-accent);  </span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/1.PNG"></p>
+<h2 id="Flex布局介绍"><a href="#Flex布局介绍" class="headerlink" title="Flex布局介绍"></a>Flex布局介绍</h2><h3 id="如何对整个container容器采用Flex布局"><a href="#如何对整个container容器采用Flex布局" class="headerlink" title="如何对整个container容器采用Flex布局"></a>如何对整个container容器采用Flex布局</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">   <span class="attribute">display</span>: flex;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果如下<br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/2.png"></p>
+<blockquote>
+<p>display: flex;  代表对容器采用Flex布局<br><font color="red">注意:</font>采用Flex布局后容器元素默认在一行上排列</p>
+</blockquote>
+<h2 id="Flex重要属性介绍"><a href="#Flex重要属性介绍" class="headerlink" title="Flex重要属性介绍"></a>Flex重要属性介绍</h2><h3 id="flex-direction-属性"><a href="#flex-direction-属性" class="headerlink" title="flex-direction 属性"></a>flex-direction 属性</h3><blockquote>
+<p>作用介绍:<br>决定了布局容器中元素的主轴方向    布局中元素顺着主轴排列<br><font color="red">row</font>       横向排列    X轴<br><font color="red">colum</font>    纵向排列    Y轴</p>
+</blockquote>
+<p><strong>row效果</strong><br><img src="/.com//%E5%89%8D%E7%AB%AF/2.png"></p>
+<p><strong>colum效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/1.png"></p>
+<h3 id="justify-content-属性"><a href="#justify-content-属性" class="headerlink" title="justify-content 属性"></a>justify-content 属性</h3><blockquote>
+<p>作用介绍:<br>决定了布局容器中元素在主轴方向上 对齐方式<br><font color="red">flex-start</font>       以起始点为参考对齐<br><font color="red">flex-end</font>         以结束点为参考对齐<br><font color="red">center</font>            居中对齐<br><font color="red">space-between</font>   主轴上的第一个和最后一个元素紧靠主轴起始和结束位置<br>                           对剩余空间的间隔平均分配后对齐</p>
+<p><font color="red">space-around</font>     对主轴上元素的剩余空间进行平分 主轴的起始和结束位置会保留间隔</p>
+</blockquote>
+<p><strong>flex-start效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/2.png"></p>
+<p><strong>flex-end效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/3.png"></p>
+<p><strong>center效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/4.png"></p>
+<p><strong>space-between</strong></p>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/5.png"></p>
+<p><strong>space-around效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/6.png"></p>
+<h3 id="align-items属性"><a href="#align-items属性" class="headerlink" title="align-items属性"></a>align-items属性</h3><blockquote>
+<p>作用介绍:<br>决定了布局容器中元素在测轴方向上 对齐方式<br><font color="red">flex-start</font>        在侧轴上以起始点为参考对齐<br><font color="red">flex-end</font>          在侧轴上以结束点为参考对齐<br><font color="red">center</font>             在侧轴上居中对齐<br><font color="red">baseline</font>          在侧轴上以基线对齐项目</p>
+</blockquote>
+<p><strong>flex-start效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/7.png"></p>
+<p><strong>flex-end效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/8.png"></p>
+<p><strong>center效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/9.png"></p>
+<p><strong>baseline效果</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">  <span class="attribute">display</span>: flex;  </span><br><span class="line">  <span class="attribute">flex-direction</span>: row;  </span><br><span class="line">  <span class="attribute">justify-content</span>:flex-start;  </span><br><span class="line">  <span class="attribute">align-items</span>: baseline;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.item-1</span>&#123;  </span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">1.5rem</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/10.png"></p>
+<h3 id="flex-wrap属性"><a href="#flex-wrap属性" class="headerlink" title="flex-wrap属性"></a>flex-wrap属性</h3><blockquote>
+<p>作用介绍:<br>主轴上元素过多时，是否需要换行<br><font color="red">wrap</font>      换行显示<br><font color="red">nowrap</font>  不换行  <font color="red">注意</font>当空间不足时元素大小会被挤压</p>
+</blockquote>
+<p><strong>Html代码</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>8分钟学会Flex布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </span><br><span class="line">  <span class="comment">&lt;!--引入样式文件--&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/style.css&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-1&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-2&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-3&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-4&quot;</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-5&quot;</span>&gt;</span>5<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-6&quot;</span>&gt;</span>6<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-7&quot;</span>&gt;</span>7<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-8&quot;</span>&gt;</span>8<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-9&quot;</span>&gt;</span>9<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-10&quot;</span>&gt;</span>10<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<p><strong>wrap效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/11.png"></p>
+<p><strong>nowrap效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/12.png"></p>
+<p>当元素有多行时候如果需要消除，侧轴的间隔可以将align-items替换为<font color="red">align-content</font><br>对齐方式和之前一样<br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/13.png"></p>
+<p>此时如果需要调整间隔可使用 <font color="red">gap</font></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">  <span class="attribute">display</span>: flex;  </span><br><span class="line">  <span class="attribute">flex-direction</span>: row;  </span><br><span class="line">  <span class="attribute">justify-content</span>:flex-start;  </span><br><span class="line">  <span class="attribute">align-content</span>: flex-start;  </span><br><span class="line">  <span class="attribute">flex-wrap</span>: wrap;  </span><br><span class="line">  <span class="attribute">gap</span>: <span class="number">1rem</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/14.png"></p>
+<h3 id="flex-grow属性"><a href="#flex-grow属性" class="headerlink" title="flex-grow属性"></a>flex-grow属性</h3><blockquote>
+<p>作用介绍:<br>在主轴上当剩余的空间较多是，可以通过该属性设置，主轴上元素增长空间</p>
+</blockquote>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/15.png"></p>
+<p>此时我们可以通过该属性设置让第三个元素占满剩下的所有空间</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>8分钟学会Flex布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </span><br><span class="line">  <span class="comment">&lt;!--引入样式文件--&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/style.css&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-1&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-2&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-3&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-class">.item-3</span>&#123;  </span><br><span class="line">  <span class="attribute">flex-grow</span>: <span class="number">1</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/16.png"></p>
+<h3 id="flex-shrink属性"><a href="#flex-shrink属性" class="headerlink" title="flex-shrink属性"></a>flex-shrink属性</h3><p>作用介绍:</p>
+<blockquote>
+<p>当屏幕缩小时，元素在主轴缩小效果   0拒绝收缩 默认所有元素都是1的等比压缩 值越大空间不够时压缩的就越小</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.item-1&#123;  </span><br><span class="line">  flex-shrink: 5;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/17.png"></p>
+<h3 id="flex和flex-basis属性"><a href="#flex和flex-basis属性" class="headerlink" title="flex和flex-basis属性"></a>flex和flex-basis属性</h3><blockquote>
+<p>作用介绍:<br>flex:   按照份数设置元素宽度   1<br>  flex-basis:  通过设置像素或者百分比  控制元素的宽度</p>
+</blockquote>
+<h3 id="align-self属性"><a href="#align-self属性" class="headerlink" title="align-self属性"></a>align-self属性</h3><blockquote>
+<p>作用介绍:<br>单独设置主轴上某一个元素，在侧轴的对齐方式</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item-1</span>&#123;  </span><br><span class="line">  <span class="attribute">align-self</span>: center;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/18.png"></p>
+<h3 id="order属性"><a href="#order属性" class="headerlink" title="order属性"></a>order属性</h3><p>作用介绍:</p>
+<blockquote>
+<p>该值越大，在主轴上元素越靠后</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.item-1&#123;  </span><br><span class="line"> order: 10000;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/19.png"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10003-%E7%82%AB%E9%85%B7%E7%9A%84%E7%8E%BB%E7%92%83%E5%BD%A2%E6%80%81%E6%8C%89%E9%92%AE%E7%9A%84%E5%88%B6%E4%BD%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="博哥">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="博哥编程日记">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10003-%E7%82%AB%E9%85%B7%E7%9A%84%E7%8E%BB%E7%92%83%E5%BD%A2%E6%80%81%E6%8C%89%E9%92%AE%E7%9A%84%E5%88%B6%E4%BD%9C/" class="post-title-link" itemprop="url">炫酷的玻璃形态按钮的制作</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-01 12:39:04" itemprop="dateCreated datePublished" datetime="2023-05-01T12:39:04+08:00">2023-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-05-02 17:28:38" itemprop="dateModified" datetime="2023-05-02T17:28:38+08:00">2023-05-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>318</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h2><blockquote>
+<ul>
+<li>HTML</li>
+<li>CSS3</li>
+</ul>
+</blockquote>
+<h2 id="案列效果"><a href="#案列效果" class="headerlink" title="案列效果"></a>案列效果</h2><p><img src="/images/%E5%89%8D%E7%AB%AF/05/A3/1.png" alt="效果1"></p>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A3/2.png" alt="效果1"></p>
+<h2 id="重要参数准备"><a href="#重要参数准备" class="headerlink" title="重要参数准备"></a>重要参数准备</h2><blockquote>
+<ul>
+<li><strong>1.页面背景色</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">--background-color</span>: <span class="number">#350048</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>2.父容器宽度</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">--container-width</span>: <span class="number">600px</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>3.按钮宽度</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">--bth-width</span>: <span class="number">155px</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>4.按钮高度</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">--btn-height</span>: <span class="number">50px</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><em><strong>5.按钮背景色</strong></em></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="attr">--btn-a-background-color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.05</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><em><strong>6.按钮阴影色</strong></em></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">--btn-a-box-shadow</span>: <span class="number">0</span> <span class="number">15px</span> <span class="number">35px</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.2</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><em><strong>7.按钮边框颜色</strong></em></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">--btn-a-border-top-color</span>:<span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.1</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>8.按钮圆角</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">--btn-a-border-radius</span>:<span class="number">30px</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><em><strong>9.按钮字体颜色</strong></em></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">--btn-a-color</span>: <span class="number">#fff</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>10.按钮为元素 背景色</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="attr">--btn-a-before-background-color</span>:<span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.15</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>11.按钮背景伪元素的宽高</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">--btn-before-background-width</span>:<span class="number">30px</span>;</span><br><span class="line"><span class="attr">--btn-before-background-height</span>:<span class="number">10px</span>;</span><br><span class="line"><span class="attr">--btn-after-background-width</span>:<span class="number">30px</span>;</span><br><span class="line"><span class="attr">--btn-after-background-height</span>:<span class="number">10px</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>12 鼠标移动时按钮背景伪元素宽高</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">height</span>: <span class="number">50%</span>;</span><br><span class="line"><span class="attribute">width</span>: <span class="number">80%</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>13 伪元素背景色和阴影</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="comment">/*1.背景1*/</span></span><br><span class="line">&gt;<span class="attribute">background</span>: <span class="number">#ff1f71</span>;</span><br><span class="line">&gt;<span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="number">#ff1f71</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">15px</span> <span class="number">#ff1f71</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">30px</span> <span class="number">#ff1f71</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">60px</span> <span class="number">#ff1f71</span>;</span><br><span class="line">&gt;<span class="comment">/*2.背景2*/</span></span><br><span class="line">&gt;<span class="attribute">background</span>: <span class="number">#2bd2ff</span>;</span><br><span class="line">&gt;<span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="number">#2bd2ff</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">15px</span> <span class="number">#2bd2ff</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">30px</span> <span class="number">#2bd2ff</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">60px</span> <span class="number">#2bd2ff</span>;</span><br><span class="line">&gt;<span class="comment">/*3.背景3*/</span></span><br><span class="line">&gt;<span class="attribute">background</span>: <span class="number">#1eff45</span>;</span><br><span class="line">&gt;<span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="number">#1eff45</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">15px</span> <span class="number">#1eff45</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">30px</span> <span class="number">#1eff45</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">60px</span> <span class="number">#1eff45</span>;</span><br><span class="line">&gt;&#125;</span><br></pre></td></tr></table></figure>
+
+
+</blockquote>
+<h2 id="具体实现步骤思路解析-gt-观看B站教程"><a href="#具体实现步骤思路解析-gt-观看B站教程" class="headerlink" title="具体实现步骤思路解析&gt;观看B站教程"></a>具体实现步骤思路解析&gt;观看B站教程</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Us4y1t7TT/?spm_id_from=333.999.0.0&vd_source=f3e9b6267b64788ca7c02128e6a463b6">博哥教你快速实现毛玻璃发光按钮制作_哔哩哔哩_bilibili</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10004-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E5%BF%AB%E9%80%9F%E5%AD%A6%E4%BC%9A%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="博哥">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="博哥编程日记">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10004-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E5%BF%AB%E9%80%9F%E5%AD%A6%E4%BC%9A%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86/" class="post-title-link" itemprop="url">快速掌握网格布局核心知识</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-01 12:39:04" itemprop="dateCreated datePublished" datetime="2023-05-01T12:39:04+08:00">2023-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-05-02 17:29:30" itemprop="dateModified" datetime="2023-05-02T17:29:30+08:00">2023-05-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>1.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h2><blockquote>
+<ul>
+<li>HTML</li>
+<li>CSS3</li>
+</ul>
+</blockquote>
+<h2 id="基础样式和html代码"><a href="#基础样式和html代码" class="headerlink" title="基础样式和html代码"></a>基础样式和html代码</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*******************网格布局基础样式****************************/</span></span><br><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attr">--clr-dark</span>: <span class="number">#0f172a</span>;</span><br><span class="line">  <span class="attr">--clr-light</span>: <span class="number">#f1f5f9</span>;</span><br><span class="line">  <span class="attr">--clr-accent</span>: <span class="number">#e11d48</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">*,</span><br><span class="line">*<span class="selector-pseudo">::before</span>,</span><br><span class="line">*<span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">5em</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">1.6</span>;</span><br><span class="line">  <span class="attribute">word-spacing</span>: <span class="number">1.4px</span>;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&#x27;Roboto&#x27;</span>, sans-serif;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--clr-dark);</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">var</span>(--clr-light);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">80%</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="built_in">var</span>(--clr-dark);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0.5em</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fb7185</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>: <span class="number">700</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--clr-light);</span><br><span class="line">  <span class="attribute">border</span>: solid <span class="number">0.2px</span> black;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/***********************************网格布局基础样式*************************************************/</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-1&quot;</span>&gt;</span>item1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-2&quot;</span>&gt;</span>item2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-3&quot;</span>&gt;</span>item3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-4&quot;</span>&gt;</span>item4<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>效果图</strong></p>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A5/1.png" alt="效果图"></p>
+<h2 id="网格重要属性介绍"><a href="#网格重要属性介绍" class="headerlink" title="网格重要属性介绍"></a>网格重要属性介绍</h2><h3 id="如何采用网格布局"><a href="#如何采用网格布局" class="headerlink" title="如何采用网格布局"></a>如何采用网格布局</h3><blockquote>
+<p>display:grid</p>
+</blockquote>
+<p><font color="red"><strong>代码:</strong></font></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;</span><br><span class="line">	<span class="attribute">display</span>: grid;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="grid-template-rows和grid-template-columns-属性介绍"><a href="#grid-template-rows和grid-template-columns-属性介绍" class="headerlink" title="grid-template-rows和grid-template-columns 属性介绍"></a>grid-template-rows和grid-template-columns 属性介绍</h3><blockquote>
+<p>​    <strong>属性作用说明:</strong></p>
+<ul>
+<li>grid-template-rows          主要用来设置网格行   <strong>&#x3D;&#x3D;》</strong>  网格有几行  每行高度</li>
+<li>grid-template-columns   主要用来设置网格列   <strong>&#x3D;&#x3D;》</strong>  网格有几列  每列宽度</li>
+</ul>
+</blockquote>
+<p><font color="red"><strong>案列代码和效果:</strong></font></p>
+<blockquote>
+<ul>
+<li>将网格布局成 8行8列  </li>
+<li>每列的宽度100px </li>
+<li>每列的高度100px</li>
+</ul>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;</span><br><span class="line">	<span class="attribute">display</span>: grid;</span><br><span class="line">	<span class="attribute">grid-template-rows</span>:  <span class="number">100px</span> <span class="number">100px</span> <span class="number">100px</span> <span class="number">100px</span> <span class="number">100px</span> <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">grid-template-columns</span>: <span class="number">100px</span> <span class="number">100px</span> <span class="number">100px</span> <span class="number">100px</span> <span class="number">100px</span> <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A5/2.png" alt="效果图"></p>
+<p><font color="red"><strong>案列代码和效果:</strong></font></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item-1</span>&#123;</span><br><span class="line">	<span class="attribute">grid-row-start</span>: <span class="number">1</span>;</span><br><span class="line">	<span class="attribute">grid-row-end</span>:<span class="number">3</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="grid-row-start和grid-row-end属性介绍"><a href="#grid-row-start和grid-row-end属性介绍" class="headerlink" title="grid-row-start和grid-row-end属性介绍"></a>grid-row-start和grid-row-end属性介绍</h3><blockquote>
+<p>​    <strong>属性作用说明</strong></p>
+<ul>
+<li><p>完成布局元素跨行效果</p>
+</li>
+<li><p>grid-row-start         网格布局元素所在行的起始线位置</p>
+</li>
+<li><p>grid-row-end           网格布局元素所在行的结束线位置</p>
+</li>
+</ul>
+</blockquote>
+<h3 id="grid-column-start和grid-column-end属性介绍"><a href="#grid-column-start和grid-column-end属性介绍" class="headerlink" title="grid-column-start和grid-column-end属性介绍"></a>grid-column-start和grid-column-end属性介绍</h3><blockquote>
+<p>​    <strong>属性作用说明</strong></p>
+<ul>
+<li><p>完成布局元素跨行效果</p>
+</li>
+<li><p>grid-column-start        网格布局元素所在列的起始线位置</p>
+</li>
+<li><p>grid-column-end          网格布局元素所在列的结束线位置</p>
+</li>
+</ul>
+</blockquote>
+<h4 id="跨行和跨列案例"><a href="#跨行和跨列案例" class="headerlink" title="跨行和跨列案例"></a>跨行和跨列案例</h4><p><font color="red"><strong>案列1:</strong></font></p>
+<blockquote>
+<ul>
+<li>网格中第一个元素跨2行    </li>
+<li>网格中第一个元素跨4列</li>
+</ul>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*写法1*/</span></span><br><span class="line"><span class="selector-class">.item-1</span>&#123;</span><br><span class="line">	<span class="attribute">grid-row-start</span>: <span class="number">1</span>;</span><br><span class="line">	<span class="attribute">grid-row-end</span>:<span class="number">3</span>;</span><br><span class="line">	<span class="attribute">grid-column-start</span>: <span class="number">1</span>;</span><br><span class="line">	<span class="attribute">grid-column-end</span>: <span class="number">5</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*写法2*/</span></span><br><span class="line"><span class="selector-class">.item-1</span>&#123;</span><br><span class="line">   <span class="attribute">grid-row</span>: <span class="number">1</span>/<span class="number">3</span>;      <span class="comment">/*等同于同时设置   grid-row-start: 1; grid-row-end:3;*/</span></span><br><span class="line">   <span class="attribute">grid-column</span>: <span class="number">1</span>/<span class="number">5</span>;   <span class="comment">/*等同于同时设置   grid-column-start: 1;grid-column-end: 5;*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A5/3.png" alt="效果图"></p>
+<p><font color="red"><strong>案列2:</strong></font></p>
+<blockquote>
+<ul>
+<li>网格中第二个元素跨2行    </li>
+<li>网格中第二个元素跨2列</li>
+</ul>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*写法1*/</span></span><br><span class="line"><span class="selector-class">.item-2</span>&#123;</span><br><span class="line">    <span class="attribute">grid-row</span>: <span class="number">1</span>/<span class="number">3</span>;</span><br><span class="line">    <span class="attribute">grid-column</span>: <span class="number">5</span>/<span class="number">7</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*写法2*/</span></span><br><span class="line"><span class="selector-class">.item-2</span>&#123;</span><br><span class="line">    <span class="attribute">grid-row</span>: span <span class="number">2</span>;</span><br><span class="line">    <span class="attribute">grid-column</span>:span <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A5/4.png" alt="效果图"></p>
+<h3 id="grid-area属性介绍"><a href="#grid-area属性介绍" class="headerlink" title="grid-area属性介绍"></a>grid-area属性介绍</h3><blockquote>
+<p>完成跨行和跨列   合并缩写</p>
+<p>grid-area:   row-start    col-start   row-end    col-end ;</p>
+</blockquote>
+<p><font color="red"><strong>案列1</strong></font></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item-3</span>&#123;</span><br><span class="line">	<span class="attribute">grid-area</span>: <span class="number">3</span> /<span class="number">1</span> / -<span class="number">1</span> / -<span class="number">1</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A5/5.png" alt="效果图"></p>
+<p><font color="red"><strong>案列2</strong></font></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item-2</span>&#123;</span><br><span class="line">    <span class="attribute">grid-area</span>: <span class="number">2</span> /<span class="number">4</span>/ <span class="number">4</span> /<span class="number">6</span>;</span><br><span class="line">	<span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A5/6.png" alt="效果图"></p>
+<h3 id="隐式网格和相关属性介绍"><a href="#隐式网格和相关属性介绍" class="headerlink" title="隐式网格和相关属性介绍"></a>隐式网格和相关属性介绍</h3><blockquote>
+<p>当网格布局没有可用空间时候,新添加的元素就属于隐式网格</p>
+<ul>
+<li>隐式网格默认不会继承 网格布局中的行列设置值</li>
+<li>grid-auto-rows       设置隐式网格行高度</li>
+<li>grid-auto-colunm   设置隐式网格列宽度</li>
+</ul>
+</blockquote>
+<h3 id="按等分划分行和列的空间"><a href="#按等分划分行和列的空间" class="headerlink" title="按等分划分行和列的空间"></a>按等分划分行和列的空间</h3><h4 id="fr单位使用"><a href="#fr单位使用" class="headerlink" title="fr单位使用"></a>fr单位使用</h4><p><font color="red"><strong>案列1</strong></font></p>
+<blockquote>
+<p>将网格分成   <strong>2行3列</strong></p>
+<p>网格行高 200px    </p>
+<p>列宽按等分划分</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;</span><br><span class="line">	<span class="attribute">display</span>: grid;</span><br><span class="line">	<span class="attribute">grid-template-rows</span>: <span class="number">200px</span>  <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">grid-template-columns</span>: <span class="number">1</span>fr <span class="number">1</span>fr <span class="number">1</span>fr;</span><br><span class="line">	<span class="attribute">grid-auto-columns</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A5/7.png" alt="效果图"></p>
+<h4 id="fr和像素单位结合使用"><a href="#fr和像素单位结合使用" class="headerlink" title="fr和像素单位结合使用"></a>fr和像素单位结合使用</h4><p><font color="red"><strong>案列2</strong></font></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;</span><br><span class="line">	<span class="attribute">display</span>: grid;</span><br><span class="line">	<span class="attribute">grid-template-rows</span>: <span class="number">200px</span>  <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">grid-template-columns</span>: <span class="number">100px</span> <span class="number">2</span>fr <span class="number">1</span>fr;</span><br><span class="line">	<span class="attribute">grid-auto-columns</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A5/8.png" alt="效果图"></p>
+<h4 id="minmax和fr结合使用介绍"><a href="#minmax和fr结合使用介绍" class="headerlink" title="minmax和fr结合使用介绍"></a>minmax和fr结合使用介绍</h4><blockquote>
+<p>控制网格布局元素最小缩放空间</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-class">.container</span>&#123;</span><br><span class="line">	<span class="attribute">display</span>: grid;</span><br><span class="line">	<span class="attribute">grid-template-rows</span>: <span class="number">200px</span>  <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">grid-template-columns</span>: <span class="number">100px</span> <span class="built_in">minmax</span>(<span class="number">400px</span>,<span class="number">2</span>fr) <span class="number">1</span>fr;</span><br><span class="line">	<span class="attribute">grid-auto-columns</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="repeat使用介绍"><a href="#repeat使用介绍" class="headerlink" title="repeat使用介绍"></a>repeat使用介绍</h3><blockquote>
+<p>网格布局中划分行和列个数时候，可以针对连续多行和多列等值设置采用.repeat简写</p>
+<ul>
+<li>grid-template-rows: 200px  200px;  可以替换成  grid-template-rows: repeat(2,100px);</li>
+</ul>
+</blockquote>
+<h3 id="grid-gap属性介绍"><a href="#grid-gap属性介绍" class="headerlink" title="grid-gap属性介绍"></a>grid-gap属性介绍</h3><blockquote>
+<p>设置网格布局元素间距</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;</span><br><span class="line">	<span class="attribute">display</span>: grid;</span><br><span class="line">	<span class="attribute">grid-template-rows</span>: <span class="built_in">repeat</span>(<span class="number">2</span>,<span class="number">100px</span>);</span><br><span class="line">	<span class="attribute">grid-template-columns</span>: <span class="number">100px</span> <span class="built_in">minmax</span>(<span class="number">400px</span>,<span class="number">2</span>fr) <span class="number">1</span>fr;</span><br><span class="line">	<span class="attribute">grid-auto-columns</span>: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">grid-gap</span>: <span class="number">1rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><font color="red"><strong>案列</strong></font></p>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A5/9.png" alt="效果图"></p>
+<h3 id="grid-template-areas属性"><a href="#grid-template-areas属性" class="headerlink" title="grid-template-areas属性"></a><strong>grid-template-areas属性</strong></h3><blockquote>
+<p>grid-template-areas  网格布局空间 别名模板</p>
+</blockquote>
+<p><font color="red"><strong>案列</strong></font></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;</span><br><span class="line">	<span class="attribute">display</span>: grid;</span><br><span class="line">	<span class="attribute">grid-template-rows</span>: <span class="number">100px</span> <span class="number">400px</span> <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">grid-template-columns</span>: <span class="number">1</span>fr <span class="number">3</span>fr;</span><br><span class="line">	<span class="attribute">grid-auto-columns</span>: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">grid-template-areas</span>: </span><br><span class="line">	<span class="string">&#x27;header header&#x27;</span></span><br><span class="line">	<span class="string">&#x27;aside  main&#x27;</span></span><br><span class="line">	<span class="string">&#x27;footer footer&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item-1</span>&#123;</span><br><span class="line">	<span class="attribute">grid-area</span>: header;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item-2</span>&#123;</span><br><span class="line">	<span class="attribute">grid-area</span>: aside;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item-3</span>&#123;</span><br><span class="line">	<span class="attribute">grid-area</span>: main;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item-4</span>&#123;</span><br><span class="line">	<span class="attribute">grid-area</span>: footer;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A5/10.png" alt="效果图"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10005-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E5%88%B6%E4%BD%9C%E4%BB%A3%E7%A0%81%E9%9B%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="博哥">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="博哥编程日记">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10005-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E5%88%B6%E4%BD%9C%E4%BB%A3%E7%A0%81%E9%9B%A8/" class="post-title-link" itemprop="url">漂亮的代码雨效果</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-01 12:39:04" itemprop="dateCreated datePublished" datetime="2023-05-01T12:39:04+08:00">2023-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-05-02 17:29:42" itemprop="dateModified" datetime="2023-05-02T17:29:42+08:00">2023-05-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>46</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <table><tr><td bgcolor="BlueViolet"><font color="white">作者:博哥 时间:2023-02-11</font></td></tr></table>
+
+<h2 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h2><blockquote>
+<ul>
+<li>HTML</li>
+<li>CSS3</li>
+<li>JavaScript</li>
+</ul>
+</blockquote>
+<h2 id="基础参数"><a href="#基础参数" class="headerlink" title="基础参数"></a>基础参数</h2><blockquote>
+<ul>
+<li><strong>代码雨颜色</strong></li>
+</ul>
+<p> #0ff</p>
+<p> #0f0</p>
+<p> #f00</p>
+<ul>
+<li><strong>代码雨高度</strong></li>
+</ul>
+<p> 200px</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10006-%E5%A6%82%E4%BD%95%E8%AE%A9%E6%88%91%E4%BB%AC%E5%86%99%E7%9A%84%E4%BB%A3%E7%A0%81%E6%9B%B4%E6%BC%82%E4%BA%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="博哥">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="博哥编程日记">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10006-%E5%A6%82%E4%BD%95%E8%AE%A9%E6%88%91%E4%BB%AC%E5%86%99%E7%9A%84%E4%BB%A3%E7%A0%81%E6%9B%B4%E6%BC%82%E4%BA%AE/" class="post-title-link" itemprop="url">如何让我们写的代码更漂亮</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-01 12:39:04" itemprop="dateCreated datePublished" datetime="2023-05-01T12:39:04+08:00">2023-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-05-02 17:30:03" itemprop="dateModified" datetime="2023-05-02T17:30:03+08:00">2023-05-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>195</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <table><tr><td bgcolor="BlueViolet"><font color="white">作者:博哥 时间:2023-02-26</font></td></tr></table>
+
+<h2 id="一-代码格式化"><a href="#一-代码格式化" class="headerlink" title="一.代码格式化"></a>一.代码格式化</h2><h3 id="将项目使用npm初始化"><a href="#将项目使用npm初始化" class="headerlink" title="将项目使用npm初始化"></a>将项目使用npm初始化</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装格式化插件"><a href="#安装格式化插件" class="headerlink" title="安装格式化插件"></a>安装格式化插件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">配置官方源码</span></span><br><span class="line">npm config set registry https://registry.npmjs.org/</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">卡顿时候切换源码</span></span><br><span class="line">npm config set registry https://registry.npm.taobao.org</span><br><span class="line">npm install prettier</span><br></pre></td></tr></table></figure>
+
+<h3 id="格式化代码"><a href="#格式化代码" class="headerlink" title="格式化代码"></a>格式化代码</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npx prettier --write  文件</span><br><span class="line">npx prettier --write   .   所有</span><br></pre></td></tr></table></figure>
+
+<h3 id="检查代码"><a href="#检查代码" class="headerlink" title="检查代码"></a>检查代码</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npx prettier --check  文件</span><br><span class="line">npx prettier --check  .   所有</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="插件使用减少手动格式麻烦流程"><a href="#插件使用减少手动格式麻烦流程" class="headerlink" title="插件使用减少手动格式麻烦流程"></a>插件使用减少手动格式麻烦流程</h3><p><img src="/images/%E5%89%8D%E7%AB%AF/05/A7/1.png"></p>
+<ul>
+<li><p>CTRL+, 打开设置面板 </p>
+<p>修改模式格式工具为Prettier</p>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A7/2.png"></p>
+</li>
+<li><p>设置保存时自动格式化代码</p>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A7/3.png"></p>
+</li>
+</ul>
+<h3 id="忽略检查代码"><a href="#忽略检查代码" class="headerlink" title="忽略检查代码"></a>忽略检查代码</h3><blockquote>
+<p>创建文件  .prettierignore </p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#忽略的文件</span><br><span class="line">node_modules</span><br><span class="line">*<span class="selector-class">.html</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="使用-prettierrc配置格式化的参数"><a href="#使用-prettierrc配置格式化的参数" class="headerlink" title="使用.prettierrc配置格式化的参数"></a>使用.prettierrc配置格式化的参数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;semi&quot;:true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除空白行"><a href="#删除空白行" class="headerlink" title="删除空白行"></a>删除空白行</h3><p>正则匹配</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^\s*(?=\r?$)\n</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10001-windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8Mysql8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="博哥">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="博哥编程日记">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10001-windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8Mysql8/" class="post-title-link" itemprop="url">快速在Winows环境下安装使用mysql8</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-04-22 12:39:04" itemprop="dateCreated datePublished" datetime="2023-04-22T12:39:04+08:00">2023-04-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-05-02 14:36:20" itemprop="dateModified" datetime="2023-05-02T14:36:20+08:00">2023-05-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%8D%E5%8A%A1/" itemprop="url" rel="index"><span itemprop="name">服务</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>605</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><font color="blue"><strong>作者:博哥</strong></font></p>
+<h2 id="下载mysql8免安装包压缩包"><a href="#下载mysql8免安装包压缩包" class="headerlink" title="下载mysql8免安装包压缩包"></a>下载mysql8免安装包压缩包</h2><p>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1gQ4PCPDHNK1Vuqx5tmqrsQ">https://pan.baidu.com/s/1gQ4PCPDHNK1Vuqx5tmqrsQ</a><br>提取码：8g9n </p>
+<h2 id="解压后看到如下的文件夹"><a href="#解压后看到如下的文件夹" class="headerlink" title="解压后看到如下的文件夹"></a>解压后看到如下的文件夹</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A1/1.png" alt="页面效果"></p>
+<p> <img src="/images/%E6%9C%8D%E5%8A%A1/04/A1/2.png" alt="页面效果"></p>
+<h2 id="配置初始化文件my-ini"><a href="#配置初始化文件my-ini" class="headerlink" title="配置初始化文件my.ini"></a>配置初始化文件my.ini</h2><p>解压后的目录并没有my.ini文件，需要手动创建。<br>在<strong>mysql-8.0.20-winx64</strong>目录下添加my.ini（新建文本文件，将文件类型改为 .ini）：</p>
+<p> <img src="/images/%E6%9C%8D%E5%8A%A1/04/A1/3.png" alt="页面效果"></p>
+<p>写入基本配置到my.ini：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line"># 设置3306端口</span><br><span class="line">port=3306</span><br><span class="line"># 设置mysql的安装目录，一定要与上面的安装路径保持一致</span><br><span class="line">basedir=D:\\MySQL\\mysql-8.0.20-winx64</span><br><span class="line"># 设置mysql数据库的数据的存放目录，自动生成，无需手动创建，当然也可以放在其他地方</span><br><span class="line">datadir=D:\\MySQL\\mysql-8.0.20-winx64\\Data</span><br><span class="line"># 允许最大连接数</span><br><span class="line">max_connections=200</span><br><span class="line"># 允许连接失败的次数。</span><br><span class="line">max_connect_errors=10</span><br><span class="line"># 服务端使用的字符集默认为utf8mb4</span><br><span class="line">character-set-server=utf8mb4</span><br><span class="line"># 创建新表时将使用的默认存储引擎</span><br><span class="line">default-storage-engine=INNODB</span><br><span class="line"># 默认使用“mysql_native_password”插件认证</span><br><span class="line">#mysql_native_password</span><br><span class="line">default_authentication_plugin=mysql_native_password</span><br><span class="line">[mysql]</span><br><span class="line"># 设置mysql客户端默认字符集</span><br><span class="line">default-character-set=utf8mb4</span><br><span class="line">[client]</span><br><span class="line"># 设置mysql客户端连接服务端时默认使用的端口，不建议修改，这是公认端口号</span><br><span class="line">port=3306</span><br><span class="line">default-character-set=utf8mb4</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A1/4.png" alt="页面效果"></p>
+<h2 id="初始化MySQL"><a href="#初始化MySQL" class="headerlink" title="初始化MySQL"></a>初始化MySQL</h2><blockquote>
+<p>(1)  <strong>win+s</strong>；搜索<strong>cmd</strong>；右键<strong>以管理员身份运行</strong>：</p>
+</blockquote>
+<p>切入到mysql的bin所在目录</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A1/5.png" alt="页面效果"></p>
+<blockquote>
+<p>(2) 在MySQL目录下的bin目录下执行命令：记住初始化密码</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld --initialize --console</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A1/6.png" alt="页面效果"></p>
+<blockquote>
+<p>密码:M5ETQIrasG(e</p>
+</blockquote>
+<h2 id="安装、启动MySQL服务"><a href="#安装、启动MySQL服务" class="headerlink" title="安装、启动MySQL服务"></a>安装、启动MySQL服务</h2><p>安装mysql服务，执行下面的命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld --install</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A1/7.png" alt="页面效果"></p>
+<p>出现<strong>Service successfully installed</strong>代表安装成功了！测试一下：</p>
+<blockquote>
+<p>执行如下命令启动停止mysql</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">net <span class="keyword">start</span> mysql  # 启动mysql的服务</span><br><span class="line">net stop mysql   # 关闭mysql服务</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A1/8.png" alt="页面效果"></p>
+<h2 id="最后修改一下密码"><a href="#最后修改一下密码" class="headerlink" title="最后修改一下密码"></a>最后修改一下密码</h2><p>首先打开数据库：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net start mysql</span><br></pre></td></tr></table></figure>
+
+<p>然后登陆（注意p后面不加空格）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p 刚才复制的密码 </span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A1/9.png" alt="页面效果"></p>
+<p>enter后会让你重复输入确认:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> IDENTIFIED BY <span class="string">&#x27;root123&#x27;</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>密码修改成功后退出mysql</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exit</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A1/10.png" alt="页面效果"></p>
+<h2 id="使用图形化工具连接mysql"><a href="#使用图形化工具连接mysql" class="headerlink" title="使用图形化工具连接mysql"></a>使用图形化工具连接mysql</h2><p>下载安装navicat</p>
+<p>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1IIuHg7UKmMzdI1JoymVn3g">https://pan.baidu.com/s/1IIuHg7UKmMzdI1JoymVn3g</a><br>提取码：5qhp </p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A1/11.png" alt="页面效果"></p>
+<p>双击安装即可无需破解</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A1/12.png" alt="页面效果"></p>
+<h2 id="使用navicat连接mysql"><a href="#使用navicat连接mysql" class="headerlink" title="使用navicat连接mysql"></a>使用navicat连接mysql</h2><p>点新建选择 navicat for mysql</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A1/13.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A1/14.png" alt="页面效果"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/22/%E5%85%B6%E4%BB%96/04/10001-GitHub%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="博哥">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="博哥编程日记">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/04/22/%E5%85%B6%E4%BB%96/04/10001-GitHub%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/" class="post-title-link" itemprop="url">程序员必备GitHub搜索技巧</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-04-22 12:39:04" itemprop="dateCreated datePublished" datetime="2023-04-22T12:39:04+08:00">2023-04-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-05-02 14:26:32" itemprop="dateModified" datetime="2023-05-02T14:26:32+08:00">2023-05-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%85%B6%E4%BB%96/" itemprop="url" rel="index"><span itemprop="name">其他</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>646</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>– by  MrBO 博哥</strong> </p>
+<h2 id="1-根据名称搜索"><a href="#1-根据名称搜索" class="headerlink" title="1.根据名称搜索"></a>1.根据名称搜索</h2><blockquote>
+<p><strong>in:name   关键词</strong></p>
+<p><font color="red">概述: </font>搜索名称中包含关键词的项目                                                                                                                                    </p>
+</blockquote>
+<h2 id="2-根据点赞数搜索"><a href="#2-根据点赞数搜索" class="headerlink" title="2.根据点赞数搜索"></a>2.根据点赞数搜索</h2><blockquote>
+<p><strong>stars: &gt;    n</strong></p>
+<p><font color="red">概述: </font>搜索点赞量大于n的项目</p>
+</blockquote>
+<h2 id="3-在项目详情中根据关键词搜索"><a href="#3-在项目详情中根据关键词搜索" class="headerlink" title="3.在项目详情中根据关键词搜索"></a>3.在项目详情中根据关键词搜索</h2><blockquote>
+<p><strong>in: readme 关键词</strong></p>
+<p><font color="red">概述: </font>搜索项目详情中含有关键词的项目</p>
+</blockquote>
+<h2 id="4-在项目描述中根据关键词搜索"><a href="#4-在项目描述中根据关键词搜索" class="headerlink" title="4.在项目描述中根据关键词搜索"></a>4.在项目描述中根据关键词搜索</h2><blockquote>
+<p><strong>in: description关键词</strong></p>
+<p><font color="red">概述: </font>搜索项目描述中含有关键词的项目</p>
+</blockquote>
+<h2 id="5-筛选项目编程语言"><a href="#5-筛选项目编程语言" class="headerlink" title="5.筛选项目编程语言"></a>5.筛选项目编程语言</h2><blockquote>
+<p><strong>language:  语言名称       如  Java html    c</strong></p>
+<p><font color="red">概述: </font>根据编程语言搜索项目</p>
+</blockquote>
+<h2 id="6-根据更新时间筛选"><a href="#6-根据更新时间筛选" class="headerlink" title="6.根据更新时间筛选"></a>6.根据更新时间筛选</h2><blockquote>
+<p><strong>pushed:&gt;筛选日期</strong></p>
+<p><font color="red">概述: </font>根据编程语言搜索项目</p>
+</blockquote>
+<h2 id="7-其他找项目途径"><a href="#7-其他找项目途径" class="headerlink" title="7.其他找项目途径"></a>7.其他找项目途径</h2><h3 id="GitHub-Trending"><a href="#GitHub-Trending" class="headerlink" title="GitHub Trending"></a>GitHub Trending</h3><p><strong>这个相信是大家使用频率最高的渠道了，它是来自于 GitHub 官方的项目趋势列表，一些 Star 增长比较快的项目会在这里出现。开发者可以针对不同编程语言进行过滤筛选，是个挖掘优质项目的好渠道。</strong></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/trending">链接地址</a></p>
+<h3 id="GitHub-动态"><a href="#GitHub-动态" class="headerlink" title="GitHub 动态"></a>GitHub 动态</h3><p><strong>GitHub 上的一些大神经常会关注一些比较优秀的项目，如果你有关注他们，则可以通过 GitHub 动态流了解到一些他们认为不错的开源项目，甚至有时他们准备搞一些大动作时，你也可以在第一时间知晓。</strong></p>
+<p><strong>GitHub 上大神很多，不同领域可关注的人也不同，这块等后面有时间我再分类整理一下，敬请关注。</strong></p>
+<h3 id="GitHub-Topic"><a href="#GitHub-Topic" class="headerlink" title="GitHub Topic"></a>GitHub Topic</h3><p><strong>从去年微软收购 GitHub 后，可以很明显的感知到的一点是，GitHub 正在慢慢优化项目的信息分类，让一些优质开源项目得到更有针对性的推送。</strong></p>
+<p><strong>早期大部分开发者都是 Trending 或关注的人的动态来了解一些开源项目，但这样的曝光量显然对一个新启动的开源项目不太友好，因此后续 GitHub 应该会推出一些更为丰富的渠道，让大家可以更好的挖掘一些优质的开源项目。</strong></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/topics">链接地址</a></p>
+<h3 id="技术周报"><a href="#技术周报" class="headerlink" title="技术周报"></a>技术周报</h3><p><strong>各类技术周报，这里就不展开说了，你可以根据自己的技术领域在 Google 加关键词 Weekly 搜索订阅。他们一般每周都会定时推送所在领域相关的开源项目</strong></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/ascoders/weekly">weekly</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/ruanyf/weekly">ruanyf&#x2F;weekly</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/vitalets/github-trending-repos">trending</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/GrowingGit/GitHub-Chinese-Top-Charts">github中文排行榜</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/search?q=Awesome">Aweso</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10002-windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJdk/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="博哥">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="博哥编程日记">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10002-windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJdk/" class="post-title-link" itemprop="url">window环境下安装配置Jdk环境</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-04-22 12:39:04" itemprop="dateCreated datePublished" datetime="2023-04-22T12:39:04+08:00">2023-04-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-05-02 14:38:44" itemprop="dateModified" datetime="2023-05-02T14:38:44+08:00">2023-05-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%8D%E5%8A%A1/" itemprop="url" rel="index"><span itemprop="name">服务</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>170</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><font color="blue"><strong>作者:博哥</strong></font></p>
+<h2 id="下载jdk"><a href="#下载jdk" class="headerlink" title="下载jdk"></a>下载jdk</h2><p>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/19p4hwHms_bHwXxPS9b99BA">https://pan.baidu.com/s/19p4hwHms_bHwXxPS9b99BA</a><br>提取码：id9k </p>
+<h2 id="安装JDk"><a href="#安装JDk" class="headerlink" title="安装JDk"></a>安装JDk</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/1.png" alt="页面效果"></p>
+<p>双击安装:一直默认即可知道安装完成</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/2.png" alt="页面效果"></p>
+<p>jdk的默认安装目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\Java\jdk1.8.0_181</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><h3 id="此电脑属性—-gt-高级系统盘设置–环境变量—打开环境变量设置窗口"><a href="#此电脑属性—-gt-高级系统盘设置–环境变量—打开环境变量设置窗口" class="headerlink" title="此电脑属性—&gt;高级系统盘设置–环境变量—打开环境变量设置窗口"></a>此电脑属性—&gt;高级系统盘设置–环境变量—打开环境变量设置窗口</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/3.png" alt="页面效果"></p>
+<h3 id="在用户变量中新建JAVA-HOME如图所示"><a href="#在用户变量中新建JAVA-HOME如图所示" class="headerlink" title="在用户变量中新建JAVA_HOME如图所示"></a>在用户变量中新建JAVA_HOME如图所示</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/4.png" alt="页面效果"></p>
+<h3 id="在系统变量中配置Path-如下图所示"><a href="#在系统变量中配置Path-如下图所示" class="headerlink" title="在系统变量中配置Path 如下图所示"></a>在系统变量中配置Path 如下图所示</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/5.png" alt="页面效果"></p>
+<h3 id="windows-R键输入cmd打开命令行窗口"><a href="#windows-R键输入cmd打开命令行窗口" class="headerlink" title="windows+R键输入cmd打开命令行窗口"></a>windows+R键输入cmd打开命令行窗口</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/6.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/7.png" alt="页面效果"></p>
+<h3 id="验证Java环境有没有配置成功"><a href="#验证Java环境有没有配置成功" class="headerlink" title="验证Java环境有没有配置成功"></a>验证Java环境有没有配置成功</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/8.png" alt="页面效果"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10003-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJDK/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="博哥">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="博哥编程日记">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10003-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJDK/" class="post-title-link" itemprop="url">快速在Linux环境下安装配置JDk</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-04-22 12:39:04" itemprop="dateCreated datePublished" datetime="2023-04-22T12:39:04+08:00">2023-04-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-05-02 14:43:52" itemprop="dateModified" datetime="2023-05-02T14:43:52+08:00">2023-05-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%8D%E5%8A%A1/" itemprop="url" rel="index"><span itemprop="name">服务</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>237</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><font color="blue"><strong>作者:博哥</strong></font></p>
+<h2 id="使用Xshell工具连接Linux服务器"><a href="#使用Xshell工具连接Linux服务器" class="headerlink" title="使用Xshell工具连接Linux服务器"></a>使用Xshell工具连接Linux服务器</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/1.png" alt="页面效果"></p>
+<h2 id="下载Linux版本的Jdk安装包"><a href="#下载Linux版本的Jdk安装包" class="headerlink" title="下载Linux版本的Jdk安装包"></a>下载Linux版本的Jdk安装包</h2><p>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ">https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ</a><br>提取码：0er6 </p>
+<p>将下载的安装包上传到linux下的opt目录</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/2.png" alt="页面效果"></p>
+<h2 id="在命令行界面切入到opt目录下"><a href="#在命令行界面切入到opt目录下" class="headerlink" title="在命令行界面切入到opt目录下"></a>在命令行界面切入到opt目录下</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/3.png" alt="页面效果"></p>
+<h3 id="解压jdk安装包"><a href="#解压jdk安装包" class="headerlink" title="解压jdk安装包"></a>解压jdk安装包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf jdk-8u301-linux-x64.tar.gz </span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/4.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/5.png" alt="页面效果"></p>
+<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><h3 id="切入到etc-目录"><a href="#切入到etc-目录" class="headerlink" title="切入到etc 目录"></a>切入到etc 目录</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/6.png" alt="页面效果"></p>
+<h3 id="使用vi-命令修改-profile文件"><a href="#使用vi-命令修改-profile文件" class="headerlink" title="使用vi 命令修改 profile文件"></a>使用vi 命令修改 profile文件</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/7.png" alt="页面效果"></p>
+<h3 id="找到最后一行位置"><a href="#找到最后一行位置" class="headerlink" title="找到最后一行位置"></a>找到最后一行位置</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/8.png" alt="页面效果"></p>
+<h3 id="将如下的Jdk环境变量添加到尾部"><a href="#将如下的Jdk环境变量添加到尾部" class="headerlink" title="将如下的Jdk环境变量添加到尾部"></a>将如下的Jdk环境变量添加到尾部</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/jdk1.8.0_301</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$&#123;JAVA_HOME&#125;</span>/jre/lib/rt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/dt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/tools.jar</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/9.png" alt="页面效果"></p>
+<p>按下Esc  wq!保存退出</p>
+<h3 id="刷新环境变量和验证java环境是否安装成功"><a href="#刷新环境变量和验证java环境是否安装成功" class="headerlink" title="刷新环境变量和验证java环境是否安装成功"></a>刷新环境变量和验证java环境是否安装成功</h3><p><strong>刷新环境变量</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source  /etc/profile</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/10.png" alt="页面效果"></p>
+<p><strong>验证jdk是否安装成功</strong></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/11.png" alt="页面效果"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="博哥"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">博哥</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">博哥</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">23k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:25</span>
+</div>
+
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+-->
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
