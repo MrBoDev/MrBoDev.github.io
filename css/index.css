@@ -5789,8 +5789,8 @@ hr:before {
     padding-left: 1.2rem
 }
 
-body {
-    cursor: url(https://bu.dusays.com/2022/05/17/6283c365d20dd.png), auto;
+body,html{
+  cursor: url('https://npm.elemecdn.com/akilar-candyassets/image/cur/arrow.cur'),auto !important;
 }
 
 .hide-block>.hide-button.open,
@@ -5799,7 +5799,7 @@ body {
 }
 
 a,button,img {
-    cursor: url(https://bu.dusays.com/2022/05/17/6283c376afcfc.png), auto
+  cursor: url('https://npm.elemecdn.com/akilar-candyassets/image/cur/hf.cur'),auto !important;
 }
 
 ::-webkit-scrollbar {
