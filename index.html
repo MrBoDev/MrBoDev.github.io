@@ -177,6 +177,169 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10001-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E5%85%AB%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9AFlex%E5%B8%83%E5%B1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="博哥">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="博哥编程日记">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10001-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E5%85%AB%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9AFlex%E5%B8%83%E5%B1%80/" class="post-title-link" itemprop="url">博哥教你八分钟学会Flex布局</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-01 12:39:04" itemprop="dateCreated datePublished" datetime="2023-05-01T12:39:04+08:00">2023-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-05-02 17:26:53" itemprop="dateModified" datetime="2023-05-02T17:26:53+08:00">2023-05-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>1.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="创建index-html-编写如下代码"><a href="#创建index-html-编写如下代码" class="headerlink" title="创建index.html 编写如下代码"></a>创建index.html 编写如下代码</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>8分钟学会Flex布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="引入如下初始化样式"><a href="#引入如下初始化样式" class="headerlink" title="引入如下初始化样式"></a>引入如下初始化样式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span>&#123;  </span><br><span class="line">  <span class="attr">--clr-dark</span>: <span class="number">#0f172a</span>;  </span><br><span class="line">  <span class="attr">--clr-light</span>: <span class="number">#f1f5f9</span>;  </span><br><span class="line">  <span class="attr">--clr-accent</span>: <span class="number">#e11d48</span>;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">*,  </span><br><span class="line">*<span class="selector-pseudo">::before</span>,  </span><br><span class="line">*<span class="selector-pseudo">::after</span>&#123;  </span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-tag">body</span>&#123;  </span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;  </span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;  </span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">1.6</span>;  </span><br><span class="line">  <span class="attribute">word-spacing</span>: <span class="number">1.4px</span>;  </span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&#x27;Roboto&#x27;</span>, sans-serif;  </span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--clr-dark);  </span><br><span class="line">  <span class="attribute">background-color</span>:<span class="built_in">var</span>( --clr-light) ;  </span><br><span class="line">  <span class="attribute">display</span>: flex;  </span><br><span class="line">  <span class="attribute">justify-content</span>: center;  </span><br><span class="line">  <span class="attribute">align-items</span>: center;  </span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100vh</span>;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">   <span class="attribute">width</span>: <span class="number">80%</span>;  </span><br><span class="line">   <span class="attribute">height</span>: <span class="number">700px</span>;  </span><br><span class="line">   <span class="attribute">margin</span>: <span class="number">0</span> auto;  </span><br><span class="line">   <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="built_in">var</span>(--clr-dark);  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.item</span>&#123;  </span><br><span class="line">  <span class="attribute">width</span>: <span class="number">150px</span>;  </span><br><span class="line">  <span class="attribute">height</span>: <span class="number">150px</span>;  </span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fb7185</span>;  </span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">1em</span>;  </span><br><span class="line">  <span class="attribute">font-weight</span>: <span class="number">700</span>;  </span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--clr-light);  </span><br><span class="line">  <span class="attribute">text-align</span>: center;  </span><br><span class="line">  <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="built_in">var</span>(--clr-accent);  </span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/1.PNG"></p>
+<h2 id="Flex布局介绍"><a href="#Flex布局介绍" class="headerlink" title="Flex布局介绍"></a>Flex布局介绍</h2><h3 id="如何对整个container容器采用Flex布局"><a href="#如何对整个container容器采用Flex布局" class="headerlink" title="如何对整个container容器采用Flex布局"></a>如何对整个container容器采用Flex布局</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">   <span class="attribute">display</span>: flex;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果如下<br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/2.png"></p>
+<blockquote>
+<p>display: flex;  代表对容器采用Flex布局<br><font color="red">注意:</font>采用Flex布局后容器元素默认在一行上排列</p>
+</blockquote>
+<h2 id="Flex重要属性介绍"><a href="#Flex重要属性介绍" class="headerlink" title="Flex重要属性介绍"></a>Flex重要属性介绍</h2><h3 id="flex-direction-属性"><a href="#flex-direction-属性" class="headerlink" title="flex-direction 属性"></a>flex-direction 属性</h3><blockquote>
+<p>作用介绍:<br>决定了布局容器中元素的主轴方向    布局中元素顺着主轴排列<br><font color="red">row</font>       横向排列    X轴<br><font color="red">colum</font>    纵向排列    Y轴</p>
+</blockquote>
+<p><strong>row效果</strong><br><img src="/.com//%E5%89%8D%E7%AB%AF/2.png"></p>
+<p><strong>colum效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/1.png"></p>
+<h3 id="justify-content-属性"><a href="#justify-content-属性" class="headerlink" title="justify-content 属性"></a>justify-content 属性</h3><blockquote>
+<p>作用介绍:<br>决定了布局容器中元素在主轴方向上 对齐方式<br><font color="red">flex-start</font>       以起始点为参考对齐<br><font color="red">flex-end</font>         以结束点为参考对齐<br><font color="red">center</font>            居中对齐<br><font color="red">space-between</font>   主轴上的第一个和最后一个元素紧靠主轴起始和结束位置<br>                           对剩余空间的间隔平均分配后对齐</p>
+<p><font color="red">space-around</font>     对主轴上元素的剩余空间进行平分 主轴的起始和结束位置会保留间隔</p>
+</blockquote>
+<p><strong>flex-start效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/2.png"></p>
+<p><strong>flex-end效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/3.png"></p>
+<p><strong>center效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/4.png"></p>
+<p><strong>space-between</strong></p>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/5.png"></p>
+<p><strong>space-around效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/6.png"></p>
+<h3 id="align-items属性"><a href="#align-items属性" class="headerlink" title="align-items属性"></a>align-items属性</h3><blockquote>
+<p>作用介绍:<br>决定了布局容器中元素在测轴方向上 对齐方式<br><font color="red">flex-start</font>        在侧轴上以起始点为参考对齐<br><font color="red">flex-end</font>          在侧轴上以结束点为参考对齐<br><font color="red">center</font>             在侧轴上居中对齐<br><font color="red">baseline</font>          在侧轴上以基线对齐项目</p>
+</blockquote>
+<p><strong>flex-start效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/7.png"></p>
+<p><strong>flex-end效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/8.png"></p>
+<p><strong>center效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/9.png"></p>
+<p><strong>baseline效果</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">  <span class="attribute">display</span>: flex;  </span><br><span class="line">  <span class="attribute">flex-direction</span>: row;  </span><br><span class="line">  <span class="attribute">justify-content</span>:flex-start;  </span><br><span class="line">  <span class="attribute">align-items</span>: baseline;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.item-1</span>&#123;  </span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">1.5rem</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/10.png"></p>
+<h3 id="flex-wrap属性"><a href="#flex-wrap属性" class="headerlink" title="flex-wrap属性"></a>flex-wrap属性</h3><blockquote>
+<p>作用介绍:<br>主轴上元素过多时，是否需要换行<br><font color="red">wrap</font>      换行显示<br><font color="red">nowrap</font>  不换行  <font color="red">注意</font>当空间不足时元素大小会被挤压</p>
+</blockquote>
+<p><strong>Html代码</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>8分钟学会Flex布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </span><br><span class="line">  <span class="comment">&lt;!--引入样式文件--&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/style.css&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-1&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-2&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-3&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-4&quot;</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-5&quot;</span>&gt;</span>5<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-6&quot;</span>&gt;</span>6<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-7&quot;</span>&gt;</span>7<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-8&quot;</span>&gt;</span>8<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-9&quot;</span>&gt;</span>9<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-10&quot;</span>&gt;</span>10<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<p><strong>wrap效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/11.png"></p>
+<p><strong>nowrap效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/12.png"></p>
+<p>当元素有多行时候如果需要消除，侧轴的间隔可以将align-items替换为<font color="red">align-content</font><br>对齐方式和之前一样<br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/13.png"></p>
+<p>此时如果需要调整间隔可使用 <font color="red">gap</font></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">  <span class="attribute">display</span>: flex;  </span><br><span class="line">  <span class="attribute">flex-direction</span>: row;  </span><br><span class="line">  <span class="attribute">justify-content</span>:flex-start;  </span><br><span class="line">  <span class="attribute">align-content</span>: flex-start;  </span><br><span class="line">  <span class="attribute">flex-wrap</span>: wrap;  </span><br><span class="line">  <span class="attribute">gap</span>: <span class="number">1rem</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/14.png"></p>
+<h3 id="flex-grow属性"><a href="#flex-grow属性" class="headerlink" title="flex-grow属性"></a>flex-grow属性</h3><blockquote>
+<p>作用介绍:<br>在主轴上当剩余的空间较多是，可以通过该属性设置，主轴上元素增长空间</p>
+</blockquote>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/15.png"></p>
+<p>此时我们可以通过该属性设置让第三个元素占满剩下的所有空间</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>8分钟学会Flex布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </span><br><span class="line">  <span class="comment">&lt;!--引入样式文件--&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/style.css&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-1&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-2&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-3&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-class">.item-3</span>&#123;  </span><br><span class="line">  <span class="attribute">flex-grow</span>: <span class="number">1</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/16.png"></p>
+<h3 id="flex-shrink属性"><a href="#flex-shrink属性" class="headerlink" title="flex-shrink属性"></a>flex-shrink属性</h3><p>作用介绍:</p>
+<blockquote>
+<p>当屏幕缩小时，元素在主轴缩小效果   0拒绝收缩 默认所有元素都是1的等比压缩 值越大空间不够时压缩的就越小</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.item-1&#123;  </span><br><span class="line">  flex-shrink: 5;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/17.png"></p>
+<h3 id="flex和flex-basis属性"><a href="#flex和flex-basis属性" class="headerlink" title="flex和flex-basis属性"></a>flex和flex-basis属性</h3><blockquote>
+<p>作用介绍:<br>flex:   按照份数设置元素宽度   1<br>  flex-basis:  通过设置像素或者百分比  控制元素的宽度</p>
+</blockquote>
+<h3 id="align-self属性"><a href="#align-self属性" class="headerlink" title="align-self属性"></a>align-self属性</h3><blockquote>
+<p>作用介绍:<br>单独设置主轴上某一个元素，在侧轴的对齐方式</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item-1</span>&#123;  </span><br><span class="line">  <span class="attribute">align-self</span>: center;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/18.png"></p>
+<h3 id="order属性"><a href="#order属性" class="headerlink" title="order属性"></a>order属性</h3><p>作用介绍:</p>
+<blockquote>
+<p>该值越大，在主轴上元素越靠后</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.item-1&#123;  </span><br><span class="line"> order: 10000;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/19.png"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10002-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E4%BD%BF%E7%94%A8%E7%BA%AFCSS%E5%88%B6%E4%BD%9C%E9%85%B7%E7%82%AB%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%90%8D%E7%89%87%E6%95%88%E6%9E%9C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -544,169 +707,6 @@
 
 
 <p><img src="/images/%E5%89%8D%E7%AB%AF/05/A2/10.png" alt="页面效果"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10001-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E5%85%AB%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9AFlex%E5%B8%83%E5%B1%80/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="博哥">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="博哥编程日记">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10001-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E5%85%AB%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9AFlex%E5%B8%83%E5%B1%80/" class="post-title-link" itemprop="url">博哥教你八分钟学会Flex布局</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-05-01 12:39:04" itemprop="dateCreated datePublished" datetime="2023-05-01T12:39:04+08:00">2023-05-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-05-02 17:26:53" itemprop="dateModified" datetime="2023-05-02T17:26:53+08:00">2023-05-02</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-              <span>1.1k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-              <span>4 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="创建index-html-编写如下代码"><a href="#创建index-html-编写如下代码" class="headerlink" title="创建index.html 编写如下代码"></a>创建index.html 编写如下代码</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>8分钟学会Flex布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="引入如下初始化样式"><a href="#引入如下初始化样式" class="headerlink" title="引入如下初始化样式"></a>引入如下初始化样式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span>&#123;  </span><br><span class="line">  <span class="attr">--clr-dark</span>: <span class="number">#0f172a</span>;  </span><br><span class="line">  <span class="attr">--clr-light</span>: <span class="number">#f1f5f9</span>;  </span><br><span class="line">  <span class="attr">--clr-accent</span>: <span class="number">#e11d48</span>;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">*,  </span><br><span class="line">*<span class="selector-pseudo">::before</span>,  </span><br><span class="line">*<span class="selector-pseudo">::after</span>&#123;  </span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-tag">body</span>&#123;  </span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;  </span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;  </span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">1.6</span>;  </span><br><span class="line">  <span class="attribute">word-spacing</span>: <span class="number">1.4px</span>;  </span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&#x27;Roboto&#x27;</span>, sans-serif;  </span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--clr-dark);  </span><br><span class="line">  <span class="attribute">background-color</span>:<span class="built_in">var</span>( --clr-light) ;  </span><br><span class="line">  <span class="attribute">display</span>: flex;  </span><br><span class="line">  <span class="attribute">justify-content</span>: center;  </span><br><span class="line">  <span class="attribute">align-items</span>: center;  </span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100vh</span>;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">   <span class="attribute">width</span>: <span class="number">80%</span>;  </span><br><span class="line">   <span class="attribute">height</span>: <span class="number">700px</span>;  </span><br><span class="line">   <span class="attribute">margin</span>: <span class="number">0</span> auto;  </span><br><span class="line">   <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="built_in">var</span>(--clr-dark);  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.item</span>&#123;  </span><br><span class="line">  <span class="attribute">width</span>: <span class="number">150px</span>;  </span><br><span class="line">  <span class="attribute">height</span>: <span class="number">150px</span>;  </span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fb7185</span>;  </span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">1em</span>;  </span><br><span class="line">  <span class="attribute">font-weight</span>: <span class="number">700</span>;  </span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--clr-light);  </span><br><span class="line">  <span class="attribute">text-align</span>: center;  </span><br><span class="line">  <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="built_in">var</span>(--clr-accent);  </span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/1.PNG"></p>
-<h2 id="Flex布局介绍"><a href="#Flex布局介绍" class="headerlink" title="Flex布局介绍"></a>Flex布局介绍</h2><h3 id="如何对整个container容器采用Flex布局"><a href="#如何对整个container容器采用Flex布局" class="headerlink" title="如何对整个container容器采用Flex布局"></a>如何对整个container容器采用Flex布局</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">   <span class="attribute">display</span>: flex;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>效果如下<br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/2.png"></p>
-<blockquote>
-<p>display: flex;  代表对容器采用Flex布局<br><font color="red">注意:</font>采用Flex布局后容器元素默认在一行上排列</p>
-</blockquote>
-<h2 id="Flex重要属性介绍"><a href="#Flex重要属性介绍" class="headerlink" title="Flex重要属性介绍"></a>Flex重要属性介绍</h2><h3 id="flex-direction-属性"><a href="#flex-direction-属性" class="headerlink" title="flex-direction 属性"></a>flex-direction 属性</h3><blockquote>
-<p>作用介绍:<br>决定了布局容器中元素的主轴方向    布局中元素顺着主轴排列<br><font color="red">row</font>       横向排列    X轴<br><font color="red">colum</font>    纵向排列    Y轴</p>
-</blockquote>
-<p><strong>row效果</strong><br><img src="/.com//%E5%89%8D%E7%AB%AF/2.png"></p>
-<p><strong>colum效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/1.png"></p>
-<h3 id="justify-content-属性"><a href="#justify-content-属性" class="headerlink" title="justify-content 属性"></a>justify-content 属性</h3><blockquote>
-<p>作用介绍:<br>决定了布局容器中元素在主轴方向上 对齐方式<br><font color="red">flex-start</font>       以起始点为参考对齐<br><font color="red">flex-end</font>         以结束点为参考对齐<br><font color="red">center</font>            居中对齐<br><font color="red">space-between</font>   主轴上的第一个和最后一个元素紧靠主轴起始和结束位置<br>                           对剩余空间的间隔平均分配后对齐</p>
-<p><font color="red">space-around</font>     对主轴上元素的剩余空间进行平分 主轴的起始和结束位置会保留间隔</p>
-</blockquote>
-<p><strong>flex-start效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/2.png"></p>
-<p><strong>flex-end效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/3.png"></p>
-<p><strong>center效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/4.png"></p>
-<p><strong>space-between</strong></p>
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/5.png"></p>
-<p><strong>space-around效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/6.png"></p>
-<h3 id="align-items属性"><a href="#align-items属性" class="headerlink" title="align-items属性"></a>align-items属性</h3><blockquote>
-<p>作用介绍:<br>决定了布局容器中元素在测轴方向上 对齐方式<br><font color="red">flex-start</font>        在侧轴上以起始点为参考对齐<br><font color="red">flex-end</font>          在侧轴上以结束点为参考对齐<br><font color="red">center</font>             在侧轴上居中对齐<br><font color="red">baseline</font>          在侧轴上以基线对齐项目</p>
-</blockquote>
-<p><strong>flex-start效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/7.png"></p>
-<p><strong>flex-end效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/8.png"></p>
-<p><strong>center效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/9.png"></p>
-<p><strong>baseline效果</strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">  <span class="attribute">display</span>: flex;  </span><br><span class="line">  <span class="attribute">flex-direction</span>: row;  </span><br><span class="line">  <span class="attribute">justify-content</span>:flex-start;  </span><br><span class="line">  <span class="attribute">align-items</span>: baseline;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.item-1</span>&#123;  </span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">1.5rem</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/10.png"></p>
-<h3 id="flex-wrap属性"><a href="#flex-wrap属性" class="headerlink" title="flex-wrap属性"></a>flex-wrap属性</h3><blockquote>
-<p>作用介绍:<br>主轴上元素过多时，是否需要换行<br><font color="red">wrap</font>      换行显示<br><font color="red">nowrap</font>  不换行  <font color="red">注意</font>当空间不足时元素大小会被挤压</p>
-</blockquote>
-<p><strong>Html代码</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>8分钟学会Flex布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </span><br><span class="line">  <span class="comment">&lt;!--引入样式文件--&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/style.css&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-1&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-2&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-3&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-4&quot;</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-5&quot;</span>&gt;</span>5<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-6&quot;</span>&gt;</span>6<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-7&quot;</span>&gt;</span>7<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-8&quot;</span>&gt;</span>8<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-9&quot;</span>&gt;</span>9<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-10&quot;</span>&gt;</span>10<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-<p><strong>wrap效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/11.png"></p>
-<p><strong>nowrap效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/12.png"></p>
-<p>当元素有多行时候如果需要消除，侧轴的间隔可以将align-items替换为<font color="red">align-content</font><br>对齐方式和之前一样<br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/13.png"></p>
-<p>此时如果需要调整间隔可使用 <font color="red">gap</font></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">  <span class="attribute">display</span>: flex;  </span><br><span class="line">  <span class="attribute">flex-direction</span>: row;  </span><br><span class="line">  <span class="attribute">justify-content</span>:flex-start;  </span><br><span class="line">  <span class="attribute">align-content</span>: flex-start;  </span><br><span class="line">  <span class="attribute">flex-wrap</span>: wrap;  </span><br><span class="line">  <span class="attribute">gap</span>: <span class="number">1rem</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/14.png"></p>
-<h3 id="flex-grow属性"><a href="#flex-grow属性" class="headerlink" title="flex-grow属性"></a>flex-grow属性</h3><blockquote>
-<p>作用介绍:<br>在主轴上当剩余的空间较多是，可以通过该属性设置，主轴上元素增长空间</p>
-</blockquote>
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/15.png"></p>
-<p>此时我们可以通过该属性设置让第三个元素占满剩下的所有空间</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>8分钟学会Flex布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </span><br><span class="line">  <span class="comment">&lt;!--引入样式文件--&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/style.css&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-1&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-2&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-3&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-class">.item-3</span>&#123;  </span><br><span class="line">  <span class="attribute">flex-grow</span>: <span class="number">1</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/16.png"></p>
-<h3 id="flex-shrink属性"><a href="#flex-shrink属性" class="headerlink" title="flex-shrink属性"></a>flex-shrink属性</h3><p>作用介绍:</p>
-<blockquote>
-<p>当屏幕缩小时，元素在主轴缩小效果   0拒绝收缩 默认所有元素都是1的等比压缩 值越大空间不够时压缩的就越小</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.item-1&#123;  </span><br><span class="line">  flex-shrink: 5;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/17.png"></p>
-<h3 id="flex和flex-basis属性"><a href="#flex和flex-basis属性" class="headerlink" title="flex和flex-basis属性"></a>flex和flex-basis属性</h3><blockquote>
-<p>作用介绍:<br>flex:   按照份数设置元素宽度   1<br>  flex-basis:  通过设置像素或者百分比  控制元素的宽度</p>
-</blockquote>
-<h3 id="align-self属性"><a href="#align-self属性" class="headerlink" title="align-self属性"></a>align-self属性</h3><blockquote>
-<p>作用介绍:<br>单独设置主轴上某一个元素，在侧轴的对齐方式</p>
-</blockquote>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item-1</span>&#123;  </span><br><span class="line">  <span class="attribute">align-self</span>: center;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/18.png"></p>
-<h3 id="order属性"><a href="#order属性" class="headerlink" title="order属性"></a>order属性</h3><p>作用介绍:</p>
-<blockquote>
-<p>该值越大，在主轴上元素越靠后</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.item-1&#123;  </span><br><span class="line"> order: 10000;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/19.png"></p>
 
       
     </div>
@@ -1717,7 +1717,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10003-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJDK/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10004-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8Mysql/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -1731,7 +1731,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10003-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJDK/" class="post-title-link" itemprop="url">快速在Linux环境下安装配置JDk</a>
+            <a href="/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10004-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8Mysql/" class="post-title-link" itemprop="url">快速在Linux环境下安装使用Mysql8</a>
         </h2>
 
         <div class="post-meta">
@@ -1748,7 +1748,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-05-02 14:43:52" itemprop="dateModified" datetime="2023-05-02T14:43:52+08:00">2023-05-02</time>
+                <time title="修改时间：2023-05-02 14:44:57" itemprop="dateModified" datetime="2023-05-02T14:44:57+08:00">2023-05-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1765,13 +1765,13 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>237</span>
+              <span>719</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>1 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -1783,31 +1783,89 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><font color="blue"><strong>作者:博哥</strong></font></p>
-<h2 id="使用Xshell工具连接Linux服务器"><a href="#使用Xshell工具连接Linux服务器" class="headerlink" title="使用Xshell工具连接Linux服务器"></a>使用Xshell工具连接Linux服务器</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/1.png" alt="页面效果"></p>
-<h2 id="下载Linux版本的Jdk安装包"><a href="#下载Linux版本的Jdk安装包" class="headerlink" title="下载Linux版本的Jdk安装包"></a>下载Linux版本的Jdk安装包</h2><p>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ">https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ</a><br>提取码：0er6 </p>
-<p>将下载的安装包上传到linux下的opt目录</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/2.png" alt="页面效果"></p>
-<h2 id="在命令行界面切入到opt目录下"><a href="#在命令行界面切入到opt目录下" class="headerlink" title="在命令行界面切入到opt目录下"></a>在命令行界面切入到opt目录下</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/3.png" alt="页面效果"></p>
-<h3 id="解压jdk安装包"><a href="#解压jdk安装包" class="headerlink" title="解压jdk安装包"></a>解压jdk安装包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf jdk-8u301-linux-x64.tar.gz </span><br></pre></td></tr></table></figure>
+          <h2 id="使用Xshell连接到Linux服务器"><a href="#使用Xshell连接到Linux服务器" class="headerlink" title="使用Xshell连接到Linux服务器"></a>使用Xshell连接到Linux服务器</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/1.png" alt="页面效果"></p>
+<h2 id="卸载历史版本MySQL"><a href="#卸载历史版本MySQL" class="headerlink" title="卸载历史版本MySQL"></a>卸载历史版本MySQL</h2><p>非首次安装需卸载历史版本MySQL，命令查看是否有安装MySQL历史版本组件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># rpm -qa|grep mysql</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/4.png" alt="页面效果"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/5.png" alt="页面效果"></p>
-<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><h3 id="切入到etc-目录"><a href="#切入到etc-目录" class="headerlink" title="切入到etc 目录"></a>切入到etc 目录</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/6.png" alt="页面效果"></p>
-<h3 id="使用vi-命令修改-profile文件"><a href="#使用vi-命令修改-profile文件" class="headerlink" title="使用vi 命令修改 profile文件"></a>使用vi 命令修改 profile文件</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/7.png" alt="页面效果"></p>
-<h3 id="找到最后一行位置"><a href="#找到最后一行位置" class="headerlink" title="找到最后一行位置"></a>找到最后一行位置</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/8.png" alt="页面效果"></p>
-<h3 id="将如下的Jdk环境变量添加到尾部"><a href="#将如下的Jdk环境变量添加到尾部" class="headerlink" title="将如下的Jdk环境变量添加到尾部"></a>将如下的Jdk环境变量添加到尾部</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/jdk1.8.0_301</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$&#123;JAVA_HOME&#125;</span>/jre/lib/rt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/dt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/tools.jar</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/2.png" alt="页面效果"></p>
+<p>上图中没有mysql环境–无需删除卸载</p>
+<p>如果存在之前的安装程序需要卸载</p>
+<h3 id="查看MySQL服务状态"><a href="#查看MySQL服务状态" class="headerlink" title="查看MySQL服务状态"></a>查看MySQL服务状态</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># service mysqld status</span></span><br></pre></td></tr></table></figure>
 
+<h3 id="暂停MySQL服务"><a href="#暂停MySQL服务" class="headerlink" title="暂停MySQL服务"></a>暂停MySQL服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># service mysqld stop</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="卸载MySQL服务"><a href="#卸载MySQL服务" class="headerlink" title="卸载MySQL服务"></a>卸载MySQL服务</h3><p>需要把每个组件全部移除，注意可能会有组件的依赖前后顺序。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># rpm -ev [需要移除组件的名称]</span></span><br><span class="line">或者</span><br><span class="line"><span class="meta"># rpm -e --nodeps [需要移除组件的名称]  <span class="comment">//此命令为强制卸载</span></span></span><br></pre></td></tr></table></figure>
 
 
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/9.png" alt="页面效果"></p>
-<p>按下Esc  wq!保存退出</p>
-<h3 id="刷新环境变量和验证java环境是否安装成功"><a href="#刷新环境变量和验证java环境是否安装成功" class="headerlink" title="刷新环境变量和验证java环境是否安装成功"></a>刷新环境变量和验证java环境是否安装成功</h3><p><strong>刷新环境变量</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source  /etc/profile</span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/10.png" alt="页面效果"></p>
-<p><strong>验证jdk是否安装成功</strong></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/11.png" alt="页面效果"></p>
+<h2 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h2><h3 id="使用rpm来安装MySQL"><a href="#使用rpm来安装MySQL" class="headerlink" title="使用rpm来安装MySQL"></a>使用rpm来安装MySQL</h3><p>因为CentOS 7默认安装的数据库是Mariadb,所以使用YUM命令是无法安装MySQL的，只会更新Mariadb。使用rpm来进行安装。可以在<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=http://repo.mysql.com/">mysql的repo源仓库</a>右键复制指定版本的数据库。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">wget http://repo.mysql.com/mysql80-community-release-el7-1.noarch.rpm</span></span><br></pre></td></tr></table></figure>
+
+<p>先切换到opt目录</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/3.png" alt="页面效果"></p>
+<h3 id="下载rpm包"><a href="#下载rpm包" class="headerlink" title="下载rpm包"></a>下载rpm包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># wget http://repo.mysql.com/mysql80-community-release-el7-1.noarch.rpm</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/4.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/5.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/6.png" alt="页面效果"></p>
+<h3 id="安装mysql80-community-release-el7-1-noarch-rpm包"><a href="#安装mysql80-community-release-el7-1-noarch-rpm包" class="headerlink" title="安装mysql80-community-release-el7-1.noarch.rpm包"></a>安装mysql80-community-release-el7-1.noarch.rpm包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sudo rpm -ivh mysql80-community-release-el7-1.noarch.rpm</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/7.png"></p>
+<p>安装完成后会在 &#x2F;etc&#x2F;yum.repos.d文件夹里面获得两个文件：</p>
+<p>mysql-community.repo &amp;&amp; mysql-community-source.repo</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/8.png"></p>
+<h3 id="使用yum安装mysql服务"><a href="#使用yum安装mysql服务" class="headerlink" title="使用yum安装mysql服务"></a>使用yum安装mysql服务</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install mysql-server --nogpgcheck</span><br></pre></td></tr></table></figure>
+
+<p>如果显示以下内容说明安装成功<br><strong>Complete!</strong></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/9.png"></p>
+<p>检查是否已经设置为开机启动MySQL服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># systemctl list-unit-files|grep mysqld</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/10.png"></p>
+<p> 如果显示上图所示,则表示已经设置为开机启动，如果没有设置为开机启动则执行</p>
+<h3 id="设置mysql开机启动"><a href="#设置mysql开机启动" class="headerlink" title="设置mysql开机启动"></a>设置mysql开机启动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># systemctl enable mysqld.service</span></span><br></pre></td></tr></table></figure>
+
+<p>查看MySQL是否启动未启动则执行启动服务命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">查看是否启动MySQL服务</span><br><span class="line"><span class="comment"># ps -ef|grep mysql</span></span><br><span class="line"></span><br><span class="line">启动服务</span><br><span class="line"><span class="comment"># systemctl start mysqld.service</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/11.png"></p>
+<h3 id="初始化mysql"><a href="#初始化mysql" class="headerlink" title="初始化mysql"></a>初始化mysql</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mysqld --initialize</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/12.png"></p>
+<h3 id="查看MySQL初始默认密码"><a href="#查看MySQL初始默认密码" class="headerlink" title="查看MySQL初始默认密码"></a>查看MySQL初始默认密码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep <span class="string">&#x27;temporary password&#x27;</span> /var/log/mysqld.log</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/13.png"></p>
+<blockquote>
+<p>密码:_.XGsj+(F7tQ</p>
+</blockquote>
+<p>复制 root@localhost: 后面的密码。登录mysql，并粘贴默认密码<br>因为MySQL8.0的更改，导致必须要重置密码</p>
+<p>如果启动mysql失败</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/14.png"></p>
+<p>需要修改数据目录权限</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">chmod -R 777 /root/</span><br><span class="line">chown -R mysql /var/lib/mysql</span><br><span class="line">chgrp -R mysql /var/lib/mysql</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/15.png"></p>
+<h3 id="登录mysql修改默认密码"><a href="#登录mysql修改默认密码" class="headerlink" title="登录mysql修改默认密码"></a>登录mysql修改默认密码</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/16.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alter user &#x27;root&#x27;@&#x27;localhost&#x27; identified by &#x27;root123&#x27;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>如果设置密码时候出现提示</p>
+<blockquote>
+<p>ERROR 1819 (HY000): Your password does not satisfy the current policy requirements</p>
+</blockquote>
+<p>代表需要降低policy的等级后在执行</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SHOW VARIABLES LIKE <span class="string">&#x27;validate_password%&#x27;</span>;     查看密码策略</span><br><span class="line"><span class="keyword">set</span> <span class="keyword">global</span> validate_password.policy=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">set</span> <span class="keyword">global</span> validate_password.length=<span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/17.png"></p>
+<h3 id="开启MySQL远程连接"><a href="#开启MySQL远程连接" class="headerlink" title="开启MySQL远程连接"></a>开启MySQL远程连接</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">use mysql;</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改root账户权限</span></span><br><span class="line">update user set host = &#x27;%&#x27; where user = &#x27;root&#x27;;</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">刷新权限</span></span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/18.png"></p>
+<h2 id="使用Navicat测试连接服务器mysql"><a href="#使用Navicat测试连接服务器mysql" class="headerlink" title="使用Navicat测试连接服务器mysql"></a>使用Navicat测试连接服务器mysql</h2><h3 id="如果连接不上-尝试防火墙打开3306端口"><a href="#如果连接不上-尝试防火墙打开3306端口" class="headerlink" title="如果连接不上,尝试防火墙打开3306端口"></a>如果连接不上,尝试防火墙打开3306端口</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/19.png"></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=3306/tcp --permanent</span><br><span class="line">firewall-cmd --reload</span><br><span class="line">firewall-cmd --list-port</span><br></pre></td></tr></table></figure>
+
+<h3 id="再次尝试"><a href="#再次尝试" class="headerlink" title="再次尝试"></a>再次尝试</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/20.png"></p>
 
       
     </div>

@@ -1,6 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>博哥教你八分钟学会Flex布局</title>
+    <url>/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10001-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E5%85%AB%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9AFlex%E5%B8%83%E5%B1%80/</url>
+    <content><![CDATA[<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="创建index-html-编写如下代码"><a href="#创建index-html-编写如下代码" class="headerlink" title="创建index.html 编写如下代码"></a>创建index.html 编写如下代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>8分钟学会Flex布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="引入如下初始化样式"><a href="#引入如下初始化样式" class="headerlink" title="引入如下初始化样式"></a>引入如下初始化样式</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span>&#123;  </span><br><span class="line">  <span class="attr">--clr-dark</span>: <span class="number">#0f172a</span>;  </span><br><span class="line">  <span class="attr">--clr-light</span>: <span class="number">#f1f5f9</span>;  </span><br><span class="line">  <span class="attr">--clr-accent</span>: <span class="number">#e11d48</span>;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">*,  </span><br><span class="line">*<span class="selector-pseudo">::before</span>,  </span><br><span class="line">*<span class="selector-pseudo">::after</span>&#123;  </span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-tag">body</span>&#123;  </span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;  </span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;  </span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">1.6</span>;  </span><br><span class="line">  <span class="attribute">word-spacing</span>: <span class="number">1.4px</span>;  </span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&#x27;Roboto&#x27;</span>, sans-serif;  </span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--clr-dark);  </span><br><span class="line">  <span class="attribute">background-color</span>:<span class="built_in">var</span>( --clr-light) ;  </span><br><span class="line">  <span class="attribute">display</span>: flex;  </span><br><span class="line">  <span class="attribute">justify-content</span>: center;  </span><br><span class="line">  <span class="attribute">align-items</span>: center;  </span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100vh</span>;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">   <span class="attribute">width</span>: <span class="number">80%</span>;  </span><br><span class="line">   <span class="attribute">height</span>: <span class="number">700px</span>;  </span><br><span class="line">   <span class="attribute">margin</span>: <span class="number">0</span> auto;  </span><br><span class="line">   <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="built_in">var</span>(--clr-dark);  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.item</span>&#123;  </span><br><span class="line">  <span class="attribute">width</span>: <span class="number">150px</span>;  </span><br><span class="line">  <span class="attribute">height</span>: <span class="number">150px</span>;  </span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fb7185</span>;  </span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">1em</span>;  </span><br><span class="line">  <span class="attribute">font-weight</span>: <span class="number">700</span>;  </span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--clr-light);  </span><br><span class="line">  <span class="attribute">text-align</span>: center;  </span><br><span class="line">  <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="built_in">var</span>(--clr-accent);  </span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/1.PNG"></p>
+<h2 id="Flex布局介绍"><a href="#Flex布局介绍" class="headerlink" title="Flex布局介绍"></a>Flex布局介绍</h2><h3 id="如何对整个container容器采用Flex布局"><a href="#如何对整个container容器采用Flex布局" class="headerlink" title="如何对整个container容器采用Flex布局"></a>如何对整个container容器采用Flex布局</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">   <span class="attribute">display</span>: flex;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果如下<br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/2.png"></p>
+<blockquote>
+<p>display: flex;  代表对容器采用Flex布局<br><font color="red">注意:</font>采用Flex布局后容器元素默认在一行上排列</p>
+</blockquote>
+<h2 id="Flex重要属性介绍"><a href="#Flex重要属性介绍" class="headerlink" title="Flex重要属性介绍"></a>Flex重要属性介绍</h2><h3 id="flex-direction-属性"><a href="#flex-direction-属性" class="headerlink" title="flex-direction 属性"></a>flex-direction 属性</h3><blockquote>
+<p>作用介绍:<br>决定了布局容器中元素的主轴方向    布局中元素顺着主轴排列<br><font color="red">row</font>       横向排列    X轴<br><font color="red">colum</font>    纵向排列    Y轴</p>
+</blockquote>
+<p><strong>row效果</strong><br><img src="/.com//%E5%89%8D%E7%AB%AF/2.png"></p>
+<p><strong>colum效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/1.png"></p>
+<h3 id="justify-content-属性"><a href="#justify-content-属性" class="headerlink" title="justify-content 属性"></a>justify-content 属性</h3><blockquote>
+<p>作用介绍:<br>决定了布局容器中元素在主轴方向上 对齐方式<br><font color="red">flex-start</font>       以起始点为参考对齐<br><font color="red">flex-end</font>         以结束点为参考对齐<br><font color="red">center</font>            居中对齐<br><font color="red">space-between</font>   主轴上的第一个和最后一个元素紧靠主轴起始和结束位置<br>                           对剩余空间的间隔平均分配后对齐</p>
+<p><font color="red">space-around</font>     对主轴上元素的剩余空间进行平分 主轴的起始和结束位置会保留间隔</p>
+</blockquote>
+<p><strong>flex-start效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/2.png"></p>
+<p><strong>flex-end效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/3.png"></p>
+<p><strong>center效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/4.png"></p>
+<p><strong>space-between</strong></p>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/5.png"></p>
+<p><strong>space-around效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/6.png"></p>
+<h3 id="align-items属性"><a href="#align-items属性" class="headerlink" title="align-items属性"></a>align-items属性</h3><blockquote>
+<p>作用介绍:<br>决定了布局容器中元素在测轴方向上 对齐方式<br><font color="red">flex-start</font>        在侧轴上以起始点为参考对齐<br><font color="red">flex-end</font>          在侧轴上以结束点为参考对齐<br><font color="red">center</font>             在侧轴上居中对齐<br><font color="red">baseline</font>          在侧轴上以基线对齐项目</p>
+</blockquote>
+<p><strong>flex-start效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/7.png"></p>
+<p><strong>flex-end效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/8.png"></p>
+<p><strong>center效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/9.png"></p>
+<p><strong>baseline效果</strong></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">  <span class="attribute">display</span>: flex;  </span><br><span class="line">  <span class="attribute">flex-direction</span>: row;  </span><br><span class="line">  <span class="attribute">justify-content</span>:flex-start;  </span><br><span class="line">  <span class="attribute">align-items</span>: baseline;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.item-1</span>&#123;  </span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">1.5rem</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/10.png"></p>
+<h3 id="flex-wrap属性"><a href="#flex-wrap属性" class="headerlink" title="flex-wrap属性"></a>flex-wrap属性</h3><blockquote>
+<p>作用介绍:<br>主轴上元素过多时，是否需要换行<br><font color="red">wrap</font>      换行显示<br><font color="red">nowrap</font>  不换行  <font color="red">注意</font>当空间不足时元素大小会被挤压</p>
+</blockquote>
+<p><strong>Html代码</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>8分钟学会Flex布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </span><br><span class="line">  <span class="comment">&lt;!--引入样式文件--&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/style.css&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-1&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-2&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-3&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-4&quot;</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-5&quot;</span>&gt;</span>5<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-6&quot;</span>&gt;</span>6<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-7&quot;</span>&gt;</span>7<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-8&quot;</span>&gt;</span>8<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-9&quot;</span>&gt;</span>9<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-10&quot;</span>&gt;</span>10<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<p><strong>wrap效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/11.png"></p>
+<p><strong>nowrap效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/12.png"></p>
+<p>当元素有多行时候如果需要消除，侧轴的间隔可以将align-items替换为<font color="red">align-content</font><br>对齐方式和之前一样<br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/13.png"></p>
+<p>此时如果需要调整间隔可使用 <font color="red">gap</font></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">  <span class="attribute">display</span>: flex;  </span><br><span class="line">  <span class="attribute">flex-direction</span>: row;  </span><br><span class="line">  <span class="attribute">justify-content</span>:flex-start;  </span><br><span class="line">  <span class="attribute">align-content</span>: flex-start;  </span><br><span class="line">  <span class="attribute">flex-wrap</span>: wrap;  </span><br><span class="line">  <span class="attribute">gap</span>: <span class="number">1rem</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/14.png"></p>
+<h3 id="flex-grow属性"><a href="#flex-grow属性" class="headerlink" title="flex-grow属性"></a>flex-grow属性</h3><blockquote>
+<p>作用介绍:<br>在主轴上当剩余的空间较多是，可以通过该属性设置，主轴上元素增长空间</p>
+</blockquote>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/15.png"></p>
+<p>此时我们可以通过该属性设置让第三个元素占满剩下的所有空间</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>8分钟学会Flex布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </span><br><span class="line">  <span class="comment">&lt;!--引入样式文件--&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/style.css&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-1&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-2&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-3&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-class">.item-3</span>&#123;  </span><br><span class="line">  <span class="attribute">flex-grow</span>: <span class="number">1</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/16.png"></p>
+<h3 id="flex-shrink属性"><a href="#flex-shrink属性" class="headerlink" title="flex-shrink属性"></a>flex-shrink属性</h3><p>作用介绍:</p>
+<blockquote>
+<p>当屏幕缩小时，元素在主轴缩小效果   0拒绝收缩 默认所有元素都是1的等比压缩 值越大空间不够时压缩的就越小</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.item-1&#123;  </span><br><span class="line">  flex-shrink: 5;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/17.png"></p>
+<h3 id="flex和flex-basis属性"><a href="#flex和flex-basis属性" class="headerlink" title="flex和flex-basis属性"></a>flex和flex-basis属性</h3><blockquote>
+<p>作用介绍:<br>flex:   按照份数设置元素宽度   1<br>  flex-basis:  通过设置像素或者百分比  控制元素的宽度</p>
+</blockquote>
+<h3 id="align-self属性"><a href="#align-self属性" class="headerlink" title="align-self属性"></a>align-self属性</h3><blockquote>
+<p>作用介绍:<br>单独设置主轴上某一个元素，在侧轴的对齐方式</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.item-1</span>&#123;  </span><br><span class="line">  <span class="attribute">align-self</span>: center;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/18.png"></p>
+<h3 id="order属性"><a href="#order属性" class="headerlink" title="order属性"></a>order属性</h3><p>作用介绍:</p>
+<blockquote>
+<p>该值越大，在主轴上元素越靠后</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.item-1&#123;  </span><br><span class="line"> order: 10000;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/19.png"></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>前端案列</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>博哥教你使用纯CSS制作酷炫的个人名片效果</title>
     <url>/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10002-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E4%BD%BF%E7%94%A8%E7%BA%AFCSS%E5%88%B6%E4%BD%9C%E9%85%B7%E7%82%AB%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%90%8D%E7%89%87%E6%95%88%E6%9E%9C/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
@@ -304,97 +395,6 @@
 
 
 <p><img src="/images/%E5%89%8D%E7%AB%AF/05/A2/10.png" alt="页面效果"></p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>前端案列</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博哥教你八分钟学会Flex布局</title>
-    <url>/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10001-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E5%85%AB%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9AFlex%E5%B8%83%E5%B1%80/</url>
-    <content><![CDATA[<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="创建index-html-编写如下代码"><a href="#创建index-html-编写如下代码" class="headerlink" title="创建index.html 编写如下代码"></a>创建index.html 编写如下代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>8分钟学会Flex布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="引入如下初始化样式"><a href="#引入如下初始化样式" class="headerlink" title="引入如下初始化样式"></a>引入如下初始化样式</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span>&#123;  </span><br><span class="line">  <span class="attr">--clr-dark</span>: <span class="number">#0f172a</span>;  </span><br><span class="line">  <span class="attr">--clr-light</span>: <span class="number">#f1f5f9</span>;  </span><br><span class="line">  <span class="attr">--clr-accent</span>: <span class="number">#e11d48</span>;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">*,  </span><br><span class="line">*<span class="selector-pseudo">::before</span>,  </span><br><span class="line">*<span class="selector-pseudo">::after</span>&#123;  </span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-tag">body</span>&#123;  </span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;  </span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;  </span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">1.6</span>;  </span><br><span class="line">  <span class="attribute">word-spacing</span>: <span class="number">1.4px</span>;  </span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&#x27;Roboto&#x27;</span>, sans-serif;  </span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--clr-dark);  </span><br><span class="line">  <span class="attribute">background-color</span>:<span class="built_in">var</span>( --clr-light) ;  </span><br><span class="line">  <span class="attribute">display</span>: flex;  </span><br><span class="line">  <span class="attribute">justify-content</span>: center;  </span><br><span class="line">  <span class="attribute">align-items</span>: center;  </span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100vh</span>;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">   <span class="attribute">width</span>: <span class="number">80%</span>;  </span><br><span class="line">   <span class="attribute">height</span>: <span class="number">700px</span>;  </span><br><span class="line">   <span class="attribute">margin</span>: <span class="number">0</span> auto;  </span><br><span class="line">   <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="built_in">var</span>(--clr-dark);  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.item</span>&#123;  </span><br><span class="line">  <span class="attribute">width</span>: <span class="number">150px</span>;  </span><br><span class="line">  <span class="attribute">height</span>: <span class="number">150px</span>;  </span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fb7185</span>;  </span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">1em</span>;  </span><br><span class="line">  <span class="attribute">font-weight</span>: <span class="number">700</span>;  </span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--clr-light);  </span><br><span class="line">  <span class="attribute">text-align</span>: center;  </span><br><span class="line">  <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="built_in">var</span>(--clr-accent);  </span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/1.PNG"></p>
-<h2 id="Flex布局介绍"><a href="#Flex布局介绍" class="headerlink" title="Flex布局介绍"></a>Flex布局介绍</h2><h3 id="如何对整个container容器采用Flex布局"><a href="#如何对整个container容器采用Flex布局" class="headerlink" title="如何对整个container容器采用Flex布局"></a>如何对整个container容器采用Flex布局</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">   <span class="attribute">display</span>: flex;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>效果如下<br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/2.png"></p>
-<blockquote>
-<p>display: flex;  代表对容器采用Flex布局<br><font color="red">注意:</font>采用Flex布局后容器元素默认在一行上排列</p>
-</blockquote>
-<h2 id="Flex重要属性介绍"><a href="#Flex重要属性介绍" class="headerlink" title="Flex重要属性介绍"></a>Flex重要属性介绍</h2><h3 id="flex-direction-属性"><a href="#flex-direction-属性" class="headerlink" title="flex-direction 属性"></a>flex-direction 属性</h3><blockquote>
-<p>作用介绍:<br>决定了布局容器中元素的主轴方向    布局中元素顺着主轴排列<br><font color="red">row</font>       横向排列    X轴<br><font color="red">colum</font>    纵向排列    Y轴</p>
-</blockquote>
-<p><strong>row效果</strong><br><img src="/.com//%E5%89%8D%E7%AB%AF/2.png"></p>
-<p><strong>colum效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/1.png"></p>
-<h3 id="justify-content-属性"><a href="#justify-content-属性" class="headerlink" title="justify-content 属性"></a>justify-content 属性</h3><blockquote>
-<p>作用介绍:<br>决定了布局容器中元素在主轴方向上 对齐方式<br><font color="red">flex-start</font>       以起始点为参考对齐<br><font color="red">flex-end</font>         以结束点为参考对齐<br><font color="red">center</font>            居中对齐<br><font color="red">space-between</font>   主轴上的第一个和最后一个元素紧靠主轴起始和结束位置<br>                           对剩余空间的间隔平均分配后对齐</p>
-<p><font color="red">space-around</font>     对主轴上元素的剩余空间进行平分 主轴的起始和结束位置会保留间隔</p>
-</blockquote>
-<p><strong>flex-start效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/2.png"></p>
-<p><strong>flex-end效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/3.png"></p>
-<p><strong>center效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/4.png"></p>
-<p><strong>space-between</strong></p>
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/5.png"></p>
-<p><strong>space-around效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/6.png"></p>
-<h3 id="align-items属性"><a href="#align-items属性" class="headerlink" title="align-items属性"></a>align-items属性</h3><blockquote>
-<p>作用介绍:<br>决定了布局容器中元素在测轴方向上 对齐方式<br><font color="red">flex-start</font>        在侧轴上以起始点为参考对齐<br><font color="red">flex-end</font>          在侧轴上以结束点为参考对齐<br><font color="red">center</font>             在侧轴上居中对齐<br><font color="red">baseline</font>          在侧轴上以基线对齐项目</p>
-</blockquote>
-<p><strong>flex-start效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/7.png"></p>
-<p><strong>flex-end效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/8.png"></p>
-<p><strong>center效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/9.png"></p>
-<p><strong>baseline效果</strong></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">  <span class="attribute">display</span>: flex;  </span><br><span class="line">  <span class="attribute">flex-direction</span>: row;  </span><br><span class="line">  <span class="attribute">justify-content</span>:flex-start;  </span><br><span class="line">  <span class="attribute">align-items</span>: baseline;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.item-1</span>&#123;  </span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">1.5rem</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/10.png"></p>
-<h3 id="flex-wrap属性"><a href="#flex-wrap属性" class="headerlink" title="flex-wrap属性"></a>flex-wrap属性</h3><blockquote>
-<p>作用介绍:<br>主轴上元素过多时，是否需要换行<br><font color="red">wrap</font>      换行显示<br><font color="red">nowrap</font>  不换行  <font color="red">注意</font>当空间不足时元素大小会被挤压</p>
-</blockquote>
-<p><strong>Html代码</strong></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>8分钟学会Flex布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </span><br><span class="line">  <span class="comment">&lt;!--引入样式文件--&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/style.css&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-1&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-2&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-3&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-4&quot;</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-5&quot;</span>&gt;</span>5<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-6&quot;</span>&gt;</span>6<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-7&quot;</span>&gt;</span>7<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-8&quot;</span>&gt;</span>8<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-9&quot;</span>&gt;</span>9<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-10&quot;</span>&gt;</span>10<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-<p><strong>wrap效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/11.png"></p>
-<p><strong>nowrap效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/12.png"></p>
-<p>当元素有多行时候如果需要消除，侧轴的间隔可以将align-items替换为<font color="red">align-content</font><br>对齐方式和之前一样<br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/13.png"></p>
-<p>此时如果需要调整间隔可使用 <font color="red">gap</font></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">  <span class="attribute">display</span>: flex;  </span><br><span class="line">  <span class="attribute">flex-direction</span>: row;  </span><br><span class="line">  <span class="attribute">justify-content</span>:flex-start;  </span><br><span class="line">  <span class="attribute">align-content</span>: flex-start;  </span><br><span class="line">  <span class="attribute">flex-wrap</span>: wrap;  </span><br><span class="line">  <span class="attribute">gap</span>: <span class="number">1rem</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/14.png"></p>
-<h3 id="flex-grow属性"><a href="#flex-grow属性" class="headerlink" title="flex-grow属性"></a>flex-grow属性</h3><blockquote>
-<p>作用介绍:<br>在主轴上当剩余的空间较多是，可以通过该属性设置，主轴上元素增长空间</p>
-</blockquote>
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/15.png"></p>
-<p>此时我们可以通过该属性设置让第三个元素占满剩下的所有空间</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>8分钟学会Flex布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </span><br><span class="line">  <span class="comment">&lt;!--引入样式文件--&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/style.css&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-1&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-2&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-3&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-class">.item-3</span>&#123;  </span><br><span class="line">  <span class="attribute">flex-grow</span>: <span class="number">1</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/16.png"></p>
-<h3 id="flex-shrink属性"><a href="#flex-shrink属性" class="headerlink" title="flex-shrink属性"></a>flex-shrink属性</h3><p>作用介绍:</p>
-<blockquote>
-<p>当屏幕缩小时，元素在主轴缩小效果   0拒绝收缩 默认所有元素都是1的等比压缩 值越大空间不够时压缩的就越小</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.item-1&#123;  </span><br><span class="line">  flex-shrink: 5;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/17.png"></p>
-<h3 id="flex和flex-basis属性"><a href="#flex和flex-basis属性" class="headerlink" title="flex和flex-basis属性"></a>flex和flex-basis属性</h3><blockquote>
-<p>作用介绍:<br>flex:   按照份数设置元素宽度   1<br>  flex-basis:  通过设置像素或者百分比  控制元素的宽度</p>
-</blockquote>
-<h3 id="align-self属性"><a href="#align-self属性" class="headerlink" title="align-self属性"></a>align-self属性</h3><blockquote>
-<p>作用介绍:<br>单独设置主轴上某一个元素，在侧轴的对齐方式</p>
-</blockquote>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.item-1</span>&#123;  </span><br><span class="line">  <span class="attribute">align-self</span>: center;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/18.png"></p>
-<h3 id="order属性"><a href="#order属性" class="headerlink" title="order属性"></a>order属性</h3><p>作用介绍:</p>
-<blockquote>
-<p>该值越大，在主轴上元素越靠后</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.item-1&#123;  </span><br><span class="line"> order: 10000;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/19.png"></p>
 ]]></content>
       <categories>
         <category>前端</category>
@@ -890,43 +890,6 @@
       </tags>
   </entry>
   <entry>
-    <title>快速在Linux环境下安装配置JDk</title>
-    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10003-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJDK/</url>
-    <content><![CDATA[<p><font color="blue"><strong>作者:博哥</strong></font></p>
-<h2 id="使用Xshell工具连接Linux服务器"><a href="#使用Xshell工具连接Linux服务器" class="headerlink" title="使用Xshell工具连接Linux服务器"></a>使用Xshell工具连接Linux服务器</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/1.png" alt="页面效果"></p>
-<h2 id="下载Linux版本的Jdk安装包"><a href="#下载Linux版本的Jdk安装包" class="headerlink" title="下载Linux版本的Jdk安装包"></a>下载Linux版本的Jdk安装包</h2><p>链接：<a href="https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ">https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ</a><br>提取码：0er6 </p>
-<p>将下载的安装包上传到linux下的opt目录</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/2.png" alt="页面效果"></p>
-<h2 id="在命令行界面切入到opt目录下"><a href="#在命令行界面切入到opt目录下" class="headerlink" title="在命令行界面切入到opt目录下"></a>在命令行界面切入到opt目录下</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/3.png" alt="页面效果"></p>
-<h3 id="解压jdk安装包"><a href="#解压jdk安装包" class="headerlink" title="解压jdk安装包"></a>解压jdk安装包</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf jdk-8u301-linux-x64.tar.gz </span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/4.png" alt="页面效果"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/5.png" alt="页面效果"></p>
-<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><h3 id="切入到etc-目录"><a href="#切入到etc-目录" class="headerlink" title="切入到etc 目录"></a>切入到etc 目录</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/6.png" alt="页面效果"></p>
-<h3 id="使用vi-命令修改-profile文件"><a href="#使用vi-命令修改-profile文件" class="headerlink" title="使用vi 命令修改 profile文件"></a>使用vi 命令修改 profile文件</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/7.png" alt="页面效果"></p>
-<h3 id="找到最后一行位置"><a href="#找到最后一行位置" class="headerlink" title="找到最后一行位置"></a>找到最后一行位置</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/8.png" alt="页面效果"></p>
-<h3 id="将如下的Jdk环境变量添加到尾部"><a href="#将如下的Jdk环境变量添加到尾部" class="headerlink" title="将如下的Jdk环境变量添加到尾部"></a>将如下的Jdk环境变量添加到尾部</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/jdk1.8.0_301</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$&#123;JAVA_HOME&#125;</span>/jre/lib/rt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/dt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/tools.jar</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/9.png" alt="页面效果"></p>
-<p>按下Esc  wq!保存退出</p>
-<h3 id="刷新环境变量和验证java环境是否安装成功"><a href="#刷新环境变量和验证java环境是否安装成功" class="headerlink" title="刷新环境变量和验证java环境是否安装成功"></a>刷新环境变量和验证java环境是否安装成功</h3><p><strong>刷新环境变量</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source  /etc/profile</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/10.png" alt="页面效果"></p>
-<p><strong>验证jdk是否安装成功</strong></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/11.png" alt="页面效果"></p>
-]]></content>
-      <categories>
-        <category>服务</category>
-      </categories>
-      <tags>
-        <tag>jdk</tag>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>快速在Linux环境下安装使用Mysql8</title>
     <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10004-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8Mysql/</url>
     <content><![CDATA[<h2 id="使用Xshell连接到Linux服务器"><a href="#使用Xshell连接到Linux服务器" class="headerlink" title="使用Xshell连接到Linux服务器"></a>使用Xshell连接到Linux服务器</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/1.png" alt="页面效果"></p>
@@ -1022,6 +985,43 @@
       </tags>
   </entry>
   <entry>
+    <title>快速在Linux环境下安装配置JDk</title>
+    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10003-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJDK/</url>
+    <content><![CDATA[<p><font color="blue"><strong>作者:博哥</strong></font></p>
+<h2 id="使用Xshell工具连接Linux服务器"><a href="#使用Xshell工具连接Linux服务器" class="headerlink" title="使用Xshell工具连接Linux服务器"></a>使用Xshell工具连接Linux服务器</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/1.png" alt="页面效果"></p>
+<h2 id="下载Linux版本的Jdk安装包"><a href="#下载Linux版本的Jdk安装包" class="headerlink" title="下载Linux版本的Jdk安装包"></a>下载Linux版本的Jdk安装包</h2><p>链接：<a href="https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ">https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ</a><br>提取码：0er6 </p>
+<p>将下载的安装包上传到linux下的opt目录</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/2.png" alt="页面效果"></p>
+<h2 id="在命令行界面切入到opt目录下"><a href="#在命令行界面切入到opt目录下" class="headerlink" title="在命令行界面切入到opt目录下"></a>在命令行界面切入到opt目录下</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/3.png" alt="页面效果"></p>
+<h3 id="解压jdk安装包"><a href="#解压jdk安装包" class="headerlink" title="解压jdk安装包"></a>解压jdk安装包</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf jdk-8u301-linux-x64.tar.gz </span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/4.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/5.png" alt="页面效果"></p>
+<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><h3 id="切入到etc-目录"><a href="#切入到etc-目录" class="headerlink" title="切入到etc 目录"></a>切入到etc 目录</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/6.png" alt="页面效果"></p>
+<h3 id="使用vi-命令修改-profile文件"><a href="#使用vi-命令修改-profile文件" class="headerlink" title="使用vi 命令修改 profile文件"></a>使用vi 命令修改 profile文件</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/7.png" alt="页面效果"></p>
+<h3 id="找到最后一行位置"><a href="#找到最后一行位置" class="headerlink" title="找到最后一行位置"></a>找到最后一行位置</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/8.png" alt="页面效果"></p>
+<h3 id="将如下的Jdk环境变量添加到尾部"><a href="#将如下的Jdk环境变量添加到尾部" class="headerlink" title="将如下的Jdk环境变量添加到尾部"></a>将如下的Jdk环境变量添加到尾部</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/jdk1.8.0_301</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$&#123;JAVA_HOME&#125;</span>/jre/lib/rt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/dt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/tools.jar</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/9.png" alt="页面效果"></p>
+<p>按下Esc  wq!保存退出</p>
+<h3 id="刷新环境变量和验证java环境是否安装成功"><a href="#刷新环境变量和验证java环境是否安装成功" class="headerlink" title="刷新环境变量和验证java环境是否安装成功"></a>刷新环境变量和验证java环境是否安装成功</h3><p><strong>刷新环境变量</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source  /etc/profile</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/10.png" alt="页面效果"></p>
+<p><strong>验证jdk是否安装成功</strong></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/11.png" alt="页面效果"></p>
+]]></content>
+      <categories>
+        <category>服务</category>
+      </categories>
+      <tags>
+        <tag>jdk</tag>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何在windows下快速模拟搭建Linux环境</title>
     <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10006-%E5%A6%82%E4%BD%95%E5%9C%A8windows%E4%B8%8B%E5%BF%AB%E9%80%9F%E6%A8%A1%E6%8B%9F%E6%90%AD%E5%BB%BALinux%E7%8E%AF%E5%A2%83/</url>
     <content><![CDATA[<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
@@ -1102,239 +1102,6 @@
       <tags>
         <tag>linux</tag>
         <tag>虚拟机</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>快速在Linux环境下安装配置Tomcat并部署项目测试</title>
-    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10005-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8tomcat/</url>
-    <content><![CDATA[<h2 id="使用Xshell工具连上Linux服务器"><a href="#使用Xshell工具连上Linux服务器" class="headerlink" title="使用Xshell工具连上Linux服务器"></a>使用Xshell工具连上Linux服务器</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/1.png" alt="页面效果"></p>
-<h2 id="下载Tomcat9-的安装包"><a href="#下载Tomcat9-的安装包" class="headerlink" title="下载Tomcat9 的安装包"></a>下载Tomcat9 的安装包</h2><p>链接：<a href="https://pan.baidu.com/s/1As5zvaQmUdyv2lIi0Lu3Qw">https://pan.baidu.com/s/1As5zvaQmUdyv2lIi0Lu3Qw</a><br>提取码：dm8g </p>
-<p><strong>注意:tomcat安装配置前必须确保jdk已经安装配置完成</strong></p>
-<p>将下载的安装包上传到Linux下的opt目录</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/2.png" alt="页面效果"></p>
-<h2 id="解压tomcat"><a href="#解压tomcat" class="headerlink" title="解压tomcat"></a>解压tomcat</h2><blockquote>
-<p>执行如下命令解压tomcat</p>
-</blockquote>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/3.png" alt="页面效果"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/4.png" alt="页面效果"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/5.png" alt="页面效果"></p>
-<h2 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h2><h3 id="进入到tomcat下bin目录中"><a href="#进入到tomcat下bin目录中" class="headerlink" title="进入到tomcat下bin目录中"></a>进入到tomcat下bin目录中</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/6.png" alt="页面效果"></p>
-<h3 id="启动tomcat"><a href="#启动tomcat" class="headerlink" title="启动tomcat"></a>启动tomcat</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./start</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/7.png" alt="页面效果"></p>
-<h3 id="查看tomcat启动日志，是否启动成功"><a href="#查看tomcat启动日志，是否启动成功" class="headerlink" title="查看tomcat启动日志，是否启动成功"></a>查看tomcat启动日志，是否启动成功</h3><p>切入到logs下目录下查看项目启动状态</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/8.png" alt="页面效果"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/9.png" alt="页面效果"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/10.png" alt="页面效果"></p>
-<h2 id="测试访问Tomcat"><a href="#测试访问Tomcat" class="headerlink" title="测试访问Tomcat"></a>测试访问Tomcat</h2><h3 id="打开浏览器输入如下地址"><a href="#打开浏览器输入如下地址" class="headerlink" title="打开浏览器输入如下地址"></a>打开浏览器输入如下地址</h3><blockquote>
-<p><a href="http://192.168.195.131:8080/">http://192.168.195.131:8080</a></p>
-</blockquote>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/11.png" alt="页面效果"></p>
-<h3 id="在服务器地址和端口都没错情况-访问不了，原因，防火墙拦截了8080端口"><a href="#在服务器地址和端口都没错情况-访问不了，原因，防火墙拦截了8080端口" class="headerlink" title="在服务器地址和端口都没错情况,访问不了，原因，防火墙拦截了8080端口"></a>在服务器地址和端口都没错情况,访问不了，原因，防火墙拦截了8080端口</h3><p>输入如下命令查看防火墙状态</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl  status firewalld.service</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/12.png" alt="页面效果"></p>
-<h2 id="防火墙规则中添加8080端口"><a href="#防火墙规则中添加8080端口" class="headerlink" title="防火墙规则中添加8080端口"></a>防火墙规则中添加8080端口</h2><h3 id="查询有哪些端口是开启的"><a href="#查询有哪些端口是开启的" class="headerlink" title="查询有哪些端口是开启的"></a>查询有哪些端口是开启的</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --list-port</span><br></pre></td></tr></table></figure>
-
-<h3 id="查询9090端口是否开启："><a href="#查询9090端口是否开启：" class="headerlink" title="查询9090端口是否开启："></a>查询9090端口是否开启：</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --query-port=9090/tcp</span><br></pre></td></tr></table></figure>
-
-<h3 id="开启9090端口"><a href="#开启9090端口" class="headerlink" title="开启9090端口"></a>开启9090端口</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=9090/tcp --permanent</span><br></pre></td></tr></table></figure>
-
-<h3 id="重启防火墙生效"><a href="#重启防火墙生效" class="headerlink" title="重启防火墙生效"></a>重启防火墙生效</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>命令含义： –zone #作用域 –add-port&#x3D;9090&#x2F;tcp #添加端口，格式为：端口&#x2F;通讯协议 –permanent #永久生效，没有此参数重启后失效</p>
-</blockquote>
-<h3 id="删除9090端口"><a href="#删除9090端口" class="headerlink" title="删除9090端口"></a>删除9090端口</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --remove-port=9090/tcp --permanent</span><br></pre></td></tr></table></figure>
-
-<h3 id="重启防火墙生效-1"><a href="#重启防火墙生效-1" class="headerlink" title="重启防火墙生效"></a>重启防火墙生效</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
-
-<h3 id="关闭并禁用"><a href="#关闭并禁用" class="headerlink" title="关闭并禁用"></a>关闭并禁用</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl disable firewalld</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/13.png" alt="页面效果"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/14.png" alt="页面效果"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/15.png" alt="页面效果"></p>
-<h3 id="验证tomcat是否可以访问"><a href="#验证tomcat是否可以访问" class="headerlink" title="验证tomcat是否可以访问"></a>验证tomcat是否可以访问</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/16.png" alt="页面效果"></p>
-<h2 id="快速部署项目测试"><a href="#快速部署项目测试" class="headerlink" title="快速部署项目测试"></a>快速部署项目测试</h2><h3 id="先停止tomcat服务器"><a href="#先停止tomcat服务器" class="headerlink" title="先停止tomcat服务器"></a>先停止tomcat服务器</h3><p>切换到tomcat的bin目录</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/17.png" alt="页面效果"></p>
-<p>执行停止的命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./shutdown.sh</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/18.png" alt="页面效果"></p>
-<h3 id="部署简单项目测试–先准备一个web静态网页项目"><a href="#部署简单项目测试–先准备一个web静态网页项目" class="headerlink" title="部署简单项目测试–先准备一个web静态网页项目"></a>部署简单项目测试–先准备一个web静态网页项目</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/19.png" alt="页面效果"></p>
-<p>博哥个人主页 <a href="https://www.aliyundrive.com/s/Fyw9Q5tuF4u">https://www.aliyundrive.com/s/Fyw9Q5tuF4u</a> </p>
-<p>将上面这个项目上传到tomcat的webapps目录</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/20.png" alt="页面效果"></p>
-<h3 id="重新启动tomcat访问该项目"><a href="#重新启动tomcat访问该项目" class="headerlink" title="重新启动tomcat访问该项目"></a>重新启动tomcat访问该项目</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/21.png" alt="页面效果"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/22.png" alt="页面效果"></p>
-]]></content>
-      <categories>
-        <category>服务</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>tomcat</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Redis安装说明</title>
-    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10007-Linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85Redis/</url>
-    <content><![CDATA[<ul>
-<li>准备CentOS 7操作系统</li>
-<li>Redis的官方网站地址：<a href="https://redis.io/">https://redis.io/</a></li>
-</ul>
-<h1 id="redis资料下载"><a href="#redis资料下载" class="headerlink" title="redis资料下载"></a>redis资料下载</h1><blockquote>
-<p>链接：<a href="https://pan.baidu.com/s/1GOVkM-TuPKFCISDqPob4Lg">https://pan.baidu.com/s/1GOVkM-TuPKFCISDqPob4Lg</a><br>提取码：1234 </p>
-</blockquote>
-<h1 id="单机安装Redis"><a href="#单机安装Redis" class="headerlink" title="单机安装Redis"></a>单机安装Redis</h1><h2 id="安装Redis依赖"><a href="#安装Redis依赖" class="headerlink" title="安装Redis依赖"></a>安装Redis依赖</h2><h1 id="资料下载"><a href="#资料下载" class="headerlink" title="资料下载"></a>资料下载</h1><p><a href="https://blog.csdn.net/fenli_ang/article/details/116262282">修改yum源</a></p>
-<p>Redis是基于C语言编写的，因此首先需要安装Redis所需要的gcc依赖：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yum install -y gcc tcl</span><br></pre></td></tr></table></figure>
-
-<h2 id="上传安装包并解压"><a href="#上传安装包并解压" class="headerlink" title="上传安装包并解压"></a>上传安装包并解压</h2><p>准备Redis安装包上传到虚拟机的任意目录：</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/1.png" alt="image-20211211071712536"></p>
-<p>例如，我放到了&#x2F;usr&#x2F;opt 目录：</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/2.png" alt="image-20211211080151539"></p>
-<p>解压缩：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">tar -zxvf redis-6.2.6.tar.gz</span><br></pre></td></tr></table></figure>
-
-<p>解压后：</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/3.png" alt="image-20211211080339076"></p>
-<p>进入redis目录：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> redis-6.2.6</span><br></pre></td></tr></table></figure>
-
-
-
-<p>运行编译命令：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-
-<p>如果没有出错，应该就安装成功了。</p>
-<p>默认的安装路径是在 <code>/usr/local/bin</code>目录下：</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/image-20211211080603710.png" alt="image-20211211080603710"></p>
-<p>该目录以及默认配置到环境变量，因此可以在任意目录下运行这些命令。其中：</p>
-<ul>
-<li>redis-cli：是redis提供的命令行客户端</li>
-<li>redis-server：是redis的服务端启动脚本</li>
-<li>redis-sentinel：是redis的哨兵启动脚本</li>
-</ul>
-<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><p>redis的启动方式有很多种，例如：</p>
-<ul>
-<li>默认启动</li>
-<li>指定配置启动</li>
-<li>开机自启</li>
-</ul>
-<h3 id="默认启动"><a href="#默认启动" class="headerlink" title="默认启动"></a>默认启动</h3><p>安装完成后，在任意目录输入redis-server命令即可启动Redis：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">redis-server</span><br></pre></td></tr></table></figure>
-
-<p>如图：</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/image-20211211081716167.png" alt="image-20211211081716167"></p>
-<p>这种启动属于<code>前台启动</code>，会阻塞整个会话窗口，窗口关闭或者按下<code>CTRL + C</code>则Redis停止。不推荐使用。</p>
-<h3 id="指定配置启动"><a href="#指定配置启动" class="headerlink" title="指定配置启动"></a>指定配置启动</h3><p>如果要让Redis以<code>后台</code>方式启动，则必须修改Redis配置文件，就在我们之前解压的redis安装包下（<code>/usr/local/src/redis-6.2.6</code>），名字叫redis.conf：</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/image-20211211082225509.png" alt="image-20211211082225509"></p>
-<p>我们先将这个配置文件备份一份：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> redis.conf redis.conf.back</span><br></pre></td></tr></table></figure>
-
-
-
-<p>然后修改redis.conf文件中的一些配置：</p>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 允许访问的地址，默认是127.0.0.1，会导致只能在本地访问。修改为0.0.0.0则可以在任意IP访问，生产环境不要设置为0.0.0.0</span></span><br><span class="line"><span class="attr">bind</span> <span class="string">0.0.0.0</span></span><br><span class="line"><span class="comment"># 守护进程，修改为yes后即可后台运行</span></span><br><span class="line"><span class="attr">daemonize</span> <span class="string">yes </span></span><br><span class="line"><span class="comment"># 密码，设置后访问Redis必须输入密码</span></span><br><span class="line"><span class="attr">requirepass</span> <span class="string">root123</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>Redis的其它常见配置：</p>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 监听的端口</span></span><br><span class="line"><span class="attr">port</span> <span class="string">6379</span></span><br><span class="line"><span class="comment"># 工作目录，默认是当前目录，也就是运行redis-server时的命令，日志、持久化等文件会保存在这个目录</span></span><br><span class="line"><span class="attr">dir</span> <span class="string">.</span></span><br><span class="line"><span class="comment"># 数据库数量，设置为1，代表只使用1个库，默认有16个库，编号0~15</span></span><br><span class="line"><span class="attr">databases</span> <span class="string">1</span></span><br><span class="line"><span class="comment"># 设置redis能够使用的最大内存</span></span><br><span class="line"><span class="attr">maxmemory</span> <span class="string">3000mb</span></span><br><span class="line"><span class="comment"># 日志文件，默认为空，不记录日志，可以指定日志文件名</span></span><br><span class="line"><span class="attr">logfile</span> <span class="string">&quot;redis.log&quot;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>启动Redis：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 进入redis安装目录 </span></span><br><span class="line"><span class="built_in">cd</span> /usr/local/src/redis-6.2.6</span><br><span class="line"><span class="comment"># 启动</span></span><br><span class="line">redis-server redis.conf</span><br></pre></td></tr></table></figure>
-
-
-
-<p>停止服务：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 利用redis-cli来执行 shutdown 命令，即可停止 Redis 服务，</span></span><br><span class="line"><span class="comment"># 因为之前配置了密码，因此需要通过 -u 来指定密码</span></span><br><span class="line">redis-cli -u root123 shutdown</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="开机自启"><a href="#开机自启" class="headerlink" title="开机自启"></a>开机自启</h3><p>我们也可以通过配置来实现开机自启。</p>
-<p>首先，新建一个系统服务文件：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">vi /etc/systemd/system/redis.service</span><br></pre></td></tr></table></figure>
-
-<p>内容如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=redis-server</span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=forking</span><br><span class="line">ExecStart=/usr/local/bin/redis-server /usr/local/src/redis-6.2.6/redis.conf</span><br><span class="line">PrivateTmp=true</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
-
-
-
-<p>然后重载系统服务：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure>
-
-
-
-<p>现在，我们可以用下面这组命令来操作redis了：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 启动</span></span><br><span class="line">systemctl start redis</span><br><span class="line"><span class="comment"># 停止</span></span><br><span class="line">systemctl stop redis</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">systemctl restart redis</span><br><span class="line"><span class="comment"># 查看状态</span></span><br><span class="line">systemctl status redis</span><br></pre></td></tr></table></figure>
-
-
-
-<p>执行下面的命令，可以让redis开机自启：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> redis</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="Redis客户端"><a href="#Redis客户端" class="headerlink" title="Redis客户端"></a>Redis客户端</h1><p>安装完成Redis，我们就可以操作Redis，实现数据的CRUD了。这需要用到Redis客户端，包括：</p>
-<ul>
-<li>命令行客户端</li>
-<li>图形化桌面客户端</li>
-<li>编程客户端</li>
-</ul>
-<h2 id="Redis命令行客户端"><a href="#Redis命令行客户端" class="headerlink" title="Redis命令行客户端"></a>Redis命令行客户端</h2><p>Redis安装完成后就自带了命令行客户端：redis-cli，使用方式如下：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">redis-cli [options] [commonds]</span><br></pre></td></tr></table></figure>
-
-<p>其中常见的options有：</p>
-<ul>
-<li><code>-h 127.0.0.1</code>：指定要连接的redis节点的IP地址，默认是127.0.0.1</li>
-<li><code>-p 6379</code>：指定要连接的redis节点的端口，默认是6379</li>
-<li><code>-a 123321</code>：指定redis的访问密码</li>
-</ul>
-<p>其中的commonds就是Redis的操作命令，例如：</p>
-<ul>
-<li><code>ping</code>：与redis服务端做心跳测试，服务端正常会返回<code>pong</code></li>
-</ul>
-<p>不指定commond时，会进入<code>redis-cli</code>的交互控制台：</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/image-20211211110439353.png" alt="image-20211211110439353"></p>
-<h2 id="图形化桌面客户端"><a href="#图形化桌面客户端" class="headerlink" title="图形化桌面客户端"></a>图形化桌面客户端</h2><p>GitHub上的大神编写了Redis的图形化桌面客户端，地址：<a href="https://github.com/uglide/RedisDesktopManager">https://github.com/uglide/RedisDesktopManager</a></p>
-<p>不过该仓库提供的是RedisDesktopManager的源码，并未提供windows安装包。</p>
-<p>在下面这个仓库可以找到安装包：<a href="https://github.com/lework/RedisDesktopManager-Windows/releases">https://github.com/lework/RedisDesktopManager-Windows/releases</a></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/4.png" alt="image-20211211111351885"></p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>在课前资料中可以找到Redis的图形化桌面客户端：</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/5.png" alt="image-20211214154938770"></p>
-<p>解压缩后，运行安装程序即可安装：</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/6.png" alt="image-20211214155123841"></p>
-<p>此处略。</p>
-<p>安装完成后，在安装目录下找到resp.exe文件：</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/7.png" alt="image-20211211110935819"></p>
-<p>双击即可运行：</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/image-20211214155406692.png" alt="image-20211214155406692"></p>
-<h3 id="建立连接"><a href="#建立连接" class="headerlink" title="建立连接"></a>建立连接</h3><p>点击左上角的<code>连接到Redis服务器</code>按钮：</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/image-20211214155424842.png" alt="image-20211214155424842"></p>
-<p>在弹出的窗口中填写Redis服务信息：</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/8.png" alt="image-20211211111614483"></p>
-<p>点击确定后，在左侧菜单会出现这个链接：</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/9.png" alt="image-20211214155804523"></p>
-<p>点击即可建立连接了：</p>
-<p>Redis默认有16个仓库，编号从0至15.  通过配置文件可以设置仓库数量，但是不超过16，并且不能自定义仓库名称。</p>
-<p>如果是基于redis-cli连接Redis服务，可以通过select命令来选择数据库：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 选择 0号库</span></span><br><span class="line"><span class="keyword">select</span> 0</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>服务</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>Redis</tag>
       </tags>
   </entry>
   <entry>
@@ -1563,6 +1330,311 @@
       </tags>
   </entry>
   <entry>
+    <title>Redis安装说明</title>
+    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10007-Linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85Redis/</url>
+    <content><![CDATA[<ul>
+<li>准备CentOS 7操作系统</li>
+<li>Redis的官方网站地址：<a href="https://redis.io/">https://redis.io/</a></li>
+</ul>
+<h1 id="redis资料下载"><a href="#redis资料下载" class="headerlink" title="redis资料下载"></a>redis资料下载</h1><blockquote>
+<p>链接：<a href="https://pan.baidu.com/s/1GOVkM-TuPKFCISDqPob4Lg">https://pan.baidu.com/s/1GOVkM-TuPKFCISDqPob4Lg</a><br>提取码：1234 </p>
+</blockquote>
+<h1 id="单机安装Redis"><a href="#单机安装Redis" class="headerlink" title="单机安装Redis"></a>单机安装Redis</h1><h2 id="安装Redis依赖"><a href="#安装Redis依赖" class="headerlink" title="安装Redis依赖"></a>安装Redis依赖</h2><h1 id="资料下载"><a href="#资料下载" class="headerlink" title="资料下载"></a>资料下载</h1><p><a href="https://blog.csdn.net/fenli_ang/article/details/116262282">修改yum源</a></p>
+<p>Redis是基于C语言编写的，因此首先需要安装Redis所需要的gcc依赖：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yum install -y gcc tcl</span><br></pre></td></tr></table></figure>
+
+<h2 id="上传安装包并解压"><a href="#上传安装包并解压" class="headerlink" title="上传安装包并解压"></a>上传安装包并解压</h2><p>准备Redis安装包上传到虚拟机的任意目录：</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/1.png" alt="image-20211211071712536"></p>
+<p>例如，我放到了&#x2F;usr&#x2F;opt 目录：</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/2.png" alt="image-20211211080151539"></p>
+<p>解压缩：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">tar -zxvf redis-6.2.6.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>解压后：</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/3.png" alt="image-20211211080339076"></p>
+<p>进入redis目录：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> redis-6.2.6</span><br></pre></td></tr></table></figure>
+
+
+
+<p>运行编译命令：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+
+<p>如果没有出错，应该就安装成功了。</p>
+<p>默认的安装路径是在 <code>/usr/local/bin</code>目录下：</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/image-20211211080603710.png" alt="image-20211211080603710"></p>
+<p>该目录以及默认配置到环境变量，因此可以在任意目录下运行这些命令。其中：</p>
+<ul>
+<li>redis-cli：是redis提供的命令行客户端</li>
+<li>redis-server：是redis的服务端启动脚本</li>
+<li>redis-sentinel：是redis的哨兵启动脚本</li>
+</ul>
+<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><p>redis的启动方式有很多种，例如：</p>
+<ul>
+<li>默认启动</li>
+<li>指定配置启动</li>
+<li>开机自启</li>
+</ul>
+<h3 id="默认启动"><a href="#默认启动" class="headerlink" title="默认启动"></a>默认启动</h3><p>安装完成后，在任意目录输入redis-server命令即可启动Redis：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">redis-server</span><br></pre></td></tr></table></figure>
+
+<p>如图：</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/image-20211211081716167.png" alt="image-20211211081716167"></p>
+<p>这种启动属于<code>前台启动</code>，会阻塞整个会话窗口，窗口关闭或者按下<code>CTRL + C</code>则Redis停止。不推荐使用。</p>
+<h3 id="指定配置启动"><a href="#指定配置启动" class="headerlink" title="指定配置启动"></a>指定配置启动</h3><p>如果要让Redis以<code>后台</code>方式启动，则必须修改Redis配置文件，就在我们之前解压的redis安装包下（<code>/usr/local/src/redis-6.2.6</code>），名字叫redis.conf：</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/image-20211211082225509.png" alt="image-20211211082225509"></p>
+<p>我们先将这个配置文件备份一份：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> redis.conf redis.conf.back</span><br></pre></td></tr></table></figure>
+
+
+
+<p>然后修改redis.conf文件中的一些配置：</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 允许访问的地址，默认是127.0.0.1，会导致只能在本地访问。修改为0.0.0.0则可以在任意IP访问，生产环境不要设置为0.0.0.0</span></span><br><span class="line"><span class="attr">bind</span> <span class="string">0.0.0.0</span></span><br><span class="line"><span class="comment"># 守护进程，修改为yes后即可后台运行</span></span><br><span class="line"><span class="attr">daemonize</span> <span class="string">yes </span></span><br><span class="line"><span class="comment"># 密码，设置后访问Redis必须输入密码</span></span><br><span class="line"><span class="attr">requirepass</span> <span class="string">root123</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>Redis的其它常见配置：</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 监听的端口</span></span><br><span class="line"><span class="attr">port</span> <span class="string">6379</span></span><br><span class="line"><span class="comment"># 工作目录，默认是当前目录，也就是运行redis-server时的命令，日志、持久化等文件会保存在这个目录</span></span><br><span class="line"><span class="attr">dir</span> <span class="string">.</span></span><br><span class="line"><span class="comment"># 数据库数量，设置为1，代表只使用1个库，默认有16个库，编号0~15</span></span><br><span class="line"><span class="attr">databases</span> <span class="string">1</span></span><br><span class="line"><span class="comment"># 设置redis能够使用的最大内存</span></span><br><span class="line"><span class="attr">maxmemory</span> <span class="string">3000mb</span></span><br><span class="line"><span class="comment"># 日志文件，默认为空，不记录日志，可以指定日志文件名</span></span><br><span class="line"><span class="attr">logfile</span> <span class="string">&quot;redis.log&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>启动Redis：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 进入redis安装目录 </span></span><br><span class="line"><span class="built_in">cd</span> /usr/local/src/redis-6.2.6</span><br><span class="line"><span class="comment"># 启动</span></span><br><span class="line">redis-server redis.conf</span><br></pre></td></tr></table></figure>
+
+
+
+<p>停止服务：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 利用redis-cli来执行 shutdown 命令，即可停止 Redis 服务，</span></span><br><span class="line"><span class="comment"># 因为之前配置了密码，因此需要通过 -u 来指定密码</span></span><br><span class="line">redis-cli -u root123 shutdown</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="开机自启"><a href="#开机自启" class="headerlink" title="开机自启"></a>开机自启</h3><p>我们也可以通过配置来实现开机自启。</p>
+<p>首先，新建一个系统服务文件：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">vi /etc/systemd/system/redis.service</span><br></pre></td></tr></table></figure>
+
+<p>内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=redis-server</span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=forking</span><br><span class="line">ExecStart=/usr/local/bin/redis-server /usr/local/src/redis-6.2.6/redis.conf</span><br><span class="line">PrivateTmp=true</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+
+
+
+<p>然后重载系统服务：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure>
+
+
+
+<p>现在，我们可以用下面这组命令来操作redis了：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 启动</span></span><br><span class="line">systemctl start redis</span><br><span class="line"><span class="comment"># 停止</span></span><br><span class="line">systemctl stop redis</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">systemctl restart redis</span><br><span class="line"><span class="comment"># 查看状态</span></span><br><span class="line">systemctl status redis</span><br></pre></td></tr></table></figure>
+
+
+
+<p>执行下面的命令，可以让redis开机自启：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> redis</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="Redis客户端"><a href="#Redis客户端" class="headerlink" title="Redis客户端"></a>Redis客户端</h1><p>安装完成Redis，我们就可以操作Redis，实现数据的CRUD了。这需要用到Redis客户端，包括：</p>
+<ul>
+<li>命令行客户端</li>
+<li>图形化桌面客户端</li>
+<li>编程客户端</li>
+</ul>
+<h2 id="Redis命令行客户端"><a href="#Redis命令行客户端" class="headerlink" title="Redis命令行客户端"></a>Redis命令行客户端</h2><p>Redis安装完成后就自带了命令行客户端：redis-cli，使用方式如下：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">redis-cli [options] [commonds]</span><br></pre></td></tr></table></figure>
+
+<p>其中常见的options有：</p>
+<ul>
+<li><code>-h 127.0.0.1</code>：指定要连接的redis节点的IP地址，默认是127.0.0.1</li>
+<li><code>-p 6379</code>：指定要连接的redis节点的端口，默认是6379</li>
+<li><code>-a 123321</code>：指定redis的访问密码</li>
+</ul>
+<p>其中的commonds就是Redis的操作命令，例如：</p>
+<ul>
+<li><code>ping</code>：与redis服务端做心跳测试，服务端正常会返回<code>pong</code></li>
+</ul>
+<p>不指定commond时，会进入<code>redis-cli</code>的交互控制台：</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/image-20211211110439353.png" alt="image-20211211110439353"></p>
+<h2 id="图形化桌面客户端"><a href="#图形化桌面客户端" class="headerlink" title="图形化桌面客户端"></a>图形化桌面客户端</h2><p>GitHub上的大神编写了Redis的图形化桌面客户端，地址：<a href="https://github.com/uglide/RedisDesktopManager">https://github.com/uglide/RedisDesktopManager</a></p>
+<p>不过该仓库提供的是RedisDesktopManager的源码，并未提供windows安装包。</p>
+<p>在下面这个仓库可以找到安装包：<a href="https://github.com/lework/RedisDesktopManager-Windows/releases">https://github.com/lework/RedisDesktopManager-Windows/releases</a></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/4.png" alt="image-20211211111351885"></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>在课前资料中可以找到Redis的图形化桌面客户端：</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/5.png" alt="image-20211214154938770"></p>
+<p>解压缩后，运行安装程序即可安装：</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/6.png" alt="image-20211214155123841"></p>
+<p>此处略。</p>
+<p>安装完成后，在安装目录下找到resp.exe文件：</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/7.png" alt="image-20211211110935819"></p>
+<p>双击即可运行：</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/image-20211214155406692.png" alt="image-20211214155406692"></p>
+<h3 id="建立连接"><a href="#建立连接" class="headerlink" title="建立连接"></a>建立连接</h3><p>点击左上角的<code>连接到Redis服务器</code>按钮：</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/image-20211214155424842.png" alt="image-20211214155424842"></p>
+<p>在弹出的窗口中填写Redis服务信息：</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/8.png" alt="image-20211211111614483"></p>
+<p>点击确定后，在左侧菜单会出现这个链接：</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A8/9.png" alt="image-20211214155804523"></p>
+<p>点击即可建立连接了：</p>
+<p>Redis默认有16个仓库，编号从0至15.  通过配置文件可以设置仓库数量，但是不超过16，并且不能自定义仓库名称。</p>
+<p>如果是基于redis-cli连接Redis服务，可以通过select命令来选择数据库：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 选择 0号库</span></span><br><span class="line"><span class="keyword">select</span> 0</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>服务</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>快速在Linux环境下安装配置Tomcat并部署项目测试</title>
+    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10005-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8tomcat/</url>
+    <content><![CDATA[<h2 id="使用Xshell工具连上Linux服务器"><a href="#使用Xshell工具连上Linux服务器" class="headerlink" title="使用Xshell工具连上Linux服务器"></a>使用Xshell工具连上Linux服务器</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/1.png" alt="页面效果"></p>
+<h2 id="下载Tomcat9-的安装包"><a href="#下载Tomcat9-的安装包" class="headerlink" title="下载Tomcat9 的安装包"></a>下载Tomcat9 的安装包</h2><p>链接：<a href="https://pan.baidu.com/s/1As5zvaQmUdyv2lIi0Lu3Qw">https://pan.baidu.com/s/1As5zvaQmUdyv2lIi0Lu3Qw</a><br>提取码：dm8g </p>
+<p><strong>注意:tomcat安装配置前必须确保jdk已经安装配置完成</strong></p>
+<p>将下载的安装包上传到Linux下的opt目录</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/2.png" alt="页面效果"></p>
+<h2 id="解压tomcat"><a href="#解压tomcat" class="headerlink" title="解压tomcat"></a>解压tomcat</h2><blockquote>
+<p>执行如下命令解压tomcat</p>
+</blockquote>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/3.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/4.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/5.png" alt="页面效果"></p>
+<h2 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h2><h3 id="进入到tomcat下bin目录中"><a href="#进入到tomcat下bin目录中" class="headerlink" title="进入到tomcat下bin目录中"></a>进入到tomcat下bin目录中</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/6.png" alt="页面效果"></p>
+<h3 id="启动tomcat"><a href="#启动tomcat" class="headerlink" title="启动tomcat"></a>启动tomcat</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./start</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/7.png" alt="页面效果"></p>
+<h3 id="查看tomcat启动日志，是否启动成功"><a href="#查看tomcat启动日志，是否启动成功" class="headerlink" title="查看tomcat启动日志，是否启动成功"></a>查看tomcat启动日志，是否启动成功</h3><p>切入到logs下目录下查看项目启动状态</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/8.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/9.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/10.png" alt="页面效果"></p>
+<h2 id="测试访问Tomcat"><a href="#测试访问Tomcat" class="headerlink" title="测试访问Tomcat"></a>测试访问Tomcat</h2><h3 id="打开浏览器输入如下地址"><a href="#打开浏览器输入如下地址" class="headerlink" title="打开浏览器输入如下地址"></a>打开浏览器输入如下地址</h3><blockquote>
+<p><a href="http://192.168.195.131:8080/">http://192.168.195.131:8080</a></p>
+</blockquote>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/11.png" alt="页面效果"></p>
+<h3 id="在服务器地址和端口都没错情况-访问不了，原因，防火墙拦截了8080端口"><a href="#在服务器地址和端口都没错情况-访问不了，原因，防火墙拦截了8080端口" class="headerlink" title="在服务器地址和端口都没错情况,访问不了，原因，防火墙拦截了8080端口"></a>在服务器地址和端口都没错情况,访问不了，原因，防火墙拦截了8080端口</h3><p>输入如下命令查看防火墙状态</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl  status firewalld.service</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/12.png" alt="页面效果"></p>
+<h2 id="防火墙规则中添加8080端口"><a href="#防火墙规则中添加8080端口" class="headerlink" title="防火墙规则中添加8080端口"></a>防火墙规则中添加8080端口</h2><h3 id="查询有哪些端口是开启的"><a href="#查询有哪些端口是开启的" class="headerlink" title="查询有哪些端口是开启的"></a>查询有哪些端口是开启的</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --list-port</span><br></pre></td></tr></table></figure>
+
+<h3 id="查询9090端口是否开启："><a href="#查询9090端口是否开启：" class="headerlink" title="查询9090端口是否开启："></a>查询9090端口是否开启：</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --query-port=9090/tcp</span><br></pre></td></tr></table></figure>
+
+<h3 id="开启9090端口"><a href="#开启9090端口" class="headerlink" title="开启9090端口"></a>开启9090端口</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=9090/tcp --permanent</span><br></pre></td></tr></table></figure>
+
+<h3 id="重启防火墙生效"><a href="#重启防火墙生效" class="headerlink" title="重启防火墙生效"></a>重启防火墙生效</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>命令含义： –zone #作用域 –add-port&#x3D;9090&#x2F;tcp #添加端口，格式为：端口&#x2F;通讯协议 –permanent #永久生效，没有此参数重启后失效</p>
+</blockquote>
+<h3 id="删除9090端口"><a href="#删除9090端口" class="headerlink" title="删除9090端口"></a>删除9090端口</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --remove-port=9090/tcp --permanent</span><br></pre></td></tr></table></figure>
+
+<h3 id="重启防火墙生效-1"><a href="#重启防火墙生效-1" class="headerlink" title="重启防火墙生效"></a>重启防火墙生效</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+
+<h3 id="关闭并禁用"><a href="#关闭并禁用" class="headerlink" title="关闭并禁用"></a>关闭并禁用</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl disable firewalld</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/13.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/14.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/15.png" alt="页面效果"></p>
+<h3 id="验证tomcat是否可以访问"><a href="#验证tomcat是否可以访问" class="headerlink" title="验证tomcat是否可以访问"></a>验证tomcat是否可以访问</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/16.png" alt="页面效果"></p>
+<h2 id="快速部署项目测试"><a href="#快速部署项目测试" class="headerlink" title="快速部署项目测试"></a>快速部署项目测试</h2><h3 id="先停止tomcat服务器"><a href="#先停止tomcat服务器" class="headerlink" title="先停止tomcat服务器"></a>先停止tomcat服务器</h3><p>切换到tomcat的bin目录</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/17.png" alt="页面效果"></p>
+<p>执行停止的命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./shutdown.sh</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/18.png" alt="页面效果"></p>
+<h3 id="部署简单项目测试–先准备一个web静态网页项目"><a href="#部署简单项目测试–先准备一个web静态网页项目" class="headerlink" title="部署简单项目测试–先准备一个web静态网页项目"></a>部署简单项目测试–先准备一个web静态网页项目</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/19.png" alt="页面效果"></p>
+<p>博哥个人主页 <a href="https://www.aliyundrive.com/s/Fyw9Q5tuF4u">https://www.aliyundrive.com/s/Fyw9Q5tuF4u</a> </p>
+<p>将上面这个项目上传到tomcat的webapps目录</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/20.png" alt="页面效果"></p>
+<h3 id="重新启动tomcat访问该项目"><a href="#重新启动tomcat访问该项目" class="headerlink" title="重新启动tomcat访问该项目"></a>重新启动tomcat访问该项目</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/21.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/22.png" alt="页面效果"></p>
+]]></content>
+      <categories>
+        <category>服务</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>tomcat</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker环境下安装Nginx</title>
+    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10011-Docker%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85Nginx/</url>
+    <content><![CDATA[<h2 id="准备好centos7环境并安装好了Docker"><a href="#准备好centos7环境并安装好了Docker" class="headerlink" title="准备好centos7环境并安装好了Docker"></a>准备好centos7环境并安装好了Docker</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A12/1.png"></p>
+<h2 id="Docker安装Nginx过程"><a href="#Docker安装Nginx过程" class="headerlink" title="Docker安装Nginx过程"></a>Docker安装Nginx过程</h2><h3 id="拉取和查看mysq镜像"><a href="#拉取和查看mysq镜像" class="headerlink" title="拉取和查看mysq镜像"></a>拉取和查看mysq镜像</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull nginx</span><br><span class="line">docker images</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A12/1.png"></p>
+<h3 id="创建Nginx配置文件"><a href="#创建Nginx配置文件" class="headerlink" title="创建Nginx配置文件"></a>创建Nginx配置文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 创建挂载目录</span></span><br><span class="line"><span class="built_in">mkdir</span> -p /home/nginx/conf</span><br><span class="line"><span class="built_in">mkdir</span> -p /home/nginx/log</span><br><span class="line"><span class="built_in">mkdir</span> -p /home/nginx/html</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A12/2.png"></p>
+<h3 id="容器中的nginx-conf文件和conf-d文件夹复制到宿主机"><a href="#容器中的nginx-conf文件和conf-d文件夹复制到宿主机" class="headerlink" title="容器中的nginx.conf文件和conf.d文件夹复制到宿主机"></a>容器中的nginx.conf文件和conf.d文件夹复制到宿主机</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 生成容器</span></span><br><span class="line">docker run --name nginx -p 9001:80 -d nginx</span><br><span class="line"><span class="comment"># 将容器nginx.conf文件复制到宿主机</span></span><br><span class="line">docker <span class="built_in">cp</span> nginx:/etc/nginx/nginx.conf /home/nginx/conf/nginx.conf</span><br><span class="line"><span class="comment"># 将容器conf.d文件夹下内容复制到宿主机</span></span><br><span class="line">docker <span class="built_in">cp</span> nginx:/etc/nginx/conf.d /home/nginx/conf/conf.d</span><br><span class="line"><span class="comment"># 将容器中的html文件夹复制到宿主机</span></span><br><span class="line">docker <span class="built_in">cp</span> nginx:/usr/share/nginx/html /home/nginx/</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A12/3.png"></p>
+<h3 id="创建Nginx容器并运行"><a href="#创建Nginx容器并运行" class="headerlink" title="创建Nginx容器并运行"></a>创建Nginx容器并运行</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 直接执行docker rm nginx或者以容器id方式关闭容器</span></span><br><span class="line"><span class="comment"># 找到nginx对应的容器id</span></span><br><span class="line">docker ps -a</span><br><span class="line"><span class="comment"># 关闭该容器</span></span><br><span class="line">docker stop nginx</span><br><span class="line"><span class="comment"># 删除该容器</span></span><br><span class="line">docker <span class="built_in">rm</span> nginx</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 删除正在运行的nginx容器</span></span><br><span class="line">docker <span class="built_in">rm</span> -f nginx</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run \</span><br><span class="line">-p 9002:80 \</span><br><span class="line">--name nginx \</span><br><span class="line">-v /home/nginx/conf/nginx.conf:/etc/nginx/nginx.conf \</span><br><span class="line">-v /home/nginx/conf/conf.d:/etc/nginx/conf.d \</span><br><span class="line">-v /home/nginx/log:/var/log/nginx \</span><br><span class="line">-v /home/nginx/html:/usr/share/nginx/html \</span><br><span class="line">-d nginx:latest</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A12/4.png"></p>
+<table>
+<thead>
+<tr>
+<th align="left">命令</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">–name nginx</td>
+<td align="left">启动容器的名字</td>
+</tr>
+<tr>
+<td align="left">-d</td>
+<td align="left">后台运行</td>
+</tr>
+<tr>
+<td align="left">-p 9002:80</td>
+<td align="left">将容器的 9002(后面那个) 端口映射到主机的 80(前面那个) 端口</td>
+</tr>
+<tr>
+<td align="left">-v &#x2F;home&#x2F;nginx&#x2F;conf&#x2F;nginx.conf:&#x2F;etc&#x2F;nginx&#x2F;nginx.conf</td>
+<td align="left">挂载nginx.conf配置文件</td>
+</tr>
+<tr>
+<td align="left">-v &#x2F;home&#x2F;nginx&#x2F;conf&#x2F;conf.d:&#x2F;etc&#x2F;nginx&#x2F;conf.d</td>
+<td align="left">挂载nginx配置文件</td>
+</tr>
+<tr>
+<td align="left">-v &#x2F;home&#x2F;nginx&#x2F;log:&#x2F;var&#x2F;log&#x2F;nginx</td>
+<td align="left">挂载nginx日志文件</td>
+</tr>
+<tr>
+<td align="left">-v &#x2F;home&#x2F;nginx&#x2F;html:&#x2F;usr&#x2F;share&#x2F;nginx&#x2F;html</td>
+<td align="left">挂载nginx内容</td>
+</tr>
+<tr>
+<td align="left">nginx:latest</td>
+<td align="left">本地运行的版本</td>
+</tr>
+<tr>
+<td align="left">\</td>
+<td align="left">shell 命令换行</td>
+</tr>
+</tbody></table>
+<h3 id="结果检测"><a href="#结果检测" class="headerlink" title="结果检测"></a>结果检测</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A12/5.png"></p>
+]]></content>
+      <categories>
+        <category>服务</category>
+      </categories>
+      <tags>
+        <tag>Nginx</tag>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Docker环境下安装Mysql8</title>
     <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10010-Docker%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85Mysql8/</url>
     <content><![CDATA[<h2 id="准备好centos7环境并安装好了Docker"><a href="#准备好centos7环境并安装好了Docker" class="headerlink" title="准备好centos7环境并安装好了Docker"></a>准备好centos7环境并安装好了Docker</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/1.png"></p>
@@ -1644,78 +1716,6 @@
       <tags>
         <tag>Docker</tag>
         <tag>Tomcat</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker环境下安装Nginx</title>
-    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10011-Docker%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85Nginx/</url>
-    <content><![CDATA[<h2 id="准备好centos7环境并安装好了Docker"><a href="#准备好centos7环境并安装好了Docker" class="headerlink" title="准备好centos7环境并安装好了Docker"></a>准备好centos7环境并安装好了Docker</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A12/1.png"></p>
-<h2 id="Docker安装Nginx过程"><a href="#Docker安装Nginx过程" class="headerlink" title="Docker安装Nginx过程"></a>Docker安装Nginx过程</h2><h3 id="拉取和查看mysq镜像"><a href="#拉取和查看mysq镜像" class="headerlink" title="拉取和查看mysq镜像"></a>拉取和查看mysq镜像</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull nginx</span><br><span class="line">docker images</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A12/1.png"></p>
-<h3 id="创建Nginx配置文件"><a href="#创建Nginx配置文件" class="headerlink" title="创建Nginx配置文件"></a>创建Nginx配置文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 创建挂载目录</span></span><br><span class="line"><span class="built_in">mkdir</span> -p /home/nginx/conf</span><br><span class="line"><span class="built_in">mkdir</span> -p /home/nginx/log</span><br><span class="line"><span class="built_in">mkdir</span> -p /home/nginx/html</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A12/2.png"></p>
-<h3 id="容器中的nginx-conf文件和conf-d文件夹复制到宿主机"><a href="#容器中的nginx-conf文件和conf-d文件夹复制到宿主机" class="headerlink" title="容器中的nginx.conf文件和conf.d文件夹复制到宿主机"></a>容器中的nginx.conf文件和conf.d文件夹复制到宿主机</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 生成容器</span></span><br><span class="line">docker run --name nginx -p 9001:80 -d nginx</span><br><span class="line"><span class="comment"># 将容器nginx.conf文件复制到宿主机</span></span><br><span class="line">docker <span class="built_in">cp</span> nginx:/etc/nginx/nginx.conf /home/nginx/conf/nginx.conf</span><br><span class="line"><span class="comment"># 将容器conf.d文件夹下内容复制到宿主机</span></span><br><span class="line">docker <span class="built_in">cp</span> nginx:/etc/nginx/conf.d /home/nginx/conf/conf.d</span><br><span class="line"><span class="comment"># 将容器中的html文件夹复制到宿主机</span></span><br><span class="line">docker <span class="built_in">cp</span> nginx:/usr/share/nginx/html /home/nginx/</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A12/3.png"></p>
-<h3 id="创建Nginx容器并运行"><a href="#创建Nginx容器并运行" class="headerlink" title="创建Nginx容器并运行"></a>创建Nginx容器并运行</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 直接执行docker rm nginx或者以容器id方式关闭容器</span></span><br><span class="line"><span class="comment"># 找到nginx对应的容器id</span></span><br><span class="line">docker ps -a</span><br><span class="line"><span class="comment"># 关闭该容器</span></span><br><span class="line">docker stop nginx</span><br><span class="line"><span class="comment"># 删除该容器</span></span><br><span class="line">docker <span class="built_in">rm</span> nginx</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 删除正在运行的nginx容器</span></span><br><span class="line">docker <span class="built_in">rm</span> -f nginx</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run \</span><br><span class="line">-p 9002:80 \</span><br><span class="line">--name nginx \</span><br><span class="line">-v /home/nginx/conf/nginx.conf:/etc/nginx/nginx.conf \</span><br><span class="line">-v /home/nginx/conf/conf.d:/etc/nginx/conf.d \</span><br><span class="line">-v /home/nginx/log:/var/log/nginx \</span><br><span class="line">-v /home/nginx/html:/usr/share/nginx/html \</span><br><span class="line">-d nginx:latest</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A12/4.png"></p>
-<table>
-<thead>
-<tr>
-<th align="left">命令</th>
-<th align="left">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">–name nginx</td>
-<td align="left">启动容器的名字</td>
-</tr>
-<tr>
-<td align="left">-d</td>
-<td align="left">后台运行</td>
-</tr>
-<tr>
-<td align="left">-p 9002:80</td>
-<td align="left">将容器的 9002(后面那个) 端口映射到主机的 80(前面那个) 端口</td>
-</tr>
-<tr>
-<td align="left">-v &#x2F;home&#x2F;nginx&#x2F;conf&#x2F;nginx.conf:&#x2F;etc&#x2F;nginx&#x2F;nginx.conf</td>
-<td align="left">挂载nginx.conf配置文件</td>
-</tr>
-<tr>
-<td align="left">-v &#x2F;home&#x2F;nginx&#x2F;conf&#x2F;conf.d:&#x2F;etc&#x2F;nginx&#x2F;conf.d</td>
-<td align="left">挂载nginx配置文件</td>
-</tr>
-<tr>
-<td align="left">-v &#x2F;home&#x2F;nginx&#x2F;log:&#x2F;var&#x2F;log&#x2F;nginx</td>
-<td align="left">挂载nginx日志文件</td>
-</tr>
-<tr>
-<td align="left">-v &#x2F;home&#x2F;nginx&#x2F;html:&#x2F;usr&#x2F;share&#x2F;nginx&#x2F;html</td>
-<td align="left">挂载nginx内容</td>
-</tr>
-<tr>
-<td align="left">nginx:latest</td>
-<td align="left">本地运行的版本</td>
-</tr>
-<tr>
-<td align="left">\</td>
-<td align="left">shell 命令换行</td>
-</tr>
-</tbody></table>
-<h3 id="结果检测"><a href="#结果检测" class="headerlink" title="结果检测"></a>结果检测</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A12/5.png"></p>
-]]></content>
-      <categories>
-        <category>服务</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-        <tag>Nginx</tag>
       </tags>
   </entry>
   <entry>
