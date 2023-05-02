@@ -15,47 +15,47 @@
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"mrbodev.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="使用Xshell工具连上Linux服务器 下载Tomcat9 的安装包链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1As5zvaQmUdyv2lIi0Lu3Qw提取码：dm8g  注意:tomcat安装配置前必须确保jdk已经安装配置完成 将下载的安装包上传到Linux下的opt目录  解压tomcat 执行如下命令解压tomcat     启动Tomcat进入到tomcat下bin目录">
 <meta property="og:type" content="article">
 <meta property="og:title" content="快速在Linux环境下安装配置Tomcat并部署项目测试">
-<meta property="og:url" content="http://example.com/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10005-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8tomcat/index.html">
+<meta property="og:url" content="https://mrbodev.github.io/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10005-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8tomcat/index.html">
 <meta property="og:site_name" content="博哥编程日记">
 <meta property="og:description" content="使用Xshell工具连上Linux服务器 下载Tomcat9 的安装包链接：https:&#x2F;&#x2F;pan.baidu.com&#x2F;s&#x2F;1As5zvaQmUdyv2lIi0Lu3Qw提取码：dm8g  注意:tomcat安装配置前必须确保jdk已经安装配置完成 将下载的安装包上传到Linux下的opt目录  解压tomcat 执行如下命令解压tomcat     启动Tomcat进入到tomcat下bin目录">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A5/1.png">
-<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A5/2.png">
-<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A5/3.png">
-<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A5/4.png">
-<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A5/5.png">
-<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A5/6.png">
-<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A5/7.png">
-<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A5/8.png">
-<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A5/9.png">
-<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A5/10.png">
-<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A5/11.png">
-<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A5/12.png">
-<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A5/13.png">
-<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A5/14.png">
-<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A5/15.png">
-<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A5/16.png">
-<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A5/17.png">
-<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A5/18.png">
-<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A5/19.png">
-<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A5/20.png">
-<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A5/21.png">
-<meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A5/22.png">
+<meta property="og:image" content="https://mrbodev.github.io/images/%E6%9C%8D%E5%8A%A1/04/A5/1.png">
+<meta property="og:image" content="https://mrbodev.github.io/images/%E6%9C%8D%E5%8A%A1/04/A5/2.png">
+<meta property="og:image" content="https://mrbodev.github.io/images/%E6%9C%8D%E5%8A%A1/04/A5/3.png">
+<meta property="og:image" content="https://mrbodev.github.io/images/%E6%9C%8D%E5%8A%A1/04/A5/4.png">
+<meta property="og:image" content="https://mrbodev.github.io/images/%E6%9C%8D%E5%8A%A1/04/A5/5.png">
+<meta property="og:image" content="https://mrbodev.github.io/images/%E6%9C%8D%E5%8A%A1/04/A5/6.png">
+<meta property="og:image" content="https://mrbodev.github.io/images/%E6%9C%8D%E5%8A%A1/04/A5/7.png">
+<meta property="og:image" content="https://mrbodev.github.io/images/%E6%9C%8D%E5%8A%A1/04/A5/8.png">
+<meta property="og:image" content="https://mrbodev.github.io/images/%E6%9C%8D%E5%8A%A1/04/A5/9.png">
+<meta property="og:image" content="https://mrbodev.github.io/images/%E6%9C%8D%E5%8A%A1/04/A5/10.png">
+<meta property="og:image" content="https://mrbodev.github.io/images/%E6%9C%8D%E5%8A%A1/04/A5/11.png">
+<meta property="og:image" content="https://mrbodev.github.io/images/%E6%9C%8D%E5%8A%A1/04/A5/12.png">
+<meta property="og:image" content="https://mrbodev.github.io/images/%E6%9C%8D%E5%8A%A1/04/A5/13.png">
+<meta property="og:image" content="https://mrbodev.github.io/images/%E6%9C%8D%E5%8A%A1/04/A5/14.png">
+<meta property="og:image" content="https://mrbodev.github.io/images/%E6%9C%8D%E5%8A%A1/04/A5/15.png">
+<meta property="og:image" content="https://mrbodev.github.io/images/%E6%9C%8D%E5%8A%A1/04/A5/16.png">
+<meta property="og:image" content="https://mrbodev.github.io/images/%E6%9C%8D%E5%8A%A1/04/A5/17.png">
+<meta property="og:image" content="https://mrbodev.github.io/images/%E6%9C%8D%E5%8A%A1/04/A5/18.png">
+<meta property="og:image" content="https://mrbodev.github.io/images/%E6%9C%8D%E5%8A%A1/04/A5/19.png">
+<meta property="og:image" content="https://mrbodev.github.io/images/%E6%9C%8D%E5%8A%A1/04/A5/20.png">
+<meta property="og:image" content="https://mrbodev.github.io/images/%E6%9C%8D%E5%8A%A1/04/A5/21.png">
+<meta property="og:image" content="https://mrbodev.github.io/images/%E6%9C%8D%E5%8A%A1/04/A5/22.png">
 <meta property="article:published_time" content="2023-04-22T04:39:04.000Z">
 <meta property="article:modified_time" content="2023-05-02T06:46:28.114Z">
 <meta property="article:author" content="博哥">
-<meta property="article:tag" content="linux">
 <meta property="article:tag" content="tomcat">
+<meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1/04/A5/1.png">
+<meta name="twitter:image" content="https://mrbodev.github.io/images/%E6%9C%8D%E5%8A%A1/04/A5/1.png">
 
-<link rel="canonical" href="http://example.com/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10005-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8tomcat/">
+<link rel="canonical" href="https://mrbodev.github.io/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10005-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8tomcat/">
 
 
 <script id="page-configurations">
@@ -207,7 +207,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10005-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8tomcat/">
+    <link itemprop="mainEntityOfPage" href="https://mrbodev.github.io/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10005-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8tomcat/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -348,8 +348,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/linux/" rel="tag"># linux</a>
               <a href="/tags/tomcat/" rel="tag"># tomcat</a>
+              <a href="/tags/linux/" rel="tag"># linux</a>
           </div>
 
         
@@ -358,12 +358,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10011-Docker%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85Nginx/" rel="prev" title="Docker环境下安装Nginx">
-      <i class="fa fa-chevron-left"></i> Docker环境下安装Nginx
+    <a href="/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10006-%E5%A6%82%E4%BD%95%E5%9C%A8windows%E4%B8%8B%E5%BF%AB%E9%80%9F%E6%A8%A1%E6%8B%9F%E6%90%AD%E5%BB%BALinux%E7%8E%AF%E5%A2%83/" rel="prev" title="如何在windows下快速模拟搭建Linux环境">
+      <i class="fa fa-chevron-left"></i> 如何在windows下快速模拟搭建Linux环境
     </a></div>
       <div class="post-nav-item">
-    <a href="/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10007-Linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85Redis/" rel="next" title="Redis安装说明">
-      Redis安装说明 <i class="fa fa-chevron-right"></i>
+    <a href="/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10002-windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJdk/" rel="next" title="window环境下安装配置Jdk环境">
+      window环境下安装配置Jdk环境 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>

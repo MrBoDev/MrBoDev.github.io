@@ -15,13 +15,13 @@
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"mrbodev.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="Docker容器化部署Rancher2.x实战简介：云服务器Docker容器化部署Rancher2.x实战 注意事项 基于Docker镜像安装Rancher，阿里云 Linux CentOS 7.8 + Docker-20.10.10 2核8g内存+5M带宽   选择Rancher机器可以把【内存+带宽】弄大点，因为Rancher部署好后需要下载很多的镜像，不要因为内存问题导致部署没成功">
 <meta property="og:type" content="article">
 <meta property="og:title" content="容器编排调度-K8S可视化工具Rancher2.x实战">
-<meta property="og:url" content="http://example.com/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10016-%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92%E8%B0%83%E5%BA%A6-K8S%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7Rancher2.x%E5%AE%9E%E6%88%98/index.html">
+<meta property="og:url" content="https://mrbodev.github.io/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10016-%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92%E8%B0%83%E5%BA%A6-K8S%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7Rancher2.x%E5%AE%9E%E6%88%98/index.html">
 <meta property="og:site_name" content="博哥编程日记">
 <meta property="og:description" content="Docker容器化部署Rancher2.x实战简介：云服务器Docker容器化部署Rancher2.x实战 注意事项 基于Docker镜像安装Rancher，阿里云 Linux CentOS 7.8 + Docker-20.10.10 2核8g内存+5M带宽   选择Rancher机器可以把【内存+带宽】弄大点，因为Rancher部署好后需要下载很多的镜像，不要因为内存问题导致部署没成功">
 <meta property="og:locale" content="zh_CN">
@@ -31,7 +31,7 @@
 <meta property="article:tag" content="K8s">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10016-%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92%E8%B0%83%E5%BA%A6-K8S%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7Rancher2.x%E5%AE%9E%E6%88%98/">
+<link rel="canonical" href="https://mrbodev.github.io/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10016-%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92%E8%B0%83%E5%BA%A6-K8S%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7Rancher2.x%E5%AE%9E%E6%88%98/">
 
 
 <script id="page-configurations">
@@ -183,7 +183,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10016-%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92%E8%B0%83%E5%BA%A6-K8S%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7Rancher2.x%E5%AE%9E%E6%88%98/">
+    <link itemprop="mainEntityOfPage" href="https://mrbodev.github.io/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10016-%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92%E8%B0%83%E5%BA%A6-K8S%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7Rancher2.x%E5%AE%9E%E6%88%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -309,10 +309,7 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2023/04/22/%E5%B7%A5%E5%85%B7/04/1001-Ngrock%E5%86%85%E5%A4%96%E7%A9%BF%E9%80%8F%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/" rel="prev" title="博哥带你快速了解内网穿透软件的使用">
-      <i class="fa fa-chevron-left"></i> 博哥带你快速了解内网穿透软件的使用
-    </a></div>
+      <div class="post-nav-item"></div>
       <div class="post-nav-item">
     <a href="/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10015-%E5%9F%BA%E4%BA%8EKubAdmin%E6%90%AD%E5%BB%BA%E5%A4%9A%E8%8A%82%E7%82%B9K8S%E9%9B%86%E7%BE%A4/" rel="next" title="基于KubAdmin搭建多节点K8S集群">
       基于KubAdmin搭建多节点K8S集群 <i class="fa fa-chevron-right"></i>
