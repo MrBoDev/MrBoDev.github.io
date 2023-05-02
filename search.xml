@@ -92,101 +92,6 @@
       </tags>
   </entry>
   <entry>
-    <title>炫酷的玻璃形态按钮的制作</title>
-    <url>/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10003-%E7%82%AB%E9%85%B7%E7%9A%84%E7%8E%BB%E7%92%83%E5%BD%A2%E6%80%81%E6%8C%89%E9%92%AE%E7%9A%84%E5%88%B6%E4%BD%9C/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h2><blockquote>
-<ul>
-<li>HTML</li>
-<li>CSS3</li>
-</ul>
-</blockquote>
-<h2 id="案列效果"><a href="#案列效果" class="headerlink" title="案列效果"></a>案列效果</h2><p><img src="/images/%E5%89%8D%E7%AB%AF/05/A3/1.png" alt="效果1"></p>
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A3/2.png" alt="效果1"></p>
-<h2 id="重要参数准备"><a href="#重要参数准备" class="headerlink" title="重要参数准备"></a>重要参数准备</h2><blockquote>
-<ul>
-<li><strong>1.页面背景色</strong></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--background-color</span>: <span class="number">#350048</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>2.父容器宽度</strong></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--container-width</span>: <span class="number">600px</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>3.按钮宽度</strong></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--bth-width</span>: <span class="number">155px</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>4.按钮高度</strong></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-height</span>: <span class="number">50px</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><em><strong>5.按钮背景色</strong></em></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&gt;<span class="attr">--btn-a-background-color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.05</span>);</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><em><strong>6.按钮阴影色</strong></em></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-a-box-shadow</span>: <span class="number">0</span> <span class="number">15px</span> <span class="number">35px</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.2</span>);</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><em><strong>7.按钮边框颜色</strong></em></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-a-border-top-color</span>:<span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.1</span>);</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>8.按钮圆角</strong></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-a-border-radius</span>:<span class="number">30px</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><em><strong>9.按钮字体颜色</strong></em></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-a-color</span>: <span class="number">#fff</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>10.按钮为元素 背景色</strong></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&gt;<span class="attr">--btn-a-before-background-color</span>:<span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.15</span>)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>11.按钮背景伪元素的宽高</strong></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-before-background-width</span>:<span class="number">30px</span>;</span><br><span class="line"><span class="attr">--btn-before-background-height</span>:<span class="number">10px</span>;</span><br><span class="line"><span class="attr">--btn-after-background-width</span>:<span class="number">30px</span>;</span><br><span class="line"><span class="attr">--btn-after-background-height</span>:<span class="number">10px</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>12 鼠标移动时按钮背景伪元素宽高</strong></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">height</span>: <span class="number">50%</span>;</span><br><span class="line"><span class="attribute">width</span>: <span class="number">80%</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>13 伪元素背景色和阴影</strong></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&gt;<span class="comment">/*1.背景1*/</span></span><br><span class="line">&gt;<span class="attribute">background</span>: <span class="number">#ff1f71</span>;</span><br><span class="line">&gt;<span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="number">#ff1f71</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">15px</span> <span class="number">#ff1f71</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">30px</span> <span class="number">#ff1f71</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">60px</span> <span class="number">#ff1f71</span>;</span><br><span class="line">&gt;<span class="comment">/*2.背景2*/</span></span><br><span class="line">&gt;<span class="attribute">background</span>: <span class="number">#2bd2ff</span>;</span><br><span class="line">&gt;<span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="number">#2bd2ff</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">15px</span> <span class="number">#2bd2ff</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">30px</span> <span class="number">#2bd2ff</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">60px</span> <span class="number">#2bd2ff</span>;</span><br><span class="line">&gt;<span class="comment">/*3.背景3*/</span></span><br><span class="line">&gt;<span class="attribute">background</span>: <span class="number">#1eff45</span>;</span><br><span class="line">&gt;<span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="number">#1eff45</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">15px</span> <span class="number">#1eff45</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">30px</span> <span class="number">#1eff45</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">60px</span> <span class="number">#1eff45</span>;</span><br><span class="line">&gt;&#125;</span><br></pre></td></tr></table></figure>
-
-
-</blockquote>
-<h2 id="具体实现步骤思路解析-gt-观看B站教程"><a href="#具体实现步骤思路解析-gt-观看B站教程" class="headerlink" title="具体实现步骤思路解析&gt;观看B站教程"></a>具体实现步骤思路解析&gt;观看B站教程</h2><p><a href="https://www.bilibili.com/video/BV1Us4y1t7TT/?spm_id_from=333.999.0.0&vd_source=f3e9b6267b64788ca7c02128e6a463b6">博哥教你快速实现毛玻璃发光按钮制作_哔哩哔哩_bilibili</a></p>
-
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
-<iframe src="//player.bilibili.com/player.html?aid=948086410&bvid=BV1Us4y1t7TT&cid=972275652&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; Left: 0; top: 0;"></iframe></div>
-
-
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>前端案列</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>快速掌握网格布局核心知识</title>
     <url>/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10004-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E5%BF%AB%E9%80%9F%E5%AD%A6%E4%BC%9A%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h2><blockquote>
@@ -659,6 +564,40 @@
       </tags>
   </entry>
   <entry>
+    <title>漂亮的代码雨效果</title>
+    <url>/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10005-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E5%88%B6%E4%BD%9C%E4%BB%A3%E7%A0%81%E9%9B%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><table><tr><td bgcolor="BlueViolet"><font color="white">作者:博哥 时间:2023-02-11</font></td></tr></table>
+
+<h2 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h2><blockquote>
+<ul>
+<li>HTML</li>
+<li>CSS3</li>
+<li>JavaScript</li>
+</ul>
+</blockquote>
+<h2 id="基础参数"><a href="#基础参数" class="headerlink" title="基础参数"></a>基础参数</h2><blockquote>
+<ul>
+<li><strong>代码雨颜色</strong></li>
+</ul>
+<p> #0ff</p>
+<p> #0f0</p>
+<p> #f00</p>
+<ul>
+<li><strong>代码雨高度</strong></li>
+</ul>
+<p> 200px</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>前端案列</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何让我们写的代码更漂亮</title>
     <url>/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10006-%E5%A6%82%E4%BD%95%E8%AE%A9%E6%88%91%E4%BB%AC%E5%86%99%E7%9A%84%E4%BB%A3%E7%A0%81%E6%9B%B4%E6%BC%82%E4%BA%AE/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><table><tr><td bgcolor="BlueViolet"><font color="white">作者:博哥 时间:2023-02-26</font></td></tr></table>
@@ -710,29 +649,90 @@
       </tags>
   </entry>
   <entry>
-    <title>漂亮的代码雨效果</title>
-    <url>/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10005-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E5%88%B6%E4%BD%9C%E4%BB%A3%E7%A0%81%E9%9B%A8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><table><tr><td bgcolor="BlueViolet"><font color="white">作者:博哥 时间:2023-02-11</font></td></tr></table>
-
-<h2 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h2><blockquote>
+    <title>炫酷的玻璃形态按钮的制作</title>
+    <url>/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10003-%E7%82%AB%E9%85%B7%E7%9A%84%E7%8E%BB%E7%92%83%E5%BD%A2%E6%80%81%E6%8C%89%E9%92%AE%E7%9A%84%E5%88%B6%E4%BD%9C/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h2><blockquote>
 <ul>
 <li>HTML</li>
 <li>CSS3</li>
-<li>JavaScript</li>
 </ul>
 </blockquote>
-<h2 id="基础参数"><a href="#基础参数" class="headerlink" title="基础参数"></a>基础参数</h2><blockquote>
+<h2 id="案列效果"><a href="#案列效果" class="headerlink" title="案列效果"></a>案列效果</h2><p><img src="/images/%E5%89%8D%E7%AB%AF/05/A3/1.png" alt="效果1"></p>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A3/2.png" alt="效果1"></p>
+<h2 id="重要参数准备"><a href="#重要参数准备" class="headerlink" title="重要参数准备"></a>重要参数准备</h2><blockquote>
 <ul>
-<li><strong>代码雨颜色</strong></li>
+<li><strong>1.页面背景色</strong></li>
 </ul>
-<p> #0ff</p>
-<p> #0f0</p>
-<p> #f00</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--background-color</span>: <span class="number">#350048</span>;</span><br></pre></td></tr></table></figure>
+
 <ul>
-<li><strong>代码雨高度</strong></li>
+<li><strong>2.父容器宽度</strong></li>
 </ul>
-<p> 200px</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--container-width</span>: <span class="number">600px</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>3.按钮宽度</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--bth-width</span>: <span class="number">155px</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>4.按钮高度</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-height</span>: <span class="number">50px</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><em><strong>5.按钮背景色</strong></em></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&gt;<span class="attr">--btn-a-background-color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.05</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><em><strong>6.按钮阴影色</strong></em></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-a-box-shadow</span>: <span class="number">0</span> <span class="number">15px</span> <span class="number">35px</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.2</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><em><strong>7.按钮边框颜色</strong></em></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-a-border-top-color</span>:<span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.1</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>8.按钮圆角</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-a-border-radius</span>:<span class="number">30px</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><em><strong>9.按钮字体颜色</strong></em></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-a-color</span>: <span class="number">#fff</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>10.按钮为元素 背景色</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&gt;<span class="attr">--btn-a-before-background-color</span>:<span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.15</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>11.按钮背景伪元素的宽高</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-before-background-width</span>:<span class="number">30px</span>;</span><br><span class="line"><span class="attr">--btn-before-background-height</span>:<span class="number">10px</span>;</span><br><span class="line"><span class="attr">--btn-after-background-width</span>:<span class="number">30px</span>;</span><br><span class="line"><span class="attr">--btn-after-background-height</span>:<span class="number">10px</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>12 鼠标移动时按钮背景伪元素宽高</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">height</span>: <span class="number">50%</span>;</span><br><span class="line"><span class="attribute">width</span>: <span class="number">80%</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>13 伪元素背景色和阴影</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&gt;<span class="comment">/*1.背景1*/</span></span><br><span class="line">&gt;<span class="attribute">background</span>: <span class="number">#ff1f71</span>;</span><br><span class="line">&gt;<span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="number">#ff1f71</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">15px</span> <span class="number">#ff1f71</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">30px</span> <span class="number">#ff1f71</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">60px</span> <span class="number">#ff1f71</span>;</span><br><span class="line">&gt;<span class="comment">/*2.背景2*/</span></span><br><span class="line">&gt;<span class="attribute">background</span>: <span class="number">#2bd2ff</span>;</span><br><span class="line">&gt;<span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="number">#2bd2ff</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">15px</span> <span class="number">#2bd2ff</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">30px</span> <span class="number">#2bd2ff</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">60px</span> <span class="number">#2bd2ff</span>;</span><br><span class="line">&gt;<span class="comment">/*3.背景3*/</span></span><br><span class="line">&gt;<span class="attribute">background</span>: <span class="number">#1eff45</span>;</span><br><span class="line">&gt;<span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="number">#1eff45</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">15px</span> <span class="number">#1eff45</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">30px</span> <span class="number">#1eff45</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">60px</span> <span class="number">#1eff45</span>;</span><br><span class="line">&gt;&#125;</span><br></pre></td></tr></table></figure>
+
+
 </blockquote>
+<h2 id="具体实现步骤思路解析-gt-观看B站教程"><a href="#具体实现步骤思路解析-gt-观看B站教程" class="headerlink" title="具体实现步骤思路解析&gt;观看B站教程"></a>具体实现步骤思路解析&gt;观看B站教程</h2><p><a href="https://www.bilibili.com/video/BV1Us4y1t7TT/?spm_id_from=333.999.0.0&vd_source=f3e9b6267b64788ca7c02128e6a463b6">博哥教你快速实现毛玻璃发光按钮制作_哔哩哔哩_bilibili</a></p>
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
+<iframe src="//player.bilibili.com/player.html?aid=948086410&bvid=BV1Us4y1t7TT&cid=972275652&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; Left: 0; top: 0;"></iframe></div>
+
+
 ]]></content>
       <categories>
         <category>前端</category>
@@ -744,30 +744,46 @@
       </tags>
   </entry>
   <entry>
-    <title>程序员必备GitHub搜索技巧</title>
-    <url>/2023/04/22/%E5%85%B6%E4%BB%96/04/10001-GitHub%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="2d29a21f918038486f665e7f3d6eea4777f7495afbaba6945d8f63f7a52a9ef0">36ebae3cb6203d7c8af26406b224b5f626520a7ad288a3d7fe753ba0f492c7d22ea25ec9c0a2dc6d993792747e5b63f2a030cf317aa27046d035427e47ed67e727ffdff9ddc378adac6d80b2a9a2b972e2303edcfec73bb02edf26fcca6526dca07ae7e821ad1c985eb17fe417f56ede7a7203cf638f0e2e10bc1ec8b8591b3d2f21a215e2a9c244ef7167cb434934b2264f9ee1e58788aa2edb7a77bc4394dd6ab0a833bfb289582662aeccb3273df7391c6a79e35c6681e28b10828bca6cb52b3f720d0a45392792bad5a5e406250598844b6400f4591baef017e06f2794eda153b38ddf9a0d4a80ea11ff8de2f0031e3ae92ee90c151dfc50ad026e1121f6bb3bf8622692fb59f084575e1a2fd12abf00e0044dcb602024faca1672b13826ebd4a49be41f88893ba143f5401651b39d1a98ea059c8254b31be2a8c6f1c89e05c97104b3839aae69554f7daba25bb4a2e62a31724761e2ea8501b1de25aae199b2f85d1a075ea0fe89a2940b04ed00bae44b1f0a1d41a04867a82323c181157b384cab5d74724dc5fb32b3431bf2736c24e315d5973ec2e7e0950ffec7a8d9936b59ee81cfd6231482e5dd7b89c95e6e21cb49a9bb2a082d98e418c08b1e8fca4bd78e89c0ce7b8d03e753ef370e56859afe823b9e76c630dd5c6e4f9def422a6f08164aa681c64a16874637983fc0c70aecf462180f784bb6cc44f93fbb6af549b90d9b650135e145712837f358646dcbdf49c5db1ed6ea42f918eec5008f571b2ddd88e241612c1ed43b69bd5a36a7dec19acb1053f502ca7a3009e375864d11f4f303abf7ed41777fc61f775a6a07afbb3c61b46ae736f9b51fff09493c489b27ab3587e1348566d50bbf0fe533ce700569f17f4f5bb51f1a7f4c3464bd3bdd41ce87d74d0b7c4eead95947730158b5079aaae72a97e29922f6c0983a7da6ab6f19b7df59969965e4adef53fe186c6091ed9631bf2d09346987395b5c28d5b7b57f88c81a33b4c4bdd2d5ac8643ee5529179846589fb98105a9e93d0cb975b669196bb84f7a54fc3d8e0e6507d60b2f427a0e1ae784a02c1f66144c7e7d59b7b2349dea2bf0ac28b9b2889e7fbf1c4b523b8060bedd14fc75e592f015da32acee91570b78b3d2f266ac2741b95665569874b406d5b58816bcfef23a25c566b1f07ae18ee3e8d6f6446854a7c248ef642b5905851afb86cecdac03adf9c3e24df27b6a53f620e5aa91ac7ef1ce715f4fe07c7bbd5d4a1ce6a06463f6f927a0479fce57c42e5c3a47cf0280ea55f7a377c28f6ccd24ce522cc1ceed06d25d852a1e5c6c3ca1456a50e3ad9d001af4b11e31b37fa3fcc6e95d9954179a09abc5d864078124f5cc34b5716f4f544f8696061e34866c1b046764ab74a87377bf3b4cd11d54af78c2872a50c32aafc8ed294817d650eedf6b95cd73ddab65e28b1ba1f13815b1661f74a05df7c98f5465a1111ad11da8940ff457639f4ecd09556d7a2b4017505ab3dc678e21e78281c1d557134ca44f39ca9a3e808da33e313cb550602b393c277ce641905fffaee815604c7b19d57c673daf76644f2fc807702ca7d00a8bcab619ff1e4cc6d411abc2bee7aa856644fe1ec0b8d97abee07263d9fd86348589b8da2ee6d024f8e901dded0c54222a949ef1f5a404e6416d5f6d01a7c4f46a97c209b6b0b15fd3eca11848f9d31469a672af247d45741d9d03956bff8fd28415d6c1df80c6dff26810fbc19ec65a8a99ecb9e78326631e442d34717b6aca432b1b340162cde4556d7ed93fa254787e35097770a6ce8b15edd34aa9ebb2901b65d46c635e0c90383b7df7f175048df05d61952fea6f89ffdd0e34baebf2207aa2054ed8a724e65bff9dea057c94224735d317cf665f398a0849c400da0ff7d914c9c9ac34ead05af1ef893939faf358e34ce649513d41e0f82de2ebaaaa8bd3dad1c0262d24edb23da60702c7f7b9221f46c88a974f94d90d2f48bac37f132f1cdfbddc1dfeeebf6e895df42a7e99de35fa7fc6b2cfd0908742b9878f2650f70cc9a40957cb49b31786efb65d26d0129cacac8751b047144068b3174e54a4bdad35d17a7add3a4d8e81bdafdd642774b266d9d2d9adc474b1885e9a73058170e7faf357f95472538e74ce6773dc0c12c3c60f8c59d0a9f9829b54cc7bb377a3cd406799263ad0a4e06eb50b3f103d4aaeac2a27e0f27f1c9ff0c8d057f3012ba04d9c3be95429c956779b8e389b95c710ea39b1be4f57eecf09964595834533c586f325560059d84d6deadd28abda6f4d8fd71d6bedbc0ac627ecdf89eccacb33a39642b66afa92d338ed32d57aef3d7ecbd2a4e8f04abe4db77c0c5df6cbf4277811fa08d52885d3d1a3b70453369e6dd0015d1d5b4803a6b8cb33bce93e082c309ae9a3946d35c6ca34ec211e396419c05979c4acb7843352ef06755c64cb9ae787854e24eaf9da86c71527d4c3ea2fd8a4c0d8302120d3cb7c9c77439ec1052444fadc7f8d0c007c88851b44a96398d0f165b040e83b147ceb95d428e4923c9cbe05126c5269ab7e2b02a7ec2b06beac2ce905ee6d7252d848ef701b16a932db4541171abf64c67418a005718f4fa5c264e5dbe26732d844868d7d36789e154f3de05ec9e65137a034e935e16fa295b2259d37e8ac6b89785e2632b0f457675414f0073f23dba64ff5dd1eb13f78f67c9f4c57a4030a92dab13200fcb7c4b672cc9ef1fa1c2d400964341434f09d674747ea8dcde1121d17cb417f654e9627a77e6d59ce591b561794bd6384f004d075f7e4ab75cc527926e7115d8b906d456d5fc5dae34c52d9f9c0329b385ae4d820cbf38d6e962b3f909ac032a68c4ed422cb4fa240c9ff46c19fd50d00241b0c7ea70deb57ec8a5e6ffc36c7901e0b1ead67f5bb62c2500333c7598cbc6f33529e9392f6000a4aa43ea667b075d3d95a1d4a9744767a2c25f47bd92d844b7d272559c69b5d809b05e76ecc84ea4345c56a1f8bb3d69926b250729e36d11ccf5ceec33bd5eea5ceb2e71b0095c130d683cdf97f8f039b6e6b839984f90b0b27690b03cd01fd8472c85b6ebe1b719f78a9b2a22a957e4068bd8e9aa2c943194ae4789b7b4f891fb1c9b3d341968c7dc2592ed90ef61750aa6df5235d92c85b280d7456a4932bf6c6bf036d3238aa7ce43e75de7b18a39b5c5cf623e6d84531f878e44f7681f26f0d81a62884d1a4a5e9bee1a516c415af9269369f30993f1ce940e824b28272547b8240986f86c2cf083cac06173381c25b87adc8c51400364469689fae75b2f8c9c0037793d797df06a53ac2c33d88a9bf0fc13dde3a4b852dee3d9b654510bd85396f74d5b5504adab119b85881d5b790552282ad6631a1e16863fe00ac9e65bf09283454431a404c2f65d37d68e9d697c05e26b46f255c644e4ecf7e0ca58399c90ac1601bfc5af3a414326881a6da3241ff4e835a62bd379824305809312cb0e22283516a2ca4abcc9aa88dadf78e6064645248ba24e0c40a77d1211b486ba5c65194938f987bd651ee600fe05c6a4c8750a6374c2e3ab36490a5967da249dc431d3ab315799fab5ba45d4d565c6e5ce6158959b1b0356581ed912683592ffcd7712431f539f8f0dfca70f2668bc2cdedd0a51cf556ebdef2b0673ce5dc21b2e142da805c773856ba71113415e504d919cf175b07c2f3bf0dfef21d390d163887481518f21dafc01ce6a2ead674b50f3e37c5d8db82bfa81d77bad2f00c8b193b162a25be34c7615b6ee708bd1f8bd4f2266cd3cd6187cf4f7bdc0db33c098ab3581be1af0a8323652e5e50fbdefd482a96ea84164dcb0d9948841c99084d544bc9245ba623727fec163488174426ffeec895d4cfbd408b59c7f069c1b72bdcc1579df71d4a7bf3f55e8112f92825d9b1141ecb042894d5c6f13405e61e2702e7e22d5490d978dcd36bfd29ecfd2998688a0ea0788bcfd3968a3e5817e65829c75bc616256e42f9e03306d6dcbaa086f0b0e4920c15ce99f9e8513bc8d11e9a30ba5719082d0d425756d051798627e7512b81d69522a5f5693f3f1a1f6093bdfc2f53b61087b97f3f4b39ca8e886d350fee29fe7825d1a048976097f557ac1b729cd2ad01c27991900a10b24f7ca37f5e8985ab84e171fa801d5a6dbe6a0ad551569618ca149cf21a818f3cb3a2aa7e90d608560fec66217b110f31ae2ebae13874a5ede2650d8f06a1e4334489f108e6d17d9cbd21f7f835dda9059e27e267816dfad097dc81b14ada8217bdd67ece8afe3296762a8b3025a296d8125ede53890969ea219bfd1d8a697b3b3b762710032ac4b12a8ecc519205897c37633e1751c7012ab25c2d0eeceea9c209754d0b083aabab0fde15d1c70f8da6e7d6766c3e569fe53c29bcfa3a5d05e2f63a168c54481e2f83609f03413bcbd03f4026034aee1f6d8cd2a87a3494a75c7d4e48c2ed90454b13c23f2f9390f80d90e9ca2edbed22cff3428fe05f40606216be21caf25d2c556e69844a0350120f995cbd0fc356cee0005fe8a67478e6b77d319b00d8895976cf9be6fa43894d0cac2f210faeecb49e1b9db47e0cfec9a2c57f624af2d972ad5d9e29b981de0550f11b0a97d436912785f2ba38cdf9c3566fbcd59526737a9de02cd59f13a69855e703ed010404661d070cd9d86ba0ab48256c0f02a56984ef7d58682ee7f05d60c4b5117b4a3be89dd0e1d94d0014d81e24323e107a8f02a6a2bb886d9010fe9944279f1483379650e2e4500981464b753655362d8801436aa220c71dbe72b0e836259cc448481c8499e947bf4196acb2eb2fd8ba192a28ff05c86c9d3c50b9740848067455996c1bd7050f0a1ea466547f82b826549a9c05d61e9c3fae297562d5170e24174f7f79fef9db3873c55ddacb80ad74ed2c304b916b4e6bd40d5477f4a448ecfab5db4fa8702aafa45782e98a6f111353156efe3f42640d049a5bd54a2bad49bf64d11e19712bb09af53e11f7f9ee2cfc6bb97e87fd12f8bf0137882f8ebed997df308d3e0d072f39f0f9933a905523a234682b821001d46363951b2607969fef0ed15127562e0c44c6d37c286f7fa6123a19ab50d926196c7415c10859f1d63f4c684fcdc012040c3b084d93de4278f0aeb84865d97459d3657b0032a732ba1b734fa4c2dc03b42dd549f8e6f1d3d2c22120f2963b521f65a61e710f7c5043c641a05cadc640aa11362e1b2ded9edf981a1f602d0d0ed49805ecb114600db7b7ba406110ddcd2c85596832ac0dab0bdcfe00ceca415076e581cd3b21eecb8b164210a71e336dd70377b61c91c21e97f8f6e5787b96a5fd09a60a96c9211d1e831e8c37e8397d85f87b95c7446591b4808c4876330f4ddf217553e023740e96221475a8ac5dc915f189b39ed7653a0eba894d51b050fa2b4fb2c1b26986805f66cede94cd646ab75421a7f6d2688b7bc29f420df005e3807d757dfd75846e7c59a8ad78acd0f364f1116e9ccd6a2e536055c0703b2ad258975fb4ff143fc6a872e51940db654193451e4ae5273464c36fa901bc76f222908e2b619edc34eeeeba6adcb64cf5c09574cfcdd6e318a37159b5e382988633ff1fe7424c6d7f8450e6648896a4fe15f3a096101a86ebcf8c13675944fd3410520966c6a9eff8883321038ed86acff4a1599f8d4dfc9d25712240898c775f16d01aceb3b93def1506e27329062a0d4b255401f34d9e28b168afb1bc409696c82378bda92339fb7d365c40760d7484f280984038b9e404abe7c00e0d71370af8d6334f62de23053ae0285f35a209a6ecf4c6abb357e6d79dbf660348584c25a60416ad73d5010dae267ee0d9245a62a05bc695a16b23c141888a2a38234fa2d0ad296b9f7a4e22fba32a27495d90d6d447f2d762da5629642901f5e6a4d640b0e572cee69a529ac882572ffc302782c55aa9e70c08d5925f21c2a5faa8e1d692cd11c9d7a2e3354e7d38afc7f66dc1fc0aabf14cb1229c1dc93220f9e4f4c55536006d4942028632be6471a057958aab44c3183395d7013db7ad68be571798bd7caff48db7b7a58b869880209e0ae85301d90b479feaba69e0c7ff907c7f2c11fe66f75d5bdcdb597fe8ae4941cf7ed5e67511dd8bd90628e9f25977ed52eaad5df2fb625622c04adc979ddef6a9c6040354af4873910b5658240a264f1140c4feecabd0adf652012298e50c2cc7c55cff6fbae9a0f1652a6f893e424a6f22d802720a599d5d5eaeddda943d5f94c22862a9b7ed09cd6ed01f8eecc9684a256fbc35bb1b8db65a5d472d58dcb5fc68db6a7048f9ddcd21dca77c2e4e369035ed515be00b0ad394242945a0726fb5ac1141280b5826d5bc89a2ffdda677e59736b05f9bee44ceafb805f5e265dcf6a8ebee9b64d9239ac3d92ae0008412b480c38bbfd2d79099a9bf9d6bfcb73f0c993184c798917f8469f8ed5c1f60b3c3e086f5a767f1ee4f7767f91ccca991644e947d67f81cae787c174a3946a10a64e2ec6b9b889afe14a2028fa60138b28ae6398d5013bcd9d5cdb0bd98dfd9ad4eadaff9fcb29e2947980fa19b26b44e6f143b3aa79d8291af69b0db790678705151304e41eb9427d51fb7e24e126294f1dc3a139427527992be8fc642560a7b091d69e8ffcfc5c9d8e92c62511f1fbf9ac15959b98f262c2867f41f9c2daa4dffbc7944581068bffee455de89b3c40c4ed0d5f6cf4b1b632f9fcd0da8b73775059945f69496f8c09f04f22d993a994bd1461c6f732ebda1cabdde362d0bde602523d83adfaf70c8a07f7ff50b8b89cc61d1214049ad474b8bb12ea9f055d701d21d659ecbf72ccc6abdf768747fef8d3d467fd4e9c110e5316544773781364b042d86e7bfe6bb4a497b5cab55a75332e63b00d0d25a115531fe7755179ce5012f87734d0945c3e1ac57429e2ba3af13dadeb91e39b6b5dc3b18964736f1247422bc5975ed67d43e7dbc8c0a20408d</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-xray">
-      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好, 这里需要密码. 请尝试输入root123</span>
-      </label>
-      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
-        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
-      </svg>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    <title>博哥带你快速了解内网穿透软件的使用</title>
+    <url>/2023/04/22/%E5%B7%A5%E5%85%B7/04/1001-Ngrock%E5%86%85%E5%A4%96%E7%A9%BF%E9%80%8F%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="ngrok内网穿透"><a href="#ngrok内网穿透" class="headerlink" title="ngrok内网穿透"></a>ngrok内网穿透</h2><blockquote>
+<p>①我们个人电脑的ip都是局域网ip,比如学校拉了一个网线它的ip是 电信:10.30.10.1，这个网线覆盖整个局域范围，通过这个ip 10.30.10.1是无法访问到这个局域范围内的具体某个计算机的，因为在学校这个局域网范围内通过wifi设备等将该ip分成很多个ip供每个学生使用。</p>
+<p>②ngrok服务器有自己的ip,也就是它自己拉了一根网线 电信:10.30.10.2，我们无法从外面连接局域网中某个ip的服务器(即编码的电脑)，但是局域网内的服务器可以通过ip 10.30.10.2 连接ngrok服务器，然后用户客户端只要连接ngrok服务器，三者就可以互相通信，就实现了从外面访问局域网内某个具体ip的服务器，即内容穿透也叫内网映射。</p>
+<p>③总结: 客户端访问服务器端内容，中间使用ngrok服务器作为中转，进行内网穿透，实现客户端访问到局域网中具体ip的服务器</p>
+</blockquote>
+<p><img src="/images/%E5%B7%A5%E5%85%B7/04/A1/1.png"></p>
+<h2 id="ngrok的使用"><a href="#ngrok的使用" class="headerlink" title="ngrok的使用"></a>ngrok的使用</h2><ol>
+<li><p><strong>进入官网<a href="https://ngrok.cc,注册登录/">https://ngrok.cc,注册登录</a></strong></p>
+</li>
+<li><p><strong>建立隧道，编码电脑与ngrok服务器电脑进行打通</strong></p>
+</li>
+<li><p><strong>下载Ngrock</strong></p>
+</li>
+</ol>
+<p><a href="https://www.ngrok.cc/_book/start/ngrok_windows.html">下载地址</a></p>
+<p>下载之后得到两个文件，可以通过cmd命令行进到sunny.exe所在的目录执行</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sunny.exe clientid 隧道id</span><br></pre></td></tr></table></figure>
+
+<p>多个隧道同时启动</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sunny.exe clientid 隧道id,隧道id</span><br></pre></td></tr></table></figure>
+
+<p>另一种方式通过 Sunny-Ngrok启动工具.bat 启动，直接输入隧道id就好了</p>
+<h2 id="安装nginx测试访问效果"><a href="#安装nginx测试访问效果" class="headerlink" title="安装nginx测试访问效果"></a>安装nginx测试访问效果</h2><p><a href="http://nginx.org/en/download.html">nginx下载</a></p>
+<ol>
+<li>启动nginx</li>
+</ol>
+<p><img src="/images/%E5%B7%A5%E5%85%B7/04/A1/8.png"></p>
+<ol start="2">
+<li><p>测试http访问</p>
+<p><img src="/images/%E5%B7%A5%E5%85%B7/04/A1/9.png"></p>
+</li>
+</ol>
+]]></content>
       <categories>
-        <category>其他</category>
+        <category>工具</category>
       </categories>
       <tags>
-        <tag>搜索</tag>
-        <tag>github</tag>
+        <tag>内网穿透</tag>
       </tags>
   </entry>
   <entry>
@@ -844,46 +860,30 @@
       </tags>
   </entry>
   <entry>
-    <title>博哥带你快速了解内网穿透软件的使用</title>
-    <url>/2023/04/22/%E5%B7%A5%E5%85%B7/04/1001-Ngrock%E5%86%85%E5%A4%96%E7%A9%BF%E9%80%8F%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="ngrok内网穿透"><a href="#ngrok内网穿透" class="headerlink" title="ngrok内网穿透"></a>ngrok内网穿透</h2><blockquote>
-<p>①我们个人电脑的ip都是局域网ip,比如学校拉了一个网线它的ip是 电信:10.30.10.1，这个网线覆盖整个局域范围，通过这个ip 10.30.10.1是无法访问到这个局域范围内的具体某个计算机的，因为在学校这个局域网范围内通过wifi设备等将该ip分成很多个ip供每个学生使用。</p>
-<p>②ngrok服务器有自己的ip,也就是它自己拉了一根网线 电信:10.30.10.2，我们无法从外面连接局域网中某个ip的服务器(即编码的电脑)，但是局域网内的服务器可以通过ip 10.30.10.2 连接ngrok服务器，然后用户客户端只要连接ngrok服务器，三者就可以互相通信，就实现了从外面访问局域网内某个具体ip的服务器，即内容穿透也叫内网映射。</p>
-<p>③总结: 客户端访问服务器端内容，中间使用ngrok服务器作为中转，进行内网穿透，实现客户端访问到局域网中具体ip的服务器</p>
-</blockquote>
-<p><img src="/images/%E5%B7%A5%E5%85%B7/04/A1/1.png"></p>
-<h2 id="ngrok的使用"><a href="#ngrok的使用" class="headerlink" title="ngrok的使用"></a>ngrok的使用</h2><ol>
-<li><p><strong>进入官网<a href="https://ngrok.cc,注册登录/">https://ngrok.cc,注册登录</a></strong></p>
-</li>
-<li><p><strong>建立隧道，编码电脑与ngrok服务器电脑进行打通</strong></p>
-</li>
-<li><p><strong>下载Ngrock</strong></p>
-</li>
-</ol>
-<p><a href="https://www.ngrok.cc/_book/start/ngrok_windows.html">下载地址</a></p>
-<p>下载之后得到两个文件，可以通过cmd命令行进到sunny.exe所在的目录执行</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sunny.exe clientid 隧道id</span><br></pre></td></tr></table></figure>
-
-<p>多个隧道同时启动</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sunny.exe clientid 隧道id,隧道id</span><br></pre></td></tr></table></figure>
-
-<p>另一种方式通过 Sunny-Ngrok启动工具.bat 启动，直接输入隧道id就好了</p>
-<h2 id="安装nginx测试访问效果"><a href="#安装nginx测试访问效果" class="headerlink" title="安装nginx测试访问效果"></a>安装nginx测试访问效果</h2><p><a href="http://nginx.org/en/download.html">nginx下载</a></p>
-<ol>
-<li>启动nginx</li>
-</ol>
-<p><img src="/images/%E5%B7%A5%E5%85%B7/04/A1/8.png"></p>
-<ol start="2">
-<li><p>测试http访问</p>
-<p><img src="/images/%E5%B7%A5%E5%85%B7/04/A1/9.png"></p>
-</li>
-</ol>
-]]></content>
+    <title>程序员必备GitHub搜索技巧</title>
+    <url>/2023/04/22/%E5%85%B6%E4%BB%96/04/10001-GitHub%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="2d29a21f918038486f665e7f3d6eea4777f7495afbaba6945d8f63f7a52a9ef0">36ebae3cb6203d7c8af26406b224b5f626520a7ad288a3d7fe753ba0f492c7d22ea25ec9c0a2dc6d993792747e5b63f2a030cf317aa27046d035427e47ed67e727ffdff9ddc378adac6d80b2a9a2b972e2303edcfec73bb02edf26fcca6526dca07ae7e821ad1c985eb17fe417f56ede7a7203cf638f0e2e10bc1ec8b8591b3d2f21a215e2a9c244ef7167cb434934b2264f9ee1e58788aa2edb7a77bc4394dd6ab0a833bfb289582662aeccb3273df7391c6a79e35c6681e28b10828bca6cb52b3f720d0a45392792bad5a5e406250598844b6400f4591baef017e06f2794eda153b38ddf9a0d4a80ea11ff8de2f0031e3ae92ee90c151dfc50ad026e1121f6bb3bf8622692fb59f084575e1a2fd12abf00e0044dcb602024faca1672b13826ebd4a49be41f88893ba143f5401651b39d1a98ea059c8254b31be2a8c6f1c89e05c97104b3839aae69554f7daba25bb4a2e62a31724761e2ea8501b1de25aae199b2f85d1a075ea0fe89a2940b04ed00bae44b1f0a1d41a04867a82323c181157b384cab5d74724dc5fb32b3431bf2736c24e315d5973ec2e7e0950ffec7a8d9936b59ee81cfd6231482e5dd7b89c95e6e21cb49a9bb2a082d98e418c08b1e8fca4bd78e89c0ce7b8d03e753ef370e56859afe823b9e76c630dd5c6e4f9def422a6f08164aa681c64a16874637983fc0c70aecf462180f784bb6cc44f93fbb6af549b90d9b650135e145712837f358646dcbdf49c5db1ed6ea42f918eec5008f571b2ddd88e241612c1ed43b69bd5a36a7dec19acb1053f502ca7a3009e375864d11f4f303abf7ed41777fc61f775a6a07afbb3c61b46ae736f9b51fff09493c489b27ab3587e1348566d50bbf0fe533ce700569f17f4f5bb51f1a7f4c3464bd3bdd41ce87d74d0b7c4eead95947730158b5079aaae72a97e29922f6c0983a7da6ab6f19b7df59969965e4adef53fe186c6091ed9631bf2d09346987395b5c28d5b7b57f88c81a33b4c4bdd2d5ac8643ee5529179846589fb98105a9e93d0cb975b669196bb84f7a54fc3d8e0e6507d60b2f427a0e1ae784a02c1f66144c7e7d59b7b2349dea2bf0ac28b9b2889e7fbf1c4b523b8060bedd14fc75e592f015da32acee91570b78b3d2f266ac2741b95665569874b406d5b58816bcfef23a25c566b1f07ae18ee3e8d6f6446854a7c248ef642b5905851afb86cecdac03adf9c3e24df27b6a53f620e5aa91ac7ef1ce715f4fe07c7bbd5d4a1ce6a06463f6f927a0479fce57c42e5c3a47cf0280ea55f7a377c28f6ccd24ce522cc1ceed06d25d852a1e5c6c3ca1456a50e3ad9d001af4b11e31b37fa3fcc6e95d9954179a09abc5d864078124f5cc34b5716f4f544f8696061e34866c1b046764ab74a87377bf3b4cd11d54af78c2872a50c32aafc8ed294817d650eedf6b95cd73ddab65e28b1ba1f13815b1661f74a05df7c98f5465a1111ad11da8940ff457639f4ecd09556d7a2b4017505ab3dc678e21e78281c1d557134ca44f39ca9a3e808da33e313cb550602b393c277ce641905fffaee815604c7b19d57c673daf76644f2fc807702ca7d00a8bcab619ff1e4cc6d411abc2bee7aa856644fe1ec0b8d97abee07263d9fd86348589b8da2ee6d024f8e901dded0c54222a949ef1f5a404e6416d5f6d01a7c4f46a97c209b6b0b15fd3eca11848f9d31469a672af247d45741d9d03956bff8fd28415d6c1df80c6dff26810fbc19ec65a8a99ecb9e78326631e442d34717b6aca432b1b340162cde4556d7ed93fa254787e35097770a6ce8b15edd34aa9ebb2901b65d46c635e0c90383b7df7f175048df05d61952fea6f89ffdd0e34baebf2207aa2054ed8a724e65bff9dea057c94224735d317cf665f398a0849c400da0ff7d914c9c9ac34ead05af1ef893939faf358e34ce649513d41e0f82de2ebaaaa8bd3dad1c0262d24edb23da60702c7f7b9221f46c88a974f94d90d2f48bac37f132f1cdfbddc1dfeeebf6e895df42a7e99de35fa7fc6b2cfd0908742b9878f2650f70cc9a40957cb49b31786efb65d26d0129cacac8751b047144068b3174e54a4bdad35d17a7add3a4d8e81bdafdd642774b266d9d2d9adc474b1885e9a73058170e7faf357f95472538e74ce6773dc0c12c3c60f8c59d0a9f9829b54cc7bb377a3cd406799263ad0a4e06eb50b3f103d4aaeac2a27e0f27f1c9ff0c8d057f3012ba04d9c3be95429c956779b8e389b95c710ea39b1be4f57eecf09964595834533c586f325560059d84d6deadd28abda6f4d8fd71d6bedbc0ac627ecdf89eccacb33a39642b66afa92d338ed32d57aef3d7ecbd2a4e8f04abe4db77c0c5df6cbf4277811fa08d52885d3d1a3b70453369e6dd0015d1d5b4803a6b8cb33bce93e082c309ae9a3946d35c6ca34ec211e396419c05979c4acb7843352ef06755c64cb9ae787854e24eaf9da86c71527d4c3ea2fd8a4c0d8302120d3cb7c9c77439ec1052444fadc7f8d0c007c88851b44a96398d0f165b040e83b147ceb95d428e4923c9cbe05126c5269ab7e2b02a7ec2b06beac2ce905ee6d7252d848ef701b16a932db4541171abf64c67418a005718f4fa5c264e5dbe26732d844868d7d36789e154f3de05ec9e65137a034e935e16fa295b2259d37e8ac6b89785e2632b0f457675414f0073f23dba64ff5dd1eb13f78f67c9f4c57a4030a92dab13200fcb7c4b672cc9ef1fa1c2d400964341434f09d674747ea8dcde1121d17cb417f654e9627a77e6d59ce591b561794bd6384f004d075f7e4ab75cc527926e7115d8b906d456d5fc5dae34c52d9f9c0329b385ae4d820cbf38d6e962b3f909ac032a68c4ed422cb4fa240c9ff46c19fd50d00241b0c7ea70deb57ec8a5e6ffc36c7901e0b1ead67f5bb62c2500333c7598cbc6f33529e9392f6000a4aa43ea667b075d3d95a1d4a9744767a2c25f47bd92d844b7d272559c69b5d809b05e76ecc84ea4345c56a1f8bb3d69926b250729e36d11ccf5ceec33bd5eea5ceb2e71b0095c130d683cdf97f8f039b6e6b839984f90b0b27690b03cd01fd8472c85b6ebe1b719f78a9b2a22a957e4068bd8e9aa2c943194ae4789b7b4f891fb1c9b3d341968c7dc2592ed90ef61750aa6df5235d92c85b280d7456a4932bf6c6bf036d3238aa7ce43e75de7b18a39b5c5cf623e6d84531f878e44f7681f26f0d81a62884d1a4a5e9bee1a516c415af9269369f30993f1ce940e824b28272547b8240986f86c2cf083cac06173381c25b87adc8c51400364469689fae75b2f8c9c0037793d797df06a53ac2c33d88a9bf0fc13dde3a4b852dee3d9b654510bd85396f74d5b5504adab119b85881d5b790552282ad6631a1e16863fe00ac9e65bf09283454431a404c2f65d37d68e9d697c05e26b46f255c644e4ecf7e0ca58399c90ac1601bfc5af3a414326881a6da3241ff4e835a62bd379824305809312cb0e22283516a2ca4abcc9aa88dadf78e6064645248ba24e0c40a77d1211b486ba5c65194938f987bd651ee600fe05c6a4c8750a6374c2e3ab36490a5967da249dc431d3ab315799fab5ba45d4d565c6e5ce6158959b1b0356581ed912683592ffcd7712431f539f8f0dfca70f2668bc2cdedd0a51cf556ebdef2b0673ce5dc21b2e142da805c773856ba71113415e504d919cf175b07c2f3bf0dfef21d390d163887481518f21dafc01ce6a2ead674b50f3e37c5d8db82bfa81d77bad2f00c8b193b162a25be34c7615b6ee708bd1f8bd4f2266cd3cd6187cf4f7bdc0db33c098ab3581be1af0a8323652e5e50fbdefd482a96ea84164dcb0d9948841c99084d544bc9245ba623727fec163488174426ffeec895d4cfbd408b59c7f069c1b72bdcc1579df71d4a7bf3f55e8112f92825d9b1141ecb042894d5c6f13405e61e2702e7e22d5490d978dcd36bfd29ecfd2998688a0ea0788bcfd3968a3e5817e65829c75bc616256e42f9e03306d6dcbaa086f0b0e4920c15ce99f9e8513bc8d11e9a30ba5719082d0d425756d051798627e7512b81d69522a5f5693f3f1a1f6093bdfc2f53b61087b97f3f4b39ca8e886d350fee29fe7825d1a048976097f557ac1b729cd2ad01c27991900a10b24f7ca37f5e8985ab84e171fa801d5a6dbe6a0ad551569618ca149cf21a818f3cb3a2aa7e90d608560fec66217b110f31ae2ebae13874a5ede2650d8f06a1e4334489f108e6d17d9cbd21f7f835dda9059e27e267816dfad097dc81b14ada8217bdd67ece8afe3296762a8b3025a296d8125ede53890969ea219bfd1d8a697b3b3b762710032ac4b12a8ecc519205897c37633e1751c7012ab25c2d0eeceea9c209754d0b083aabab0fde15d1c70f8da6e7d6766c3e569fe53c29bcfa3a5d05e2f63a168c54481e2f83609f03413bcbd03f4026034aee1f6d8cd2a87a3494a75c7d4e48c2ed90454b13c23f2f9390f80d90e9ca2edbed22cff3428fe05f40606216be21caf25d2c556e69844a0350120f995cbd0fc356cee0005fe8a67478e6b77d319b00d8895976cf9be6fa43894d0cac2f210faeecb49e1b9db47e0cfec9a2c57f624af2d972ad5d9e29b981de0550f11b0a97d436912785f2ba38cdf9c3566fbcd59526737a9de02cd59f13a69855e703ed010404661d070cd9d86ba0ab48256c0f02a56984ef7d58682ee7f05d60c4b5117b4a3be89dd0e1d94d0014d81e24323e107a8f02a6a2bb886d9010fe9944279f1483379650e2e4500981464b753655362d8801436aa220c71dbe72b0e836259cc448481c8499e947bf4196acb2eb2fd8ba192a28ff05c86c9d3c50b9740848067455996c1bd7050f0a1ea466547f82b826549a9c05d61e9c3fae297562d5170e24174f7f79fef9db3873c55ddacb80ad74ed2c304b916b4e6bd40d5477f4a448ecfab5db4fa8702aafa45782e98a6f111353156efe3f42640d049a5bd54a2bad49bf64d11e19712bb09af53e11f7f9ee2cfc6bb97e87fd12f8bf0137882f8ebed997df308d3e0d072f39f0f9933a905523a234682b821001d46363951b2607969fef0ed15127562e0c44c6d37c286f7fa6123a19ab50d926196c7415c10859f1d63f4c684fcdc012040c3b084d93de4278f0aeb84865d97459d3657b0032a732ba1b734fa4c2dc03b42dd549f8e6f1d3d2c22120f2963b521f65a61e710f7c5043c641a05cadc640aa11362e1b2ded9edf981a1f602d0d0ed49805ecb114600db7b7ba406110ddcd2c85596832ac0dab0bdcfe00ceca415076e581cd3b21eecb8b164210a71e336dd70377b61c91c21e97f8f6e5787b96a5fd09a60a96c9211d1e831e8c37e8397d85f87b95c7446591b4808c4876330f4ddf217553e023740e96221475a8ac5dc915f189b39ed7653a0eba894d51b050fa2b4fb2c1b26986805f66cede94cd646ab75421a7f6d2688b7bc29f420df005e3807d757dfd75846e7c59a8ad78acd0f364f1116e9ccd6a2e536055c0703b2ad258975fb4ff143fc6a872e51940db654193451e4ae5273464c36fa901bc76f222908e2b619edc34eeeeba6adcb64cf5c09574cfcdd6e318a37159b5e382988633ff1fe7424c6d7f8450e6648896a4fe15f3a096101a86ebcf8c13675944fd3410520966c6a9eff8883321038ed86acff4a1599f8d4dfc9d25712240898c775f16d01aceb3b93def1506e27329062a0d4b255401f34d9e28b168afb1bc409696c82378bda92339fb7d365c40760d7484f280984038b9e404abe7c00e0d71370af8d6334f62de23053ae0285f35a209a6ecf4c6abb357e6d79dbf660348584c25a60416ad73d5010dae267ee0d9245a62a05bc695a16b23c141888a2a38234fa2d0ad296b9f7a4e22fba32a27495d90d6d447f2d762da5629642901f5e6a4d640b0e572cee69a529ac882572ffc302782c55aa9e70c08d5925f21c2a5faa8e1d692cd11c9d7a2e3354e7d38afc7f66dc1fc0aabf14cb1229c1dc93220f9e4f4c55536006d4942028632be6471a057958aab44c3183395d7013db7ad68be571798bd7caff48db7b7a58b869880209e0ae85301d90b479feaba69e0c7ff907c7f2c11fe66f75d5bdcdb597fe8ae4941cf7ed5e67511dd8bd90628e9f25977ed52eaad5df2fb625622c04adc979ddef6a9c6040354af4873910b5658240a264f1140c4feecabd0adf652012298e50c2cc7c55cff6fbae9a0f1652a6f893e424a6f22d802720a599d5d5eaeddda943d5f94c22862a9b7ed09cd6ed01f8eecc9684a256fbc35bb1b8db65a5d472d58dcb5fc68db6a7048f9ddcd21dca77c2e4e369035ed515be00b0ad394242945a0726fb5ac1141280b5826d5bc89a2ffdda677e59736b05f9bee44ceafb805f5e265dcf6a8ebee9b64d9239ac3d92ae0008412b480c38bbfd2d79099a9bf9d6bfcb73f0c993184c798917f8469f8ed5c1f60b3c3e086f5a767f1ee4f7767f91ccca991644e947d67f81cae787c174a3946a10a64e2ec6b9b889afe14a2028fa60138b28ae6398d5013bcd9d5cdb0bd98dfd9ad4eadaff9fcb29e2947980fa19b26b44e6f143b3aa79d8291af69b0db790678705151304e41eb9427d51fb7e24e126294f1dc3a139427527992be8fc642560a7b091d69e8ffcfc5c9d8e92c62511f1fbf9ac15959b98f262c2867f41f9c2daa4dffbc7944581068bffee455de89b3c40c4ed0d5f6cf4b1b632f9fcd0da8b73775059945f69496f8c09f04f22d993a994bd1461c6f732ebda1cabdde362d0bde602523d83adfaf70c8a07f7ff50b8b89cc61d1214049ad474b8bb12ea9f055d701d21d659ecbf72ccc6abdf768747fef8d3d467fd4e9c110e5316544773781364b042d86e7bfe6bb4a497b5cab55a75332e63b00d0d25a115531fe7755179ce5012f87734d0945c3e1ac57429e2ba3af13dadeb91e39b6b5dc3b18964736f1247422bc5975ed67d43e7dbc8c0a20408d</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-xray">
+      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好, 这里需要密码. 请尝试输入root123</span>
+      </label>
+      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
+        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
-        <category>工具</category>
+        <category>其他</category>
       </categories>
       <tags>
-        <tag>内网穿透</tag>
+        <tag>搜索</tag>
+        <tag>github</tag>
       </tags>
   </entry>
   <entry>
@@ -912,43 +912,6 @@
       <tags>
         <tag>windows</tag>
         <tag>jdk</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>快速在Linux环境下安装配置JDk</title>
-    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10003-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJDK/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><font color="blue"><strong>作者:博哥</strong></font></p>
-<h2 id="使用Xshell工具连接Linux服务器"><a href="#使用Xshell工具连接Linux服务器" class="headerlink" title="使用Xshell工具连接Linux服务器"></a>使用Xshell工具连接Linux服务器</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/1.png" alt="页面效果"></p>
-<h2 id="下载Linux版本的Jdk安装包"><a href="#下载Linux版本的Jdk安装包" class="headerlink" title="下载Linux版本的Jdk安装包"></a>下载Linux版本的Jdk安装包</h2><p>链接：<a href="https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ">https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ</a><br>提取码：0er6 </p>
-<p>将下载的安装包上传到linux下的opt目录</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/2.png" alt="页面效果"></p>
-<h2 id="在命令行界面切入到opt目录下"><a href="#在命令行界面切入到opt目录下" class="headerlink" title="在命令行界面切入到opt目录下"></a>在命令行界面切入到opt目录下</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/3.png" alt="页面效果"></p>
-<h3 id="解压jdk安装包"><a href="#解压jdk安装包" class="headerlink" title="解压jdk安装包"></a>解压jdk安装包</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf jdk-8u301-linux-x64.tar.gz </span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/4.png" alt="页面效果"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/5.png" alt="页面效果"></p>
-<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><h3 id="切入到etc-目录"><a href="#切入到etc-目录" class="headerlink" title="切入到etc 目录"></a>切入到etc 目录</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/6.png" alt="页面效果"></p>
-<h3 id="使用vi-命令修改-profile文件"><a href="#使用vi-命令修改-profile文件" class="headerlink" title="使用vi 命令修改 profile文件"></a>使用vi 命令修改 profile文件</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/7.png" alt="页面效果"></p>
-<h3 id="找到最后一行位置"><a href="#找到最后一行位置" class="headerlink" title="找到最后一行位置"></a>找到最后一行位置</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/8.png" alt="页面效果"></p>
-<h3 id="将如下的Jdk环境变量添加到尾部"><a href="#将如下的Jdk环境变量添加到尾部" class="headerlink" title="将如下的Jdk环境变量添加到尾部"></a>将如下的Jdk环境变量添加到尾部</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/jdk1.8.0_301</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$&#123;JAVA_HOME&#125;</span>/jre/lib/rt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/dt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/tools.jar</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/9.png" alt="页面效果"></p>
-<p>按下Esc  wq!保存退出</p>
-<h3 id="刷新环境变量和验证java环境是否安装成功"><a href="#刷新环境变量和验证java环境是否安装成功" class="headerlink" title="刷新环境变量和验证java环境是否安装成功"></a>刷新环境变量和验证java环境是否安装成功</h3><p><strong>刷新环境变量</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source  /etc/profile</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/10.png" alt="页面效果"></p>
-<p><strong>验证jdk是否安装成功</strong></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/11.png" alt="页面效果"></p>
-]]></content>
-      <categories>
-        <category>服务</category>
-      </categories>
-      <tags>
-        <tag>jdk</tag>
-        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -1043,6 +1006,43 @@
       </categories>
       <tags>
         <tag>mysql</tag>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>快速在Linux环境下安装配置JDk</title>
+    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10003-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJDK/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><font color="blue"><strong>作者:博哥</strong></font></p>
+<h2 id="使用Xshell工具连接Linux服务器"><a href="#使用Xshell工具连接Linux服务器" class="headerlink" title="使用Xshell工具连接Linux服务器"></a>使用Xshell工具连接Linux服务器</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/1.png" alt="页面效果"></p>
+<h2 id="下载Linux版本的Jdk安装包"><a href="#下载Linux版本的Jdk安装包" class="headerlink" title="下载Linux版本的Jdk安装包"></a>下载Linux版本的Jdk安装包</h2><p>链接：<a href="https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ">https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ</a><br>提取码：0er6 </p>
+<p>将下载的安装包上传到linux下的opt目录</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/2.png" alt="页面效果"></p>
+<h2 id="在命令行界面切入到opt目录下"><a href="#在命令行界面切入到opt目录下" class="headerlink" title="在命令行界面切入到opt目录下"></a>在命令行界面切入到opt目录下</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/3.png" alt="页面效果"></p>
+<h3 id="解压jdk安装包"><a href="#解压jdk安装包" class="headerlink" title="解压jdk安装包"></a>解压jdk安装包</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf jdk-8u301-linux-x64.tar.gz </span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/4.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/5.png" alt="页面效果"></p>
+<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><h3 id="切入到etc-目录"><a href="#切入到etc-目录" class="headerlink" title="切入到etc 目录"></a>切入到etc 目录</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/6.png" alt="页面效果"></p>
+<h3 id="使用vi-命令修改-profile文件"><a href="#使用vi-命令修改-profile文件" class="headerlink" title="使用vi 命令修改 profile文件"></a>使用vi 命令修改 profile文件</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/7.png" alt="页面效果"></p>
+<h3 id="找到最后一行位置"><a href="#找到最后一行位置" class="headerlink" title="找到最后一行位置"></a>找到最后一行位置</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/8.png" alt="页面效果"></p>
+<h3 id="将如下的Jdk环境变量添加到尾部"><a href="#将如下的Jdk环境变量添加到尾部" class="headerlink" title="将如下的Jdk环境变量添加到尾部"></a>将如下的Jdk环境变量添加到尾部</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/jdk1.8.0_301</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$&#123;JAVA_HOME&#125;</span>/jre/lib/rt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/dt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/tools.jar</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/9.png" alt="页面效果"></p>
+<p>按下Esc  wq!保存退出</p>
+<h3 id="刷新环境变量和验证java环境是否安装成功"><a href="#刷新环境变量和验证java环境是否安装成功" class="headerlink" title="刷新环境变量和验证java环境是否安装成功"></a>刷新环境变量和验证java环境是否安装成功</h3><p><strong>刷新环境变量</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source  /etc/profile</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/10.png" alt="页面效果"></p>
+<p><strong>验证jdk是否安装成功</strong></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/11.png" alt="页面效果"></p>
+]]></content>
+      <categories>
+        <category>服务</category>
+      </categories>
+      <tags>
+        <tag>jdk</tag>
         <tag>linux</tag>
       </tags>
   </entry>
@@ -1508,6 +1508,51 @@
       </tags>
   </entry>
   <entry>
+    <title>Docker环境下安装Mysql8</title>
+    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10010-Docker%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85Mysql8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="准备好centos7环境并安装好了Docker"><a href="#准备好centos7环境并安装好了Docker" class="headerlink" title="准备好centos7环境并安装好了Docker"></a>准备好centos7环境并安装好了Docker</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/1.png"></p>
+<h2 id="Docker安装Mysql过程"><a href="#Docker安装Mysql过程" class="headerlink" title="Docker安装Mysql过程"></a>Docker安装Mysql过程</h2><h3 id="拉取和查看mysq镜像"><a href="#拉取和查看mysq镜像" class="headerlink" title="拉取和查看mysq镜像"></a>拉取和查看mysq镜像</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo docker pull mysql:8.0.23</span><br><span class="line">docker images</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/2.png"></p>
+<h3 id="启动运行mysql镜像-docker-run-用于启动一个容器"><a href="#启动运行mysql镜像-docker-run-用于启动一个容器" class="headerlink" title="启动运行mysql镜像 (docker run 用于启动一个容器)"></a>启动运行mysql镜像 (docker run 用于启动一个容器)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo docker run -p 3306:3306 --name mysql \</span><br><span class="line">-v /usr/local/docker/mysql/mysql-files:/var/lib/mysql-files \</span><br><span class="line">-v /usr/local/docker/mysql/conf:/etc/mysql \</span><br><span class="line">-v /usr/local/docker/mysql/logs:/var/log/mysql \</span><br><span class="line">-v /usr/local/docker/mysql/data:/var/lib/mysql \</span><br><span class="line">-e MYSQL_ROOT_PASSWORD=root \</span><br><span class="line">-d mysql:8.0.23</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/3.png"></p>
+<h3 id="查看docker启动的服务"><a href="#查看docker启动的服务" class="headerlink" title="查看docker启动的服务"></a>查看docker启动的服务</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/4.png"></p>
+<h3 id="进入mysql容器内部-退出容器用exit"><a href="#进入mysql容器内部-退出容器用exit" class="headerlink" title="进入mysql容器内部(退出容器用exit)"></a>进入mysql容器内部(退出容器用exit)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it mysql /bin/bash</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/5.png"></p>
+<h3 id="登陆-默认密码root-，一定要先进入mysql容器。"><a href="#登陆-默认密码root-，一定要先进入mysql容器。" class="headerlink" title="登陆(默认密码root)，一定要先进入mysql容器。"></a>登陆(默认密码root)，一定要先进入mysql容器。</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql -uroot -proot</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/6.png"></p>
+<h3 id="设置mysql开机自启动（可选）"><a href="#设置mysql开机自启动（可选）" class="headerlink" title="设置mysql开机自启动（可选）"></a>设置mysql开机自启动（可选）</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker update mysql --restart=always</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/7.png"></p>
+<h3 id="在mysql容器内部切换到mysql数据库"><a href="#在mysql容器内部切换到mysql数据库" class="headerlink" title="在mysql容器内部切换到mysql数据库"></a>在mysql容器内部切换到mysql数据库</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">use mysql</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/8.png"></p>
+<h3 id="查看用户信息"><a href="#查看用户信息" class="headerlink" title="查看用户信息"></a>查看用户信息</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span>  host,user from user</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/9.png"></p>
+<h3 id="修改用户密码"><a href="#修改用户密码" class="headerlink" title="修改用户密码"></a>修改用户密码</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ALTER USER <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;%&#x27;</span> IDENTIFIED WITH mysql_native_password BY <span class="string">&#x27;root123&#x27;</span>;</span><br><span class="line">ALTER USER <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> IDENTIFIED WITH mysql_native_password BY <span class="string">&#x27;root123&#x27;</span>; </span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/10.png"></p>
+<h3 id="查看mysql运行状态"><a href="#查看mysql运行状态" class="headerlink" title="查看mysql运行状态"></a>查看mysql运行状态</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/11.png"></p>
+<h3 id="开启防火墙添加3306端口"><a href="#开启防火墙添加3306端口" class="headerlink" title="开启防火墙添加3306端口"></a>开启防火墙添加3306端口</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl  start firewalld.service</span><br><span class="line">firewall-cmd --zone=public --add-port=3306/tcp --permanent</span><br><span class="line">firewall-cmd --reload</span><br><span class="line">firewall-cmd --list-port</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/12.png"></p>
+<h2 id="使用Navicat测试链接Mysql"><a href="#使用Navicat测试链接Mysql" class="headerlink" title="使用Navicat测试链接Mysql"></a>使用Navicat测试链接Mysql</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/13.png"></p>
+]]></content>
+      <categories>
+        <category>服务</category>
+      </categories>
+      <tags>
+        <tag>Mysql</tag>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Mycat部署安装_搭建MySQL主从复制</title>
     <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10009-Linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BAMysql%E9%9B%86%E7%BE%A4/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><font color="blue"><strong>作者:博哥</strong></font></p>
@@ -1588,48 +1633,42 @@
       </tags>
   </entry>
   <entry>
-    <title>Docker环境下安装Mysql8</title>
-    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10010-Docker%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85Mysql8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="准备好centos7环境并安装好了Docker"><a href="#准备好centos7环境并安装好了Docker" class="headerlink" title="准备好centos7环境并安装好了Docker"></a>准备好centos7环境并安装好了Docker</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/1.png"></p>
-<h2 id="Docker安装Mysql过程"><a href="#Docker安装Mysql过程" class="headerlink" title="Docker安装Mysql过程"></a>Docker安装Mysql过程</h2><h3 id="拉取和查看mysq镜像"><a href="#拉取和查看mysq镜像" class="headerlink" title="拉取和查看mysq镜像"></a>拉取和查看mysq镜像</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo docker pull mysql:8.0.23</span><br><span class="line">docker images</span><br></pre></td></tr></table></figure>
+    <title>Docker环境下安装Tomcat</title>
+    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10012-Docker%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85Tomcat/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="准备好Centos7环境并安装好了Docker"><a href="#准备好Centos7环境并安装好了Docker" class="headerlink" title="准备好Centos7环境并安装好了Docker"></a>准备好Centos7环境并安装好了Docker</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/1.png"></p>
+<h2 id="Docker安装Tomcat过程"><a href="#Docker安装Tomcat过程" class="headerlink" title="Docker安装Tomcat过程"></a>Docker安装Tomcat过程</h2><h3 id="拉取和查看mysq镜像"><a href="#拉取和查看mysq镜像" class="headerlink" title="拉取和查看mysq镜像"></a>拉取和查看mysq镜像</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull tomcat</span><br><span class="line">docker images</span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/2.png"></p>
-<h3 id="启动运行mysql镜像-docker-run-用于启动一个容器"><a href="#启动运行mysql镜像-docker-run-用于启动一个容器" class="headerlink" title="启动运行mysql镜像 (docker run 用于启动一个容器)"></a>启动运行mysql镜像 (docker run 用于启动一个容器)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo docker run -p 3306:3306 --name mysql \</span><br><span class="line">-v /usr/local/docker/mysql/mysql-files:/var/lib/mysql-files \</span><br><span class="line">-v /usr/local/docker/mysql/conf:/etc/mysql \</span><br><span class="line">-v /usr/local/docker/mysql/logs:/var/log/mysql \</span><br><span class="line">-v /usr/local/docker/mysql/data:/var/lib/mysql \</span><br><span class="line">-e MYSQL_ROOT_PASSWORD=root \</span><br><span class="line">-d mysql:8.0.23</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A13/1.png"></p>
+<h3 id="创建容器-tomcat-，映射宿主的-8080-端口到-tomcat-的-8080-端口"><a href="#创建容器-tomcat-，映射宿主的-8080-端口到-tomcat-的-8080-端口" class="headerlink" title="创建容器 tomcat ，映射宿主的 8080 端口到 tomcat 的 8080 端口"></a>创建容器 tomcat ，映射宿主的 8080 端口到 tomcat 的 8080 端口</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --name tomcat -d -p 8080:8080 tomcat</span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/3.png"></p>
-<h3 id="查看docker启动的服务"><a href="#查看docker启动的服务" class="headerlink" title="查看docker启动的服务"></a>查看docker启动的服务</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A13/2.png"></p>
+<h3 id="在防火墙开发8080端口"><a href="#在防火墙开发8080端口" class="headerlink" title="在防火墙开发8080端口"></a>在防火墙开发8080端口</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl  start firewalld.service</span><br><span class="line">firewall-cmd --zone=public --add-port=8080/tcp --permanent</span><br><span class="line">firewall-cmd --reload</span><br><span class="line">firewall-cmd --list-port</span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/4.png"></p>
-<h3 id="进入mysql容器内部-退出容器用exit"><a href="#进入mysql容器内部-退出容器用exit" class="headerlink" title="进入mysql容器内部(退出容器用exit)"></a>进入mysql容器内部(退出容器用exit)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it mysql /bin/bash</span><br></pre></td></tr></table></figure>
+<h3 id="挂载宿主目录到容器"><a href="#挂载宿主目录到容器" class="headerlink" title="挂载宿主目录到容器"></a>挂载宿主目录到容器</h3><blockquote>
+<ol>
+<li>tomcat 容器 webapps 路径：&#x2F;usr&#x2F;local&#x2F;tomcat&#x2F;webapps</li>
+<li>在宿主目录下新建目录 &#x2F;home&#x2F;tomcat&#x2F;webapps</li>
+</ol>
+</blockquote>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A13/3.png"></p>
+<h3 id="停止-tomcat-容器并删除该容器"><a href="#停止-tomcat-容器并删除该容器" class="headerlink" title="停止 tomcat 容器并删除该容器"></a>停止 tomcat 容器并删除该容器</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker ps -a </span><br><span class="line">docker stop CONTAINER_ID</span><br><span class="line">docker <span class="built_in">rm</span> CONTAINER_ID</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/5.png"></p>
-<h3 id="登陆-默认密码root-，一定要先进入mysql容器。"><a href="#登陆-默认密码root-，一定要先进入mysql容器。" class="headerlink" title="登陆(默认密码root)，一定要先进入mysql容器。"></a>登陆(默认密码root)，一定要先进入mysql容器。</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql -uroot -proot</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --name tomcat -d -p 8080:8080 -v /home/tomcat/webapps:/usr/local/tomcat/webapps tomcat  </span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/6.png"></p>
-<h3 id="设置mysql开机自启动（可选）"><a href="#设置mysql开机自启动（可选）" class="headerlink" title="设置mysql开机自启动（可选）"></a>设置mysql开机自启动（可选）</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker update mysql --restart=always</span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/7.png"></p>
-<h3 id="在mysql容器内部切换到mysql数据库"><a href="#在mysql容器内部切换到mysql数据库" class="headerlink" title="在mysql容器内部切换到mysql数据库"></a>在mysql容器内部切换到mysql数据库</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">use mysql</span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/8.png"></p>
-<h3 id="查看用户信息"><a href="#查看用户信息" class="headerlink" title="查看用户信息"></a>查看用户信息</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span>  host,user from user</span><br></pre></td></tr></table></figure>
+<h3 id="复制wepapps-dist文件到-刚创建的webapps目录"><a href="#复制wepapps-dist文件到-刚创建的webapps目录" class="headerlink" title="复制wepapps.dist文件到 刚创建的webapps目录"></a>复制wepapps.dist文件到 刚创建的webapps目录</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">cp</span> tomcat:/usr/local/tomcat/webapps.dist /home/tomcat/webapps</span><br><span class="line"><span class="built_in">mv</span> /home/tomcat/webapps/webapps.dist/*  /home/tomcat/webapps/</span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/9.png"></p>
-<h3 id="修改用户密码"><a href="#修改用户密码" class="headerlink" title="修改用户密码"></a>修改用户密码</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ALTER USER <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;%&#x27;</span> IDENTIFIED WITH mysql_native_password BY <span class="string">&#x27;root123&#x27;</span>;</span><br><span class="line">ALTER USER <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> IDENTIFIED WITH mysql_native_password BY <span class="string">&#x27;root123&#x27;</span>; </span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/10.png"></p>
-<h3 id="查看mysql运行状态"><a href="#查看mysql运行状态" class="headerlink" title="查看mysql运行状态"></a>查看mysql运行状态</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/11.png"></p>
-<h3 id="开启防火墙添加3306端口"><a href="#开启防火墙添加3306端口" class="headerlink" title="开启防火墙添加3306端口"></a>开启防火墙添加3306端口</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl  start firewalld.service</span><br><span class="line">firewall-cmd --zone=public --add-port=3306/tcp --permanent</span><br><span class="line">firewall-cmd --reload</span><br><span class="line">firewall-cmd --list-port</span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/12.png"></p>
-<h2 id="使用Navicat测试链接Mysql"><a href="#使用Navicat测试链接Mysql" class="headerlink" title="使用Navicat测试链接Mysql"></a>使用Navicat测试链接Mysql</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/13.png"></p>
+<h3 id="结果检测"><a href="#结果检测" class="headerlink" title="结果检测"></a>结果检测</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A13/4.png"></p>
 ]]></content>
       <categories>
         <category>服务</category>
       </categories>
       <tags>
-        <tag>Mysql</tag>
         <tag>Docker</tag>
+        <tag>Tomcat</tag>
       </tags>
   </entry>
   <entry>
@@ -1702,45 +1741,6 @@
       <tags>
         <tag>Docker</tag>
         <tag>Nginx</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker环境下安装Tomcat</title>
-    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10012-Docker%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85Tomcat/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="准备好Centos7环境并安装好了Docker"><a href="#准备好Centos7环境并安装好了Docker" class="headerlink" title="准备好Centos7环境并安装好了Docker"></a>准备好Centos7环境并安装好了Docker</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/1.png"></p>
-<h2 id="Docker安装Tomcat过程"><a href="#Docker安装Tomcat过程" class="headerlink" title="Docker安装Tomcat过程"></a>Docker安装Tomcat过程</h2><h3 id="拉取和查看mysq镜像"><a href="#拉取和查看mysq镜像" class="headerlink" title="拉取和查看mysq镜像"></a>拉取和查看mysq镜像</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull tomcat</span><br><span class="line">docker images</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A13/1.png"></p>
-<h3 id="创建容器-tomcat-，映射宿主的-8080-端口到-tomcat-的-8080-端口"><a href="#创建容器-tomcat-，映射宿主的-8080-端口到-tomcat-的-8080-端口" class="headerlink" title="创建容器 tomcat ，映射宿主的 8080 端口到 tomcat 的 8080 端口"></a>创建容器 tomcat ，映射宿主的 8080 端口到 tomcat 的 8080 端口</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --name tomcat -d -p 8080:8080 tomcat</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A13/2.png"></p>
-<h3 id="在防火墙开发8080端口"><a href="#在防火墙开发8080端口" class="headerlink" title="在防火墙开发8080端口"></a>在防火墙开发8080端口</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl  start firewalld.service</span><br><span class="line">firewall-cmd --zone=public --add-port=8080/tcp --permanent</span><br><span class="line">firewall-cmd --reload</span><br><span class="line">firewall-cmd --list-port</span><br></pre></td></tr></table></figure>
-
-<h3 id="挂载宿主目录到容器"><a href="#挂载宿主目录到容器" class="headerlink" title="挂载宿主目录到容器"></a>挂载宿主目录到容器</h3><blockquote>
-<ol>
-<li>tomcat 容器 webapps 路径：&#x2F;usr&#x2F;local&#x2F;tomcat&#x2F;webapps</li>
-<li>在宿主目录下新建目录 &#x2F;home&#x2F;tomcat&#x2F;webapps</li>
-</ol>
-</blockquote>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A13/3.png"></p>
-<h3 id="停止-tomcat-容器并删除该容器"><a href="#停止-tomcat-容器并删除该容器" class="headerlink" title="停止 tomcat 容器并删除该容器"></a>停止 tomcat 容器并删除该容器</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker ps -a </span><br><span class="line">docker stop CONTAINER_ID</span><br><span class="line">docker <span class="built_in">rm</span> CONTAINER_ID</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --name tomcat -d -p 8080:8080 -v /home/tomcat/webapps:/usr/local/tomcat/webapps tomcat  </span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="复制wepapps-dist文件到-刚创建的webapps目录"><a href="#复制wepapps-dist文件到-刚创建的webapps目录" class="headerlink" title="复制wepapps.dist文件到 刚创建的webapps目录"></a>复制wepapps.dist文件到 刚创建的webapps目录</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">cp</span> tomcat:/usr/local/tomcat/webapps.dist /home/tomcat/webapps</span><br><span class="line"><span class="built_in">mv</span> /home/tomcat/webapps/webapps.dist/*  /home/tomcat/webapps/</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="结果检测"><a href="#结果检测" class="headerlink" title="结果检测"></a>结果检测</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A13/4.png"></p>
-]]></content>
-      <categories>
-        <category>服务</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-        <tag>Tomcat</tag>
       </tags>
   </entry>
   <entry>
