@@ -172,6 +172,29 @@
       </tags>
   </entry>
   <entry>
+    <title>windows实用命令合集</title>
+    <url>/2023/05/01/%E7%B3%BB%E7%BB%9F/05/windows%E5%AE%9E%E7%94%A8%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="实用命令"><a href="#实用命令" class="headerlink" title="实用命令"></a>实用命令</h1><h2 id="学会这四个快捷键-再也不怕老妈突然袭击"><a href="#学会这四个快捷键-再也不怕老妈突然袭击" class="headerlink" title="学会这四个快捷键,再也不怕老妈突然袭击"></a>学会这四个快捷键,再也不怕老妈突然袭击</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">(1)win+L 一键锁屏</span><br><span class="line">(2)win+D 一键返回桌面</span><br><span class="line">(3)win+tab 一键切换程序</span><br><span class="line">(4)<span class="built_in">shift</span>+delete 一键永久删除Copy to clipboardErrorCopied</span><br></pre></td></tr></table></figure>
+
+<h2 id="新电脑到手后一定要会的五大操作"><a href="#新电脑到手后一定要会的五大操作" class="headerlink" title="新电脑到手后一定要会的五大操作"></a>新电脑到手后一定要会的五大操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">(1)dxdiag    查看电脑配置</span><br><span class="line">(2)cleanmgr  清理磁盘垃圾</span><br><span class="line">(3)%temp%    清理缓存垃圾</span><br><span class="line">(4)perfmon /report  检测电脑性能,解决长时间不关机卡顿现象</span><br><span class="line">(5) shutdown -r 重启电脑</span><br><span class="line">Copy to clipboardErrorCopied</span><br></pre></td></tr></table></figure>
+
+<h2 id="怀疑有人动了你电脑不要慌-一条命令获取修改历史"><a href="#怀疑有人动了你电脑不要慌-一条命令获取修改历史" class="headerlink" title="怀疑有人动了你电脑不要慌,一条命令获取修改历史"></a>怀疑有人动了你电脑不要慌,一条命令获取修改历史</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">(1)Recent 查看电脑修改历史记录Copy to clipboardErrorCopied</span><br></pre></td></tr></table></figure>
+
+<h2 id="一键开启狂暴模式，让家里电脑比网吧更流畅玩游戏必备技能"><a href="#一键开启狂暴模式，让家里电脑比网吧更流畅玩游戏必备技能" class="headerlink" title="一键开启狂暴模式，让家里电脑比网吧更流畅玩游戏必备技能"></a>一键开启狂暴模式，让家里电脑比网吧更流畅玩游戏必备技能</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">(1)win+i 打开windows设置</span><br><span class="line">(2)打开游戏选项</span><br><span class="line">(3)打开游戏模式</span><br><span class="line">(4)打开图形设置 将桌面应用改为微软store应用</span><br><span class="line">(5)选择windows安全中心</span><br><span class="line">(6)点击添加选项 高性能Copy to clipboardErrorCopied</span><br></pre></td></tr></table></figure>
+
+<h2 id="电脑经常用到的四种截图命令"><a href="#电脑经常用到的四种截图命令" class="headerlink" title="电脑经常用到的四种截图命令"></a>电脑经常用到的四种截图命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">(1)QQ截图   ctrl+<span class="built_in">shift</span>+a</span><br><span class="line">(2)花式截图 win+<span class="built_in">shift</span>+s</span><br><span class="line">(3)微信截图 alt+a</span><br><span class="line">(4)WPS截图   ctrl+alt+xCopy to clipboardErrorCopied</span><br></pre></td></tr></table></figure>
+
+<h2 id="旧电脑又卡又慢怎么办，别急一招搞定"><a href="#旧电脑又卡又慢怎么办，别急一招搞定" class="headerlink" title="旧电脑又卡又慢怎么办，别急一招搞定"></a>旧电脑又卡又慢怎么办，别急一招搞定</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">(1) 管理员身份打开cmd 输入chddsk检查磁盘</span><br><span class="line">(2)sfc /scannow 修复磁盘</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>命令</tag>
+        <tag>windows</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux防火墙命令速记</title>
     <url>/2023/05/01/%E7%B3%BB%E7%BB%9F/05/Linux%E9%98%B2%E7%81%AB%E5%A2%99%E5%91%BD%E4%BB%A4%E9%80%9F%E8%AE%B0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><font color="orange" face="kaiti">防火墙相关</font></p>
@@ -224,26 +247,94 @@
       </tags>
   </entry>
   <entry>
-    <title>windows实用命令合集</title>
-    <url>/2023/05/01/%E7%B3%BB%E7%BB%9F/05/windows%E5%AE%9E%E7%94%A8%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="实用命令"><a href="#实用命令" class="headerlink" title="实用命令"></a>实用命令</h1><h2 id="学会这四个快捷键-再也不怕老妈突然袭击"><a href="#学会这四个快捷键-再也不怕老妈突然袭击" class="headerlink" title="学会这四个快捷键,再也不怕老妈突然袭击"></a>学会这四个快捷键,再也不怕老妈突然袭击</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">(1)win+L 一键锁屏</span><br><span class="line">(2)win+D 一键返回桌面</span><br><span class="line">(3)win+tab 一键切换程序</span><br><span class="line">(4)<span class="built_in">shift</span>+delete 一键永久删除Copy to clipboardErrorCopied</span><br></pre></td></tr></table></figure>
+    <title>博哥教你八分钟学会Flex布局</title>
+    <url>/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10001-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E5%85%AB%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9AFlex%E5%B8%83%E5%B1%80/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="创建index-html-编写如下代码"><a href="#创建index-html-编写如下代码" class="headerlink" title="创建index.html 编写如下代码"></a>创建index.html 编写如下代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>8分钟学会Flex布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="新电脑到手后一定要会的五大操作"><a href="#新电脑到手后一定要会的五大操作" class="headerlink" title="新电脑到手后一定要会的五大操作"></a>新电脑到手后一定要会的五大操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">(1)dxdiag    查看电脑配置</span><br><span class="line">(2)cleanmgr  清理磁盘垃圾</span><br><span class="line">(3)%temp%    清理缓存垃圾</span><br><span class="line">(4)perfmon /report  检测电脑性能,解决长时间不关机卡顿现象</span><br><span class="line">(5) shutdown -r 重启电脑</span><br><span class="line">Copy to clipboardErrorCopied</span><br></pre></td></tr></table></figure>
+<h3 id="引入如下初始化样式"><a href="#引入如下初始化样式" class="headerlink" title="引入如下初始化样式"></a>引入如下初始化样式</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span>&#123;  </span><br><span class="line">  <span class="attr">--clr-dark</span>: <span class="number">#0f172a</span>;  </span><br><span class="line">  <span class="attr">--clr-light</span>: <span class="number">#f1f5f9</span>;  </span><br><span class="line">  <span class="attr">--clr-accent</span>: <span class="number">#e11d48</span>;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">*,  </span><br><span class="line">*<span class="selector-pseudo">::before</span>,  </span><br><span class="line">*<span class="selector-pseudo">::after</span>&#123;  </span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-tag">body</span>&#123;  </span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;  </span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;  </span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">1.6</span>;  </span><br><span class="line">  <span class="attribute">word-spacing</span>: <span class="number">1.4px</span>;  </span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&#x27;Roboto&#x27;</span>, sans-serif;  </span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--clr-dark);  </span><br><span class="line">  <span class="attribute">background-color</span>:<span class="built_in">var</span>( --clr-light) ;  </span><br><span class="line">  <span class="attribute">display</span>: flex;  </span><br><span class="line">  <span class="attribute">justify-content</span>: center;  </span><br><span class="line">  <span class="attribute">align-items</span>: center;  </span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100vh</span>;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">   <span class="attribute">width</span>: <span class="number">80%</span>;  </span><br><span class="line">   <span class="attribute">height</span>: <span class="number">700px</span>;  </span><br><span class="line">   <span class="attribute">margin</span>: <span class="number">0</span> auto;  </span><br><span class="line">   <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="built_in">var</span>(--clr-dark);  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.item</span>&#123;  </span><br><span class="line">  <span class="attribute">width</span>: <span class="number">150px</span>;  </span><br><span class="line">  <span class="attribute">height</span>: <span class="number">150px</span>;  </span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fb7185</span>;  </span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">1em</span>;  </span><br><span class="line">  <span class="attribute">font-weight</span>: <span class="number">700</span>;  </span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--clr-light);  </span><br><span class="line">  <span class="attribute">text-align</span>: center;  </span><br><span class="line">  <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="built_in">var</span>(--clr-accent);  </span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="怀疑有人动了你电脑不要慌-一条命令获取修改历史"><a href="#怀疑有人动了你电脑不要慌-一条命令获取修改历史" class="headerlink" title="怀疑有人动了你电脑不要慌,一条命令获取修改历史"></a>怀疑有人动了你电脑不要慌,一条命令获取修改历史</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">(1)Recent 查看电脑修改历史记录Copy to clipboardErrorCopied</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/1.PNG"></p>
+<h2 id="Flex布局介绍"><a href="#Flex布局介绍" class="headerlink" title="Flex布局介绍"></a>Flex布局介绍</h2><h3 id="如何对整个container容器采用Flex布局"><a href="#如何对整个container容器采用Flex布局" class="headerlink" title="如何对整个container容器采用Flex布局"></a>如何对整个container容器采用Flex布局</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">   <span class="attribute">display</span>: flex;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果如下<br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/2.png"></p>
+<blockquote>
+<p>display: flex;  代表对容器采用Flex布局<br><font color="red">注意:</font>采用Flex布局后容器元素默认在一行上排列</p>
+</blockquote>
+<h2 id="Flex重要属性介绍"><a href="#Flex重要属性介绍" class="headerlink" title="Flex重要属性介绍"></a>Flex重要属性介绍</h2><h3 id="flex-direction-属性"><a href="#flex-direction-属性" class="headerlink" title="flex-direction 属性"></a>flex-direction 属性</h3><blockquote>
+<p>作用介绍:<br>决定了布局容器中元素的主轴方向    布局中元素顺着主轴排列<br><font color="red">row</font>       横向排列    X轴<br><font color="red">colum</font>    纵向排列    Y轴</p>
+</blockquote>
+<p><strong>row效果</strong><br><img src="/.io//%E5%89%8D%E7%AB%AF/2.png"></p>
+<p><strong>colum效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/1.png"></p>
+<h3 id="justify-content-属性"><a href="#justify-content-属性" class="headerlink" title="justify-content 属性"></a>justify-content 属性</h3><blockquote>
+<p>作用介绍:<br>决定了布局容器中元素在主轴方向上 对齐方式<br><font color="red">flex-start</font>       以起始点为参考对齐<br><font color="red">flex-end</font>         以结束点为参考对齐<br><font color="red">center</font>            居中对齐<br><font color="red">space-between</font>   主轴上的第一个和最后一个元素紧靠主轴起始和结束位置<br>                           对剩余空间的间隔平均分配后对齐</p>
+<p><font color="red">space-around</font>     对主轴上元素的剩余空间进行平分 主轴的起始和结束位置会保留间隔</p>
+</blockquote>
+<p><strong>flex-start效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/2.png"></p>
+<p><strong>flex-end效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/3.png"></p>
+<p><strong>center效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/4.png"></p>
+<p><strong>space-between</strong></p>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/5.png"></p>
+<p><strong>space-around效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/6.png"></p>
+<h3 id="align-items属性"><a href="#align-items属性" class="headerlink" title="align-items属性"></a>align-items属性</h3><blockquote>
+<p>作用介绍:<br>决定了布局容器中元素在测轴方向上 对齐方式<br><font color="red">flex-start</font>        在侧轴上以起始点为参考对齐<br><font color="red">flex-end</font>          在侧轴上以结束点为参考对齐<br><font color="red">center</font>             在侧轴上居中对齐<br><font color="red">baseline</font>          在侧轴上以基线对齐项目</p>
+</blockquote>
+<p><strong>flex-start效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/7.png"></p>
+<p><strong>flex-end效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/8.png"></p>
+<p><strong>center效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/9.png"></p>
+<p><strong>baseline效果</strong></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">  <span class="attribute">display</span>: flex;  </span><br><span class="line">  <span class="attribute">flex-direction</span>: row;  </span><br><span class="line">  <span class="attribute">justify-content</span>:flex-start;  </span><br><span class="line">  <span class="attribute">align-items</span>: baseline;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.item-1</span>&#123;  </span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">1.5rem</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/10.png"></p>
+<h3 id="flex-wrap属性"><a href="#flex-wrap属性" class="headerlink" title="flex-wrap属性"></a>flex-wrap属性</h3><blockquote>
+<p>作用介绍:<br>主轴上元素过多时，是否需要换行<br><font color="red">wrap</font>      换行显示<br><font color="red">nowrap</font>  不换行  <font color="red">注意</font>当空间不足时元素大小会被挤压</p>
+</blockquote>
+<p><strong>Html代码</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>8分钟学会Flex布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </span><br><span class="line">  <span class="comment">&lt;!--引入样式文件--&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/style.css&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-1&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-2&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-3&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-4&quot;</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-5&quot;</span>&gt;</span>5<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-6&quot;</span>&gt;</span>6<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-7&quot;</span>&gt;</span>7<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-8&quot;</span>&gt;</span>8<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-9&quot;</span>&gt;</span>9<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-10&quot;</span>&gt;</span>10<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="一键开启狂暴模式，让家里电脑比网吧更流畅玩游戏必备技能"><a href="#一键开启狂暴模式，让家里电脑比网吧更流畅玩游戏必备技能" class="headerlink" title="一键开启狂暴模式，让家里电脑比网吧更流畅玩游戏必备技能"></a>一键开启狂暴模式，让家里电脑比网吧更流畅玩游戏必备技能</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">(1)win+i 打开windows设置</span><br><span class="line">(2)打开游戏选项</span><br><span class="line">(3)打开游戏模式</span><br><span class="line">(4)打开图形设置 将桌面应用改为微软store应用</span><br><span class="line">(5)选择windows安全中心</span><br><span class="line">(6)点击添加选项 高性能Copy to clipboardErrorCopied</span><br></pre></td></tr></table></figure>
 
-<h2 id="电脑经常用到的四种截图命令"><a href="#电脑经常用到的四种截图命令" class="headerlink" title="电脑经常用到的四种截图命令"></a>电脑经常用到的四种截图命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">(1)QQ截图   ctrl+<span class="built_in">shift</span>+a</span><br><span class="line">(2)花式截图 win+<span class="built_in">shift</span>+s</span><br><span class="line">(3)微信截图 alt+a</span><br><span class="line">(4)WPS截图   ctrl+alt+xCopy to clipboardErrorCopied</span><br></pre></td></tr></table></figure>
+<p><strong>wrap效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/11.png"></p>
+<p><strong>nowrap效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/12.png"></p>
+<p>当元素有多行时候如果需要消除，侧轴的间隔可以将align-items替换为<font color="red">align-content</font><br>对齐方式和之前一样<br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/13.png"></p>
+<p>此时如果需要调整间隔可使用 <font color="red">gap</font></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">  <span class="attribute">display</span>: flex;  </span><br><span class="line">  <span class="attribute">flex-direction</span>: row;  </span><br><span class="line">  <span class="attribute">justify-content</span>:flex-start;  </span><br><span class="line">  <span class="attribute">align-content</span>: flex-start;  </span><br><span class="line">  <span class="attribute">flex-wrap</span>: wrap;  </span><br><span class="line">  <span class="attribute">gap</span>: <span class="number">1rem</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/14.png"></p>
+<h3 id="flex-grow属性"><a href="#flex-grow属性" class="headerlink" title="flex-grow属性"></a>flex-grow属性</h3><blockquote>
+<p>作用介绍:<br>在主轴上当剩余的空间较多是，可以通过该属性设置，主轴上元素增长空间</p>
+</blockquote>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/15.png"></p>
+<p>此时我们可以通过该属性设置让第三个元素占满剩下的所有空间</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>8分钟学会Flex布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </span><br><span class="line">  <span class="comment">&lt;!--引入样式文件--&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/style.css&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-1&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-2&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-3&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h2 id="旧电脑又卡又慢怎么办，别急一招搞定"><a href="#旧电脑又卡又慢怎么办，别急一招搞定" class="headerlink" title="旧电脑又卡又慢怎么办，别急一招搞定"></a>旧电脑又卡又慢怎么办，别急一招搞定</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">(1) 管理员身份打开cmd 输入chddsk检查磁盘</span><br><span class="line">(2)sfc /scannow 修复磁盘</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-class">.item-3</span>&#123;  </span><br><span class="line">  <span class="attribute">flex-grow</span>: <span class="number">1</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/16.png"></p>
+<h3 id="flex-shrink属性"><a href="#flex-shrink属性" class="headerlink" title="flex-shrink属性"></a>flex-shrink属性</h3><p>作用介绍:</p>
+<blockquote>
+<p>当屏幕缩小时，元素在主轴缩小效果   0拒绝收缩 默认所有元素都是1的等比压缩 值越大空间不够时压缩的就越小</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.item-1&#123;  </span><br><span class="line">  flex-shrink: 5;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/17.png"></p>
+<h3 id="flex和flex-basis属性"><a href="#flex和flex-basis属性" class="headerlink" title="flex和flex-basis属性"></a>flex和flex-basis属性</h3><blockquote>
+<p>作用介绍:<br>flex:   按照份数设置元素宽度   1<br>  flex-basis:  通过设置像素或者百分比  控制元素的宽度</p>
+</blockquote>
+<h3 id="align-self属性"><a href="#align-self属性" class="headerlink" title="align-self属性"></a>align-self属性</h3><blockquote>
+<p>作用介绍:<br>单独设置主轴上某一个元素，在侧轴的对齐方式</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.item-1</span>&#123;  </span><br><span class="line">  <span class="attribute">align-self</span>: center;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/18.png"></p>
+<h3 id="order属性"><a href="#order属性" class="headerlink" title="order属性"></a>order属性</h3><p>作用介绍:</p>
+<blockquote>
+<p>该值越大，在主轴上元素越靠后</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.item-1&#123;  </span><br><span class="line"> order: 10000;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/19.png"></p>
 ]]></content>
       <categories>
-        <category>操作系统</category>
+        <category>前端</category>
       </categories>
       <tags>
-        <tag>命令</tag>
-        <tag>windows</tag>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>前端案列</tag>
       </tags>
   </entry>
   <entry>
@@ -561,97 +652,6 @@
       </tags>
   </entry>
   <entry>
-    <title>博哥教你八分钟学会Flex布局</title>
-    <url>/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10001-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E5%85%AB%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9AFlex%E5%B8%83%E5%B1%80/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="创建index-html-编写如下代码"><a href="#创建index-html-编写如下代码" class="headerlink" title="创建index.html 编写如下代码"></a>创建index.html 编写如下代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>8分钟学会Flex布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-3&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="引入如下初始化样式"><a href="#引入如下初始化样式" class="headerlink" title="引入如下初始化样式"></a>引入如下初始化样式</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span>&#123;  </span><br><span class="line">  <span class="attr">--clr-dark</span>: <span class="number">#0f172a</span>;  </span><br><span class="line">  <span class="attr">--clr-light</span>: <span class="number">#f1f5f9</span>;  </span><br><span class="line">  <span class="attr">--clr-accent</span>: <span class="number">#e11d48</span>;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line">*,  </span><br><span class="line">*<span class="selector-pseudo">::before</span>,  </span><br><span class="line">*<span class="selector-pseudo">::after</span>&#123;  </span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-tag">body</span>&#123;  </span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;  </span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;  </span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">1.6</span>;  </span><br><span class="line">  <span class="attribute">word-spacing</span>: <span class="number">1.4px</span>;  </span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&#x27;Roboto&#x27;</span>, sans-serif;  </span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--clr-dark);  </span><br><span class="line">  <span class="attribute">background-color</span>:<span class="built_in">var</span>( --clr-light) ;  </span><br><span class="line">  <span class="attribute">display</span>: flex;  </span><br><span class="line">  <span class="attribute">justify-content</span>: center;  </span><br><span class="line">  <span class="attribute">align-items</span>: center;  </span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100vh</span>;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">   <span class="attribute">width</span>: <span class="number">80%</span>;  </span><br><span class="line">   <span class="attribute">height</span>: <span class="number">700px</span>;  </span><br><span class="line">   <span class="attribute">margin</span>: <span class="number">0</span> auto;  </span><br><span class="line">   <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="built_in">var</span>(--clr-dark);  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.item</span>&#123;  </span><br><span class="line">  <span class="attribute">width</span>: <span class="number">150px</span>;  </span><br><span class="line">  <span class="attribute">height</span>: <span class="number">150px</span>;  </span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fb7185</span>;  </span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">1em</span>;  </span><br><span class="line">  <span class="attribute">font-weight</span>: <span class="number">700</span>;  </span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--clr-light);  </span><br><span class="line">  <span class="attribute">text-align</span>: center;  </span><br><span class="line">  <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="built_in">var</span>(--clr-accent);  </span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/1.PNG"></p>
-<h2 id="Flex布局介绍"><a href="#Flex布局介绍" class="headerlink" title="Flex布局介绍"></a>Flex布局介绍</h2><h3 id="如何对整个container容器采用Flex布局"><a href="#如何对整个container容器采用Flex布局" class="headerlink" title="如何对整个container容器采用Flex布局"></a>如何对整个container容器采用Flex布局</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">   <span class="attribute">display</span>: flex;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>效果如下<br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/2.png"></p>
-<blockquote>
-<p>display: flex;  代表对容器采用Flex布局<br><font color="red">注意:</font>采用Flex布局后容器元素默认在一行上排列</p>
-</blockquote>
-<h2 id="Flex重要属性介绍"><a href="#Flex重要属性介绍" class="headerlink" title="Flex重要属性介绍"></a>Flex重要属性介绍</h2><h3 id="flex-direction-属性"><a href="#flex-direction-属性" class="headerlink" title="flex-direction 属性"></a>flex-direction 属性</h3><blockquote>
-<p>作用介绍:<br>决定了布局容器中元素的主轴方向    布局中元素顺着主轴排列<br><font color="red">row</font>       横向排列    X轴<br><font color="red">colum</font>    纵向排列    Y轴</p>
-</blockquote>
-<p><strong>row效果</strong><br><img src="/.io//%E5%89%8D%E7%AB%AF/2.png"></p>
-<p><strong>colum效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/1.png"></p>
-<h3 id="justify-content-属性"><a href="#justify-content-属性" class="headerlink" title="justify-content 属性"></a>justify-content 属性</h3><blockquote>
-<p>作用介绍:<br>决定了布局容器中元素在主轴方向上 对齐方式<br><font color="red">flex-start</font>       以起始点为参考对齐<br><font color="red">flex-end</font>         以结束点为参考对齐<br><font color="red">center</font>            居中对齐<br><font color="red">space-between</font>   主轴上的第一个和最后一个元素紧靠主轴起始和结束位置<br>                           对剩余空间的间隔平均分配后对齐</p>
-<p><font color="red">space-around</font>     对主轴上元素的剩余空间进行平分 主轴的起始和结束位置会保留间隔</p>
-</blockquote>
-<p><strong>flex-start效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/2.png"></p>
-<p><strong>flex-end效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/3.png"></p>
-<p><strong>center效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/4.png"></p>
-<p><strong>space-between</strong></p>
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/5.png"></p>
-<p><strong>space-around效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/6.png"></p>
-<h3 id="align-items属性"><a href="#align-items属性" class="headerlink" title="align-items属性"></a>align-items属性</h3><blockquote>
-<p>作用介绍:<br>决定了布局容器中元素在测轴方向上 对齐方式<br><font color="red">flex-start</font>        在侧轴上以起始点为参考对齐<br><font color="red">flex-end</font>          在侧轴上以结束点为参考对齐<br><font color="red">center</font>             在侧轴上居中对齐<br><font color="red">baseline</font>          在侧轴上以基线对齐项目</p>
-</blockquote>
-<p><strong>flex-start效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/7.png"></p>
-<p><strong>flex-end效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/8.png"></p>
-<p><strong>center效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/9.png"></p>
-<p><strong>baseline效果</strong></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">  <span class="attribute">display</span>: flex;  </span><br><span class="line">  <span class="attribute">flex-direction</span>: row;  </span><br><span class="line">  <span class="attribute">justify-content</span>:flex-start;  </span><br><span class="line">  <span class="attribute">align-items</span>: baseline;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.item-1</span>&#123;  </span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">1.5rem</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/10.png"></p>
-<h3 id="flex-wrap属性"><a href="#flex-wrap属性" class="headerlink" title="flex-wrap属性"></a>flex-wrap属性</h3><blockquote>
-<p>作用介绍:<br>主轴上元素过多时，是否需要换行<br><font color="red">wrap</font>      换行显示<br><font color="red">nowrap</font>  不换行  <font color="red">注意</font>当空间不足时元素大小会被挤压</p>
-</blockquote>
-<p><strong>Html代码</strong></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>8分钟学会Flex布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </span><br><span class="line">  <span class="comment">&lt;!--引入样式文件--&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/style.css&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-1&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-2&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-3&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-4&quot;</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-5&quot;</span>&gt;</span>5<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-6&quot;</span>&gt;</span>6<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-7&quot;</span>&gt;</span>7<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-8&quot;</span>&gt;</span>8<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-9&quot;</span>&gt;</span>9<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-10&quot;</span>&gt;</span>10<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-<p><strong>wrap效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/11.png"></p>
-<p><strong>nowrap效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/12.png"></p>
-<p>当元素有多行时候如果需要消除，侧轴的间隔可以将align-items替换为<font color="red">align-content</font><br>对齐方式和之前一样<br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/13.png"></p>
-<p>此时如果需要调整间隔可使用 <font color="red">gap</font></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;  </span><br><span class="line">  <span class="attribute">display</span>: flex;  </span><br><span class="line">  <span class="attribute">flex-direction</span>: row;  </span><br><span class="line">  <span class="attribute">justify-content</span>:flex-start;  </span><br><span class="line">  <span class="attribute">align-content</span>: flex-start;  </span><br><span class="line">  <span class="attribute">flex-wrap</span>: wrap;  </span><br><span class="line">  <span class="attribute">gap</span>: <span class="number">1rem</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/14.png"></p>
-<h3 id="flex-grow属性"><a href="#flex-grow属性" class="headerlink" title="flex-grow属性"></a>flex-grow属性</h3><blockquote>
-<p>作用介绍:<br>在主轴上当剩余的空间较多是，可以通过该属性设置，主轴上元素增长空间</p>
-</blockquote>
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/15.png"></p>
-<p>此时我们可以通过该属性设置让第三个元素占满剩下的所有空间</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>8分钟学会Flex布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span>  </span><br><span class="line">  <span class="comment">&lt;!--引入样式文件--&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/style.css&quot;</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-1&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-2&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item item-3&quot;</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-class">.item-3</span>&#123;  </span><br><span class="line">  <span class="attribute">flex-grow</span>: <span class="number">1</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/16.png"></p>
-<h3 id="flex-shrink属性"><a href="#flex-shrink属性" class="headerlink" title="flex-shrink属性"></a>flex-shrink属性</h3><p>作用介绍:</p>
-<blockquote>
-<p>当屏幕缩小时，元素在主轴缩小效果   0拒绝收缩 默认所有元素都是1的等比压缩 值越大空间不够时压缩的就越小</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.item-1&#123;  </span><br><span class="line">  flex-shrink: 5;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/17.png"></p>
-<h3 id="flex和flex-basis属性"><a href="#flex和flex-basis属性" class="headerlink" title="flex和flex-basis属性"></a>flex和flex-basis属性</h3><blockquote>
-<p>作用介绍:<br>flex:   按照份数设置元素宽度   1<br>  flex-basis:  通过设置像素或者百分比  控制元素的宽度</p>
-</blockquote>
-<h3 id="align-self属性"><a href="#align-self属性" class="headerlink" title="align-self属性"></a>align-self属性</h3><blockquote>
-<p>作用介绍:<br>单独设置主轴上某一个元素，在侧轴的对齐方式</p>
-</blockquote>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.item-1</span>&#123;  </span><br><span class="line">  <span class="attribute">align-self</span>: center;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>效果</strong><br><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/18.png"></p>
-<h3 id="order属性"><a href="#order属性" class="headerlink" title="order属性"></a>order属性</h3><p>作用介绍:</p>
-<blockquote>
-<p>该值越大，在主轴上元素越靠后</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.item-1&#123;  </span><br><span class="line"> order: 10000;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/19.png"></p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>前端案列</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>炫酷的玻璃形态按钮的制作</title>
     <url>/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10003-%E7%82%AB%E9%85%B7%E7%9A%84%E7%8E%BB%E7%92%83%E5%BD%A2%E6%80%81%E6%8C%89%E9%92%AE%E7%9A%84%E5%88%B6%E4%BD%9C/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h2><blockquote>
@@ -736,40 +736,6 @@
 <iframe src="//player.bilibili.com/player.html?aid=948086410&bvid=BV1Us4y1t7TT&cid=972275652&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; Left: 0; top: 0;"></iframe></div>
 
 
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>前端案列</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>漂亮的代码雨效果</title>
-    <url>/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10005-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E5%88%B6%E4%BD%9C%E4%BB%A3%E7%A0%81%E9%9B%A8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><table><tr><td bgcolor="BlueViolet"><font color="white">作者:博哥 时间:2023-02-11</font></td></tr></table>
-
-<h2 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h2><blockquote>
-<ul>
-<li>HTML</li>
-<li>CSS3</li>
-<li>JavaScript</li>
-</ul>
-</blockquote>
-<h2 id="基础参数"><a href="#基础参数" class="headerlink" title="基础参数"></a>基础参数</h2><blockquote>
-<ul>
-<li><strong>代码雨颜色</strong></li>
-</ul>
-<p> #0ff</p>
-<p> #0f0</p>
-<p> #f00</p>
-<ul>
-<li><strong>代码雨高度</strong></li>
-</ul>
-<p> 200px</p>
-</blockquote>
 ]]></content>
       <categories>
         <category>前端</category>
@@ -939,6 +905,40 @@
       </tags>
   </entry>
   <entry>
+    <title>漂亮的代码雨效果</title>
+    <url>/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10005-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E5%88%B6%E4%BD%9C%E4%BB%A3%E7%A0%81%E9%9B%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><table><tr><td bgcolor="BlueViolet"><font color="white">作者:博哥 时间:2023-02-11</font></td></tr></table>
+
+<h2 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h2><blockquote>
+<ul>
+<li>HTML</li>
+<li>CSS3</li>
+<li>JavaScript</li>
+</ul>
+</blockquote>
+<h2 id="基础参数"><a href="#基础参数" class="headerlink" title="基础参数"></a>基础参数</h2><blockquote>
+<ul>
+<li><strong>代码雨颜色</strong></li>
+</ul>
+<p> #0ff</p>
+<p> #0f0</p>
+<p> #f00</p>
+<ul>
+<li><strong>代码雨高度</strong></li>
+</ul>
+<p> 200px</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>前端案列</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何让我们写的代码更漂亮</title>
     <url>/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10006-%E5%A6%82%E4%BD%95%E8%AE%A9%E6%88%91%E4%BB%AC%E5%86%99%E7%9A%84%E4%BB%A3%E7%A0%81%E6%9B%B4%E6%BC%82%E4%BA%AE/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><table><tr><td bgcolor="BlueViolet"><font color="white">作者:博哥 时间:2023-02-26</font></td></tr></table>
@@ -1060,43 +1060,6 @@
       </tags>
   </entry>
   <entry>
-    <title>快速在Linux环境下安装配置JDk</title>
-    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10003-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJDK/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><font color="blue"><strong>作者:博哥</strong></font></p>
-<h2 id="使用Xshell工具连接Linux服务器"><a href="#使用Xshell工具连接Linux服务器" class="headerlink" title="使用Xshell工具连接Linux服务器"></a>使用Xshell工具连接Linux服务器</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/1.png" alt="页面效果"></p>
-<h2 id="下载Linux版本的Jdk安装包"><a href="#下载Linux版本的Jdk安装包" class="headerlink" title="下载Linux版本的Jdk安装包"></a>下载Linux版本的Jdk安装包</h2><p>链接：<a href="https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ">https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ</a><br>提取码：0er6 </p>
-<p>将下载的安装包上传到linux下的opt目录</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/2.png" alt="页面效果"></p>
-<h2 id="在命令行界面切入到opt目录下"><a href="#在命令行界面切入到opt目录下" class="headerlink" title="在命令行界面切入到opt目录下"></a>在命令行界面切入到opt目录下</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/3.png" alt="页面效果"></p>
-<h3 id="解压jdk安装包"><a href="#解压jdk安装包" class="headerlink" title="解压jdk安装包"></a>解压jdk安装包</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf jdk-8u301-linux-x64.tar.gz </span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/4.png" alt="页面效果"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/5.png" alt="页面效果"></p>
-<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><h3 id="切入到etc-目录"><a href="#切入到etc-目录" class="headerlink" title="切入到etc 目录"></a>切入到etc 目录</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/6.png" alt="页面效果"></p>
-<h3 id="使用vi-命令修改-profile文件"><a href="#使用vi-命令修改-profile文件" class="headerlink" title="使用vi 命令修改 profile文件"></a>使用vi 命令修改 profile文件</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/7.png" alt="页面效果"></p>
-<h3 id="找到最后一行位置"><a href="#找到最后一行位置" class="headerlink" title="找到最后一行位置"></a>找到最后一行位置</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/8.png" alt="页面效果"></p>
-<h3 id="将如下的Jdk环境变量添加到尾部"><a href="#将如下的Jdk环境变量添加到尾部" class="headerlink" title="将如下的Jdk环境变量添加到尾部"></a>将如下的Jdk环境变量添加到尾部</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/jdk1.8.0_301</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$&#123;JAVA_HOME&#125;</span>/jre/lib/rt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/dt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/tools.jar</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/9.png" alt="页面效果"></p>
-<p>按下Esc  wq!保存退出</p>
-<h3 id="刷新环境变量和验证java环境是否安装成功"><a href="#刷新环境变量和验证java环境是否安装成功" class="headerlink" title="刷新环境变量和验证java环境是否安装成功"></a>刷新环境变量和验证java环境是否安装成功</h3><p><strong>刷新环境变量</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source  /etc/profile</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/10.png" alt="页面效果"></p>
-<p><strong>验证jdk是否安装成功</strong></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/11.png" alt="页面效果"></p>
-]]></content>
-      <categories>
-        <category>服务</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>jdk</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>快速在Winows环境下安装使用mysql8</title>
     <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10001-windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8Mysql8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><font color="blue"><strong>作者:博哥</strong></font></p>
@@ -1167,106 +1130,6 @@
       <tags>
         <tag>windows</tag>
         <tag>mysql</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>快速在Linux环境下安装配置Tomcat并部署项目测试</title>
-    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10005-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8tomcat/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="使用Xshell工具连上Linux服务器"><a href="#使用Xshell工具连上Linux服务器" class="headerlink" title="使用Xshell工具连上Linux服务器"></a>使用Xshell工具连上Linux服务器</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/1.png" alt="页面效果"></p>
-<h2 id="下载Tomcat9-的安装包"><a href="#下载Tomcat9-的安装包" class="headerlink" title="下载Tomcat9 的安装包"></a>下载Tomcat9 的安装包</h2><p>链接：<a href="https://pan.baidu.com/s/1As5zvaQmUdyv2lIi0Lu3Qw">https://pan.baidu.com/s/1As5zvaQmUdyv2lIi0Lu3Qw</a><br>提取码：dm8g </p>
-<p><strong>注意:tomcat安装配置前必须确保jdk已经安装配置完成</strong></p>
-<p>将下载的安装包上传到Linux下的opt目录</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/2.png" alt="页面效果"></p>
-<h2 id="解压tomcat"><a href="#解压tomcat" class="headerlink" title="解压tomcat"></a>解压tomcat</h2><blockquote>
-<p>执行如下命令解压tomcat</p>
-</blockquote>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/3.png" alt="页面效果"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/4.png" alt="页面效果"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/5.png" alt="页面效果"></p>
-<h2 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h2><h3 id="进入到tomcat下bin目录中"><a href="#进入到tomcat下bin目录中" class="headerlink" title="进入到tomcat下bin目录中"></a>进入到tomcat下bin目录中</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/6.png" alt="页面效果"></p>
-<h3 id="启动tomcat"><a href="#启动tomcat" class="headerlink" title="启动tomcat"></a>启动tomcat</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./start</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/7.png" alt="页面效果"></p>
-<h3 id="查看tomcat启动日志，是否启动成功"><a href="#查看tomcat启动日志，是否启动成功" class="headerlink" title="查看tomcat启动日志，是否启动成功"></a>查看tomcat启动日志，是否启动成功</h3><p>切入到logs下目录下查看项目启动状态</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/8.png" alt="页面效果"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/9.png" alt="页面效果"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/10.png" alt="页面效果"></p>
-<h2 id="测试访问Tomcat"><a href="#测试访问Tomcat" class="headerlink" title="测试访问Tomcat"></a>测试访问Tomcat</h2><h3 id="打开浏览器输入如下地址"><a href="#打开浏览器输入如下地址" class="headerlink" title="打开浏览器输入如下地址"></a>打开浏览器输入如下地址</h3><blockquote>
-<p><a href="http://192.168.195.131:8080/">http://192.168.195.131:8080</a></p>
-</blockquote>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/11.png" alt="页面效果"></p>
-<h3 id="在服务器地址和端口都没错情况-访问不了，原因，防火墙拦截了8080端口"><a href="#在服务器地址和端口都没错情况-访问不了，原因，防火墙拦截了8080端口" class="headerlink" title="在服务器地址和端口都没错情况,访问不了，原因，防火墙拦截了8080端口"></a>在服务器地址和端口都没错情况,访问不了，原因，防火墙拦截了8080端口</h3><p>输入如下命令查看防火墙状态</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl  status firewalld.service</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/12.png" alt="页面效果"></p>
-<h2 id="防火墙规则中添加8080端口"><a href="#防火墙规则中添加8080端口" class="headerlink" title="防火墙规则中添加8080端口"></a>防火墙规则中添加8080端口</h2><h3 id="查询有哪些端口是开启的"><a href="#查询有哪些端口是开启的" class="headerlink" title="查询有哪些端口是开启的"></a>查询有哪些端口是开启的</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --list-port</span><br></pre></td></tr></table></figure>
-
-<h3 id="查询9090端口是否开启："><a href="#查询9090端口是否开启：" class="headerlink" title="查询9090端口是否开启："></a>查询9090端口是否开启：</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --query-port=9090/tcp</span><br></pre></td></tr></table></figure>
-
-<h3 id="开启9090端口"><a href="#开启9090端口" class="headerlink" title="开启9090端口"></a>开启9090端口</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=9090/tcp --permanent</span><br></pre></td></tr></table></figure>
-
-<h3 id="重启防火墙生效"><a href="#重启防火墙生效" class="headerlink" title="重启防火墙生效"></a>重启防火墙生效</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>命令含义： –zone #作用域 –add-port&#x3D;9090&#x2F;tcp #添加端口，格式为：端口&#x2F;通讯协议 –permanent #永久生效，没有此参数重启后失效</p>
-</blockquote>
-<h3 id="删除9090端口"><a href="#删除9090端口" class="headerlink" title="删除9090端口"></a>删除9090端口</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --remove-port=9090/tcp --permanent</span><br></pre></td></tr></table></figure>
-
-<h3 id="重启防火墙生效-1"><a href="#重启防火墙生效-1" class="headerlink" title="重启防火墙生效"></a>重启防火墙生效</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
-
-<h3 id="关闭并禁用"><a href="#关闭并禁用" class="headerlink" title="关闭并禁用"></a>关闭并禁用</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl disable firewalld</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/13.png" alt="页面效果"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/14.png" alt="页面效果"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/15.png" alt="页面效果"></p>
-<h3 id="验证tomcat是否可以访问"><a href="#验证tomcat是否可以访问" class="headerlink" title="验证tomcat是否可以访问"></a>验证tomcat是否可以访问</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/16.png" alt="页面效果"></p>
-<h2 id="快速部署项目测试"><a href="#快速部署项目测试" class="headerlink" title="快速部署项目测试"></a>快速部署项目测试</h2><h3 id="先停止tomcat服务器"><a href="#先停止tomcat服务器" class="headerlink" title="先停止tomcat服务器"></a>先停止tomcat服务器</h3><p>切换到tomcat的bin目录</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/17.png" alt="页面效果"></p>
-<p>执行停止的命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./shutdown.sh</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/18.png" alt="页面效果"></p>
-<h3 id="部署简单项目测试–先准备一个web静态网页项目"><a href="#部署简单项目测试–先准备一个web静态网页项目" class="headerlink" title="部署简单项目测试–先准备一个web静态网页项目"></a>部署简单项目测试–先准备一个web静态网页项目</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/19.png" alt="页面效果"></p>
-<p>博哥个人主页 <a href="https://www.aliyundrive.com/s/Fyw9Q5tuF4u">https://www.aliyundrive.com/s/Fyw9Q5tuF4u</a> </p>
-<p>将上面这个项目上传到tomcat的webapps目录</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/20.png" alt="页面效果"></p>
-<h3 id="重新启动tomcat访问该项目"><a href="#重新启动tomcat访问该项目" class="headerlink" title="重新启动tomcat访问该项目"></a>重新启动tomcat访问该项目</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/21.png" alt="页面效果"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/22.png" alt="页面效果"></p>
-]]></content>
-      <categories>
-        <category>服务</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>tomcat</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>window环境下安装配置Jdk环境</title>
-    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10002-windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJdk/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><font color="blue"><strong>作者:博哥</strong></font></p>
-<h2 id="下载jdk"><a href="#下载jdk" class="headerlink" title="下载jdk"></a>下载jdk</h2><p>链接：<a href="https://pan.baidu.com/s/19p4hwHms_bHwXxPS9b99BA">https://pan.baidu.com/s/19p4hwHms_bHwXxPS9b99BA</a><br>提取码：id9k </p>
-<h2 id="安装JDk"><a href="#安装JDk" class="headerlink" title="安装JDk"></a>安装JDk</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/1.png" alt="页面效果"></p>
-<p>双击安装:一直默认即可知道安装完成</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/2.png" alt="页面效果"></p>
-<p>jdk的默认安装目录</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">C:\Program Files\Java\jdk1.8.0_181</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><h3 id="此电脑属性—-gt-高级系统盘设置–环境变量—打开环境变量设置窗口"><a href="#此电脑属性—-gt-高级系统盘设置–环境变量—打开环境变量设置窗口" class="headerlink" title="此电脑属性—&gt;高级系统盘设置–环境变量—打开环境变量设置窗口"></a>此电脑属性—&gt;高级系统盘设置–环境变量—打开环境变量设置窗口</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/3.png" alt="页面效果"></p>
-<h3 id="在用户变量中新建JAVA-HOME如图所示"><a href="#在用户变量中新建JAVA-HOME如图所示" class="headerlink" title="在用户变量中新建JAVA_HOME如图所示"></a>在用户变量中新建JAVA_HOME如图所示</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/4.png" alt="页面效果"></p>
-<h3 id="在系统变量中配置Path-如下图所示"><a href="#在系统变量中配置Path-如下图所示" class="headerlink" title="在系统变量中配置Path 如下图所示"></a>在系统变量中配置Path 如下图所示</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/5.png" alt="页面效果"></p>
-<h3 id="windows-R键输入cmd打开命令行窗口"><a href="#windows-R键输入cmd打开命令行窗口" class="headerlink" title="windows+R键输入cmd打开命令行窗口"></a>windows+R键输入cmd打开命令行窗口</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/6.png" alt="页面效果"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/7.png" alt="页面效果"></p>
-<h3 id="验证Java环境有没有配置成功"><a href="#验证Java环境有没有配置成功" class="headerlink" title="验证Java环境有没有配置成功"></a>验证Java环境有没有配置成功</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/8.png" alt="页面效果"></p>
-]]></content>
-      <categories>
-        <category>服务</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
-        <tag>jdk</tag>
       </tags>
   </entry>
   <entry>
@@ -1365,6 +1228,115 @@
       </tags>
   </entry>
   <entry>
+    <title>快速在Linux环境下安装配置JDk</title>
+    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10003-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJDK/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><font color="blue"><strong>作者:博哥</strong></font></p>
+<h2 id="使用Xshell工具连接Linux服务器"><a href="#使用Xshell工具连接Linux服务器" class="headerlink" title="使用Xshell工具连接Linux服务器"></a>使用Xshell工具连接Linux服务器</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/1.png" alt="页面效果"></p>
+<h2 id="下载Linux版本的Jdk安装包"><a href="#下载Linux版本的Jdk安装包" class="headerlink" title="下载Linux版本的Jdk安装包"></a>下载Linux版本的Jdk安装包</h2><p>链接：<a href="https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ">https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ</a><br>提取码：0er6 </p>
+<p>将下载的安装包上传到linux下的opt目录</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/2.png" alt="页面效果"></p>
+<h2 id="在命令行界面切入到opt目录下"><a href="#在命令行界面切入到opt目录下" class="headerlink" title="在命令行界面切入到opt目录下"></a>在命令行界面切入到opt目录下</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/3.png" alt="页面效果"></p>
+<h3 id="解压jdk安装包"><a href="#解压jdk安装包" class="headerlink" title="解压jdk安装包"></a>解压jdk安装包</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf jdk-8u301-linux-x64.tar.gz </span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/4.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/5.png" alt="页面效果"></p>
+<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><h3 id="切入到etc-目录"><a href="#切入到etc-目录" class="headerlink" title="切入到etc 目录"></a>切入到etc 目录</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/6.png" alt="页面效果"></p>
+<h3 id="使用vi-命令修改-profile文件"><a href="#使用vi-命令修改-profile文件" class="headerlink" title="使用vi 命令修改 profile文件"></a>使用vi 命令修改 profile文件</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/7.png" alt="页面效果"></p>
+<h3 id="找到最后一行位置"><a href="#找到最后一行位置" class="headerlink" title="找到最后一行位置"></a>找到最后一行位置</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/8.png" alt="页面效果"></p>
+<h3 id="将如下的Jdk环境变量添加到尾部"><a href="#将如下的Jdk环境变量添加到尾部" class="headerlink" title="将如下的Jdk环境变量添加到尾部"></a>将如下的Jdk环境变量添加到尾部</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/jdk1.8.0_301</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$&#123;JAVA_HOME&#125;</span>/jre/lib/rt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/dt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/tools.jar</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/9.png" alt="页面效果"></p>
+<p>按下Esc  wq!保存退出</p>
+<h3 id="刷新环境变量和验证java环境是否安装成功"><a href="#刷新环境变量和验证java环境是否安装成功" class="headerlink" title="刷新环境变量和验证java环境是否安装成功"></a>刷新环境变量和验证java环境是否安装成功</h3><p><strong>刷新环境变量</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source  /etc/profile</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/10.png" alt="页面效果"></p>
+<p><strong>验证jdk是否安装成功</strong></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/11.png" alt="页面效果"></p>
+]]></content>
+      <categories>
+        <category>服务</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>jdk</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>快速在Linux环境下安装配置Tomcat并部署项目测试</title>
+    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10005-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8tomcat/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="使用Xshell工具连上Linux服务器"><a href="#使用Xshell工具连上Linux服务器" class="headerlink" title="使用Xshell工具连上Linux服务器"></a>使用Xshell工具连上Linux服务器</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/1.png" alt="页面效果"></p>
+<h2 id="下载Tomcat9-的安装包"><a href="#下载Tomcat9-的安装包" class="headerlink" title="下载Tomcat9 的安装包"></a>下载Tomcat9 的安装包</h2><p>链接：<a href="https://pan.baidu.com/s/1As5zvaQmUdyv2lIi0Lu3Qw">https://pan.baidu.com/s/1As5zvaQmUdyv2lIi0Lu3Qw</a><br>提取码：dm8g </p>
+<p><strong>注意:tomcat安装配置前必须确保jdk已经安装配置完成</strong></p>
+<p>将下载的安装包上传到Linux下的opt目录</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/2.png" alt="页面效果"></p>
+<h2 id="解压tomcat"><a href="#解压tomcat" class="headerlink" title="解压tomcat"></a>解压tomcat</h2><blockquote>
+<p>执行如下命令解压tomcat</p>
+</blockquote>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/3.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/4.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/5.png" alt="页面效果"></p>
+<h2 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h2><h3 id="进入到tomcat下bin目录中"><a href="#进入到tomcat下bin目录中" class="headerlink" title="进入到tomcat下bin目录中"></a>进入到tomcat下bin目录中</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/6.png" alt="页面效果"></p>
+<h3 id="启动tomcat"><a href="#启动tomcat" class="headerlink" title="启动tomcat"></a>启动tomcat</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./start</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/7.png" alt="页面效果"></p>
+<h3 id="查看tomcat启动日志，是否启动成功"><a href="#查看tomcat启动日志，是否启动成功" class="headerlink" title="查看tomcat启动日志，是否启动成功"></a>查看tomcat启动日志，是否启动成功</h3><p>切入到logs下目录下查看项目启动状态</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/8.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/9.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/10.png" alt="页面效果"></p>
+<h2 id="测试访问Tomcat"><a href="#测试访问Tomcat" class="headerlink" title="测试访问Tomcat"></a>测试访问Tomcat</h2><h3 id="打开浏览器输入如下地址"><a href="#打开浏览器输入如下地址" class="headerlink" title="打开浏览器输入如下地址"></a>打开浏览器输入如下地址</h3><blockquote>
+<p><a href="http://192.168.195.131:8080/">http://192.168.195.131:8080</a></p>
+</blockquote>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/11.png" alt="页面效果"></p>
+<h3 id="在服务器地址和端口都没错情况-访问不了，原因，防火墙拦截了8080端口"><a href="#在服务器地址和端口都没错情况-访问不了，原因，防火墙拦截了8080端口" class="headerlink" title="在服务器地址和端口都没错情况,访问不了，原因，防火墙拦截了8080端口"></a>在服务器地址和端口都没错情况,访问不了，原因，防火墙拦截了8080端口</h3><p>输入如下命令查看防火墙状态</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl  status firewalld.service</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/12.png" alt="页面效果"></p>
+<h2 id="防火墙规则中添加8080端口"><a href="#防火墙规则中添加8080端口" class="headerlink" title="防火墙规则中添加8080端口"></a>防火墙规则中添加8080端口</h2><h3 id="查询有哪些端口是开启的"><a href="#查询有哪些端口是开启的" class="headerlink" title="查询有哪些端口是开启的"></a>查询有哪些端口是开启的</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --list-port</span><br></pre></td></tr></table></figure>
+
+<h3 id="查询9090端口是否开启："><a href="#查询9090端口是否开启：" class="headerlink" title="查询9090端口是否开启："></a>查询9090端口是否开启：</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --query-port=9090/tcp</span><br></pre></td></tr></table></figure>
+
+<h3 id="开启9090端口"><a href="#开启9090端口" class="headerlink" title="开启9090端口"></a>开启9090端口</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=9090/tcp --permanent</span><br></pre></td></tr></table></figure>
+
+<h3 id="重启防火墙生效"><a href="#重启防火墙生效" class="headerlink" title="重启防火墙生效"></a>重启防火墙生效</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>命令含义： –zone #作用域 –add-port&#x3D;9090&#x2F;tcp #添加端口，格式为：端口&#x2F;通讯协议 –permanent #永久生效，没有此参数重启后失效</p>
+</blockquote>
+<h3 id="删除9090端口"><a href="#删除9090端口" class="headerlink" title="删除9090端口"></a>删除9090端口</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --remove-port=9090/tcp --permanent</span><br></pre></td></tr></table></figure>
+
+<h3 id="重启防火墙生效-1"><a href="#重启防火墙生效-1" class="headerlink" title="重启防火墙生效"></a>重启防火墙生效</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+
+<h3 id="关闭并禁用"><a href="#关闭并禁用" class="headerlink" title="关闭并禁用"></a>关闭并禁用</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl disable firewalld</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/13.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/14.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/15.png" alt="页面效果"></p>
+<h3 id="验证tomcat是否可以访问"><a href="#验证tomcat是否可以访问" class="headerlink" title="验证tomcat是否可以访问"></a>验证tomcat是否可以访问</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/16.png" alt="页面效果"></p>
+<h2 id="快速部署项目测试"><a href="#快速部署项目测试" class="headerlink" title="快速部署项目测试"></a>快速部署项目测试</h2><h3 id="先停止tomcat服务器"><a href="#先停止tomcat服务器" class="headerlink" title="先停止tomcat服务器"></a>先停止tomcat服务器</h3><p>切换到tomcat的bin目录</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/17.png" alt="页面效果"></p>
+<p>执行停止的命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./shutdown.sh</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/18.png" alt="页面效果"></p>
+<h3 id="部署简单项目测试–先准备一个web静态网页项目"><a href="#部署简单项目测试–先准备一个web静态网页项目" class="headerlink" title="部署简单项目测试–先准备一个web静态网页项目"></a>部署简单项目测试–先准备一个web静态网页项目</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/19.png" alt="页面效果"></p>
+<p>博哥个人主页 <a href="https://www.aliyundrive.com/s/Fyw9Q5tuF4u">https://www.aliyundrive.com/s/Fyw9Q5tuF4u</a> </p>
+<p>将上面这个项目上传到tomcat的webapps目录</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/20.png" alt="页面效果"></p>
+<h3 id="重新启动tomcat访问该项目"><a href="#重新启动tomcat访问该项目" class="headerlink" title="重新启动tomcat访问该项目"></a>重新启动tomcat访问该项目</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/21.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A5/22.png" alt="页面效果"></p>
+]]></content>
+      <categories>
+        <category>服务</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>tomcat</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何在windows下快速模拟搭建Linux环境</title>
     <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10006-%E5%A6%82%E4%BD%95%E5%9C%A8windows%E4%B8%8B%E5%BF%AB%E9%80%9F%E6%A8%A1%E6%8B%9F%E6%90%AD%E5%BB%BALinux%E7%8E%AF%E5%A2%83/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
@@ -1445,6 +1417,259 @@
       <tags>
         <tag>linux</tag>
         <tag>虚拟机</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>window环境下安装配置Jdk环境</title>
+    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10002-windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJdk/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><font color="blue"><strong>作者:博哥</strong></font></p>
+<h2 id="下载jdk"><a href="#下载jdk" class="headerlink" title="下载jdk"></a>下载jdk</h2><p>链接：<a href="https://pan.baidu.com/s/19p4hwHms_bHwXxPS9b99BA">https://pan.baidu.com/s/19p4hwHms_bHwXxPS9b99BA</a><br>提取码：id9k </p>
+<h2 id="安装JDk"><a href="#安装JDk" class="headerlink" title="安装JDk"></a>安装JDk</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/1.png" alt="页面效果"></p>
+<p>双击安装:一直默认即可知道安装完成</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/2.png" alt="页面效果"></p>
+<p>jdk的默认安装目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">C:\Program Files\Java\jdk1.8.0_181</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><h3 id="此电脑属性—-gt-高级系统盘设置–环境变量—打开环境变量设置窗口"><a href="#此电脑属性—-gt-高级系统盘设置–环境变量—打开环境变量设置窗口" class="headerlink" title="此电脑属性—&gt;高级系统盘设置–环境变量—打开环境变量设置窗口"></a>此电脑属性—&gt;高级系统盘设置–环境变量—打开环境变量设置窗口</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/3.png" alt="页面效果"></p>
+<h3 id="在用户变量中新建JAVA-HOME如图所示"><a href="#在用户变量中新建JAVA-HOME如图所示" class="headerlink" title="在用户变量中新建JAVA_HOME如图所示"></a>在用户变量中新建JAVA_HOME如图所示</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/4.png" alt="页面效果"></p>
+<h3 id="在系统变量中配置Path-如下图所示"><a href="#在系统变量中配置Path-如下图所示" class="headerlink" title="在系统变量中配置Path 如下图所示"></a>在系统变量中配置Path 如下图所示</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/5.png" alt="页面效果"></p>
+<h3 id="windows-R键输入cmd打开命令行窗口"><a href="#windows-R键输入cmd打开命令行窗口" class="headerlink" title="windows+R键输入cmd打开命令行窗口"></a>windows+R键输入cmd打开命令行窗口</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/6.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/7.png" alt="页面效果"></p>
+<h3 id="验证Java环境有没有配置成功"><a href="#验证Java环境有没有配置成功" class="headerlink" title="验证Java环境有没有配置成功"></a>验证Java环境有没有配置成功</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A2/8.png" alt="页面效果"></p>
+]]></content>
+      <categories>
+        <category>服务</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>jdk</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Redis集群环境搭建三种方式</title>
+    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10008-Linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BARedis%E9%9B%86%E7%BE%A4%E7%8E%AF%E5%A2%83/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="主从复制集群环境搭建"><a href="#主从复制集群环境搭建" class="headerlink" title="主从复制集群环境搭建"></a>主从复制集群环境搭建</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A9/1.png"></p>
+<h3 id="编写配置文件"><a href="#编写配置文件" class="headerlink" title="编写配置文件"></a>编写配置文件</h3><blockquote>
+<p>准备三台Linux服务器,并且安装好redis环境</p>
+</blockquote>
+<ul>
+<li><p><strong>第一台配置</strong> </p>
+<p>新建redis6379.conf</p>
+</li>
+</ul>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">include</span> <span class="string">/opt/redis-6.2.6/redis.conf</span></span><br><span class="line"><span class="attr">pidfile</span> <span class="string">/var/run/redis_6379.pid</span></span><br><span class="line"><span class="attr">port</span> <span class="string">6379</span></span><br><span class="line"><span class="attr">dbfilename</span> <span class="string">dump6379.rdb</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><strong>第二台配置</strong></p>
+<p>新建redis6380.conf</p>
+</li>
+</ul>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">include</span> <span class="string">/opt/redis-6.2.6/redis.conf</span></span><br><span class="line"><span class="attr">pidfile</span> <span class="string">/var/run/redis_6380.pid</span></span><br><span class="line"><span class="attr">port</span> <span class="string">6380</span></span><br><span class="line"><span class="attr">dbfilename</span> <span class="string">dump6380.rdb</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>第三台配置</strong></li>
+</ul>
+<p>​        新建redis6381.conf</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">include</span> <span class="string">/opt/redis-6.2.6/redis.conf</span></span><br><span class="line"><span class="attr">pidfile</span> <span class="string">/var/run/redis_6381.pid</span></span><br><span class="line"><span class="attr">port</span> <span class="string">6381</span></span><br><span class="line"><span class="attr">dbfilename</span> <span class="string">dump6381.rdb</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="启动三台redis服务器"><a href="#启动三台redis服务器" class="headerlink" title="启动三台redis服务器"></a>启动三台redis服务器</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">redis-server</span>    <span class="string">redis6379.conf</span></span><br><span class="line"><span class="attr">redis-server</span>    <span class="string">redis6380.conf</span></span><br><span class="line"><span class="attr">redis-server</span>    <span class="string">redis6381.conf</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看系统进程</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@localhost src]<span class="comment"># ps -ef |grep redis</span></span><br><span class="line">root   40737   1 0 22:05 ?    00:00:00 ./redis-server *:6379</span><br><span class="line">root   40743   1 0 22:05 ?    00:00:00 ./redis-server *:6380</span><br><span class="line">root   40750   1 0 22:05 ?    00:00:00 ./redis-server *:6381</span><br><span class="line">root   40758 40631 0 22:05 pts/0  00:00:00 grep --color=auto redis</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看三台主机运行情况"><a href="#查看三台主机运行情况" class="headerlink" title="查看三台主机运行情况"></a>查看三台主机运行情况</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#打印主从复制的相关信息</span></span><br><span class="line">./redis-cli -p 6379</span><br><span class="line">./redis-cli -p 6380</span><br><span class="line">./redis-cli -p 6381</span><br><span class="line">127.0.0.1:6379&gt; info replication</span><br><span class="line">127.0.0.1:6380&gt; info replication</span><br><span class="line">127.0.0.1:6381&gt; info replication</span><br></pre></td></tr></table></figure>
+
+<h3 id="配从库不配主库"><a href="#配从库不配主库" class="headerlink" title="配从库不配主库"></a>配从库不配主库</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">slaveof &lt;ip&gt; &lt;port&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="在主机上写，在从机上可以读取数据"><a href="#在主机上写，在从机上可以读取数据" class="headerlink" title="在主机上写，在从机上可以读取数据"></a>在主机上写，在从机上可以读取数据</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> k1 v1</span><br></pre></td></tr></table></figure>
+
+<h3 id="Redis主从复制缺点"><a href="#Redis主从复制缺点" class="headerlink" title="Redis主从复制缺点"></a>Redis主从复制缺点</h3><p>当主机 Master 宕机以后，我们需要人工解决切换</p>
+<blockquote>
+<p>暴漏问题：</p>
+<ul>
+<li><p>一旦主节点宕机，写服务无法使用，就需要手动去切换，重新选取主节点，手动设置主从关系。</p>
+</li>
+<li><p>当主服务器宕机后，需要手动把一台从服务器切换为主服务器，这就需要人工干预，费事费力，还会造<br> 成一段时间内服务不可用。这不是一种推荐的方式，更多时候，我们优先考虑哨兵模式。</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="哨兵模式集群环境搭建"><a href="#哨兵模式集群环境搭建" class="headerlink" title="哨兵模式集群环境搭建"></a>哨兵模式集群环境搭建</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A9/2.png"></p>
+<blockquote>
+<p>准备三台Linux服务器,并且安装好redis环境</p>
+<p>搭建好主从复制集群</p>
+</blockquote>
+<h3 id="新建sentinel-26379-conf文件"><a href="#新建sentinel-26379-conf文件" class="headerlink" title="新建sentinel-26379.conf文件"></a>新建sentinel-26379.conf文件</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment">#端口</span></span><br><span class="line"><span class="attr">port</span> <span class="string">26379</span></span><br><span class="line"><span class="comment">#守护进程运行</span></span><br><span class="line"><span class="attr">daemonize</span> <span class="string">yes</span></span><br><span class="line"><span class="comment">#日志文件</span></span><br><span class="line"><span class="attr">logfile</span> <span class="string">&quot;26379.log&quot;</span></span><br><span class="line"><span class="attr">sentinel</span> <span class="string">monitor mymaster 192.168.92.128 6379 2</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>参数：<br>sentinel monitor mymaster 192.168.92.128 6379 2 配置的含义是：该哨兵节点监控<br>192.168.92.128:6379这个主节点，该主节点的名称是mymaster，最后的2的含义与主节点的故障<br>判定有关：至少需要2个哨兵节点同意，才能判定主节点故障并进行故障转移。</p>
+</blockquote>
+<h3 id="新建sentinel-26380-conf文件"><a href="#新建sentinel-26380-conf文件" class="headerlink" title="新建sentinel-26380.conf文件"></a>新建sentinel-26380.conf文件</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment">#端口</span></span><br><span class="line"><span class="attr">port</span> <span class="string">26380</span></span><br><span class="line"><span class="comment">#守护进程运行</span></span><br><span class="line"><span class="attr">daemonize</span> <span class="string">yes</span></span><br><span class="line"><span class="comment">#日志文件</span></span><br><span class="line"><span class="attr">logfile</span> <span class="string">&quot;26380.log&quot;</span></span><br><span class="line"><span class="attr">sentinel</span> <span class="string">monitor mymaster 192.168.66.100 6379 2</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="新建sentinel-26381-conf文件"><a href="#新建sentinel-26381-conf文件" class="headerlink" title="新建sentinel-26381.conf文件"></a>新建sentinel-26381.conf文件</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment">#端口</span></span><br><span class="line"><span class="attr">port</span> <span class="string">26381</span></span><br><span class="line"><span class="comment">#守护进程运行</span></span><br><span class="line"><span class="attr">daemonize</span> <span class="string">yes</span></span><br><span class="line"><span class="comment">#日志文件</span></span><br><span class="line"><span class="attr">logfile</span> <span class="string">&quot;26381.log&quot;</span></span><br><span class="line"><span class="attr">sentinel</span> <span class="string">monitor mymaster 192.168.66.100 6379 2</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="哨兵节点的启动"><a href="#哨兵节点的启动" class="headerlink" title="哨兵节点的启动"></a>哨兵节点的启动</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">redis-sentinel sentinel-26379.conf</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看哨兵节点状态"><a href="#查看哨兵节点状态" class="headerlink" title="查看哨兵节点状态"></a>查看哨兵节点状态</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@localhost src]<span class="comment"># ./redis-cli -p 26379</span></span><br><span class="line">127.0.0.1:26379&gt;</span><br><span class="line">127.0.0.1:26379&gt;</span><br><span class="line">127.0.0.1:26379&gt; info sentinel</span><br><span class="line"><span class="comment"># Sentinel</span></span><br><span class="line">sentinel_masters:1</span><br><span class="line">sentinel_tilt:0</span><br><span class="line">sentinel_running_scripts:0</span><br><span class="line">sentinel_scripts_queue_length:0</span><br><span class="line">sentinel_simulate_failure_flags:0</span><br><span class="line">master0:name=mymaster,status=ok,address=192.168.66.100:6379,slaves=2,sentinels=3</span><br></pre></td></tr></table></figure>
+
+<h3 id="演示故障转移"><a href="#演示故障转移" class="headerlink" title="演示故障转移"></a>演示故障转移</h3><ul>
+<li>使用kill命令杀掉主节点</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps aux |grep redis</span><br><span class="line"><span class="built_in">kill</span> -9 pid</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>查看哨兵节点信息</p>
+<p>如果此时立即在哨兵节点中使用info Sentinel命令查看。</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@localhost src]# ./redis-cli -p 26379</span><br><span class="line">127.0.0.1:26379&gt; info sentinel</span><br><span class="line"># Sentinel</span><br><span class="line">sentinel_masters:1</span><br><span class="line">sentinel_tilt:0</span><br><span class="line">sentinel_running_scripts:0</span><br><span class="line">sentinel_scripts_queue_length:0</span><br><span class="line">sentinel_simulate_failure_flags:0</span><br><span class="line">master0:name=mymaster,status=ok,address=127.0.0.1:6381,slaves=5,sentinels=3</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>注意：</strong><br>会发现主节点还没有切换过来，因为哨兵发现主节点故障并转移，需要一段时间</p>
+</blockquote>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><blockquote>
+<ul>
+<li>哨兵系统中的主从节点，与普通的主从节点并没有什么区别，故障发现和转移是由哨兵来控制和完<br> 成的。</li>
+<li>哨兵节点本质上是redis节点。</li>
+<li>每个哨兵节点，只需要配置监控主节点，便可以自动发现其他的哨兵节点和从节点。</li>
+<li>在哨兵节点启动和故障转移阶段，各个节点的配置文件会被重写(config rewrite)。</li>
+</ul>
+</blockquote>
+<h2 id="Cluster集群环境搭建"><a href="#Cluster集群环境搭建" class="headerlink" title="Cluster集群环境搭建"></a>Cluster集群环境搭建</h2><h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">第1台机器：</span> <span class="string">192.168.66.101 8001端口 8002端口</span></span><br><span class="line"><span class="attr">第2台机器：</span> <span class="string">192.168.66.102 8001端口 8002端口</span></span><br><span class="line"><span class="attr">第3台机器：</span> <span class="string">192.168.66.103 8001端口 8002端口</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">mkdir</span> <span class="string">-p /usr/local/redis/redis-cluster/8001 /usr/local/redis/redis-cluster/8002</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="拷贝配置文件"><a href="#拷贝配置文件" class="headerlink" title="拷贝配置文件"></a>拷贝配置文件</h3><blockquote>
+<p>将redis安装目录下的 redis.conf 文件分别拷贝到8001目录下</p>
+</blockquote>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">cp</span> <span class="string">/opt/redis.conf /usr/local/redis/redis-cluster/8001</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="修改redis-conf文件以下内容"><a href="#修改redis-conf文件以下内容" class="headerlink" title="修改redis.conf文件以下内容"></a>修改redis.conf文件以下内容</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">port</span> <span class="string">8001</span></span><br><span class="line"><span class="attr">daemonize</span> <span class="string">yes</span></span><br><span class="line"><span class="attr">pidfile</span> <span class="string">&quot;/var/run/redis_8001.pid&quot;</span></span><br><span class="line"><span class="comment">#指定数据文件存放位置，必须要指定不同的目录位置，不然会丢失数据</span></span><br><span class="line"><span class="attr">dir</span> <span class="string">/usr/local/redis/redis-cluster/8001/</span></span><br><span class="line"><span class="comment">#启动集群模式</span></span><br><span class="line"><span class="attr">cluster-enabled</span> <span class="string">yes</span></span><br><span class="line"><span class="comment">#集群节点信息文件，这里800x最好和port对应上</span></span><br><span class="line"><span class="attr">cluster-config-file</span> <span class="string">nodes-8001.conf</span></span><br><span class="line"><span class="comment"># 节点离线的超时时间</span></span><br><span class="line"><span class="attr">cluster-node-timeout</span> <span class="string">5000</span></span><br><span class="line"><span class="comment">#去掉bind绑定访问ip信息</span></span><br><span class="line"><span class="comment">#bind 127.0.0.1</span></span><br><span class="line"><span class="comment">#关闭保护模式</span></span><br><span class="line"><span class="attr">protected-mode</span> <span class="string">no</span></span><br><span class="line"><span class="comment">#启动AOF文件</span></span><br><span class="line"><span class="attr">appendonly</span> <span class="string">yes</span></span><br><span class="line"><span class="comment">#如果要设置密码需要增加如下配置：</span></span><br><span class="line"><span class="comment">#设置redis访问密码</span></span><br><span class="line"><span class="comment">#requirepass root123</span></span><br><span class="line"><span class="comment">#设置集群节点间访问密码，跟上面一致</span></span><br><span class="line"><span class="comment">#masterauth root123</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="文件拷贝到8002文件夹"><a href="#文件拷贝到8002文件夹" class="headerlink" title="文件拷贝到8002文件夹"></a>文件拷贝到8002文件夹</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#将8001修改为8002：</span></span><br><span class="line"><span class="built_in">cp</span> /usr/local/redis/redis-cluster/8001/redis.conf /usr/local/redis/redis-</span><br><span class="line">cluster/8002</span><br><span class="line"><span class="comment"># 批量修改字符串</span></span><br><span class="line">:%s/8001/8002/g</span><br></pre></td></tr></table></figure>
+
+<h3 id="将本机机器上的文件拷贝到另外两台机器上"><a href="#将本机机器上的文件拷贝到另外两台机器上" class="headerlink" title="将本机机器上的文件拷贝到另外两台机器上"></a>将本机机器上的文件拷贝到另外两台机器上</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 第二台机器</span></span><br><span class="line">scp /usr1/redis/redis-cluster/8001/redis.conf</span><br><span class="line">root@192.168.66.102:/usr1/redis/redis-cluster/8001/</span><br><span class="line">scp /usr1/redis/redis-cluster/8002/redis.conf</span><br><span class="line">root@192.168.66.102:/usr1/redis/redis-cluster/8002/</span><br><span class="line"><span class="comment"># 第三台机器</span></span><br><span class="line">scp /usr1/redis/redis-cluster/8001/redis.conf</span><br><span class="line">root@192.168.66.103:/usr1/redis/redis-cluster/8001/</span><br><span class="line">scp /usr1/redis/redis-cluster/8002/redis.conf</span><br><span class="line">root@192.168.66.103:/usr1/redis/redis-cluster/8002/</span><br></pre></td></tr></table></figure>
+
+<h3 id="分别启动这6个redis实例"><a href="#分别启动这6个redis实例" class="headerlink" title="分别启动这6个redis实例"></a>分别启动这6个redis实例</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">redis-server /usr/local/redis/redis-cluster/8001/redis.conf</span><br><span class="line">redis-server /usr/local/redis/redis-cluster/8002/redis.conf</span><br></pre></td></tr></table></figure>
+
+<h3 id="检查是否启动成功"><a href="#检查是否启动成功" class="headerlink" title="检查是否启动成功"></a>检查是否启动成功</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps -ef |grep redis</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用redis-cli创建整个redis集群"><a href="#使用redis-cli创建整个redis集群" class="headerlink" title="使用redis-cli创建整个redis集群"></a>使用redis-cli创建整个redis集群</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">/usr/local/redis/src/redis-cli</span> <span class="string">-a redis-pw --cluster create --cluster-replicas 1 \</span></span><br><span class="line"><span class="string">192.168.66.101:8001 192.168.66.101:8002 \</span></span><br><span class="line"><span class="string">192.168.66.102:8001 192.168.66.102:8002 \</span></span><br><span class="line"><span class="string">192.168.66.103:8001 192.168.66.103:8002</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>参数：<br>-a：密码<br>–cluster-replicas 1：表示1个master下挂1个slave； –cluster-replicas 2：表示1个master<br>下挂2个slave。</p>
+</blockquote>
+<h3 id="查看帮助命令"><a href="#查看帮助命令" class="headerlink" title="查看帮助命令"></a>查看帮助命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">redis-cli --cluster <span class="built_in">help</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>参数：<br>create：创建一个集群环境host1:port1 … hostN:portN<br>call：可以执行redis命令<br>add-node：将一个节点添加到集群里，第一个参数为新节点的ip:port，第二个参数为集群中<br>任意一个已经存在的节点的ip:port<br>del-node：移除一个节点<br>reshard：重新分片<br>check：检查集群状态</p>
+</blockquote>
+<h3 id="验证集群"><a href="#验证集群" class="headerlink" title="验证集群"></a>验证集群</h3><ul>
+<li>连接任意一个客户端</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/local/redisd/src/redis-cli -a redis-pw -c -h 192.168.66.101 -p 8001</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>参数：<br>‐a表示服务端密码<br>‐c表示集群模式<br>-h指定ip地址<br>-p表示端口号</p>
+</blockquote>
+<h3 id="查看集群的信息"><a href="#查看集群的信息" class="headerlink" title="查看集群的信息"></a>查看集群的信息</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cluster info</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A9/3.png"></p>
+<h3 id="查看节点"><a href="#查看节点" class="headerlink" title="查看节点"></a>查看节点</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">192.168.66.103</span>:<span class="string">8001&gt; cluster nodes</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="杀死Master节点"><a href="#杀死Master节点" class="headerlink" title="杀死Master节点"></a>杀死Master节点</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">lsof</span> <span class="string">-i:8001</span></span><br><span class="line"><span class="attr">kill</span> <span class="string">-9 pid</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="观察节点信息"><a href="#观察节点信息" class="headerlink" title="观察节点信息"></a>观察节点信息</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A9/4.png"></p>
+]]></content>
+      <categories>
+        <category>服务</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mycat部署安装_搭建MySQL主从复制</title>
+    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10009-Linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BAMysql%E9%9B%86%E7%BE%A4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><font color="blue"><strong>作者:博哥</strong></font></p>
+<h2 id="安装MySQL数据库"><a href="#安装MySQL数据库" class="headerlink" title="安装MySQL数据库"></a>安装MySQL数据库</h2><p>下载YUM库</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm</span><br></pre></td></tr></table></figure>
+
+<p>安装YUM库</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">rpm -ivh mysql57-community-release-el7-10.noarch.rpm</span><br></pre></td></tr></table></figure>
+
+<p>安装MySQL服务，重启mysql</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum -y install mysql-community-serversystemctl restart mysqld</span><br></pre></td></tr></table></figure>
+
+<p>完成安装，重启mysql</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl restart mysqld</span><br></pre></td></tr></table></figure>
+
+<p>日志文件中找出密码</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">grep &quot;password&quot; /var/log/mysqld.log </span><br></pre></td></tr></table></figure>
+
+<p>修改密码策略</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">set global validate_password_policy=0;</span><br><span class="line">set global validate_password_policy=LOW;</span><br><span class="line">set global validate_password_length=6;</span><br></pre></td></tr></table></figure>
+
+<p>密码策略修改完以后可以修改密码</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ALTER USER &#x27;root&#x27;@&#x27;localhost&#x27; IDENTIFIED BY &#x27;root123&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>开启远程连接</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">use mysql;</span><br><span class="line">update user set host =&quot;%&quot; where user =&quot;root&quot;;</span><br></pre></td></tr></table></figure>
+
+<p>刷新信息</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
+
+<h2 id="开启bin-log日志"><a href="#开启bin-log日志" class="headerlink" title="开启bin-log日志"></a>开启bin-log日志</h2><h3 id="修改主服务器Master"><a href="#修改主服务器Master" class="headerlink" title="修改主服务器Master"></a>修改主服务器Master</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">修改配置文件：vim /etc/my.cnf</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">主服务器唯一ID</span></span><br><span class="line">server-id=1</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">启用二进制日志</span></span><br><span class="line">log-bin=mysql-bin</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改从服务器slave"><a href="#修改从服务器slave" class="headerlink" title="修改从服务器slave"></a>修改从服务器slave</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">修改配置文件：vim /etc/my.cnf</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">从服务器唯一ID</span></span><br><span class="line">server-id=2</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">启用中继日志</span></span><br><span class="line">relay-log=mysql-relay</span><br></pre></td></tr></table></figure>
+
+<h2 id="重启两台服务器的mysql"><a href="#重启两台服务器的mysql" class="headerlink" title="重启两台服务器的mysql"></a>重启两台服务器的mysql</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">service mysqld restart </span><br></pre></td></tr></table></figure>
+
+<h2 id="在主服务器上建立帐户并授权slave"><a href="#在主服务器上建立帐户并授权slave" class="headerlink" title="在主服务器上建立帐户并授权slave"></a>在主服务器上建立帐户并授权slave</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">GRANT REPLICATION SLAVE ON *.* to &#x27;slave&#x27;@&#x27;%&#x27; identified by &#x27;123456&#x27;;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：<br>一般不用root帐号，“%”表示所有客户端都可能连，只要帐号，<br>密码正确，此处可用具体客户端IP代替，如192.168.145.226，<br>加强安全。</p>
+</blockquote>
+<h2 id="查询Master的状态"><a href="#查询Master的状态" class="headerlink" title="查询Master的状态"></a>查询Master的状态</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">mysql&gt;</span><span class="language-bash">show master status;</span></span><br><span class="line"> +------------+----------+--------------+--</span><br><span class="line">----------------+</span><br><span class="line"> | File    | Position | Binlog_Do_DB |</span><br><span class="line">Binlog_Ignore_DB |</span><br><span class="line"> +------------+-----------+--------------+-</span><br><span class="line">-------------+</span><br><span class="line"> | mysql-bin.000004 | 308 |       |</span><br><span class="line">     </span><br><span class="line"> +-----------+----------+--------------+---</span><br><span class="line">---------------+</span><br><span class="line"> 1 row in set (0.00 sec)</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+
+<h2 id="配置从服务器Slave"><a href="#配置从服务器Slave" class="headerlink" title="配置从服务器Slave"></a>配置从服务器Slave</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">mysql&gt;</span><span class="language-bash">change master to</span></span><br><span class="line">master_host=&#x27;192.168.0.3&#x27;,master_user=&#x27;sla</span><br><span class="line">ve&#x27;,master_password=&#x27;root123&#x27;,master_log_file=</span><br><span class="line">&#x27;mysql-bin.000001&#x27;,master_log_pos=430;</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动从服务器复制功能"><a href="#启动从服务器复制功能" class="headerlink" title="启动从服务器复制功能"></a>启动从服务器复制功能</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span><span class="keyword">start</span> slave;</span><br></pre></td></tr></table></figure>
+
+<h3 id="检查从服务器复制功能状态"><a href="#检查从服务器复制功能状态" class="headerlink" title="检查从服务器复制功能状态"></a>检查从服务器复制功能状态</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">show</span> slave status \G; </span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A10/1.png"></p>
+<blockquote>
+<p>注意：<br>Slave_IO及Slave_SQL进程必须正常运行，即YES状态，否则都<br>是错误的状态(如：其中一个NO均属错误)</p>
+</blockquote>
+<h2 id="主从服务器测试"><a href="#主从服务器测试" class="headerlink" title="主从服务器测试"></a>主从服务器测试</h2><p>主服务器Mysql，建立数据库，并在这个库中建表插入一条数据</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">create</span> database demo;</span><br><span class="line">Query OK, <span class="number">1</span> <span class="type">row</span> affected (<span class="number">0.00</span> sec)</span><br><span class="line">mysql<span class="operator">&gt;</span> use demo;</span><br><span class="line">Database changed</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">create</span> <span class="keyword">table</span> hello(id <span class="type">int</span>(<span class="number">3</span>),name</span><br><span class="line"><span class="type">char</span>(<span class="number">10</span>));</span><br><span class="line">Query OK, <span class="number">0</span> <span class="keyword">rows</span> affected (<span class="number">0.00</span> sec)</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">insert</span> <span class="keyword">into</span> hello</span><br><span class="line"><span class="keyword">values</span>(<span class="number">001</span>,<span class="string">&#x27;博哥&#x27;</span>);</span><br><span class="line">Query OK, <span class="number">1</span> <span class="type">row</span> affected (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure>
+
+<p>从服务器Mysql查询</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span><span class="keyword">show</span> databases;</span><br><span class="line">mysql<span class="operator">&gt;</span>use hi_db</span><br><span class="line">mysql<span class="operator">&gt;</span><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> hi_tb; </span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>服务</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>Mysql</tag>
+        <tag>集群</tag>
       </tags>
   </entry>
   <entry>
@@ -1609,151 +1834,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Redis集群环境搭建三种方式</title>
-    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10008-Linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BARedis%E9%9B%86%E7%BE%A4%E7%8E%AF%E5%A2%83/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="主从复制集群环境搭建"><a href="#主从复制集群环境搭建" class="headerlink" title="主从复制集群环境搭建"></a>主从复制集群环境搭建</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A9/1.png"></p>
-<h3 id="编写配置文件"><a href="#编写配置文件" class="headerlink" title="编写配置文件"></a>编写配置文件</h3><blockquote>
-<p>准备三台Linux服务器,并且安装好redis环境</p>
-</blockquote>
-<ul>
-<li><p><strong>第一台配置</strong> </p>
-<p>新建redis6379.conf</p>
-</li>
-</ul>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">include</span> <span class="string">/opt/redis-6.2.6/redis.conf</span></span><br><span class="line"><span class="attr">pidfile</span> <span class="string">/var/run/redis_6379.pid</span></span><br><span class="line"><span class="attr">port</span> <span class="string">6379</span></span><br><span class="line"><span class="attr">dbfilename</span> <span class="string">dump6379.rdb</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p><strong>第二台配置</strong></p>
-<p>新建redis6380.conf</p>
-</li>
-</ul>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">include</span> <span class="string">/opt/redis-6.2.6/redis.conf</span></span><br><span class="line"><span class="attr">pidfile</span> <span class="string">/var/run/redis_6380.pid</span></span><br><span class="line"><span class="attr">port</span> <span class="string">6380</span></span><br><span class="line"><span class="attr">dbfilename</span> <span class="string">dump6380.rdb</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>第三台配置</strong></li>
-</ul>
-<p>​        新建redis6381.conf</p>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">include</span> <span class="string">/opt/redis-6.2.6/redis.conf</span></span><br><span class="line"><span class="attr">pidfile</span> <span class="string">/var/run/redis_6381.pid</span></span><br><span class="line"><span class="attr">port</span> <span class="string">6381</span></span><br><span class="line"><span class="attr">dbfilename</span> <span class="string">dump6381.rdb</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="启动三台redis服务器"><a href="#启动三台redis服务器" class="headerlink" title="启动三台redis服务器"></a>启动三台redis服务器</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">redis-server</span>    <span class="string">redis6379.conf</span></span><br><span class="line"><span class="attr">redis-server</span>    <span class="string">redis6380.conf</span></span><br><span class="line"><span class="attr">redis-server</span>    <span class="string">redis6381.conf</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>查看系统进程</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@localhost src]<span class="comment"># ps -ef |grep redis</span></span><br><span class="line">root   40737   1 0 22:05 ?    00:00:00 ./redis-server *:6379</span><br><span class="line">root   40743   1 0 22:05 ?    00:00:00 ./redis-server *:6380</span><br><span class="line">root   40750   1 0 22:05 ?    00:00:00 ./redis-server *:6381</span><br><span class="line">root   40758 40631 0 22:05 pts/0  00:00:00 grep --color=auto redis</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看三台主机运行情况"><a href="#查看三台主机运行情况" class="headerlink" title="查看三台主机运行情况"></a>查看三台主机运行情况</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#打印主从复制的相关信息</span></span><br><span class="line">./redis-cli -p 6379</span><br><span class="line">./redis-cli -p 6380</span><br><span class="line">./redis-cli -p 6381</span><br><span class="line">127.0.0.1:6379&gt; info replication</span><br><span class="line">127.0.0.1:6380&gt; info replication</span><br><span class="line">127.0.0.1:6381&gt; info replication</span><br></pre></td></tr></table></figure>
-
-<h3 id="配从库不配主库"><a href="#配从库不配主库" class="headerlink" title="配从库不配主库"></a>配从库不配主库</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">slaveof &lt;ip&gt; &lt;port&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="在主机上写，在从机上可以读取数据"><a href="#在主机上写，在从机上可以读取数据" class="headerlink" title="在主机上写，在从机上可以读取数据"></a>在主机上写，在从机上可以读取数据</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> k1 v1</span><br></pre></td></tr></table></figure>
-
-<h3 id="Redis主从复制缺点"><a href="#Redis主从复制缺点" class="headerlink" title="Redis主从复制缺点"></a>Redis主从复制缺点</h3><p>当主机 Master 宕机以后，我们需要人工解决切换</p>
-<blockquote>
-<p>暴漏问题：</p>
-<ul>
-<li><p>一旦主节点宕机，写服务无法使用，就需要手动去切换，重新选取主节点，手动设置主从关系。</p>
-</li>
-<li><p>当主服务器宕机后，需要手动把一台从服务器切换为主服务器，这就需要人工干预，费事费力，还会造<br> 成一段时间内服务不可用。这不是一种推荐的方式，更多时候，我们优先考虑哨兵模式。</p>
-</li>
-</ul>
-</blockquote>
-<h2 id="哨兵模式集群环境搭建"><a href="#哨兵模式集群环境搭建" class="headerlink" title="哨兵模式集群环境搭建"></a>哨兵模式集群环境搭建</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A9/2.png"></p>
-<blockquote>
-<p>准备三台Linux服务器,并且安装好redis环境</p>
-<p>搭建好主从复制集群</p>
-</blockquote>
-<h3 id="新建sentinel-26379-conf文件"><a href="#新建sentinel-26379-conf文件" class="headerlink" title="新建sentinel-26379.conf文件"></a>新建sentinel-26379.conf文件</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment">#端口</span></span><br><span class="line"><span class="attr">port</span> <span class="string">26379</span></span><br><span class="line"><span class="comment">#守护进程运行</span></span><br><span class="line"><span class="attr">daemonize</span> <span class="string">yes</span></span><br><span class="line"><span class="comment">#日志文件</span></span><br><span class="line"><span class="attr">logfile</span> <span class="string">&quot;26379.log&quot;</span></span><br><span class="line"><span class="attr">sentinel</span> <span class="string">monitor mymaster 192.168.92.128 6379 2</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>参数：<br>sentinel monitor mymaster 192.168.92.128 6379 2 配置的含义是：该哨兵节点监控<br>192.168.92.128:6379这个主节点，该主节点的名称是mymaster，最后的2的含义与主节点的故障<br>判定有关：至少需要2个哨兵节点同意，才能判定主节点故障并进行故障转移。</p>
-</blockquote>
-<h3 id="新建sentinel-26380-conf文件"><a href="#新建sentinel-26380-conf文件" class="headerlink" title="新建sentinel-26380.conf文件"></a>新建sentinel-26380.conf文件</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment">#端口</span></span><br><span class="line"><span class="attr">port</span> <span class="string">26380</span></span><br><span class="line"><span class="comment">#守护进程运行</span></span><br><span class="line"><span class="attr">daemonize</span> <span class="string">yes</span></span><br><span class="line"><span class="comment">#日志文件</span></span><br><span class="line"><span class="attr">logfile</span> <span class="string">&quot;26380.log&quot;</span></span><br><span class="line"><span class="attr">sentinel</span> <span class="string">monitor mymaster 192.168.66.100 6379 2</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="新建sentinel-26381-conf文件"><a href="#新建sentinel-26381-conf文件" class="headerlink" title="新建sentinel-26381.conf文件"></a>新建sentinel-26381.conf文件</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment">#端口</span></span><br><span class="line"><span class="attr">port</span> <span class="string">26381</span></span><br><span class="line"><span class="comment">#守护进程运行</span></span><br><span class="line"><span class="attr">daemonize</span> <span class="string">yes</span></span><br><span class="line"><span class="comment">#日志文件</span></span><br><span class="line"><span class="attr">logfile</span> <span class="string">&quot;26381.log&quot;</span></span><br><span class="line"><span class="attr">sentinel</span> <span class="string">monitor mymaster 192.168.66.100 6379 2</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="哨兵节点的启动"><a href="#哨兵节点的启动" class="headerlink" title="哨兵节点的启动"></a>哨兵节点的启动</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">redis-sentinel sentinel-26379.conf</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看哨兵节点状态"><a href="#查看哨兵节点状态" class="headerlink" title="查看哨兵节点状态"></a>查看哨兵节点状态</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@localhost src]<span class="comment"># ./redis-cli -p 26379</span></span><br><span class="line">127.0.0.1:26379&gt;</span><br><span class="line">127.0.0.1:26379&gt;</span><br><span class="line">127.0.0.1:26379&gt; info sentinel</span><br><span class="line"><span class="comment"># Sentinel</span></span><br><span class="line">sentinel_masters:1</span><br><span class="line">sentinel_tilt:0</span><br><span class="line">sentinel_running_scripts:0</span><br><span class="line">sentinel_scripts_queue_length:0</span><br><span class="line">sentinel_simulate_failure_flags:0</span><br><span class="line">master0:name=mymaster,status=ok,address=192.168.66.100:6379,slaves=2,sentinels=3</span><br></pre></td></tr></table></figure>
-
-<h3 id="演示故障转移"><a href="#演示故障转移" class="headerlink" title="演示故障转移"></a>演示故障转移</h3><ul>
-<li>使用kill命令杀掉主节点</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps aux |grep redis</span><br><span class="line"><span class="built_in">kill</span> -9 pid</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>查看哨兵节点信息</p>
-<p>如果此时立即在哨兵节点中使用info Sentinel命令查看。</p>
-</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@localhost src]# ./redis-cli -p 26379</span><br><span class="line">127.0.0.1:26379&gt; info sentinel</span><br><span class="line"># Sentinel</span><br><span class="line">sentinel_masters:1</span><br><span class="line">sentinel_tilt:0</span><br><span class="line">sentinel_running_scripts:0</span><br><span class="line">sentinel_scripts_queue_length:0</span><br><span class="line">sentinel_simulate_failure_flags:0</span><br><span class="line">master0:name=mymaster,status=ok,address=127.0.0.1:6381,slaves=5,sentinels=3</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>注意：</strong><br>会发现主节点还没有切换过来，因为哨兵发现主节点故障并转移，需要一段时间</p>
-</blockquote>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><blockquote>
-<ul>
-<li>哨兵系统中的主从节点，与普通的主从节点并没有什么区别，故障发现和转移是由哨兵来控制和完<br> 成的。</li>
-<li>哨兵节点本质上是redis节点。</li>
-<li>每个哨兵节点，只需要配置监控主节点，便可以自动发现其他的哨兵节点和从节点。</li>
-<li>在哨兵节点启动和故障转移阶段，各个节点的配置文件会被重写(config rewrite)。</li>
-</ul>
-</blockquote>
-<h2 id="Cluster集群环境搭建"><a href="#Cluster集群环境搭建" class="headerlink" title="Cluster集群环境搭建"></a>Cluster集群环境搭建</h2><h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">第1台机器：</span> <span class="string">192.168.66.101 8001端口 8002端口</span></span><br><span class="line"><span class="attr">第2台机器：</span> <span class="string">192.168.66.102 8001端口 8002端口</span></span><br><span class="line"><span class="attr">第3台机器：</span> <span class="string">192.168.66.103 8001端口 8002端口</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">mkdir</span> <span class="string">-p /usr/local/redis/redis-cluster/8001 /usr/local/redis/redis-cluster/8002</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="拷贝配置文件"><a href="#拷贝配置文件" class="headerlink" title="拷贝配置文件"></a>拷贝配置文件</h3><blockquote>
-<p>将redis安装目录下的 redis.conf 文件分别拷贝到8001目录下</p>
-</blockquote>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">cp</span> <span class="string">/opt/redis.conf /usr/local/redis/redis-cluster/8001</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="修改redis-conf文件以下内容"><a href="#修改redis-conf文件以下内容" class="headerlink" title="修改redis.conf文件以下内容"></a>修改redis.conf文件以下内容</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">port</span> <span class="string">8001</span></span><br><span class="line"><span class="attr">daemonize</span> <span class="string">yes</span></span><br><span class="line"><span class="attr">pidfile</span> <span class="string">&quot;/var/run/redis_8001.pid&quot;</span></span><br><span class="line"><span class="comment">#指定数据文件存放位置，必须要指定不同的目录位置，不然会丢失数据</span></span><br><span class="line"><span class="attr">dir</span> <span class="string">/usr/local/redis/redis-cluster/8001/</span></span><br><span class="line"><span class="comment">#启动集群模式</span></span><br><span class="line"><span class="attr">cluster-enabled</span> <span class="string">yes</span></span><br><span class="line"><span class="comment">#集群节点信息文件，这里800x最好和port对应上</span></span><br><span class="line"><span class="attr">cluster-config-file</span> <span class="string">nodes-8001.conf</span></span><br><span class="line"><span class="comment"># 节点离线的超时时间</span></span><br><span class="line"><span class="attr">cluster-node-timeout</span> <span class="string">5000</span></span><br><span class="line"><span class="comment">#去掉bind绑定访问ip信息</span></span><br><span class="line"><span class="comment">#bind 127.0.0.1</span></span><br><span class="line"><span class="comment">#关闭保护模式</span></span><br><span class="line"><span class="attr">protected-mode</span> <span class="string">no</span></span><br><span class="line"><span class="comment">#启动AOF文件</span></span><br><span class="line"><span class="attr">appendonly</span> <span class="string">yes</span></span><br><span class="line"><span class="comment">#如果要设置密码需要增加如下配置：</span></span><br><span class="line"><span class="comment">#设置redis访问密码</span></span><br><span class="line"><span class="comment">#requirepass root123</span></span><br><span class="line"><span class="comment">#设置集群节点间访问密码，跟上面一致</span></span><br><span class="line"><span class="comment">#masterauth root123</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="文件拷贝到8002文件夹"><a href="#文件拷贝到8002文件夹" class="headerlink" title="文件拷贝到8002文件夹"></a>文件拷贝到8002文件夹</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#将8001修改为8002：</span></span><br><span class="line"><span class="built_in">cp</span> /usr/local/redis/redis-cluster/8001/redis.conf /usr/local/redis/redis-</span><br><span class="line">cluster/8002</span><br><span class="line"><span class="comment"># 批量修改字符串</span></span><br><span class="line">:%s/8001/8002/g</span><br></pre></td></tr></table></figure>
-
-<h3 id="将本机机器上的文件拷贝到另外两台机器上"><a href="#将本机机器上的文件拷贝到另外两台机器上" class="headerlink" title="将本机机器上的文件拷贝到另外两台机器上"></a>将本机机器上的文件拷贝到另外两台机器上</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 第二台机器</span></span><br><span class="line">scp /usr1/redis/redis-cluster/8001/redis.conf</span><br><span class="line">root@192.168.66.102:/usr1/redis/redis-cluster/8001/</span><br><span class="line">scp /usr1/redis/redis-cluster/8002/redis.conf</span><br><span class="line">root@192.168.66.102:/usr1/redis/redis-cluster/8002/</span><br><span class="line"><span class="comment"># 第三台机器</span></span><br><span class="line">scp /usr1/redis/redis-cluster/8001/redis.conf</span><br><span class="line">root@192.168.66.103:/usr1/redis/redis-cluster/8001/</span><br><span class="line">scp /usr1/redis/redis-cluster/8002/redis.conf</span><br><span class="line">root@192.168.66.103:/usr1/redis/redis-cluster/8002/</span><br></pre></td></tr></table></figure>
-
-<h3 id="分别启动这6个redis实例"><a href="#分别启动这6个redis实例" class="headerlink" title="分别启动这6个redis实例"></a>分别启动这6个redis实例</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">redis-server /usr/local/redis/redis-cluster/8001/redis.conf</span><br><span class="line">redis-server /usr/local/redis/redis-cluster/8002/redis.conf</span><br></pre></td></tr></table></figure>
-
-<h3 id="检查是否启动成功"><a href="#检查是否启动成功" class="headerlink" title="检查是否启动成功"></a>检查是否启动成功</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps -ef |grep redis</span><br></pre></td></tr></table></figure>
-
-<h3 id="使用redis-cli创建整个redis集群"><a href="#使用redis-cli创建整个redis集群" class="headerlink" title="使用redis-cli创建整个redis集群"></a>使用redis-cli创建整个redis集群</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">/usr/local/redis/src/redis-cli</span> <span class="string">-a redis-pw --cluster create --cluster-replicas 1 \</span></span><br><span class="line"><span class="string">192.168.66.101:8001 192.168.66.101:8002 \</span></span><br><span class="line"><span class="string">192.168.66.102:8001 192.168.66.102:8002 \</span></span><br><span class="line"><span class="string">192.168.66.103:8001 192.168.66.103:8002</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>参数：<br>-a：密码<br>–cluster-replicas 1：表示1个master下挂1个slave； –cluster-replicas 2：表示1个master<br>下挂2个slave。</p>
-</blockquote>
-<h3 id="查看帮助命令"><a href="#查看帮助命令" class="headerlink" title="查看帮助命令"></a>查看帮助命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">redis-cli --cluster <span class="built_in">help</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>参数：<br>create：创建一个集群环境host1:port1 … hostN:portN<br>call：可以执行redis命令<br>add-node：将一个节点添加到集群里，第一个参数为新节点的ip:port，第二个参数为集群中<br>任意一个已经存在的节点的ip:port<br>del-node：移除一个节点<br>reshard：重新分片<br>check：检查集群状态</p>
-</blockquote>
-<h3 id="验证集群"><a href="#验证集群" class="headerlink" title="验证集群"></a>验证集群</h3><ul>
-<li>连接任意一个客户端</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/local/redisd/src/redis-cli -a redis-pw -c -h 192.168.66.101 -p 8001</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>参数：<br>‐a表示服务端密码<br>‐c表示集群模式<br>-h指定ip地址<br>-p表示端口号</p>
-</blockquote>
-<h3 id="查看集群的信息"><a href="#查看集群的信息" class="headerlink" title="查看集群的信息"></a>查看集群的信息</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cluster info</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A9/3.png"></p>
-<h3 id="查看节点"><a href="#查看节点" class="headerlink" title="查看节点"></a>查看节点</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">192.168.66.103</span>:<span class="string">8001&gt; cluster nodes</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="杀死Master节点"><a href="#杀死Master节点" class="headerlink" title="杀死Master节点"></a>杀死Master节点</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">lsof</span> <span class="string">-i:8001</span></span><br><span class="line"><span class="attr">kill</span> <span class="string">-9 pid</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="观察节点信息"><a href="#观察节点信息" class="headerlink" title="观察节点信息"></a>观察节点信息</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A9/4.png"></p>
-]]></content>
-      <categories>
-        <category>服务</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>Redis</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Docker环境下安装Mysql8</title>
     <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10010-Docker%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85Mysql8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="准备好centos7环境并安装好了Docker"><a href="#准备好centos7环境并安装好了Docker" class="headerlink" title="准备好centos7环境并安装好了Docker"></a>准备好centos7环境并安装好了Docker</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/1.png"></p>
@@ -1796,86 +1876,6 @@
       <tags>
         <tag>Mysql</tag>
         <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Mycat部署安装_搭建MySQL主从复制</title>
-    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10009-Linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BAMysql%E9%9B%86%E7%BE%A4/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><font color="blue"><strong>作者:博哥</strong></font></p>
-<h2 id="安装MySQL数据库"><a href="#安装MySQL数据库" class="headerlink" title="安装MySQL数据库"></a>安装MySQL数据库</h2><p>下载YUM库</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm</span><br></pre></td></tr></table></figure>
-
-<p>安装YUM库</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">rpm -ivh mysql57-community-release-el7-10.noarch.rpm</span><br></pre></td></tr></table></figure>
-
-<p>安装MySQL服务，重启mysql</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum -y install mysql-community-serversystemctl restart mysqld</span><br></pre></td></tr></table></figure>
-
-<p>完成安装，重启mysql</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl restart mysqld</span><br></pre></td></tr></table></figure>
-
-<p>日志文件中找出密码</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">grep &quot;password&quot; /var/log/mysqld.log </span><br></pre></td></tr></table></figure>
-
-<p>修改密码策略</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">set global validate_password_policy=0;</span><br><span class="line">set global validate_password_policy=LOW;</span><br><span class="line">set global validate_password_length=6;</span><br></pre></td></tr></table></figure>
-
-<p>密码策略修改完以后可以修改密码</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ALTER USER &#x27;root&#x27;@&#x27;localhost&#x27; IDENTIFIED BY &#x27;root123&#x27;</span><br></pre></td></tr></table></figure>
-
-<p>开启远程连接</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">use mysql;</span><br><span class="line">update user set host =&quot;%&quot; where user =&quot;root&quot;;</span><br></pre></td></tr></table></figure>
-
-<p>刷新信息</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
-
-<h2 id="开启bin-log日志"><a href="#开启bin-log日志" class="headerlink" title="开启bin-log日志"></a>开启bin-log日志</h2><h3 id="修改主服务器Master"><a href="#修改主服务器Master" class="headerlink" title="修改主服务器Master"></a>修改主服务器Master</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">修改配置文件：vim /etc/my.cnf</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">主服务器唯一ID</span></span><br><span class="line">server-id=1</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">启用二进制日志</span></span><br><span class="line">log-bin=mysql-bin</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改从服务器slave"><a href="#修改从服务器slave" class="headerlink" title="修改从服务器slave"></a>修改从服务器slave</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">修改配置文件：vim /etc/my.cnf</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">从服务器唯一ID</span></span><br><span class="line">server-id=2</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">启用中继日志</span></span><br><span class="line">relay-log=mysql-relay</span><br></pre></td></tr></table></figure>
-
-<h2 id="重启两台服务器的mysql"><a href="#重启两台服务器的mysql" class="headerlink" title="重启两台服务器的mysql"></a>重启两台服务器的mysql</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">service mysqld restart </span><br></pre></td></tr></table></figure>
-
-<h2 id="在主服务器上建立帐户并授权slave"><a href="#在主服务器上建立帐户并授权slave" class="headerlink" title="在主服务器上建立帐户并授权slave"></a>在主服务器上建立帐户并授权slave</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">GRANT REPLICATION SLAVE ON *.* to &#x27;slave&#x27;@&#x27;%&#x27; identified by &#x27;123456&#x27;;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>注意：<br>一般不用root帐号，“%”表示所有客户端都可能连，只要帐号，<br>密码正确，此处可用具体客户端IP代替，如192.168.145.226，<br>加强安全。</p>
-</blockquote>
-<h2 id="查询Master的状态"><a href="#查询Master的状态" class="headerlink" title="查询Master的状态"></a>查询Master的状态</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">mysql&gt;</span><span class="language-bash">show master status;</span></span><br><span class="line"> +------------+----------+--------------+--</span><br><span class="line">----------------+</span><br><span class="line"> | File    | Position | Binlog_Do_DB |</span><br><span class="line">Binlog_Ignore_DB |</span><br><span class="line"> +------------+-----------+--------------+-</span><br><span class="line">-------------+</span><br><span class="line"> | mysql-bin.000004 | 308 |       |</span><br><span class="line">     </span><br><span class="line"> +-----------+----------+--------------+---</span><br><span class="line">---------------+</span><br><span class="line"> 1 row in set (0.00 sec)</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
-
-<h2 id="配置从服务器Slave"><a href="#配置从服务器Slave" class="headerlink" title="配置从服务器Slave"></a>配置从服务器Slave</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">mysql&gt;</span><span class="language-bash">change master to</span></span><br><span class="line">master_host=&#x27;192.168.0.3&#x27;,master_user=&#x27;sla</span><br><span class="line">ve&#x27;,master_password=&#x27;root123&#x27;,master_log_file=</span><br><span class="line">&#x27;mysql-bin.000001&#x27;,master_log_pos=430;</span><br></pre></td></tr></table></figure>
-
-<h3 id="启动从服务器复制功能"><a href="#启动从服务器复制功能" class="headerlink" title="启动从服务器复制功能"></a>启动从服务器复制功能</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span><span class="keyword">start</span> slave;</span><br></pre></td></tr></table></figure>
-
-<h3 id="检查从服务器复制功能状态"><a href="#检查从服务器复制功能状态" class="headerlink" title="检查从服务器复制功能状态"></a>检查从服务器复制功能状态</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">show</span> slave status \G; </span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A10/1.png"></p>
-<blockquote>
-<p>注意：<br>Slave_IO及Slave_SQL进程必须正常运行，即YES状态，否则都<br>是错误的状态(如：其中一个NO均属错误)</p>
-</blockquote>
-<h2 id="主从服务器测试"><a href="#主从服务器测试" class="headerlink" title="主从服务器测试"></a>主从服务器测试</h2><p>主服务器Mysql，建立数据库，并在这个库中建表插入一条数据</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">create</span> database demo;</span><br><span class="line">Query OK, <span class="number">1</span> <span class="type">row</span> affected (<span class="number">0.00</span> sec)</span><br><span class="line">mysql<span class="operator">&gt;</span> use demo;</span><br><span class="line">Database changed</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">create</span> <span class="keyword">table</span> hello(id <span class="type">int</span>(<span class="number">3</span>),name</span><br><span class="line"><span class="type">char</span>(<span class="number">10</span>));</span><br><span class="line">Query OK, <span class="number">0</span> <span class="keyword">rows</span> affected (<span class="number">0.00</span> sec)</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">insert</span> <span class="keyword">into</span> hello</span><br><span class="line"><span class="keyword">values</span>(<span class="number">001</span>,<span class="string">&#x27;博哥&#x27;</span>);</span><br><span class="line">Query OK, <span class="number">1</span> <span class="type">row</span> affected (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure>
-
-<p>从服务器Mysql查询</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span><span class="keyword">show</span> databases;</span><br><span class="line">mysql<span class="operator">&gt;</span>use hi_db</span><br><span class="line">mysql<span class="operator">&gt;</span><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> hi_tb; </span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>服务</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>Mysql</tag>
-        <tag>集群</tag>
       </tags>
   </entry>
   <entry>
