@@ -312,8 +312,8 @@
         <category>操作系统</category>
       </categories>
       <tags>
-        <tag>windows</tag>
         <tag>命令</tag>
+        <tag>windows</tag>
       </tags>
   </entry>
   <entry>
@@ -329,8 +329,8 @@
         <category>操作系统</category>
       </categories>
       <tags>
-        <tag>windows</tag>
         <tag>命令</tag>
+        <tag>windows</tag>
       </tags>
   </entry>
   <entry>
@@ -1215,8 +1215,8 @@
         <category>服务</category>
       </categories>
       <tags>
-        <tag>mysql</tag>
         <tag>windows</tag>
+        <tag>mysql</tag>
       </tags>
   </entry>
   <entry>
@@ -1244,6 +1244,43 @@
       </categories>
       <tags>
         <tag>windows</tag>
+        <tag>jdk</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>快速在Linux环境下安装配置JDk</title>
+    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10003-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJDK/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><font color="blue"><strong>作者:博哥</strong></font></p>
+<h2 id="使用Xshell工具连接Linux服务器"><a href="#使用Xshell工具连接Linux服务器" class="headerlink" title="使用Xshell工具连接Linux服务器"></a>使用Xshell工具连接Linux服务器</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/1.png" alt="页面效果"></p>
+<h2 id="下载Linux版本的Jdk安装包"><a href="#下载Linux版本的Jdk安装包" class="headerlink" title="下载Linux版本的Jdk安装包"></a>下载Linux版本的Jdk安装包</h2><p>链接：<a href="https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ">https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ</a><br>提取码：0er6 </p>
+<p>将下载的安装包上传到linux下的opt目录</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/2.png" alt="页面效果"></p>
+<h2 id="在命令行界面切入到opt目录下"><a href="#在命令行界面切入到opt目录下" class="headerlink" title="在命令行界面切入到opt目录下"></a>在命令行界面切入到opt目录下</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/3.png" alt="页面效果"></p>
+<h3 id="解压jdk安装包"><a href="#解压jdk安装包" class="headerlink" title="解压jdk安装包"></a>解压jdk安装包</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf jdk-8u301-linux-x64.tar.gz </span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/4.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/5.png" alt="页面效果"></p>
+<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><h3 id="切入到etc-目录"><a href="#切入到etc-目录" class="headerlink" title="切入到etc 目录"></a>切入到etc 目录</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/6.png" alt="页面效果"></p>
+<h3 id="使用vi-命令修改-profile文件"><a href="#使用vi-命令修改-profile文件" class="headerlink" title="使用vi 命令修改 profile文件"></a>使用vi 命令修改 profile文件</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/7.png" alt="页面效果"></p>
+<h3 id="找到最后一行位置"><a href="#找到最后一行位置" class="headerlink" title="找到最后一行位置"></a>找到最后一行位置</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/8.png" alt="页面效果"></p>
+<h3 id="将如下的Jdk环境变量添加到尾部"><a href="#将如下的Jdk环境变量添加到尾部" class="headerlink" title="将如下的Jdk环境变量添加到尾部"></a>将如下的Jdk环境变量添加到尾部</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/jdk1.8.0_301</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$&#123;JAVA_HOME&#125;</span>/jre/lib/rt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/dt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/tools.jar</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/9.png" alt="页面效果"></p>
+<p>按下Esc  wq!保存退出</p>
+<h3 id="刷新环境变量和验证java环境是否安装成功"><a href="#刷新环境变量和验证java环境是否安装成功" class="headerlink" title="刷新环境变量和验证java环境是否安装成功"></a>刷新环境变量和验证java环境是否安装成功</h3><p><strong>刷新环境变量</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source  /etc/profile</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/10.png" alt="页面效果"></p>
+<p><strong>验证jdk是否安装成功</strong></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/11.png" alt="页面效果"></p>
+]]></content>
+      <categories>
+        <category>服务</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
         <tag>jdk</tag>
       </tags>
   </entry>
@@ -1338,8 +1375,8 @@
         <category>服务</category>
       </categories>
       <tags>
-        <tag>mysql</tag>
         <tag>linux</tag>
+        <tag>mysql</tag>
       </tags>
   </entry>
   <entry>
@@ -1415,40 +1452,86 @@
       </tags>
   </entry>
   <entry>
-    <title>快速在Linux环境下安装配置JDk</title>
-    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10003-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJDK/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><font color="blue"><strong>作者:博哥</strong></font></p>
-<h2 id="使用Xshell工具连接Linux服务器"><a href="#使用Xshell工具连接Linux服务器" class="headerlink" title="使用Xshell工具连接Linux服务器"></a>使用Xshell工具连接Linux服务器</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/1.png" alt="页面效果"></p>
-<h2 id="下载Linux版本的Jdk安装包"><a href="#下载Linux版本的Jdk安装包" class="headerlink" title="下载Linux版本的Jdk安装包"></a>下载Linux版本的Jdk安装包</h2><p>链接：<a href="https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ">https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ</a><br>提取码：0er6 </p>
-<p>将下载的安装包上传到linux下的opt目录</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/2.png" alt="页面效果"></p>
-<h2 id="在命令行界面切入到opt目录下"><a href="#在命令行界面切入到opt目录下" class="headerlink" title="在命令行界面切入到opt目录下"></a>在命令行界面切入到opt目录下</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/3.png" alt="页面效果"></p>
-<h3 id="解压jdk安装包"><a href="#解压jdk安装包" class="headerlink" title="解压jdk安装包"></a>解压jdk安装包</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf jdk-8u301-linux-x64.tar.gz </span><br></pre></td></tr></table></figure>
+    <title>如何在windows下快速模拟搭建Linux环境</title>
+    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10006-%E5%A6%82%E4%BD%95%E5%9C%A8windows%E4%B8%8B%E5%BF%AB%E9%80%9F%E6%A8%A1%E6%8B%9F%E6%90%AD%E5%BB%BALinux%E7%8E%AF%E5%A2%83/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
+<li><p>下载安装 Oracle VM VirtualBox</p>
+</li>
+<li><p>下载安装 vargent</p>
+</li>
+<li><p>下载virtualbox镜像  centos7或centos8</p>
+</li>
+<li><p>下载基础配置  Vagrantfile-centos7或Vagrantfile-centos8</p>
+<blockquote>
+<p>链接：<a href="https://pan.baidu.com/s/1fVGUip0GtoDYHe5YwNs3kg">https://pan.baidu.com/s/1fVGUip0GtoDYHe5YwNs3kg</a><br>提取码：1234</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="进入磁盘创建目录-存放需要安装的操作系统"><a href="#进入磁盘创建目录-存放需要安装的操作系统" class="headerlink" title="进入磁盘创建目录 存放需要安装的操作系统"></a>进入磁盘创建目录 存放需要安装的操作系统</h2><ul>
+<li>如下图</li>
+</ul>
+<blockquote>
+<p>进入到 磁盘上 双肩目录 vagrant–存放需要安装的操作系统</p>
+<p>**<font color="red">注意:</font>**盘符和目录不能出现中文</p>
+</blockquote>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/1.png"></p>
+<h2 id="在Vagrant中安装Centos本地镜像"><a href="#在Vagrant中安装Centos本地镜像" class="headerlink" title="在Vagrant中安装Centos本地镜像"></a>在Vagrant中安装Centos本地镜像</h2><h3 id="查看是否安装过相关镜像"><a href="#查看是否安装过相关镜像" class="headerlink" title="查看是否安装过相关镜像"></a>查看是否安装过相关镜像</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vagrant  box  list</span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/4.png" alt="页面效果"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/5.png" alt="页面效果"></p>
-<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><h3 id="切入到etc-目录"><a href="#切入到etc-目录" class="headerlink" title="切入到etc 目录"></a>切入到etc 目录</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/6.png" alt="页面效果"></p>
-<h3 id="使用vi-命令修改-profile文件"><a href="#使用vi-命令修改-profile文件" class="headerlink" title="使用vi 命令修改 profile文件"></a>使用vi 命令修改 profile文件</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/7.png" alt="页面效果"></p>
-<h3 id="找到最后一行位置"><a href="#找到最后一行位置" class="headerlink" title="找到最后一行位置"></a>找到最后一行位置</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/8.png" alt="页面效果"></p>
-<h3 id="将如下的Jdk环境变量添加到尾部"><a href="#将如下的Jdk环境变量添加到尾部" class="headerlink" title="将如下的Jdk环境变量添加到尾部"></a>将如下的Jdk环境变量添加到尾部</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/jdk1.8.0_301</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$&#123;JAVA_HOME&#125;</span>/jre/lib/rt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/dt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/tools.jar</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/2.png"></p>
+<h3 id="将事先准备好的centos镜像安装到本地"><a href="#将事先准备好的centos镜像安装到本地" class="headerlink" title="将事先准备好的centos镜像安装到本地"></a>将事先准备好的centos镜像安装到本地</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/3.png"></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vagrant  box add centos/7   C:\Users\admin\Desktop\镜像\virtualbox7.box</span><br></pre></td></tr></table></figure>
 
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/4.png"></p>
+<h3 id="查看本地镜像是否安装成功"><a href="#查看本地镜像是否安装成功" class="headerlink" title="查看本地镜像是否安装成功"></a>查看本地镜像是否安装成功</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vagrant  box list</span><br></pre></td></tr></table></figure>
 
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/5.png"></p>
+<blockquote>
+<p><font color="red"><strong>记住：</strong></font>我们通过Vargrnt刚才在本地安装了一个centos7的镜像     名称叫 centos&#x2F;7</p>
+</blockquote>
+<h2 id="安装Centos7操作系统"><a href="#安装Centos7操作系统" class="headerlink" title="安装Centos7操作系统"></a>安装Centos7操作系统</h2><h3 id="进入我们事先创建好的目录-vagrant"><a href="#进入我们事先创建好的目录-vagrant" class="headerlink" title="进入我们事先创建好的目录 vagrant"></a>进入我们事先创建好的目录 vagrant</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/1.png"></p>
+<h3 id="创建一个目录存放接下来要安装的centos7操作系统"><a href="#创建一个目录存放接下来要安装的centos7操作系统" class="headerlink" title="创建一个目录存放接下来要安装的centos7操作系统"></a>创建一个目录存放接下来要安装的centos7操作系统</h3><blockquote>
+<p>如  bogedev-centos7-1</p>
+</blockquote>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/6.png"></p>
+<h3 id="在该目录下执行cmd命令-切入到命令行"><a href="#在该目录下执行cmd命令-切入到命令行" class="headerlink" title="在该目录下执行cmd命令,切入到命令行"></a>在该目录下执行cmd命令,切入到命令行</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/7.png"></p>
+<h3 id="执行vagrant-init命令完成系统配置初始化"><a href="#执行vagrant-init命令完成系统配置初始化" class="headerlink" title="执行vagrant init命令完成系统配置初始化"></a>执行vagrant init命令完成系统配置初始化</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/8.png"></p>
+<h3 id="查看目录下是否多了一个文件"><a href="#查看目录下是否多了一个文件" class="headerlink" title="查看目录下是否多了一个文件"></a>查看目录下是否多了一个文件</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/9.png"></p>
+<h3 id="将事先准备的配置文件内容替换到刚刚生成的配置文件中"><a href="#将事先准备的配置文件内容替换到刚刚生成的配置文件中" class="headerlink" title="将事先准备的配置文件内容替换到刚刚生成的配置文件中"></a>将事先准备的配置文件内容替换到刚刚生成的配置文件中</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/10.png"></p>
+<h3 id="配置文件说明"><a href="#配置文件说明" class="headerlink" title="配置文件说明"></a>配置文件说明</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- mode: ruby -*-</span></span><br><span class="line"><span class="comment"># vi: set ft=ruby :</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"># All Vagrant configuration is done below. The &quot;2&quot; in Vagrant.configure</span></span><br><span class="line"><span class="comment"># configures the configuration version (we support older styles for</span></span><br><span class="line"><span class="comment"># backwards compatibility). Please don&#x27;t change it unless you know what</span></span><br><span class="line"><span class="comment"># you&#x27;re doing.</span></span><br><span class="line"><span class="attr">Vagrant.configure(&quot;2&quot;)</span> <span class="string">do |config|</span></span><br><span class="line"><span class="comment">  # The most common configuration options are documented and commented below.</span></span><br><span class="line"><span class="comment">  # For a complete reference, please see the online documentation at</span></span><br><span class="line"><span class="comment">  # https://docs.vagrantup.com.</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">  # Every Vagrant development environment requires a box. You can search for</span></span><br><span class="line"><span class="comment">  # boxes at https://vagrantcloud.com/search.</span></span><br><span class="line">  <span class="attr">config.vm.box</span> = <span class="string">&quot;centos/7&quot;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">  # Disable automatic box update checking. If you disable this, then</span></span><br><span class="line"><span class="comment">  # boxes will only be checked for updates when the user runs</span></span><br><span class="line"><span class="comment">  # `vagrant box outdated`. This is not recommended.</span></span><br><span class="line"><span class="comment">  # config.vm.box_check_update = false</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">  # Create a forwarded port mapping which allows access to a specific port</span></span><br><span class="line"><span class="comment">  # within the machine from a port on the host machine. In the example below,</span></span><br><span class="line"><span class="comment">  # accessing &quot;localhost:8080&quot; will access port 80 on the guest machine.</span></span><br><span class="line"><span class="comment">  # <span class="doctag">NOTE:</span> This will enable public access to the opened port</span></span><br><span class="line"><span class="comment">  # config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8080</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">  # Create a forwarded port mapping which allows access to a specific port</span></span><br><span class="line"><span class="comment">  # within the machine from a port on the host machine and only allow access</span></span><br><span class="line"><span class="comment">  # via 127.0.0.1 to disable public access</span></span><br><span class="line"><span class="comment">  # config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8080, host_ip: &quot;127.0.0.1&quot;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">  # Create a private network, which allows host-only access to the machine</span></span><br><span class="line"><span class="comment">  # using a specific IP.</span></span><br><span class="line"><span class="comment">  # config.vm.network &quot;private_network&quot;, ip: &quot;192.168.33.10&quot;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">  # Create a public network, which generally matched to bridged network.</span></span><br><span class="line"><span class="comment">  # Bridged networks make the machine appear as another physical device on</span></span><br><span class="line"><span class="comment">  # your network.</span></span><br><span class="line">  <span class="attr">config.vm.network</span> <span class="string">&quot;public_network&quot;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">  # Share an additional folder to the guest VM. The first argument is</span></span><br><span class="line"><span class="comment">  # the path on the host to the actual folder. The second argument is</span></span><br><span class="line"><span class="comment">  # the path on the guest to mount the folder. And the optional third</span></span><br><span class="line"><span class="comment">  # argument is a set of non-required options.</span></span><br><span class="line"><span class="comment">  # config.vm.synced_folder &quot;../data&quot;, &quot;/vagrant_data&quot;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">  # Provider-specific configuration so you can fine-tune various</span></span><br><span class="line"><span class="comment">  # backing providers for Vagrant. These expose provider-specific options.</span></span><br><span class="line"><span class="comment">  # Example for VirtualBox:</span></span><br><span class="line"><span class="comment">  #</span></span><br><span class="line"><span class="comment">  # config.vm.provider &quot;virtualbox&quot; do |vb|</span></span><br><span class="line"><span class="comment">  #   # Display the VirtualBox GUI when booting the machine</span></span><br><span class="line"><span class="comment">  #   vb.gui = true</span></span><br><span class="line"><span class="comment">  #</span></span><br><span class="line"><span class="comment">  #   # Customize the amount of memory on the VM:</span></span><br><span class="line"><span class="comment">  #   vb.memory = &quot;1024&quot;</span></span><br><span class="line"><span class="comment">  # end</span></span><br><span class="line"><span class="comment">  #boge-centos7-x </span></span><br><span class="line">    <span class="attr">config.vm.provider</span> <span class="string">&quot;virtualbox&quot; do |vb|</span></span><br><span class="line">        <span class="attr">vb.memory</span> = <span class="string">&quot;3000&quot;</span></span><br><span class="line">        <span class="attr">vb.name</span>= <span class="string">&quot;boge-centos7-1&quot;</span></span><br><span class="line">        <span class="attr">vb.cpus</span>= <span class="string">2</span></span><br><span class="line">    <span class="attr">end</span></span><br><span class="line"><span class="comment">  #</span></span><br><span class="line"><span class="comment">  # View the documentation for the provider you are using for more</span></span><br><span class="line"><span class="comment">  # information on available options.</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">  # Enable provisioning with a shell script. Additional provisioners such as</span></span><br><span class="line"><span class="comment">  # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the</span></span><br><span class="line"><span class="comment">  # documentation for more information about their specific syntax and use.</span></span><br><span class="line"><span class="comment">  # config.vm.provision &quot;shell&quot;, inline: &lt;&lt;-SHELL</span></span><br><span class="line"><span class="comment">  #   apt-get update</span></span><br><span class="line"><span class="comment">  #   apt-get install -y apache2</span></span><br><span class="line"><span class="comment">  # SHELL</span></span><br><span class="line"><span class="attr">end</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/9.png" alt="页面效果"></p>
-<p>按下Esc  wq!保存退出</p>
-<h3 id="刷新环境变量和验证java环境是否安装成功"><a href="#刷新环境变量和验证java环境是否安装成功" class="headerlink" title="刷新环境变量和验证java环境是否安装成功"></a>刷新环境变量和验证java环境是否安装成功</h3><p><strong>刷新环境变量</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source  /etc/profile</span><br></pre></td></tr></table></figure>
+<ul>
+<li>config.vm.box &#x3D; “centos&#x2F;7”</li>
+</ul>
+<blockquote>
+<p>安装的操作系统镜像  这里指定为事先安装好的本地镜像即可</p>
+</blockquote>
+<ul>
+<li>操作系统的基础配置  内存  cpu     名称等</li>
+</ul>
+<blockquote>
+<p>config.vm.provider “virtualbox” do |vb|<br>       vb.memory &#x3D; “3000”<br>       vb.name&#x3D; “boge-centos7-1”<br>       vb.cpus&#x3D; 2<br>   end</p>
+</blockquote>
+<h3 id="执行如下命令进行操作系统安装"><a href="#执行如下命令进行操作系统安装" class="headerlink" title="执行如下命令进行操作系统安装"></a>执行如下命令进行操作系统安装</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/11.png"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/12.png"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/13.png"></p>
+<h2 id="登录Centos7操作系统"><a href="#登录Centos7操作系统" class="headerlink" title="登录Centos7操作系统"></a>登录Centos7操作系统</h2><h3 id="输入-vagrant-ssh命令登录"><a href="#输入-vagrant-ssh命令登录" class="headerlink" title="输入 vagrant  ssh命令登录"></a>输入 vagrant  ssh命令登录</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/14.png"></p>
+<h3 id="测试网格"><a href="#测试网格" class="headerlink" title="测试网格"></a>测试网格</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/15.png"></p>
+<p>可以上网说明centoss虚拟机和物理机连接没有任何问题，大功告成</p>
+<h2 id="测试使用Xshell连接虚拟机"><a href="#测试使用Xshell连接虚拟机" class="headerlink" title="测试使用Xshell连接虚拟机"></a>测试使用Xshell连接虚拟机</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudi -i 切入到centos下</span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/10.png" alt="页面效果"></p>
-<p><strong>验证jdk是否安装成功</strong></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/11.png" alt="页面效果"></p>
+<h3 id="先修改root密码"><a href="#先修改root密码" class="headerlink" title="先修改root密码"></a>先修改root密码</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/16.png"></p>
+<h3 id="重启ssh服务"><a href="#重启ssh服务" class="headerlink" title="重启ssh服务"></a>重启ssh服务</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/17.png"></p>
+<h3 id="查看虚拟机ip地址"><a href="#查看虚拟机ip地址" class="headerlink" title="查看虚拟机ip地址"></a>查看虚拟机ip地址</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/18.png"></p>
+<h3 id="使用xshell连接"><a href="#使用xshell连接" class="headerlink" title="使用xshell连接"></a>使用xshell连接</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/19.png"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/20.png"></p>
+<h3 id="查看安装的centos版本"><a href="#查看安装的centos版本" class="headerlink" title="查看安装的centos版本"></a>查看安装的centos版本</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/21.png"></p>
 ]]></content>
       <categories>
         <category>服务</category>
       </categories>
       <tags>
-        <tag>jdk</tag>
         <tag>linux</tag>
+        <tag>虚拟机</tag>
       </tags>
   </entry>
   <entry>
@@ -1610,89 +1693,6 @@
       <tags>
         <tag>linux</tag>
         <tag>Redis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何在windows下快速模拟搭建Linux环境</title>
-    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10006-%E5%A6%82%E4%BD%95%E5%9C%A8windows%E4%B8%8B%E5%BF%AB%E9%80%9F%E6%A8%A1%E6%8B%9F%E6%90%AD%E5%BB%BALinux%E7%8E%AF%E5%A2%83/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
-<li><p>下载安装 Oracle VM VirtualBox</p>
-</li>
-<li><p>下载安装 vargent</p>
-</li>
-<li><p>下载virtualbox镜像  centos7或centos8</p>
-</li>
-<li><p>下载基础配置  Vagrantfile-centos7或Vagrantfile-centos8</p>
-<blockquote>
-<p>链接：<a href="https://pan.baidu.com/s/1fVGUip0GtoDYHe5YwNs3kg">https://pan.baidu.com/s/1fVGUip0GtoDYHe5YwNs3kg</a><br>提取码：1234</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="进入磁盘创建目录-存放需要安装的操作系统"><a href="#进入磁盘创建目录-存放需要安装的操作系统" class="headerlink" title="进入磁盘创建目录 存放需要安装的操作系统"></a>进入磁盘创建目录 存放需要安装的操作系统</h2><ul>
-<li>如下图</li>
-</ul>
-<blockquote>
-<p>进入到 磁盘上 双肩目录 vagrant–存放需要安装的操作系统</p>
-<p>**<font color="red">注意:</font>**盘符和目录不能出现中文</p>
-</blockquote>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/1.png"></p>
-<h2 id="在Vagrant中安装Centos本地镜像"><a href="#在Vagrant中安装Centos本地镜像" class="headerlink" title="在Vagrant中安装Centos本地镜像"></a>在Vagrant中安装Centos本地镜像</h2><h3 id="查看是否安装过相关镜像"><a href="#查看是否安装过相关镜像" class="headerlink" title="查看是否安装过相关镜像"></a>查看是否安装过相关镜像</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vagrant  box  list</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/2.png"></p>
-<h3 id="将事先准备好的centos镜像安装到本地"><a href="#将事先准备好的centos镜像安装到本地" class="headerlink" title="将事先准备好的centos镜像安装到本地"></a>将事先准备好的centos镜像安装到本地</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/3.png"></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vagrant  box add centos/7   C:\Users\admin\Desktop\镜像\virtualbox7.box</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/4.png"></p>
-<h3 id="查看本地镜像是否安装成功"><a href="#查看本地镜像是否安装成功" class="headerlink" title="查看本地镜像是否安装成功"></a>查看本地镜像是否安装成功</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vagrant  box list</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/5.png"></p>
-<blockquote>
-<p><font color="red"><strong>记住：</strong></font>我们通过Vargrnt刚才在本地安装了一个centos7的镜像     名称叫 centos&#x2F;7</p>
-</blockquote>
-<h2 id="安装Centos7操作系统"><a href="#安装Centos7操作系统" class="headerlink" title="安装Centos7操作系统"></a>安装Centos7操作系统</h2><h3 id="进入我们事先创建好的目录-vagrant"><a href="#进入我们事先创建好的目录-vagrant" class="headerlink" title="进入我们事先创建好的目录 vagrant"></a>进入我们事先创建好的目录 vagrant</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/1.png"></p>
-<h3 id="创建一个目录存放接下来要安装的centos7操作系统"><a href="#创建一个目录存放接下来要安装的centos7操作系统" class="headerlink" title="创建一个目录存放接下来要安装的centos7操作系统"></a>创建一个目录存放接下来要安装的centos7操作系统</h3><blockquote>
-<p>如  bogedev-centos7-1</p>
-</blockquote>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/6.png"></p>
-<h3 id="在该目录下执行cmd命令-切入到命令行"><a href="#在该目录下执行cmd命令-切入到命令行" class="headerlink" title="在该目录下执行cmd命令,切入到命令行"></a>在该目录下执行cmd命令,切入到命令行</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/7.png"></p>
-<h3 id="执行vagrant-init命令完成系统配置初始化"><a href="#执行vagrant-init命令完成系统配置初始化" class="headerlink" title="执行vagrant init命令完成系统配置初始化"></a>执行vagrant init命令完成系统配置初始化</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/8.png"></p>
-<h3 id="查看目录下是否多了一个文件"><a href="#查看目录下是否多了一个文件" class="headerlink" title="查看目录下是否多了一个文件"></a>查看目录下是否多了一个文件</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/9.png"></p>
-<h3 id="将事先准备的配置文件内容替换到刚刚生成的配置文件中"><a href="#将事先准备的配置文件内容替换到刚刚生成的配置文件中" class="headerlink" title="将事先准备的配置文件内容替换到刚刚生成的配置文件中"></a>将事先准备的配置文件内容替换到刚刚生成的配置文件中</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/10.png"></p>
-<h3 id="配置文件说明"><a href="#配置文件说明" class="headerlink" title="配置文件说明"></a>配置文件说明</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- mode: ruby -*-</span></span><br><span class="line"><span class="comment"># vi: set ft=ruby :</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"># All Vagrant configuration is done below. The &quot;2&quot; in Vagrant.configure</span></span><br><span class="line"><span class="comment"># configures the configuration version (we support older styles for</span></span><br><span class="line"><span class="comment"># backwards compatibility). Please don&#x27;t change it unless you know what</span></span><br><span class="line"><span class="comment"># you&#x27;re doing.</span></span><br><span class="line"><span class="attr">Vagrant.configure(&quot;2&quot;)</span> <span class="string">do |config|</span></span><br><span class="line"><span class="comment">  # The most common configuration options are documented and commented below.</span></span><br><span class="line"><span class="comment">  # For a complete reference, please see the online documentation at</span></span><br><span class="line"><span class="comment">  # https://docs.vagrantup.com.</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">  # Every Vagrant development environment requires a box. You can search for</span></span><br><span class="line"><span class="comment">  # boxes at https://vagrantcloud.com/search.</span></span><br><span class="line">  <span class="attr">config.vm.box</span> = <span class="string">&quot;centos/7&quot;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">  # Disable automatic box update checking. If you disable this, then</span></span><br><span class="line"><span class="comment">  # boxes will only be checked for updates when the user runs</span></span><br><span class="line"><span class="comment">  # `vagrant box outdated`. This is not recommended.</span></span><br><span class="line"><span class="comment">  # config.vm.box_check_update = false</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">  # Create a forwarded port mapping which allows access to a specific port</span></span><br><span class="line"><span class="comment">  # within the machine from a port on the host machine. In the example below,</span></span><br><span class="line"><span class="comment">  # accessing &quot;localhost:8080&quot; will access port 80 on the guest machine.</span></span><br><span class="line"><span class="comment">  # <span class="doctag">NOTE:</span> This will enable public access to the opened port</span></span><br><span class="line"><span class="comment">  # config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8080</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">  # Create a forwarded port mapping which allows access to a specific port</span></span><br><span class="line"><span class="comment">  # within the machine from a port on the host machine and only allow access</span></span><br><span class="line"><span class="comment">  # via 127.0.0.1 to disable public access</span></span><br><span class="line"><span class="comment">  # config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8080, host_ip: &quot;127.0.0.1&quot;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">  # Create a private network, which allows host-only access to the machine</span></span><br><span class="line"><span class="comment">  # using a specific IP.</span></span><br><span class="line"><span class="comment">  # config.vm.network &quot;private_network&quot;, ip: &quot;192.168.33.10&quot;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">  # Create a public network, which generally matched to bridged network.</span></span><br><span class="line"><span class="comment">  # Bridged networks make the machine appear as another physical device on</span></span><br><span class="line"><span class="comment">  # your network.</span></span><br><span class="line">  <span class="attr">config.vm.network</span> <span class="string">&quot;public_network&quot;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">  # Share an additional folder to the guest VM. The first argument is</span></span><br><span class="line"><span class="comment">  # the path on the host to the actual folder. The second argument is</span></span><br><span class="line"><span class="comment">  # the path on the guest to mount the folder. And the optional third</span></span><br><span class="line"><span class="comment">  # argument is a set of non-required options.</span></span><br><span class="line"><span class="comment">  # config.vm.synced_folder &quot;../data&quot;, &quot;/vagrant_data&quot;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">  # Provider-specific configuration so you can fine-tune various</span></span><br><span class="line"><span class="comment">  # backing providers for Vagrant. These expose provider-specific options.</span></span><br><span class="line"><span class="comment">  # Example for VirtualBox:</span></span><br><span class="line"><span class="comment">  #</span></span><br><span class="line"><span class="comment">  # config.vm.provider &quot;virtualbox&quot; do |vb|</span></span><br><span class="line"><span class="comment">  #   # Display the VirtualBox GUI when booting the machine</span></span><br><span class="line"><span class="comment">  #   vb.gui = true</span></span><br><span class="line"><span class="comment">  #</span></span><br><span class="line"><span class="comment">  #   # Customize the amount of memory on the VM:</span></span><br><span class="line"><span class="comment">  #   vb.memory = &quot;1024&quot;</span></span><br><span class="line"><span class="comment">  # end</span></span><br><span class="line"><span class="comment">  #boge-centos7-x </span></span><br><span class="line">    <span class="attr">config.vm.provider</span> <span class="string">&quot;virtualbox&quot; do |vb|</span></span><br><span class="line">        <span class="attr">vb.memory</span> = <span class="string">&quot;3000&quot;</span></span><br><span class="line">        <span class="attr">vb.name</span>= <span class="string">&quot;boge-centos7-1&quot;</span></span><br><span class="line">        <span class="attr">vb.cpus</span>= <span class="string">2</span></span><br><span class="line">    <span class="attr">end</span></span><br><span class="line"><span class="comment">  #</span></span><br><span class="line"><span class="comment">  # View the documentation for the provider you are using for more</span></span><br><span class="line"><span class="comment">  # information on available options.</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">  # Enable provisioning with a shell script. Additional provisioners such as</span></span><br><span class="line"><span class="comment">  # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the</span></span><br><span class="line"><span class="comment">  # documentation for more information about their specific syntax and use.</span></span><br><span class="line"><span class="comment">  # config.vm.provision &quot;shell&quot;, inline: &lt;&lt;-SHELL</span></span><br><span class="line"><span class="comment">  #   apt-get update</span></span><br><span class="line"><span class="comment">  #   apt-get install -y apache2</span></span><br><span class="line"><span class="comment">  # SHELL</span></span><br><span class="line"><span class="attr">end</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>config.vm.box &#x3D; “centos&#x2F;7”</li>
-</ul>
-<blockquote>
-<p>安装的操作系统镜像  这里指定为事先安装好的本地镜像即可</p>
-</blockquote>
-<ul>
-<li>操作系统的基础配置  内存  cpu     名称等</li>
-</ul>
-<blockquote>
-<p>config.vm.provider “virtualbox” do |vb|<br>       vb.memory &#x3D; “3000”<br>       vb.name&#x3D; “boge-centos7-1”<br>       vb.cpus&#x3D; 2<br>   end</p>
-</blockquote>
-<h3 id="执行如下命令进行操作系统安装"><a href="#执行如下命令进行操作系统安装" class="headerlink" title="执行如下命令进行操作系统安装"></a>执行如下命令进行操作系统安装</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/11.png"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/12.png"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/13.png"></p>
-<h2 id="登录Centos7操作系统"><a href="#登录Centos7操作系统" class="headerlink" title="登录Centos7操作系统"></a>登录Centos7操作系统</h2><h3 id="输入-vagrant-ssh命令登录"><a href="#输入-vagrant-ssh命令登录" class="headerlink" title="输入 vagrant  ssh命令登录"></a>输入 vagrant  ssh命令登录</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/14.png"></p>
-<h3 id="测试网格"><a href="#测试网格" class="headerlink" title="测试网格"></a>测试网格</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/15.png"></p>
-<p>可以上网说明centoss虚拟机和物理机连接没有任何问题，大功告成</p>
-<h2 id="测试使用Xshell连接虚拟机"><a href="#测试使用Xshell连接虚拟机" class="headerlink" title="测试使用Xshell连接虚拟机"></a>测试使用Xshell连接虚拟机</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudi -i 切入到centos下</span><br></pre></td></tr></table></figure>
-
-<h3 id="先修改root密码"><a href="#先修改root密码" class="headerlink" title="先修改root密码"></a>先修改root密码</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/16.png"></p>
-<h3 id="重启ssh服务"><a href="#重启ssh服务" class="headerlink" title="重启ssh服务"></a>重启ssh服务</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/17.png"></p>
-<h3 id="查看虚拟机ip地址"><a href="#查看虚拟机ip地址" class="headerlink" title="查看虚拟机ip地址"></a>查看虚拟机ip地址</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/18.png"></p>
-<h3 id="使用xshell连接"><a href="#使用xshell连接" class="headerlink" title="使用xshell连接"></a>使用xshell连接</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/19.png"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/20.png"></p>
-<h3 id="查看安装的centos版本"><a href="#查看安装的centos版本" class="headerlink" title="查看安装的centos版本"></a>查看安装的centos版本</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A7/21.png"></p>
-]]></content>
-      <categories>
-        <category>服务</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>虚拟机</tag>
       </tags>
   </entry>
   <entry>
@@ -2038,45 +2038,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Docker环境下安装Tomcat</title>
-    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10012-Docker%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85Tomcat/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="准备好Centos7环境并安装好了Docker"><a href="#准备好Centos7环境并安装好了Docker" class="headerlink" title="准备好Centos7环境并安装好了Docker"></a>准备好Centos7环境并安装好了Docker</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/1.png"></p>
-<h2 id="Docker安装Tomcat过程"><a href="#Docker安装Tomcat过程" class="headerlink" title="Docker安装Tomcat过程"></a>Docker安装Tomcat过程</h2><h3 id="拉取和查看mysq镜像"><a href="#拉取和查看mysq镜像" class="headerlink" title="拉取和查看mysq镜像"></a>拉取和查看mysq镜像</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull tomcat</span><br><span class="line">docker images</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A13/1.png"></p>
-<h3 id="创建容器-tomcat-，映射宿主的-8080-端口到-tomcat-的-8080-端口"><a href="#创建容器-tomcat-，映射宿主的-8080-端口到-tomcat-的-8080-端口" class="headerlink" title="创建容器 tomcat ，映射宿主的 8080 端口到 tomcat 的 8080 端口"></a>创建容器 tomcat ，映射宿主的 8080 端口到 tomcat 的 8080 端口</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --name tomcat -d -p 8080:8080 tomcat</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A13/2.png"></p>
-<h3 id="在防火墙开发8080端口"><a href="#在防火墙开发8080端口" class="headerlink" title="在防火墙开发8080端口"></a>在防火墙开发8080端口</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl  start firewalld.service</span><br><span class="line">firewall-cmd --zone=public --add-port=8080/tcp --permanent</span><br><span class="line">firewall-cmd --reload</span><br><span class="line">firewall-cmd --list-port</span><br></pre></td></tr></table></figure>
-
-<h3 id="挂载宿主目录到容器"><a href="#挂载宿主目录到容器" class="headerlink" title="挂载宿主目录到容器"></a>挂载宿主目录到容器</h3><blockquote>
-<ol>
-<li>tomcat 容器 webapps 路径：&#x2F;usr&#x2F;local&#x2F;tomcat&#x2F;webapps</li>
-<li>在宿主目录下新建目录 &#x2F;home&#x2F;tomcat&#x2F;webapps</li>
-</ol>
-</blockquote>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A13/3.png"></p>
-<h3 id="停止-tomcat-容器并删除该容器"><a href="#停止-tomcat-容器并删除该容器" class="headerlink" title="停止 tomcat 容器并删除该容器"></a>停止 tomcat 容器并删除该容器</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker ps -a </span><br><span class="line">docker stop CONTAINER_ID</span><br><span class="line">docker <span class="built_in">rm</span> CONTAINER_ID</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --name tomcat -d -p 8080:8080 -v /home/tomcat/webapps:/usr/local/tomcat/webapps tomcat  </span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="复制wepapps-dist文件到-刚创建的webapps目录"><a href="#复制wepapps-dist文件到-刚创建的webapps目录" class="headerlink" title="复制wepapps.dist文件到 刚创建的webapps目录"></a>复制wepapps.dist文件到 刚创建的webapps目录</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">cp</span> tomcat:/usr/local/tomcat/webapps.dist /home/tomcat/webapps</span><br><span class="line"><span class="built_in">mv</span> /home/tomcat/webapps/webapps.dist/*  /home/tomcat/webapps/</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="结果检测"><a href="#结果检测" class="headerlink" title="结果检测"></a>结果检测</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A13/4.png"></p>
-]]></content>
-      <categories>
-        <category>服务</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-        <tag>Tomcat</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Docker环境下安装Redis</title>
     <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10013-Docker%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85Redis/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="准备好Centos7环境并安装好了Docker"><a href="#准备好Centos7环境并安装好了Docker" class="headerlink" title="准备好Centos7环境并安装好了Docker"></a>准备好Centos7环境并安装好了Docker</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/1.png"></p>
@@ -2181,6 +2142,45 @@
       </categories>
       <tags>
         <tag>K8s</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker环境下安装Tomcat</title>
+    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10012-Docker%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85Tomcat/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="准备好Centos7环境并安装好了Docker"><a href="#准备好Centos7环境并安装好了Docker" class="headerlink" title="准备好Centos7环境并安装好了Docker"></a>准备好Centos7环境并安装好了Docker</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/1.png"></p>
+<h2 id="Docker安装Tomcat过程"><a href="#Docker安装Tomcat过程" class="headerlink" title="Docker安装Tomcat过程"></a>Docker安装Tomcat过程</h2><h3 id="拉取和查看mysq镜像"><a href="#拉取和查看mysq镜像" class="headerlink" title="拉取和查看mysq镜像"></a>拉取和查看mysq镜像</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull tomcat</span><br><span class="line">docker images</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A13/1.png"></p>
+<h3 id="创建容器-tomcat-，映射宿主的-8080-端口到-tomcat-的-8080-端口"><a href="#创建容器-tomcat-，映射宿主的-8080-端口到-tomcat-的-8080-端口" class="headerlink" title="创建容器 tomcat ，映射宿主的 8080 端口到 tomcat 的 8080 端口"></a>创建容器 tomcat ，映射宿主的 8080 端口到 tomcat 的 8080 端口</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --name tomcat -d -p 8080:8080 tomcat</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A13/2.png"></p>
+<h3 id="在防火墙开发8080端口"><a href="#在防火墙开发8080端口" class="headerlink" title="在防火墙开发8080端口"></a>在防火墙开发8080端口</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl  start firewalld.service</span><br><span class="line">firewall-cmd --zone=public --add-port=8080/tcp --permanent</span><br><span class="line">firewall-cmd --reload</span><br><span class="line">firewall-cmd --list-port</span><br></pre></td></tr></table></figure>
+
+<h3 id="挂载宿主目录到容器"><a href="#挂载宿主目录到容器" class="headerlink" title="挂载宿主目录到容器"></a>挂载宿主目录到容器</h3><blockquote>
+<ol>
+<li>tomcat 容器 webapps 路径：&#x2F;usr&#x2F;local&#x2F;tomcat&#x2F;webapps</li>
+<li>在宿主目录下新建目录 &#x2F;home&#x2F;tomcat&#x2F;webapps</li>
+</ol>
+</blockquote>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A13/3.png"></p>
+<h3 id="停止-tomcat-容器并删除该容器"><a href="#停止-tomcat-容器并删除该容器" class="headerlink" title="停止 tomcat 容器并删除该容器"></a>停止 tomcat 容器并删除该容器</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker ps -a </span><br><span class="line">docker stop CONTAINER_ID</span><br><span class="line">docker <span class="built_in">rm</span> CONTAINER_ID</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --name tomcat -d -p 8080:8080 -v /home/tomcat/webapps:/usr/local/tomcat/webapps tomcat  </span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="复制wepapps-dist文件到-刚创建的webapps目录"><a href="#复制wepapps-dist文件到-刚创建的webapps目录" class="headerlink" title="复制wepapps.dist文件到 刚创建的webapps目录"></a>复制wepapps.dist文件到 刚创建的webapps目录</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">cp</span> tomcat:/usr/local/tomcat/webapps.dist /home/tomcat/webapps</span><br><span class="line"><span class="built_in">mv</span> /home/tomcat/webapps/webapps.dist/*  /home/tomcat/webapps/</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="结果检测"><a href="#结果检测" class="headerlink" title="结果检测"></a>结果检测</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A13/4.png"></p>
+]]></content>
+      <categories>
+        <category>服务</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>Tomcat</tag>
       </tags>
   </entry>
   <entry>
