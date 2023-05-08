@@ -1,6 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Linux快速安装配置Docker</title>
+    <url>/2023/05/09/%E6%9C%8D%E5%8A%A1/05/1001-%E5%8D%9A%E5%93%A5%E5%B8%A6%E4%BD%A0%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEDocker/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="Centos8安装Docker"><a href="#Centos8安装Docker" class="headerlink" title="Centos8安装Docker"></a>Centos8安装Docker</h2><h3 id="卸载旧版本"><a href="#卸载旧版本" class="headerlink" title="卸载旧版本"></a>卸载旧版本</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo yum remove docker \</span><br><span class="line">                  docker-client \</span><br><span class="line">                  docker-client-latest \</span><br><span class="line">                  docker-common \</span><br><span class="line">                  docker-latest \</span><br><span class="line">                  docker-latest-logrotate \</span><br><span class="line">                  docker-logrotate \</span><br><span class="line">                  docker-engine</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/05/A1/1.png"></p>
+<h3 id="安装-Docker"><a href="#安装-Docker" class="headerlink" title="安装 Docker"></a>安装 Docker</h3><ul>
+<li><strong>使用 Docker 仓库进行安装</strong></li>
+</ul>
+<blockquote>
+<p>在新主机上首次安装 Docker Engine-Community 之前，需要设置 Docker 仓库。之后，您可以从仓库安装和更新 Docker。</p>
+<p><strong>设置仓库</strong></p>
+<p>安装所需的软件包。yum-utils 提供了 yum-config-manager ，并且 device mapper 存储驱动程序需要 device-mapper-persistent-data 和 lvm2。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo yum install -y yum-utils \</span><br><span class="line">  device-mapper-persistent-data \</span><br><span class="line">  lvm2</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><strong>使用以下命令来设置稳定的仓库。</strong> </p>
+<p>阿里云仓库</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo yum-config-manager \</span><br><span class="line">    --add-repo \</span><br><span class="line">    http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><h3 id="安装-Docker-Engine-Community"><a href="#安装-Docker-Engine-Community" class="headerlink" title="安装 Docker Engine-Community"></a>安装 Docker Engine-Community</h3></li>
+</ul>
+<p>安装最新版本的 Docker Engine-Community 和 containerd</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/05/A1/2.png"></p>
+<p>安装过程中提示如下界面请输入Y确认安装</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/05/A1/3.png"></p>
+<ul>
+<li><strong>查看安装的Docker信息</strong></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker  info</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/05/A1/4.png"></p>
+<ul>
+<li><strong>启动docker</strong></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl  start docker</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/05/A1/5.png"></p>
+<h3 id="配置docker镜像加速"><a href="#配置docker镜像加速" class="headerlink" title="配置docker镜像加速"></a>配置docker镜像加速</h3><blockquote>
+<ol>
+<li><p>从2017年6月9日起，Docker 官方提供了在中国的加速器，以解决墙的问题。不用注册，直接使用加速器地址：<a href="https://registry.docker-cn.com/">https://registry.docker-cn.com</a> 即可。</p>
+</li>
+<li><p>中国科技大学的镜像加速器：中科大的加速器不用注册，直接使用地址 <a href="https://docker.mirrors.ustc.edu.cn/">https://docker.mirrors.ustc.edu.cn/</a> 配置加速器即可。进一步的信息可以访问：<a href="http://mirrors.ustc.edu.cn/help/dockerhub.html?highlight=docker">http://mirrors.ustc.edu.cn/help/dockerhub.html?highlight=docker</a></p>
+</li>
+<li><p>阿里云加速器：注册阿里云开发账户(免费的)后，访问这个链接就可以看到加速器地址： <a href="https://cr.console.aliyun.com/#/accelerator">https://cr.console.aliyun.com/#/accelerator</a></p>
+</li>
+<li><p>DaoCloud 加速器：注册 DaoCloud 账户(支持微信登录)，然后访问： <a href="https://www.daocloud.io/">https://www.daocloud.io/</a> mirror#accelerator-doc</p>
+</li>
+</ol>
+<p><strong>我这里使用的阿里云加速器，使用之前要先注册阿里云账号</strong></p>
+</blockquote>
+<ul>
+<li><strong>配置镜像加速器：我们可以通过修改daemon配置文件&#x2F;etc&#x2F;docker&#x2F;daemon.json来使用加速器。</strong></li>
+</ul>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/05/A1/6.png"></p>
+<ul>
+<li><p><strong>在daemon.json中配置加速  以博哥阿里云为例</strong></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/05/A1/7.png"></p>
+</li>
+</ul>
+<p>​     </p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo mkdir -p /etc/docker</span><br><span class="line">sudo tee /etc/docker/daemon.json &lt;&lt;-&#x27;EOF&#x27;</span><br><span class="line">&#123;</span><br><span class="line">  &quot;registry-mirrors&quot;: [&quot;https://npjqmuyh.mirror.aliyuncs.com&quot;]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/05/A1/8.png"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/05/A1/9.png"></p>
+]]></content>
+      <categories>
+        <category>服务</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>博哥带你快速了解IDEA配置使用</title>
     <url>/2023/05/04/%E5%B7%A5%E5%85%B7/05/1003-%E5%8D%9A%E5%93%A5%E5%B8%A6%E4%BD%A0%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3IDEA%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><font color="blue"><strong>作者:博哥</strong></font></p>
@@ -518,23 +599,6 @@
       </tags>
   </entry>
   <entry>
-    <title>windows进程相关命令</title>
-    <url>/2023/05/01/%E7%B3%BB%E7%BB%9F/05/windows%E8%BF%9B%E7%A8%8B%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="查看端口号占用情况"><a href="#查看端口号占用情况" class="headerlink" title="查看端口号占用情况"></a>查看端口号占用情况</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -ano |findstr 3798</span><br></pre></td></tr></table></figure>
-
-<h2 id="查看进程的使用程序"><a href="#查看进程的使用程序" class="headerlink" title="查看进程的使用程序"></a>查看进程的使用程序</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tasklist |findstr 2452</span><br></pre></td></tr></table></figure>
-
-<h2 id="杀掉进程"><a href="#杀掉进程" class="headerlink" title="杀掉进程"></a>杀掉进程</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">taskkill /T /F /PID 2452 </span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>windows</tag>
-        <tag>命令</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>windows实用命令合集</title>
     <url>/2023/05/01/%E7%B3%BB%E7%BB%9F/05/windows%E5%AE%9E%E7%94%A8%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="实用命令"><a href="#实用命令" class="headerlink" title="实用命令"></a>实用命令</h1><h2 id="学会这四个快捷键-再也不怕老妈突然袭击"><a href="#学会这四个快捷键-再也不怕老妈突然袭击" class="headerlink" title="学会这四个快捷键,再也不怕老妈突然袭击"></a>学会这四个快捷键,再也不怕老妈突然袭击</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">(1)win+L 一键锁屏</span><br><span class="line">(2)win+D 一键返回桌面</span><br><span class="line">(3)win+tab 一键切换程序</span><br><span class="line">(4)<span class="built_in">shift</span>+delete 一键永久删除Copy to clipboardErrorCopied</span><br></pre></td></tr></table></figure>
@@ -638,6 +702,118 @@
 </blockquote>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.item-1&#123;  </span><br><span class="line"> order: 10000;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="/images/%E5%89%8D%E7%AB%AF/05/A1/19.png"></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+        <tag>前端案列</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>windows进程相关命令</title>
+    <url>/2023/05/01/%E7%B3%BB%E7%BB%9F/05/windows%E8%BF%9B%E7%A8%8B%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="查看端口号占用情况"><a href="#查看端口号占用情况" class="headerlink" title="查看端口号占用情况"></a>查看端口号占用情况</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -ano |findstr 3798</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看进程的使用程序"><a href="#查看进程的使用程序" class="headerlink" title="查看进程的使用程序"></a>查看进程的使用程序</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tasklist |findstr 2452</span><br></pre></td></tr></table></figure>
+
+<h2 id="杀掉进程"><a href="#杀掉进程" class="headerlink" title="杀掉进程"></a>杀掉进程</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">taskkill /T /F /PID 2452 </span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>炫酷的玻璃形态按钮的制作</title>
+    <url>/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10003-%E7%82%AB%E9%85%B7%E7%9A%84%E7%8E%BB%E7%92%83%E5%BD%A2%E6%80%81%E6%8C%89%E9%92%AE%E7%9A%84%E5%88%B6%E4%BD%9C/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h2><blockquote>
+<ul>
+<li>HTML</li>
+<li>CSS3</li>
+</ul>
+</blockquote>
+<h2 id="案列效果"><a href="#案列效果" class="headerlink" title="案列效果"></a>案列效果</h2><p><img src="/images/%E5%89%8D%E7%AB%AF/05/A3/1.png" alt="效果1"></p>
+<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A3/2.png" alt="效果1"></p>
+<h2 id="重要参数准备"><a href="#重要参数准备" class="headerlink" title="重要参数准备"></a>重要参数准备</h2><blockquote>
+<ul>
+<li><strong>1.页面背景色</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--background-color</span>: <span class="number">#350048</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>2.父容器宽度</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--container-width</span>: <span class="number">600px</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>3.按钮宽度</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--bth-width</span>: <span class="number">155px</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>4.按钮高度</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-height</span>: <span class="number">50px</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><em><strong>5.按钮背景色</strong></em></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&gt;<span class="attr">--btn-a-background-color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.05</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><em><strong>6.按钮阴影色</strong></em></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-a-box-shadow</span>: <span class="number">0</span> <span class="number">15px</span> <span class="number">35px</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.2</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><em><strong>7.按钮边框颜色</strong></em></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-a-border-top-color</span>:<span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.1</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>8.按钮圆角</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-a-border-radius</span>:<span class="number">30px</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><em><strong>9.按钮字体颜色</strong></em></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-a-color</span>: <span class="number">#fff</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>10.按钮为元素 背景色</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&gt;<span class="attr">--btn-a-before-background-color</span>:<span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.15</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>11.按钮背景伪元素的宽高</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-before-background-width</span>:<span class="number">30px</span>;</span><br><span class="line"><span class="attr">--btn-before-background-height</span>:<span class="number">10px</span>;</span><br><span class="line"><span class="attr">--btn-after-background-width</span>:<span class="number">30px</span>;</span><br><span class="line"><span class="attr">--btn-after-background-height</span>:<span class="number">10px</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>12 鼠标移动时按钮背景伪元素宽高</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">height</span>: <span class="number">50%</span>;</span><br><span class="line"><span class="attribute">width</span>: <span class="number">80%</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>13 伪元素背景色和阴影</strong></li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&gt;<span class="comment">/*1.背景1*/</span></span><br><span class="line">&gt;<span class="attribute">background</span>: <span class="number">#ff1f71</span>;</span><br><span class="line">&gt;<span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="number">#ff1f71</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">15px</span> <span class="number">#ff1f71</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">30px</span> <span class="number">#ff1f71</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">60px</span> <span class="number">#ff1f71</span>;</span><br><span class="line">&gt;<span class="comment">/*2.背景2*/</span></span><br><span class="line">&gt;<span class="attribute">background</span>: <span class="number">#2bd2ff</span>;</span><br><span class="line">&gt;<span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="number">#2bd2ff</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">15px</span> <span class="number">#2bd2ff</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">30px</span> <span class="number">#2bd2ff</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">60px</span> <span class="number">#2bd2ff</span>;</span><br><span class="line">&gt;<span class="comment">/*3.背景3*/</span></span><br><span class="line">&gt;<span class="attribute">background</span>: <span class="number">#1eff45</span>;</span><br><span class="line">&gt;<span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="number">#1eff45</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">15px</span> <span class="number">#1eff45</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">30px</span> <span class="number">#1eff45</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">60px</span> <span class="number">#1eff45</span>;</span><br><span class="line">&gt;&#125;</span><br></pre></td></tr></table></figure>
+
+
+</blockquote>
+<h2 id="具体实现步骤思路解析-gt-观看B站教程"><a href="#具体实现步骤思路解析-gt-观看B站教程" class="headerlink" title="具体实现步骤思路解析&gt;观看B站教程"></a>具体实现步骤思路解析&gt;观看B站教程</h2><p><a href="https://www.bilibili.com/video/BV1Us4y1t7TT/?spm_id_from=333.999.0.0&vd_source=f3e9b6267b64788ca7c02128e6a463b6">博哥教你快速实现毛玻璃发光按钮制作_哔哩哔哩_bilibili</a></p>
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
+<iframe src="//player.bilibili.com/player.html?aid=948086410&bvid=BV1Us4y1t7TT&cid=972275652&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; Left: 0; top: 0;"></iframe></div>
+
+
 ]]></content>
       <categories>
         <category>前端</category>
@@ -963,101 +1139,6 @@
       </tags>
   </entry>
   <entry>
-    <title>炫酷的玻璃形态按钮的制作</title>
-    <url>/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10003-%E7%82%AB%E9%85%B7%E7%9A%84%E7%8E%BB%E7%92%83%E5%BD%A2%E6%80%81%E6%8C%89%E9%92%AE%E7%9A%84%E5%88%B6%E4%BD%9C/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h2><blockquote>
-<ul>
-<li>HTML</li>
-<li>CSS3</li>
-</ul>
-</blockquote>
-<h2 id="案列效果"><a href="#案列效果" class="headerlink" title="案列效果"></a>案列效果</h2><p><img src="/images/%E5%89%8D%E7%AB%AF/05/A3/1.png" alt="效果1"></p>
-<p><img src="/images/%E5%89%8D%E7%AB%AF/05/A3/2.png" alt="效果1"></p>
-<h2 id="重要参数准备"><a href="#重要参数准备" class="headerlink" title="重要参数准备"></a>重要参数准备</h2><blockquote>
-<ul>
-<li><strong>1.页面背景色</strong></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--background-color</span>: <span class="number">#350048</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>2.父容器宽度</strong></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--container-width</span>: <span class="number">600px</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>3.按钮宽度</strong></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--bth-width</span>: <span class="number">155px</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>4.按钮高度</strong></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-height</span>: <span class="number">50px</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><em><strong>5.按钮背景色</strong></em></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&gt;<span class="attr">--btn-a-background-color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.05</span>);</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><em><strong>6.按钮阴影色</strong></em></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-a-box-shadow</span>: <span class="number">0</span> <span class="number">15px</span> <span class="number">35px</span> <span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.2</span>);</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><em><strong>7.按钮边框颜色</strong></em></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-a-border-top-color</span>:<span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.1</span>);</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>8.按钮圆角</strong></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-a-border-radius</span>:<span class="number">30px</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><em><strong>9.按钮字体颜色</strong></em></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-a-color</span>: <span class="number">#fff</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>10.按钮为元素 背景色</strong></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&gt;<span class="attr">--btn-a-before-background-color</span>:<span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.15</span>)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>11.按钮背景伪元素的宽高</strong></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attr">--btn-before-background-width</span>:<span class="number">30px</span>;</span><br><span class="line"><span class="attr">--btn-before-background-height</span>:<span class="number">10px</span>;</span><br><span class="line"><span class="attr">--btn-after-background-width</span>:<span class="number">30px</span>;</span><br><span class="line"><span class="attr">--btn-after-background-height</span>:<span class="number">10px</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>12 鼠标移动时按钮背景伪元素宽高</strong></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">height</span>: <span class="number">50%</span>;</span><br><span class="line"><span class="attribute">width</span>: <span class="number">80%</span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>13 伪元素背景色和阴影</strong></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&gt;<span class="comment">/*1.背景1*/</span></span><br><span class="line">&gt;<span class="attribute">background</span>: <span class="number">#ff1f71</span>;</span><br><span class="line">&gt;<span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="number">#ff1f71</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">15px</span> <span class="number">#ff1f71</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">30px</span> <span class="number">#ff1f71</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">60px</span> <span class="number">#ff1f71</span>;</span><br><span class="line">&gt;<span class="comment">/*2.背景2*/</span></span><br><span class="line">&gt;<span class="attribute">background</span>: <span class="number">#2bd2ff</span>;</span><br><span class="line">&gt;<span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="number">#2bd2ff</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">15px</span> <span class="number">#2bd2ff</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">30px</span> <span class="number">#2bd2ff</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">60px</span> <span class="number">#2bd2ff</span>;</span><br><span class="line">&gt;<span class="comment">/*3.背景3*/</span></span><br><span class="line">&gt;<span class="attribute">background</span>: <span class="number">#1eff45</span>;</span><br><span class="line">&gt;<span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="number">#1eff45</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">15px</span> <span class="number">#1eff45</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">30px</span> <span class="number">#1eff45</span>,</span><br><span class="line">&gt;<span class="number">0</span> <span class="number">0</span> <span class="number">60px</span> <span class="number">#1eff45</span>;</span><br><span class="line">&gt;&#125;</span><br></pre></td></tr></table></figure>
-
-
-</blockquote>
-<h2 id="具体实现步骤思路解析-gt-观看B站教程"><a href="#具体实现步骤思路解析-gt-观看B站教程" class="headerlink" title="具体实现步骤思路解析&gt;观看B站教程"></a>具体实现步骤思路解析&gt;观看B站教程</h2><p><a href="https://www.bilibili.com/video/BV1Us4y1t7TT/?spm_id_from=333.999.0.0&vd_source=f3e9b6267b64788ca7c02128e6a463b6">博哥教你快速实现毛玻璃发光按钮制作_哔哩哔哩_bilibili</a></p>
-
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
-<iframe src="//player.bilibili.com/player.html?aid=948086410&bvid=BV1Us4y1t7TT&cid=972275652&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; Left: 0; top: 0;"></iframe></div>
-
-
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-        <tag>前端案列</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>快速掌握网格布局核心知识</title>
     <url>/2023/05/01/%E5%89%8D%E7%AB%AF/2023/05/10004-%E5%8D%9A%E5%93%A5%E6%95%99%E4%BD%A0%E5%BF%AB%E9%80%9F%E5%AD%A6%E4%BC%9A%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h2><blockquote>
@@ -1328,49 +1409,6 @@
       </tags>
   </entry>
   <entry>
-    <title>博哥带你快速了解内网穿透软件的使用</title>
-    <url>/2023/04/22/%E5%B7%A5%E5%85%B7/04/1001-Ngrock%E5%86%85%E5%A4%96%E7%A9%BF%E9%80%8F%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="ngrok内网穿透"><a href="#ngrok内网穿透" class="headerlink" title="ngrok内网穿透"></a>ngrok内网穿透</h2><blockquote>
-<p>①我们个人电脑的ip都是局域网ip,比如学校拉了一个网线它的ip是 电信:10.30.10.1，这个网线覆盖整个局域范围，通过这个ip 10.30.10.1是无法访问到这个局域范围内的具体某个计算机的，因为在学校这个局域网范围内通过wifi设备等将该ip分成很多个ip供每个学生使用。</p>
-<p>②ngrok服务器有自己的ip,也就是它自己拉了一根网线 电信:10.30.10.2，我们无法从外面连接局域网中某个ip的服务器(即编码的电脑)，但是局域网内的服务器可以通过ip 10.30.10.2 连接ngrok服务器，然后用户客户端只要连接ngrok服务器，三者就可以互相通信，就实现了从外面访问局域网内某个具体ip的服务器，即内容穿透也叫内网映射。</p>
-<p>③总结: 客户端访问服务器端内容，中间使用ngrok服务器作为中转，进行内网穿透，实现客户端访问到局域网中具体ip的服务器</p>
-</blockquote>
-<p><img src="/images/%E5%B7%A5%E5%85%B7/04/A1/1.png"></p>
-<h2 id="ngrok的使用"><a href="#ngrok的使用" class="headerlink" title="ngrok的使用"></a>ngrok的使用</h2><ol>
-<li><p><strong>进入官网<a href="https://ngrok.cc,注册登录/">https://ngrok.cc,注册登录</a></strong></p>
-</li>
-<li><p><strong>建立隧道，编码电脑与ngrok服务器电脑进行打通</strong></p>
-</li>
-<li><p><strong>下载Ngrock</strong></p>
-</li>
-</ol>
-<p><a href="https://www.ngrok.cc/_book/start/ngrok_windows.html">下载地址</a></p>
-<p>下载之后得到两个文件，可以通过cmd命令行进到sunny.exe所在的目录执行</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sunny.exe clientid 隧道id</span><br></pre></td></tr></table></figure>
-
-<p>多个隧道同时启动</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sunny.exe clientid 隧道id,隧道id</span><br></pre></td></tr></table></figure>
-
-<p>另一种方式通过 Sunny-Ngrok启动工具.bat 启动，直接输入隧道id就好了</p>
-<h2 id="安装nginx测试访问效果"><a href="#安装nginx测试访问效果" class="headerlink" title="安装nginx测试访问效果"></a>安装nginx测试访问效果</h2><p><a href="http://nginx.org/en/download.html">nginx下载</a></p>
-<ol>
-<li>启动nginx</li>
-</ol>
-<p><img src="/images/%E5%B7%A5%E5%85%B7/04/A1/8.png"></p>
-<ol start="2">
-<li><p>测试http访问</p>
-<p><img src="/images/%E5%B7%A5%E5%85%B7/04/A1/9.png"></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>内网穿透</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>快速在Winows环境下安装使用mysql8</title>
     <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10001-windows%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8Mysql8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><font color="blue"><strong>作者:博哥</strong></font></p>
@@ -1472,43 +1510,6 @@
       </tags>
   </entry>
   <entry>
-    <title>快速在Linux环境下安装配置JDk</title>
-    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10003-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJDK/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><font color="blue"><strong>作者:博哥</strong></font></p>
-<h2 id="使用Xshell工具连接Linux服务器"><a href="#使用Xshell工具连接Linux服务器" class="headerlink" title="使用Xshell工具连接Linux服务器"></a>使用Xshell工具连接Linux服务器</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/1.png" alt="页面效果"></p>
-<h2 id="下载Linux版本的Jdk安装包"><a href="#下载Linux版本的Jdk安装包" class="headerlink" title="下载Linux版本的Jdk安装包"></a>下载Linux版本的Jdk安装包</h2><p>链接：<a href="https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ">https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ</a><br>提取码：0er6 </p>
-<p>将下载的安装包上传到linux下的opt目录</p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/2.png" alt="页面效果"></p>
-<h2 id="在命令行界面切入到opt目录下"><a href="#在命令行界面切入到opt目录下" class="headerlink" title="在命令行界面切入到opt目录下"></a>在命令行界面切入到opt目录下</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/3.png" alt="页面效果"></p>
-<h3 id="解压jdk安装包"><a href="#解压jdk安装包" class="headerlink" title="解压jdk安装包"></a>解压jdk安装包</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf jdk-8u301-linux-x64.tar.gz </span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/4.png" alt="页面效果"></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/5.png" alt="页面效果"></p>
-<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><h3 id="切入到etc-目录"><a href="#切入到etc-目录" class="headerlink" title="切入到etc 目录"></a>切入到etc 目录</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/6.png" alt="页面效果"></p>
-<h3 id="使用vi-命令修改-profile文件"><a href="#使用vi-命令修改-profile文件" class="headerlink" title="使用vi 命令修改 profile文件"></a>使用vi 命令修改 profile文件</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/7.png" alt="页面效果"></p>
-<h3 id="找到最后一行位置"><a href="#找到最后一行位置" class="headerlink" title="找到最后一行位置"></a>找到最后一行位置</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/8.png" alt="页面效果"></p>
-<h3 id="将如下的Jdk环境变量添加到尾部"><a href="#将如下的Jdk环境变量添加到尾部" class="headerlink" title="将如下的Jdk环境变量添加到尾部"></a>将如下的Jdk环境变量添加到尾部</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/jdk1.8.0_301</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$&#123;JAVA_HOME&#125;</span>/jre/lib/rt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/dt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/tools.jar</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/9.png" alt="页面效果"></p>
-<p>按下Esc  wq!保存退出</p>
-<h3 id="刷新环境变量和验证java环境是否安装成功"><a href="#刷新环境变量和验证java环境是否安装成功" class="headerlink" title="刷新环境变量和验证java环境是否安装成功"></a>刷新环境变量和验证java环境是否安装成功</h3><p><strong>刷新环境变量</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source  /etc/profile</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/10.png" alt="页面效果"></p>
-<p><strong>验证jdk是否安装成功</strong></p>
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/11.png" alt="页面效果"></p>
-]]></content>
-      <categories>
-        <category>服务</category>
-      </categories>
-      <tags>
-        <tag>jdk</tag>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>快速在Linux环境下安装使用Mysql8</title>
     <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10004-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8Mysql/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="使用Xshell连接到Linux服务器"><a href="#使用Xshell连接到Linux服务器" class="headerlink" title="使用Xshell连接到Linux服务器"></a>使用Xshell连接到Linux服务器</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A4/1.png" alt="页面效果"></p>
@@ -1600,6 +1601,43 @@
       </categories>
       <tags>
         <tag>mysql</tag>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>快速在Linux环境下安装配置JDk</title>
+    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10003-linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJDK/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><font color="blue"><strong>作者:博哥</strong></font></p>
+<h2 id="使用Xshell工具连接Linux服务器"><a href="#使用Xshell工具连接Linux服务器" class="headerlink" title="使用Xshell工具连接Linux服务器"></a>使用Xshell工具连接Linux服务器</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/1.png" alt="页面效果"></p>
+<h2 id="下载Linux版本的Jdk安装包"><a href="#下载Linux版本的Jdk安装包" class="headerlink" title="下载Linux版本的Jdk安装包"></a>下载Linux版本的Jdk安装包</h2><p>链接：<a href="https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ">https://pan.baidu.com/s/11by5-0_y8qoDQFiwzOXFyQ</a><br>提取码：0er6 </p>
+<p>将下载的安装包上传到linux下的opt目录</p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/2.png" alt="页面效果"></p>
+<h2 id="在命令行界面切入到opt目录下"><a href="#在命令行界面切入到opt目录下" class="headerlink" title="在命令行界面切入到opt目录下"></a>在命令行界面切入到opt目录下</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/3.png" alt="页面效果"></p>
+<h3 id="解压jdk安装包"><a href="#解压jdk安装包" class="headerlink" title="解压jdk安装包"></a>解压jdk安装包</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf jdk-8u301-linux-x64.tar.gz </span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/4.png" alt="页面效果"></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/5.png" alt="页面效果"></p>
+<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><h3 id="切入到etc-目录"><a href="#切入到etc-目录" class="headerlink" title="切入到etc 目录"></a>切入到etc 目录</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/6.png" alt="页面效果"></p>
+<h3 id="使用vi-命令修改-profile文件"><a href="#使用vi-命令修改-profile文件" class="headerlink" title="使用vi 命令修改 profile文件"></a>使用vi 命令修改 profile文件</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/7.png" alt="页面效果"></p>
+<h3 id="找到最后一行位置"><a href="#找到最后一行位置" class="headerlink" title="找到最后一行位置"></a>找到最后一行位置</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/8.png" alt="页面效果"></p>
+<h3 id="将如下的Jdk环境变量添加到尾部"><a href="#将如下的Jdk环境变量添加到尾部" class="headerlink" title="将如下的Jdk环境变量添加到尾部"></a>将如下的Jdk环境变量添加到尾部</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/jdk1.8.0_301</span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$&#123;JAVA_HOME&#125;</span>/jre/lib/rt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/dt.jar:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib/tools.jar</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/9.png" alt="页面效果"></p>
+<p>按下Esc  wq!保存退出</p>
+<h3 id="刷新环境变量和验证java环境是否安装成功"><a href="#刷新环境变量和验证java环境是否安装成功" class="headerlink" title="刷新环境变量和验证java环境是否安装成功"></a>刷新环境变量和验证java环境是否安装成功</h3><p><strong>刷新环境变量</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source  /etc/profile</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/10.png" alt="页面效果"></p>
+<p><strong>验证jdk是否安装成功</strong></p>
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A3/11.png" alt="页面效果"></p>
+]]></content>
+      <categories>
+        <category>服务</category>
+      </categories>
+      <tags>
+        <tag>jdk</tag>
         <tag>linux</tag>
       </tags>
   </entry>
@@ -1756,151 +1794,6 @@
       <tags>
         <tag>linux</tag>
         <tag>虚拟机</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Redis集群环境搭建三种方式</title>
-    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10008-Linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BARedis%E9%9B%86%E7%BE%A4%E7%8E%AF%E5%A2%83/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="主从复制集群环境搭建"><a href="#主从复制集群环境搭建" class="headerlink" title="主从复制集群环境搭建"></a>主从复制集群环境搭建</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A9/1.png"></p>
-<h3 id="编写配置文件"><a href="#编写配置文件" class="headerlink" title="编写配置文件"></a>编写配置文件</h3><blockquote>
-<p>准备三台Linux服务器,并且安装好redis环境</p>
-</blockquote>
-<ul>
-<li><p><strong>第一台配置</strong> </p>
-<p>新建redis6379.conf</p>
-</li>
-</ul>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">include</span> <span class="string">/opt/redis-6.2.6/redis.conf</span></span><br><span class="line"><span class="attr">pidfile</span> <span class="string">/var/run/redis_6379.pid</span></span><br><span class="line"><span class="attr">port</span> <span class="string">6379</span></span><br><span class="line"><span class="attr">dbfilename</span> <span class="string">dump6379.rdb</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p><strong>第二台配置</strong></p>
-<p>新建redis6380.conf</p>
-</li>
-</ul>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">include</span> <span class="string">/opt/redis-6.2.6/redis.conf</span></span><br><span class="line"><span class="attr">pidfile</span> <span class="string">/var/run/redis_6380.pid</span></span><br><span class="line"><span class="attr">port</span> <span class="string">6380</span></span><br><span class="line"><span class="attr">dbfilename</span> <span class="string">dump6380.rdb</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><strong>第三台配置</strong></li>
-</ul>
-<p>​        新建redis6381.conf</p>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">include</span> <span class="string">/opt/redis-6.2.6/redis.conf</span></span><br><span class="line"><span class="attr">pidfile</span> <span class="string">/var/run/redis_6381.pid</span></span><br><span class="line"><span class="attr">port</span> <span class="string">6381</span></span><br><span class="line"><span class="attr">dbfilename</span> <span class="string">dump6381.rdb</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="启动三台redis服务器"><a href="#启动三台redis服务器" class="headerlink" title="启动三台redis服务器"></a>启动三台redis服务器</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">redis-server</span>    <span class="string">redis6379.conf</span></span><br><span class="line"><span class="attr">redis-server</span>    <span class="string">redis6380.conf</span></span><br><span class="line"><span class="attr">redis-server</span>    <span class="string">redis6381.conf</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>查看系统进程</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@localhost src]<span class="comment"># ps -ef |grep redis</span></span><br><span class="line">root   40737   1 0 22:05 ?    00:00:00 ./redis-server *:6379</span><br><span class="line">root   40743   1 0 22:05 ?    00:00:00 ./redis-server *:6380</span><br><span class="line">root   40750   1 0 22:05 ?    00:00:00 ./redis-server *:6381</span><br><span class="line">root   40758 40631 0 22:05 pts/0  00:00:00 grep --color=auto redis</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看三台主机运行情况"><a href="#查看三台主机运行情况" class="headerlink" title="查看三台主机运行情况"></a>查看三台主机运行情况</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#打印主从复制的相关信息</span></span><br><span class="line">./redis-cli -p 6379</span><br><span class="line">./redis-cli -p 6380</span><br><span class="line">./redis-cli -p 6381</span><br><span class="line">127.0.0.1:6379&gt; info replication</span><br><span class="line">127.0.0.1:6380&gt; info replication</span><br><span class="line">127.0.0.1:6381&gt; info replication</span><br></pre></td></tr></table></figure>
-
-<h3 id="配从库不配主库"><a href="#配从库不配主库" class="headerlink" title="配从库不配主库"></a>配从库不配主库</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">slaveof &lt;ip&gt; &lt;port&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="在主机上写，在从机上可以读取数据"><a href="#在主机上写，在从机上可以读取数据" class="headerlink" title="在主机上写，在从机上可以读取数据"></a>在主机上写，在从机上可以读取数据</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> k1 v1</span><br></pre></td></tr></table></figure>
-
-<h3 id="Redis主从复制缺点"><a href="#Redis主从复制缺点" class="headerlink" title="Redis主从复制缺点"></a>Redis主从复制缺点</h3><p>当主机 Master 宕机以后，我们需要人工解决切换</p>
-<blockquote>
-<p>暴漏问题：</p>
-<ul>
-<li><p>一旦主节点宕机，写服务无法使用，就需要手动去切换，重新选取主节点，手动设置主从关系。</p>
-</li>
-<li><p>当主服务器宕机后，需要手动把一台从服务器切换为主服务器，这就需要人工干预，费事费力，还会造<br> 成一段时间内服务不可用。这不是一种推荐的方式，更多时候，我们优先考虑哨兵模式。</p>
-</li>
-</ul>
-</blockquote>
-<h2 id="哨兵模式集群环境搭建"><a href="#哨兵模式集群环境搭建" class="headerlink" title="哨兵模式集群环境搭建"></a>哨兵模式集群环境搭建</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A9/2.png"></p>
-<blockquote>
-<p>准备三台Linux服务器,并且安装好redis环境</p>
-<p>搭建好主从复制集群</p>
-</blockquote>
-<h3 id="新建sentinel-26379-conf文件"><a href="#新建sentinel-26379-conf文件" class="headerlink" title="新建sentinel-26379.conf文件"></a>新建sentinel-26379.conf文件</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment">#端口</span></span><br><span class="line"><span class="attr">port</span> <span class="string">26379</span></span><br><span class="line"><span class="comment">#守护进程运行</span></span><br><span class="line"><span class="attr">daemonize</span> <span class="string">yes</span></span><br><span class="line"><span class="comment">#日志文件</span></span><br><span class="line"><span class="attr">logfile</span> <span class="string">&quot;26379.log&quot;</span></span><br><span class="line"><span class="attr">sentinel</span> <span class="string">monitor mymaster 192.168.92.128 6379 2</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>参数：<br>sentinel monitor mymaster 192.168.92.128 6379 2 配置的含义是：该哨兵节点监控<br>192.168.92.128:6379这个主节点，该主节点的名称是mymaster，最后的2的含义与主节点的故障<br>判定有关：至少需要2个哨兵节点同意，才能判定主节点故障并进行故障转移。</p>
-</blockquote>
-<h3 id="新建sentinel-26380-conf文件"><a href="#新建sentinel-26380-conf文件" class="headerlink" title="新建sentinel-26380.conf文件"></a>新建sentinel-26380.conf文件</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment">#端口</span></span><br><span class="line"><span class="attr">port</span> <span class="string">26380</span></span><br><span class="line"><span class="comment">#守护进程运行</span></span><br><span class="line"><span class="attr">daemonize</span> <span class="string">yes</span></span><br><span class="line"><span class="comment">#日志文件</span></span><br><span class="line"><span class="attr">logfile</span> <span class="string">&quot;26380.log&quot;</span></span><br><span class="line"><span class="attr">sentinel</span> <span class="string">monitor mymaster 192.168.66.100 6379 2</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="新建sentinel-26381-conf文件"><a href="#新建sentinel-26381-conf文件" class="headerlink" title="新建sentinel-26381.conf文件"></a>新建sentinel-26381.conf文件</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment">#端口</span></span><br><span class="line"><span class="attr">port</span> <span class="string">26381</span></span><br><span class="line"><span class="comment">#守护进程运行</span></span><br><span class="line"><span class="attr">daemonize</span> <span class="string">yes</span></span><br><span class="line"><span class="comment">#日志文件</span></span><br><span class="line"><span class="attr">logfile</span> <span class="string">&quot;26381.log&quot;</span></span><br><span class="line"><span class="attr">sentinel</span> <span class="string">monitor mymaster 192.168.66.100 6379 2</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="哨兵节点的启动"><a href="#哨兵节点的启动" class="headerlink" title="哨兵节点的启动"></a>哨兵节点的启动</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">redis-sentinel sentinel-26379.conf</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看哨兵节点状态"><a href="#查看哨兵节点状态" class="headerlink" title="查看哨兵节点状态"></a>查看哨兵节点状态</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@localhost src]<span class="comment"># ./redis-cli -p 26379</span></span><br><span class="line">127.0.0.1:26379&gt;</span><br><span class="line">127.0.0.1:26379&gt;</span><br><span class="line">127.0.0.1:26379&gt; info sentinel</span><br><span class="line"><span class="comment"># Sentinel</span></span><br><span class="line">sentinel_masters:1</span><br><span class="line">sentinel_tilt:0</span><br><span class="line">sentinel_running_scripts:0</span><br><span class="line">sentinel_scripts_queue_length:0</span><br><span class="line">sentinel_simulate_failure_flags:0</span><br><span class="line">master0:name=mymaster,status=ok,address=192.168.66.100:6379,slaves=2,sentinels=3</span><br></pre></td></tr></table></figure>
-
-<h3 id="演示故障转移"><a href="#演示故障转移" class="headerlink" title="演示故障转移"></a>演示故障转移</h3><ul>
-<li>使用kill命令杀掉主节点</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps aux |grep redis</span><br><span class="line"><span class="built_in">kill</span> -9 pid</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>查看哨兵节点信息</p>
-<p>如果此时立即在哨兵节点中使用info Sentinel命令查看。</p>
-</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@localhost src]# ./redis-cli -p 26379</span><br><span class="line">127.0.0.1:26379&gt; info sentinel</span><br><span class="line"># Sentinel</span><br><span class="line">sentinel_masters:1</span><br><span class="line">sentinel_tilt:0</span><br><span class="line">sentinel_running_scripts:0</span><br><span class="line">sentinel_scripts_queue_length:0</span><br><span class="line">sentinel_simulate_failure_flags:0</span><br><span class="line">master0:name=mymaster,status=ok,address=127.0.0.1:6381,slaves=5,sentinels=3</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>注意：</strong><br>会发现主节点还没有切换过来，因为哨兵发现主节点故障并转移，需要一段时间</p>
-</blockquote>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><blockquote>
-<ul>
-<li>哨兵系统中的主从节点，与普通的主从节点并没有什么区别，故障发现和转移是由哨兵来控制和完<br> 成的。</li>
-<li>哨兵节点本质上是redis节点。</li>
-<li>每个哨兵节点，只需要配置监控主节点，便可以自动发现其他的哨兵节点和从节点。</li>
-<li>在哨兵节点启动和故障转移阶段，各个节点的配置文件会被重写(config rewrite)。</li>
-</ul>
-</blockquote>
-<h2 id="Cluster集群环境搭建"><a href="#Cluster集群环境搭建" class="headerlink" title="Cluster集群环境搭建"></a>Cluster集群环境搭建</h2><h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">第1台机器：</span> <span class="string">192.168.66.101 8001端口 8002端口</span></span><br><span class="line"><span class="attr">第2台机器：</span> <span class="string">192.168.66.102 8001端口 8002端口</span></span><br><span class="line"><span class="attr">第3台机器：</span> <span class="string">192.168.66.103 8001端口 8002端口</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">mkdir</span> <span class="string">-p /usr/local/redis/redis-cluster/8001 /usr/local/redis/redis-cluster/8002</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="拷贝配置文件"><a href="#拷贝配置文件" class="headerlink" title="拷贝配置文件"></a>拷贝配置文件</h3><blockquote>
-<p>将redis安装目录下的 redis.conf 文件分别拷贝到8001目录下</p>
-</blockquote>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">cp</span> <span class="string">/opt/redis.conf /usr/local/redis/redis-cluster/8001</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="修改redis-conf文件以下内容"><a href="#修改redis-conf文件以下内容" class="headerlink" title="修改redis.conf文件以下内容"></a>修改redis.conf文件以下内容</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">port</span> <span class="string">8001</span></span><br><span class="line"><span class="attr">daemonize</span> <span class="string">yes</span></span><br><span class="line"><span class="attr">pidfile</span> <span class="string">&quot;/var/run/redis_8001.pid&quot;</span></span><br><span class="line"><span class="comment">#指定数据文件存放位置，必须要指定不同的目录位置，不然会丢失数据</span></span><br><span class="line"><span class="attr">dir</span> <span class="string">/usr/local/redis/redis-cluster/8001/</span></span><br><span class="line"><span class="comment">#启动集群模式</span></span><br><span class="line"><span class="attr">cluster-enabled</span> <span class="string">yes</span></span><br><span class="line"><span class="comment">#集群节点信息文件，这里800x最好和port对应上</span></span><br><span class="line"><span class="attr">cluster-config-file</span> <span class="string">nodes-8001.conf</span></span><br><span class="line"><span class="comment"># 节点离线的超时时间</span></span><br><span class="line"><span class="attr">cluster-node-timeout</span> <span class="string">5000</span></span><br><span class="line"><span class="comment">#去掉bind绑定访问ip信息</span></span><br><span class="line"><span class="comment">#bind 127.0.0.1</span></span><br><span class="line"><span class="comment">#关闭保护模式</span></span><br><span class="line"><span class="attr">protected-mode</span> <span class="string">no</span></span><br><span class="line"><span class="comment">#启动AOF文件</span></span><br><span class="line"><span class="attr">appendonly</span> <span class="string">yes</span></span><br><span class="line"><span class="comment">#如果要设置密码需要增加如下配置：</span></span><br><span class="line"><span class="comment">#设置redis访问密码</span></span><br><span class="line"><span class="comment">#requirepass root123</span></span><br><span class="line"><span class="comment">#设置集群节点间访问密码，跟上面一致</span></span><br><span class="line"><span class="comment">#masterauth root123</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="文件拷贝到8002文件夹"><a href="#文件拷贝到8002文件夹" class="headerlink" title="文件拷贝到8002文件夹"></a>文件拷贝到8002文件夹</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#将8001修改为8002：</span></span><br><span class="line"><span class="built_in">cp</span> /usr/local/redis/redis-cluster/8001/redis.conf /usr/local/redis/redis-</span><br><span class="line">cluster/8002</span><br><span class="line"><span class="comment"># 批量修改字符串</span></span><br><span class="line">:%s/8001/8002/g</span><br></pre></td></tr></table></figure>
-
-<h3 id="将本机机器上的文件拷贝到另外两台机器上"><a href="#将本机机器上的文件拷贝到另外两台机器上" class="headerlink" title="将本机机器上的文件拷贝到另外两台机器上"></a>将本机机器上的文件拷贝到另外两台机器上</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 第二台机器</span></span><br><span class="line">scp /usr1/redis/redis-cluster/8001/redis.conf</span><br><span class="line">root@192.168.66.102:/usr1/redis/redis-cluster/8001/</span><br><span class="line">scp /usr1/redis/redis-cluster/8002/redis.conf</span><br><span class="line">root@192.168.66.102:/usr1/redis/redis-cluster/8002/</span><br><span class="line"><span class="comment"># 第三台机器</span></span><br><span class="line">scp /usr1/redis/redis-cluster/8001/redis.conf</span><br><span class="line">root@192.168.66.103:/usr1/redis/redis-cluster/8001/</span><br><span class="line">scp /usr1/redis/redis-cluster/8002/redis.conf</span><br><span class="line">root@192.168.66.103:/usr1/redis/redis-cluster/8002/</span><br></pre></td></tr></table></figure>
-
-<h3 id="分别启动这6个redis实例"><a href="#分别启动这6个redis实例" class="headerlink" title="分别启动这6个redis实例"></a>分别启动这6个redis实例</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">redis-server /usr/local/redis/redis-cluster/8001/redis.conf</span><br><span class="line">redis-server /usr/local/redis/redis-cluster/8002/redis.conf</span><br></pre></td></tr></table></figure>
-
-<h3 id="检查是否启动成功"><a href="#检查是否启动成功" class="headerlink" title="检查是否启动成功"></a>检查是否启动成功</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps -ef |grep redis</span><br></pre></td></tr></table></figure>
-
-<h3 id="使用redis-cli创建整个redis集群"><a href="#使用redis-cli创建整个redis集群" class="headerlink" title="使用redis-cli创建整个redis集群"></a>使用redis-cli创建整个redis集群</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">/usr/local/redis/src/redis-cli</span> <span class="string">-a redis-pw --cluster create --cluster-replicas 1 \</span></span><br><span class="line"><span class="string">192.168.66.101:8001 192.168.66.101:8002 \</span></span><br><span class="line"><span class="string">192.168.66.102:8001 192.168.66.102:8002 \</span></span><br><span class="line"><span class="string">192.168.66.103:8001 192.168.66.103:8002</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>参数：<br>-a：密码<br>–cluster-replicas 1：表示1个master下挂1个slave； –cluster-replicas 2：表示1个master<br>下挂2个slave。</p>
-</blockquote>
-<h3 id="查看帮助命令"><a href="#查看帮助命令" class="headerlink" title="查看帮助命令"></a>查看帮助命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">redis-cli --cluster <span class="built_in">help</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>参数：<br>create：创建一个集群环境host1:port1 … hostN:portN<br>call：可以执行redis命令<br>add-node：将一个节点添加到集群里，第一个参数为新节点的ip:port，第二个参数为集群中<br>任意一个已经存在的节点的ip:port<br>del-node：移除一个节点<br>reshard：重新分片<br>check：检查集群状态</p>
-</blockquote>
-<h3 id="验证集群"><a href="#验证集群" class="headerlink" title="验证集群"></a>验证集群</h3><ul>
-<li>连接任意一个客户端</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/local/redisd/src/redis-cli -a redis-pw -c -h 192.168.66.101 -p 8001</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>参数：<br>‐a表示服务端密码<br>‐c表示集群模式<br>-h指定ip地址<br>-p表示端口号</p>
-</blockquote>
-<h3 id="查看集群的信息"><a href="#查看集群的信息" class="headerlink" title="查看集群的信息"></a>查看集群的信息</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cluster info</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A9/3.png"></p>
-<h3 id="查看节点"><a href="#查看节点" class="headerlink" title="查看节点"></a>查看节点</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">192.168.66.103</span>:<span class="string">8001&gt; cluster nodes</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="杀死Master节点"><a href="#杀死Master节点" class="headerlink" title="杀死Master节点"></a>杀死Master节点</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">lsof</span> <span class="string">-i:8001</span></span><br><span class="line"><span class="attr">kill</span> <span class="string">-9 pid</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="观察节点信息"><a href="#观察节点信息" class="headerlink" title="观察节点信息"></a>观察节点信息</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A9/4.png"></p>
-]]></content>
-      <categories>
-        <category>服务</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>Redis</tag>
       </tags>
   </entry>
   <entry>
@@ -2065,6 +1958,196 @@
       </tags>
   </entry>
   <entry>
+    <title>Redis集群环境搭建三种方式</title>
+    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10008-Linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BARedis%E9%9B%86%E7%BE%A4%E7%8E%AF%E5%A2%83/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="主从复制集群环境搭建"><a href="#主从复制集群环境搭建" class="headerlink" title="主从复制集群环境搭建"></a>主从复制集群环境搭建</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A9/1.png"></p>
+<h3 id="编写配置文件"><a href="#编写配置文件" class="headerlink" title="编写配置文件"></a>编写配置文件</h3><blockquote>
+<p>准备三台Linux服务器,并且安装好redis环境</p>
+</blockquote>
+<ul>
+<li><p><strong>第一台配置</strong> </p>
+<p>新建redis6379.conf</p>
+</li>
+</ul>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">include</span> <span class="string">/opt/redis-6.2.6/redis.conf</span></span><br><span class="line"><span class="attr">pidfile</span> <span class="string">/var/run/redis_6379.pid</span></span><br><span class="line"><span class="attr">port</span> <span class="string">6379</span></span><br><span class="line"><span class="attr">dbfilename</span> <span class="string">dump6379.rdb</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><strong>第二台配置</strong></p>
+<p>新建redis6380.conf</p>
+</li>
+</ul>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">include</span> <span class="string">/opt/redis-6.2.6/redis.conf</span></span><br><span class="line"><span class="attr">pidfile</span> <span class="string">/var/run/redis_6380.pid</span></span><br><span class="line"><span class="attr">port</span> <span class="string">6380</span></span><br><span class="line"><span class="attr">dbfilename</span> <span class="string">dump6380.rdb</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>第三台配置</strong></li>
+</ul>
+<p>​        新建redis6381.conf</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">include</span> <span class="string">/opt/redis-6.2.6/redis.conf</span></span><br><span class="line"><span class="attr">pidfile</span> <span class="string">/var/run/redis_6381.pid</span></span><br><span class="line"><span class="attr">port</span> <span class="string">6381</span></span><br><span class="line"><span class="attr">dbfilename</span> <span class="string">dump6381.rdb</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="启动三台redis服务器"><a href="#启动三台redis服务器" class="headerlink" title="启动三台redis服务器"></a>启动三台redis服务器</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">redis-server</span>    <span class="string">redis6379.conf</span></span><br><span class="line"><span class="attr">redis-server</span>    <span class="string">redis6380.conf</span></span><br><span class="line"><span class="attr">redis-server</span>    <span class="string">redis6381.conf</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看系统进程</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@localhost src]<span class="comment"># ps -ef |grep redis</span></span><br><span class="line">root   40737   1 0 22:05 ?    00:00:00 ./redis-server *:6379</span><br><span class="line">root   40743   1 0 22:05 ?    00:00:00 ./redis-server *:6380</span><br><span class="line">root   40750   1 0 22:05 ?    00:00:00 ./redis-server *:6381</span><br><span class="line">root   40758 40631 0 22:05 pts/0  00:00:00 grep --color=auto redis</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看三台主机运行情况"><a href="#查看三台主机运行情况" class="headerlink" title="查看三台主机运行情况"></a>查看三台主机运行情况</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#打印主从复制的相关信息</span></span><br><span class="line">./redis-cli -p 6379</span><br><span class="line">./redis-cli -p 6380</span><br><span class="line">./redis-cli -p 6381</span><br><span class="line">127.0.0.1:6379&gt; info replication</span><br><span class="line">127.0.0.1:6380&gt; info replication</span><br><span class="line">127.0.0.1:6381&gt; info replication</span><br></pre></td></tr></table></figure>
+
+<h3 id="配从库不配主库"><a href="#配从库不配主库" class="headerlink" title="配从库不配主库"></a>配从库不配主库</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">slaveof &lt;ip&gt; &lt;port&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="在主机上写，在从机上可以读取数据"><a href="#在主机上写，在从机上可以读取数据" class="headerlink" title="在主机上写，在从机上可以读取数据"></a>在主机上写，在从机上可以读取数据</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set</span> k1 v1</span><br></pre></td></tr></table></figure>
+
+<h3 id="Redis主从复制缺点"><a href="#Redis主从复制缺点" class="headerlink" title="Redis主从复制缺点"></a>Redis主从复制缺点</h3><p>当主机 Master 宕机以后，我们需要人工解决切换</p>
+<blockquote>
+<p>暴漏问题：</p>
+<ul>
+<li><p>一旦主节点宕机，写服务无法使用，就需要手动去切换，重新选取主节点，手动设置主从关系。</p>
+</li>
+<li><p>当主服务器宕机后，需要手动把一台从服务器切换为主服务器，这就需要人工干预，费事费力，还会造<br> 成一段时间内服务不可用。这不是一种推荐的方式，更多时候，我们优先考虑哨兵模式。</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="哨兵模式集群环境搭建"><a href="#哨兵模式集群环境搭建" class="headerlink" title="哨兵模式集群环境搭建"></a>哨兵模式集群环境搭建</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A9/2.png"></p>
+<blockquote>
+<p>准备三台Linux服务器,并且安装好redis环境</p>
+<p>搭建好主从复制集群</p>
+</blockquote>
+<h3 id="新建sentinel-26379-conf文件"><a href="#新建sentinel-26379-conf文件" class="headerlink" title="新建sentinel-26379.conf文件"></a>新建sentinel-26379.conf文件</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment">#端口</span></span><br><span class="line"><span class="attr">port</span> <span class="string">26379</span></span><br><span class="line"><span class="comment">#守护进程运行</span></span><br><span class="line"><span class="attr">daemonize</span> <span class="string">yes</span></span><br><span class="line"><span class="comment">#日志文件</span></span><br><span class="line"><span class="attr">logfile</span> <span class="string">&quot;26379.log&quot;</span></span><br><span class="line"><span class="attr">sentinel</span> <span class="string">monitor mymaster 192.168.92.128 6379 2</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>参数：<br>sentinel monitor mymaster 192.168.92.128 6379 2 配置的含义是：该哨兵节点监控<br>192.168.92.128:6379这个主节点，该主节点的名称是mymaster，最后的2的含义与主节点的故障<br>判定有关：至少需要2个哨兵节点同意，才能判定主节点故障并进行故障转移。</p>
+</blockquote>
+<h3 id="新建sentinel-26380-conf文件"><a href="#新建sentinel-26380-conf文件" class="headerlink" title="新建sentinel-26380.conf文件"></a>新建sentinel-26380.conf文件</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment">#端口</span></span><br><span class="line"><span class="attr">port</span> <span class="string">26380</span></span><br><span class="line"><span class="comment">#守护进程运行</span></span><br><span class="line"><span class="attr">daemonize</span> <span class="string">yes</span></span><br><span class="line"><span class="comment">#日志文件</span></span><br><span class="line"><span class="attr">logfile</span> <span class="string">&quot;26380.log&quot;</span></span><br><span class="line"><span class="attr">sentinel</span> <span class="string">monitor mymaster 192.168.66.100 6379 2</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="新建sentinel-26381-conf文件"><a href="#新建sentinel-26381-conf文件" class="headerlink" title="新建sentinel-26381.conf文件"></a>新建sentinel-26381.conf文件</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment">#端口</span></span><br><span class="line"><span class="attr">port</span> <span class="string">26381</span></span><br><span class="line"><span class="comment">#守护进程运行</span></span><br><span class="line"><span class="attr">daemonize</span> <span class="string">yes</span></span><br><span class="line"><span class="comment">#日志文件</span></span><br><span class="line"><span class="attr">logfile</span> <span class="string">&quot;26381.log&quot;</span></span><br><span class="line"><span class="attr">sentinel</span> <span class="string">monitor mymaster 192.168.66.100 6379 2</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="哨兵节点的启动"><a href="#哨兵节点的启动" class="headerlink" title="哨兵节点的启动"></a>哨兵节点的启动</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">redis-sentinel sentinel-26379.conf</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看哨兵节点状态"><a href="#查看哨兵节点状态" class="headerlink" title="查看哨兵节点状态"></a>查看哨兵节点状态</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@localhost src]<span class="comment"># ./redis-cli -p 26379</span></span><br><span class="line">127.0.0.1:26379&gt;</span><br><span class="line">127.0.0.1:26379&gt;</span><br><span class="line">127.0.0.1:26379&gt; info sentinel</span><br><span class="line"><span class="comment"># Sentinel</span></span><br><span class="line">sentinel_masters:1</span><br><span class="line">sentinel_tilt:0</span><br><span class="line">sentinel_running_scripts:0</span><br><span class="line">sentinel_scripts_queue_length:0</span><br><span class="line">sentinel_simulate_failure_flags:0</span><br><span class="line">master0:name=mymaster,status=ok,address=192.168.66.100:6379,slaves=2,sentinels=3</span><br></pre></td></tr></table></figure>
+
+<h3 id="演示故障转移"><a href="#演示故障转移" class="headerlink" title="演示故障转移"></a>演示故障转移</h3><ul>
+<li>使用kill命令杀掉主节点</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps aux |grep redis</span><br><span class="line"><span class="built_in">kill</span> -9 pid</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>查看哨兵节点信息</p>
+<p>如果此时立即在哨兵节点中使用info Sentinel命令查看。</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@localhost src]# ./redis-cli -p 26379</span><br><span class="line">127.0.0.1:26379&gt; info sentinel</span><br><span class="line"># Sentinel</span><br><span class="line">sentinel_masters:1</span><br><span class="line">sentinel_tilt:0</span><br><span class="line">sentinel_running_scripts:0</span><br><span class="line">sentinel_scripts_queue_length:0</span><br><span class="line">sentinel_simulate_failure_flags:0</span><br><span class="line">master0:name=mymaster,status=ok,address=127.0.0.1:6381,slaves=5,sentinels=3</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>注意：</strong><br>会发现主节点还没有切换过来，因为哨兵发现主节点故障并转移，需要一段时间</p>
+</blockquote>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><blockquote>
+<ul>
+<li>哨兵系统中的主从节点，与普通的主从节点并没有什么区别，故障发现和转移是由哨兵来控制和完<br> 成的。</li>
+<li>哨兵节点本质上是redis节点。</li>
+<li>每个哨兵节点，只需要配置监控主节点，便可以自动发现其他的哨兵节点和从节点。</li>
+<li>在哨兵节点启动和故障转移阶段，各个节点的配置文件会被重写(config rewrite)。</li>
+</ul>
+</blockquote>
+<h2 id="Cluster集群环境搭建"><a href="#Cluster集群环境搭建" class="headerlink" title="Cluster集群环境搭建"></a>Cluster集群环境搭建</h2><h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">第1台机器：</span> <span class="string">192.168.66.101 8001端口 8002端口</span></span><br><span class="line"><span class="attr">第2台机器：</span> <span class="string">192.168.66.102 8001端口 8002端口</span></span><br><span class="line"><span class="attr">第3台机器：</span> <span class="string">192.168.66.103 8001端口 8002端口</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">mkdir</span> <span class="string">-p /usr/local/redis/redis-cluster/8001 /usr/local/redis/redis-cluster/8002</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="拷贝配置文件"><a href="#拷贝配置文件" class="headerlink" title="拷贝配置文件"></a>拷贝配置文件</h3><blockquote>
+<p>将redis安装目录下的 redis.conf 文件分别拷贝到8001目录下</p>
+</blockquote>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">cp</span> <span class="string">/opt/redis.conf /usr/local/redis/redis-cluster/8001</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="修改redis-conf文件以下内容"><a href="#修改redis-conf文件以下内容" class="headerlink" title="修改redis.conf文件以下内容"></a>修改redis.conf文件以下内容</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">port</span> <span class="string">8001</span></span><br><span class="line"><span class="attr">daemonize</span> <span class="string">yes</span></span><br><span class="line"><span class="attr">pidfile</span> <span class="string">&quot;/var/run/redis_8001.pid&quot;</span></span><br><span class="line"><span class="comment">#指定数据文件存放位置，必须要指定不同的目录位置，不然会丢失数据</span></span><br><span class="line"><span class="attr">dir</span> <span class="string">/usr/local/redis/redis-cluster/8001/</span></span><br><span class="line"><span class="comment">#启动集群模式</span></span><br><span class="line"><span class="attr">cluster-enabled</span> <span class="string">yes</span></span><br><span class="line"><span class="comment">#集群节点信息文件，这里800x最好和port对应上</span></span><br><span class="line"><span class="attr">cluster-config-file</span> <span class="string">nodes-8001.conf</span></span><br><span class="line"><span class="comment"># 节点离线的超时时间</span></span><br><span class="line"><span class="attr">cluster-node-timeout</span> <span class="string">5000</span></span><br><span class="line"><span class="comment">#去掉bind绑定访问ip信息</span></span><br><span class="line"><span class="comment">#bind 127.0.0.1</span></span><br><span class="line"><span class="comment">#关闭保护模式</span></span><br><span class="line"><span class="attr">protected-mode</span> <span class="string">no</span></span><br><span class="line"><span class="comment">#启动AOF文件</span></span><br><span class="line"><span class="attr">appendonly</span> <span class="string">yes</span></span><br><span class="line"><span class="comment">#如果要设置密码需要增加如下配置：</span></span><br><span class="line"><span class="comment">#设置redis访问密码</span></span><br><span class="line"><span class="comment">#requirepass root123</span></span><br><span class="line"><span class="comment">#设置集群节点间访问密码，跟上面一致</span></span><br><span class="line"><span class="comment">#masterauth root123</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="文件拷贝到8002文件夹"><a href="#文件拷贝到8002文件夹" class="headerlink" title="文件拷贝到8002文件夹"></a>文件拷贝到8002文件夹</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#将8001修改为8002：</span></span><br><span class="line"><span class="built_in">cp</span> /usr/local/redis/redis-cluster/8001/redis.conf /usr/local/redis/redis-</span><br><span class="line">cluster/8002</span><br><span class="line"><span class="comment"># 批量修改字符串</span></span><br><span class="line">:%s/8001/8002/g</span><br></pre></td></tr></table></figure>
+
+<h3 id="将本机机器上的文件拷贝到另外两台机器上"><a href="#将本机机器上的文件拷贝到另外两台机器上" class="headerlink" title="将本机机器上的文件拷贝到另外两台机器上"></a>将本机机器上的文件拷贝到另外两台机器上</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 第二台机器</span></span><br><span class="line">scp /usr1/redis/redis-cluster/8001/redis.conf</span><br><span class="line">root@192.168.66.102:/usr1/redis/redis-cluster/8001/</span><br><span class="line">scp /usr1/redis/redis-cluster/8002/redis.conf</span><br><span class="line">root@192.168.66.102:/usr1/redis/redis-cluster/8002/</span><br><span class="line"><span class="comment"># 第三台机器</span></span><br><span class="line">scp /usr1/redis/redis-cluster/8001/redis.conf</span><br><span class="line">root@192.168.66.103:/usr1/redis/redis-cluster/8001/</span><br><span class="line">scp /usr1/redis/redis-cluster/8002/redis.conf</span><br><span class="line">root@192.168.66.103:/usr1/redis/redis-cluster/8002/</span><br></pre></td></tr></table></figure>
+
+<h3 id="分别启动这6个redis实例"><a href="#分别启动这6个redis实例" class="headerlink" title="分别启动这6个redis实例"></a>分别启动这6个redis实例</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">redis-server /usr/local/redis/redis-cluster/8001/redis.conf</span><br><span class="line">redis-server /usr/local/redis/redis-cluster/8002/redis.conf</span><br></pre></td></tr></table></figure>
+
+<h3 id="检查是否启动成功"><a href="#检查是否启动成功" class="headerlink" title="检查是否启动成功"></a>检查是否启动成功</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps -ef |grep redis</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用redis-cli创建整个redis集群"><a href="#使用redis-cli创建整个redis集群" class="headerlink" title="使用redis-cli创建整个redis集群"></a>使用redis-cli创建整个redis集群</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">/usr/local/redis/src/redis-cli</span> <span class="string">-a redis-pw --cluster create --cluster-replicas 1 \</span></span><br><span class="line"><span class="string">192.168.66.101:8001 192.168.66.101:8002 \</span></span><br><span class="line"><span class="string">192.168.66.102:8001 192.168.66.102:8002 \</span></span><br><span class="line"><span class="string">192.168.66.103:8001 192.168.66.103:8002</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>参数：<br>-a：密码<br>–cluster-replicas 1：表示1个master下挂1个slave； –cluster-replicas 2：表示1个master<br>下挂2个slave。</p>
+</blockquote>
+<h3 id="查看帮助命令"><a href="#查看帮助命令" class="headerlink" title="查看帮助命令"></a>查看帮助命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">redis-cli --cluster <span class="built_in">help</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>参数：<br>create：创建一个集群环境host1:port1 … hostN:portN<br>call：可以执行redis命令<br>add-node：将一个节点添加到集群里，第一个参数为新节点的ip:port，第二个参数为集群中<br>任意一个已经存在的节点的ip:port<br>del-node：移除一个节点<br>reshard：重新分片<br>check：检查集群状态</p>
+</blockquote>
+<h3 id="验证集群"><a href="#验证集群" class="headerlink" title="验证集群"></a>验证集群</h3><ul>
+<li>连接任意一个客户端</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/local/redisd/src/redis-cli -a redis-pw -c -h 192.168.66.101 -p 8001</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>参数：<br>‐a表示服务端密码<br>‐c表示集群模式<br>-h指定ip地址<br>-p表示端口号</p>
+</blockquote>
+<h3 id="查看集群的信息"><a href="#查看集群的信息" class="headerlink" title="查看集群的信息"></a>查看集群的信息</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cluster info</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A9/3.png"></p>
+<h3 id="查看节点"><a href="#查看节点" class="headerlink" title="查看节点"></a>查看节点</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">192.168.66.103</span>:<span class="string">8001&gt; cluster nodes</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="杀死Master节点"><a href="#杀死Master节点" class="headerlink" title="杀死Master节点"></a>杀死Master节点</h3><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">lsof</span> <span class="string">-i:8001</span></span><br><span class="line"><span class="attr">kill</span> <span class="string">-9 pid</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="观察节点信息"><a href="#观察节点信息" class="headerlink" title="观察节点信息"></a>观察节点信息</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A9/4.png"></p>
+]]></content>
+      <categories>
+        <category>服务</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker环境下安装Mysql8</title>
+    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10010-Docker%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85Mysql8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="准备好centos7环境并安装好了Docker"><a href="#准备好centos7环境并安装好了Docker" class="headerlink" title="准备好centos7环境并安装好了Docker"></a>准备好centos7环境并安装好了Docker</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/1.png"></p>
+<h2 id="Docker安装Mysql过程"><a href="#Docker安装Mysql过程" class="headerlink" title="Docker安装Mysql过程"></a>Docker安装Mysql过程</h2><h3 id="拉取和查看mysq镜像"><a href="#拉取和查看mysq镜像" class="headerlink" title="拉取和查看mysq镜像"></a>拉取和查看mysq镜像</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo docker pull mysql:8.0.23</span><br><span class="line">docker images</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/2.png"></p>
+<h3 id="启动运行mysql镜像-docker-run-用于启动一个容器"><a href="#启动运行mysql镜像-docker-run-用于启动一个容器" class="headerlink" title="启动运行mysql镜像 (docker run 用于启动一个容器)"></a>启动运行mysql镜像 (docker run 用于启动一个容器)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo docker run -p 3306:3306 --name mysql \</span><br><span class="line">-v /usr/local/docker/mysql/mysql-files:/var/lib/mysql-files \</span><br><span class="line">-v /usr/local/docker/mysql/conf:/etc/mysql \</span><br><span class="line">-v /usr/local/docker/mysql/logs:/var/log/mysql \</span><br><span class="line">-v /usr/local/docker/mysql/data:/var/lib/mysql \</span><br><span class="line">-e MYSQL_ROOT_PASSWORD=root \</span><br><span class="line">-d mysql:8.0.23</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/3.png"></p>
+<h3 id="查看docker启动的服务"><a href="#查看docker启动的服务" class="headerlink" title="查看docker启动的服务"></a>查看docker启动的服务</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/4.png"></p>
+<h3 id="进入mysql容器内部-退出容器用exit"><a href="#进入mysql容器内部-退出容器用exit" class="headerlink" title="进入mysql容器内部(退出容器用exit)"></a>进入mysql容器内部(退出容器用exit)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it mysql /bin/bash</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/5.png"></p>
+<h3 id="登陆-默认密码root-，一定要先进入mysql容器。"><a href="#登陆-默认密码root-，一定要先进入mysql容器。" class="headerlink" title="登陆(默认密码root)，一定要先进入mysql容器。"></a>登陆(默认密码root)，一定要先进入mysql容器。</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql -uroot -proot</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/6.png"></p>
+<h3 id="设置mysql开机自启动（可选）"><a href="#设置mysql开机自启动（可选）" class="headerlink" title="设置mysql开机自启动（可选）"></a>设置mysql开机自启动（可选）</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker update mysql --restart=always</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/7.png"></p>
+<h3 id="在mysql容器内部切换到mysql数据库"><a href="#在mysql容器内部切换到mysql数据库" class="headerlink" title="在mysql容器内部切换到mysql数据库"></a>在mysql容器内部切换到mysql数据库</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">use mysql</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/8.png"></p>
+<h3 id="查看用户信息"><a href="#查看用户信息" class="headerlink" title="查看用户信息"></a>查看用户信息</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span>  host,user from user</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/9.png"></p>
+<h3 id="修改用户密码"><a href="#修改用户密码" class="headerlink" title="修改用户密码"></a>修改用户密码</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ALTER USER <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;%&#x27;</span> IDENTIFIED WITH mysql_native_password BY <span class="string">&#x27;root123&#x27;</span>;</span><br><span class="line">ALTER USER <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> IDENTIFIED WITH mysql_native_password BY <span class="string">&#x27;root123&#x27;</span>; </span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/10.png"></p>
+<h3 id="查看mysql运行状态"><a href="#查看mysql运行状态" class="headerlink" title="查看mysql运行状态"></a>查看mysql运行状态</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/11.png"></p>
+<h3 id="开启防火墙添加3306端口"><a href="#开启防火墙添加3306端口" class="headerlink" title="开启防火墙添加3306端口"></a>开启防火墙添加3306端口</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl  start firewalld.service</span><br><span class="line">firewall-cmd --zone=public --add-port=3306/tcp --permanent</span><br><span class="line">firewall-cmd --reload</span><br><span class="line">firewall-cmd --list-port</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/12.png"></p>
+<h2 id="使用Navicat测试链接Mysql"><a href="#使用Navicat测试链接Mysql" class="headerlink" title="使用Navicat测试链接Mysql"></a>使用Navicat测试链接Mysql</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/13.png"></p>
+]]></content>
+      <categories>
+        <category>服务</category>
+      </categories>
+      <tags>
+        <tag>Mysql</tag>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Mycat部署安装_搭建MySQL主从复制</title>
     <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10009-Linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BAMysql%E9%9B%86%E7%BE%A4/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><font color="blue"><strong>作者:博哥</strong></font></p>
@@ -2212,53 +2295,8 @@
         <category>服务</category>
       </categories>
       <tags>
+        <tag>Docker</tag>
         <tag>Nginx</tag>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker环境下安装Mysql8</title>
-    <url>/2023/04/22/%E6%9C%8D%E5%8A%A1/04/10010-Docker%E7%8E%AF%E5%A2%83%E4%B8%8B%E5%AE%89%E8%A3%85Mysql8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="准备好centos7环境并安装好了Docker"><a href="#准备好centos7环境并安装好了Docker" class="headerlink" title="准备好centos7环境并安装好了Docker"></a>准备好centos7环境并安装好了Docker</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/1.png"></p>
-<h2 id="Docker安装Mysql过程"><a href="#Docker安装Mysql过程" class="headerlink" title="Docker安装Mysql过程"></a>Docker安装Mysql过程</h2><h3 id="拉取和查看mysq镜像"><a href="#拉取和查看mysq镜像" class="headerlink" title="拉取和查看mysq镜像"></a>拉取和查看mysq镜像</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo docker pull mysql:8.0.23</span><br><span class="line">docker images</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/2.png"></p>
-<h3 id="启动运行mysql镜像-docker-run-用于启动一个容器"><a href="#启动运行mysql镜像-docker-run-用于启动一个容器" class="headerlink" title="启动运行mysql镜像 (docker run 用于启动一个容器)"></a>启动运行mysql镜像 (docker run 用于启动一个容器)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo docker run -p 3306:3306 --name mysql \</span><br><span class="line">-v /usr/local/docker/mysql/mysql-files:/var/lib/mysql-files \</span><br><span class="line">-v /usr/local/docker/mysql/conf:/etc/mysql \</span><br><span class="line">-v /usr/local/docker/mysql/logs:/var/log/mysql \</span><br><span class="line">-v /usr/local/docker/mysql/data:/var/lib/mysql \</span><br><span class="line">-e MYSQL_ROOT_PASSWORD=root \</span><br><span class="line">-d mysql:8.0.23</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/3.png"></p>
-<h3 id="查看docker启动的服务"><a href="#查看docker启动的服务" class="headerlink" title="查看docker启动的服务"></a>查看docker启动的服务</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/4.png"></p>
-<h3 id="进入mysql容器内部-退出容器用exit"><a href="#进入mysql容器内部-退出容器用exit" class="headerlink" title="进入mysql容器内部(退出容器用exit)"></a>进入mysql容器内部(退出容器用exit)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it mysql /bin/bash</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/5.png"></p>
-<h3 id="登陆-默认密码root-，一定要先进入mysql容器。"><a href="#登陆-默认密码root-，一定要先进入mysql容器。" class="headerlink" title="登陆(默认密码root)，一定要先进入mysql容器。"></a>登陆(默认密码root)，一定要先进入mysql容器。</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql -uroot -proot</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/6.png"></p>
-<h3 id="设置mysql开机自启动（可选）"><a href="#设置mysql开机自启动（可选）" class="headerlink" title="设置mysql开机自启动（可选）"></a>设置mysql开机自启动（可选）</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker update mysql --restart=always</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/7.png"></p>
-<h3 id="在mysql容器内部切换到mysql数据库"><a href="#在mysql容器内部切换到mysql数据库" class="headerlink" title="在mysql容器内部切换到mysql数据库"></a>在mysql容器内部切换到mysql数据库</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">use mysql</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/8.png"></p>
-<h3 id="查看用户信息"><a href="#查看用户信息" class="headerlink" title="查看用户信息"></a>查看用户信息</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span>  host,user from user</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/9.png"></p>
-<h3 id="修改用户密码"><a href="#修改用户密码" class="headerlink" title="修改用户密码"></a>修改用户密码</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ALTER USER <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;%&#x27;</span> IDENTIFIED WITH mysql_native_password BY <span class="string">&#x27;root123&#x27;</span>;</span><br><span class="line">ALTER USER <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> IDENTIFIED WITH mysql_native_password BY <span class="string">&#x27;root123&#x27;</span>; </span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/10.png"></p>
-<h3 id="查看mysql运行状态"><a href="#查看mysql运行状态" class="headerlink" title="查看mysql运行状态"></a>查看mysql运行状态</h3><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/11.png"></p>
-<h3 id="开启防火墙添加3306端口"><a href="#开启防火墙添加3306端口" class="headerlink" title="开启防火墙添加3306端口"></a>开启防火墙添加3306端口</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl  start firewalld.service</span><br><span class="line">firewall-cmd --zone=public --add-port=3306/tcp --permanent</span><br><span class="line">firewall-cmd --reload</span><br><span class="line">firewall-cmd --list-port</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/12.png"></p>
-<h2 id="使用Navicat测试链接Mysql"><a href="#使用Navicat测试链接Mysql" class="headerlink" title="使用Navicat测试链接Mysql"></a>使用Navicat测试链接Mysql</h2><p><img src="/images/%E6%9C%8D%E5%8A%A1/04/A11/13.png"></p>
-]]></content>
-      <categories>
-        <category>服务</category>
-      </categories>
-      <tags>
-        <tag>Mysql</tag>
-        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
@@ -2545,6 +2583,49 @@
       </categories>
       <tags>
         <tag>K8s</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博哥带你快速了解内网穿透软件的使用</title>
+    <url>/2023/04/22/%E5%B7%A5%E5%85%B7/04/1001-Ngrock%E5%86%85%E5%A4%96%E7%A9%BF%E9%80%8F%E8%BD%AF%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="ngrok内网穿透"><a href="#ngrok内网穿透" class="headerlink" title="ngrok内网穿透"></a>ngrok内网穿透</h2><blockquote>
+<p>①我们个人电脑的ip都是局域网ip,比如学校拉了一个网线它的ip是 电信:10.30.10.1，这个网线覆盖整个局域范围，通过这个ip 10.30.10.1是无法访问到这个局域范围内的具体某个计算机的，因为在学校这个局域网范围内通过wifi设备等将该ip分成很多个ip供每个学生使用。</p>
+<p>②ngrok服务器有自己的ip,也就是它自己拉了一根网线 电信:10.30.10.2，我们无法从外面连接局域网中某个ip的服务器(即编码的电脑)，但是局域网内的服务器可以通过ip 10.30.10.2 连接ngrok服务器，然后用户客户端只要连接ngrok服务器，三者就可以互相通信，就实现了从外面访问局域网内某个具体ip的服务器，即内容穿透也叫内网映射。</p>
+<p>③总结: 客户端访问服务器端内容，中间使用ngrok服务器作为中转，进行内网穿透，实现客户端访问到局域网中具体ip的服务器</p>
+</blockquote>
+<p><img src="/images/%E5%B7%A5%E5%85%B7/04/A1/1.png"></p>
+<h2 id="ngrok的使用"><a href="#ngrok的使用" class="headerlink" title="ngrok的使用"></a>ngrok的使用</h2><ol>
+<li><p><strong>进入官网<a href="https://ngrok.cc,注册登录/">https://ngrok.cc,注册登录</a></strong></p>
+</li>
+<li><p><strong>建立隧道，编码电脑与ngrok服务器电脑进行打通</strong></p>
+</li>
+<li><p><strong>下载Ngrock</strong></p>
+</li>
+</ol>
+<p><a href="https://www.ngrok.cc/_book/start/ngrok_windows.html">下载地址</a></p>
+<p>下载之后得到两个文件，可以通过cmd命令行进到sunny.exe所在的目录执行</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sunny.exe clientid 隧道id</span><br></pre></td></tr></table></figure>
+
+<p>多个隧道同时启动</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sunny.exe clientid 隧道id,隧道id</span><br></pre></td></tr></table></figure>
+
+<p>另一种方式通过 Sunny-Ngrok启动工具.bat 启动，直接输入隧道id就好了</p>
+<h2 id="安装nginx测试访问效果"><a href="#安装nginx测试访问效果" class="headerlink" title="安装nginx测试访问效果"></a>安装nginx测试访问效果</h2><p><a href="http://nginx.org/en/download.html">nginx下载</a></p>
+<ol>
+<li>启动nginx</li>
+</ol>
+<p><img src="/images/%E5%B7%A5%E5%85%B7/04/A1/8.png"></p>
+<ol start="2">
+<li><p>测试http访问</p>
+<p><img src="/images/%E5%B7%A5%E5%85%B7/04/A1/9.png"></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>内网穿透</tag>
       </tags>
   </entry>
 </search>
